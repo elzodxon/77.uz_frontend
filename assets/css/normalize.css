@@ -7,8 +7,8 @@
 
 /** use variables in css property like, background-color: var(--primary-color); */
 
-
 /* -=- Common Element CSS Start -=- */
+
 *,
 *:before,
 *:after {
@@ -35,7 +35,7 @@ body {
   line-height: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--primary-color);
+  background-color: #f0f3f7;
 }
 
 img {
