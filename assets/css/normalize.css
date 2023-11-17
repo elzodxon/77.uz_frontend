@@ -8,12 +8,15 @@
 /** use variables in css property like, background-color: var(--primary-color); */
 :root {
   /* --- color variables --- */
-  --primary-color: #f9f9f9;
-  --secondary-color: #fff;
-  --border-color: #e8dede;
-  --text-primary-color: #292323;
-  --text-secondary-color: #ccc;
+  --primary-color: #388ff3;
+  --secondary-color: #8e9297;
+  --text-secondary-color: #16191d;
+  --text-primary-color: #151515;
+  --black-color: #16191d;
+  --gray-color-color: #eaedf0;
   --text-selection-color: #b3d4fc;
+  --placeholder-color: #63676c;
+  --input-bg-color: #f0f3f7;
 }
 
 /* -=- Common Element CSS Start -=- */
