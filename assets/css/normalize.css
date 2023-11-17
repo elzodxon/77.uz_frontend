@@ -6,20 +6,9 @@
 /**** CSS Variables ****/
 
 /** use variables in css property like, background-color: var(--primary-color); */
-:root {
-  /* --- color variables --- */
-  --primary-color: #388ff3;
-  --secondary-color: #8e9297;
-  --text-secondary-color: #16191d;
-  --text-primary-color: #151515;
-  --black-color: #16191d;
-  --gray-color-color: #eaedf0;
-  --text-selection-color: #b3d4fc;
-  --placeholder-color: #63676c;
-  --input-bg-color: #f0f3f7;
-}
 
 /* -=- Common Element CSS Start -=- */
+
 *,
 *:before,
 *:after {
@@ -46,7 +35,7 @@ body {
   line-height: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--primary-color);
+  background-color: #f0f3f7;
 }
 
 img {
