@@ -1,0 +1,40 @@
+:root {
+  /* --- color variables --- */
+  --primary-color: #388ff3;
+  --secondary-color: #8e9297;
+  --text-secondary-color: #16191d;
+  --text-primary-color: #151515;
+  --black-color: #16191d;
+  --gray-color-color: #eaedf0;
+  --text-selection-color: #b3d4fc;
+  --placeholder-color: #63676c;
+  --input-bg-color: #f0f3f7;
+}
+
+.title {
+  color: var(--black-color);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 41.6px */
+}
+
+.subtitle {
+  color: var(--secondary-color);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.text-sm-subtitle {
+  overflow: hidden;
+  color: var(--secondary-color);
+  text-overflow: ellipsis;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+}
