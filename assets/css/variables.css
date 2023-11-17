@@ -2,10 +2,9 @@
   /* --- color variables --- */
   --primary-color: #388ff3;
   --secondary-color: #8e9297;
-  --text-secondary-color: #16191d;
   --text-primary-color: #151515;
   --black-color: #16191d;
-  --gray-color-color: #eaedf0;
+  --gray-color: #eaedf0;
   --text-selection-color: #b3d4fc;
   --placeholder-color: #63676c;
   --input-bg-color: #f0f3f7;
@@ -21,7 +20,6 @@
 }
 
 .subtitle {
-  color: var(--secondary-color);
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -30,7 +28,6 @@
 }
 .text-sm-subtitle {
   overflow: hidden;
-  color: var(--secondary-color);
   text-overflow: ellipsis;
   font-family: Inter;
   font-size: 14px;
@@ -40,8 +37,27 @@
 }
 
 .container {
-  max-width: 1184px;
+  max-width: 1224px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+}
+#call-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.call-number {
+  font-weight: 500;
+  color: var(--black-color);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
