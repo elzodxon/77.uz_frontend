@@ -38,3 +38,10 @@
   font-weight: 400;
   line-height: 130%; /* 18.2px */
 }
+
+.container {
+  max-width: 1184px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
