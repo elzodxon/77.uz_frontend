@@ -1,0 +1,33 @@
+.pagination {
+    display: flex;
+    padding: 8px 0px;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.pagination a {
+display: flex;
+justify-content: center;
+align-items: center;
+    color: #63676C;
+    height: 32px;
+    width: 32px;
+    border-radius: 8px;
+    border: 1px solid #D5D8DB;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    border-radius: 8px;
+    border: 1px solid rgba(56, 143, 243, 0.10);
+    background: #FFF;
+    color: #388FF3;
+
+}
