@@ -33,6 +33,7 @@ body {
   padding: 0px;
   font-size: 16px;
   line-height: 20px;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f0f3f7;

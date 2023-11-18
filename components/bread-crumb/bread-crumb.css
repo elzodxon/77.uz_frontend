@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.bread-crumb {
+  width: 100%;
+
+}
+.bread-crumb__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.bread-crumb__circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #D5D8DB;
+}
+.bread-crumb__link{
+  color: var(--black-color);
+  transition: 0.2s ease-in-out;
+}
+/* .bread-crumb__link {
+  color: var(--gray-color );
+} */
+.bread-crumb__link:hover {
+  color: var(--primary-color);
+}
