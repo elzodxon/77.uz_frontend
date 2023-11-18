@@ -1,24 +1,29 @@
 "use strict";
 // Password
-window.addEventListener('DOMContentLoaded',function(){
-  const closedEye=document.querySelector('.closed-eye');
-  const currentPassword=document.getElementById('password');
+const closedEye=document.querySelector('.closed-eye');
+const currentPassword=document.getElementById('password');
+closedEye.addEventListener('click',()=>{
+  currentPassword.
+})
+// window.addEventListener('DOMContentLoaded',function(){
+//   const closedEye=document.querySelector('.closed-eye');
+//   const currentPassword=document.getElementById('password');
 
-  closedEye.addEventListener('click',()=>{
-    closedEye.classList.toggle('opened-eye');
-    function togglePassword(){
-      if(currentPassword.type==="password"){
-        currentPassword.type="text"
-      }
-      togglePassword()
+//   closedEye.addEventListener('click',()=>{
+//     closedEye.classList.toggle('opened-eye');
+//     function togglePassword(){
+//       if(currentPassword.type==="password"){
+//         currentPassword.type="text"
+//       }
+//       togglePassword()
       // else{
         // currentPassword.type==="password";
         // closedEye.innerHTML=closedEye
       // }
-    }
+    // }
     // currentPassword.type==="text"
-  })
-})
+//   })
+// })
 
 // Phone Number
 Array.prototype.forEach.call(
