@@ -67,7 +67,7 @@ main {
   align-items: center;
   gap: 8px;
 }
-#language-wrapper {
+#language-switcher {
 }
 .language-content {
   position: absolute;
