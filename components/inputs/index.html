@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -21,8 +21,8 @@
          rel="stylesheet" />
       <!-- ================== Css links ================== -->
 
-      <!-- <link rel="stylesheet" href="../../assets/css/normalize.css" /> -->
-      <!-- <link rel="stylesheet" href="../../assets/css/variables.css" /> -->
+      <link rel="stylesheet" href="../../assets/css/normalize.css" />
+      <link rel="stylesheet" href="../../assets/css/variables.css" />
       <link rel="stylesheet" href="./inputs.css" />
 
       <!-- ================== Website Title ================== -->
@@ -30,19 +30,19 @@
    </head>
 
    <body>
-      <form action="" class="log-in-form">
+      <form action="" class="form">
          <!-- Name -->
-         <div class="input-card">
-            <label class="label" for="name">Ф.И.О. </label>
+         <div class="form-group">
+            <label class="label" for="fullName">Ф.И.О. </label>
             <input
                class="input input_text"
                type="text"
                name="name"
-               id="name"
+               id="fullName"
                placeholder="Введите вашу Ф.И.О." />
          </div>
          <!-- Product name -->
-         <div class="input-card">
+         <div class="form-group">
             <label class="label" for="product-name">Название продукта </label>
             <input
                class="input input__product-name"
@@ -52,7 +52,7 @@
                placeholder="Введите название продукта" />
          </div>
          <!-- Log-in -->
-         <div class="input-card">
+         <div class="form-group">
             <label class="label" for="log-in">Логин </label>
             <input
                class="input input__login"
@@ -62,20 +62,23 @@
                placeholder="Введите логин" />
          </div>
          <!-- Password -->
-         <div class="input-card">
+         <div class="form-group">
             <label class="label" for="password">Пароль </label>
-            <input
-               class="input input-password"
-               type="password"
-               name="password"
-               id="password"
-               placeholder="Введите пароль"
-               onclick="togglePassword()" />
-            <div class="closed-eye"></div>
-            <a href="#" class="forgot-password">Забыли пароль?</a>
+            <div class="password-input-wrapper">
+               <input
+                  class="input input-password"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Введите пароль"
+                   />
+                   <div class="closed-eye"></div>
+                   <a href="#" class="forgot-password">Забыли пароль?</a>
+
+            </div>
          </div>
          <!-- Phone number -->
-         <div class="input-card">
+         <div class="form-group">
             <label class="label" for="phone-number">Телефон номер </label>
 
             <input
@@ -93,8 +96,6 @@
       </form>
       <!-- ================== Javascript Links
       ================== -->
-      <script src="./inputs.js"></script>
+      <script src="/components/inputs/inputs.js"></script>
    </body>
 </html>
-=======
->>>>>>> 9293f24a41f09c768d4bc4dcc49375ff32f2f739

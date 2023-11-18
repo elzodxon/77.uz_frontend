@@ -1,29 +1,24 @@
 "use strict";
 // Password
-const closedEye=document.querySelector('.closed-eye');
-const currentPassword=document.getElementById('password');
-closedEye.addEventListener('click',()=
-})
-// window.addEventListener('DOMContentLoaded',function(){
-//   const closedEye=document.querySelector('.closed-eye');
-//   const currentPassword=document.getElementById('password');
-
-//   closedEye.addEventListener('click',()=>{
-//     closedEye.classList.toggle('opened-eye');
-//     function togglePassword(){
-//       if(currentPassword.type==="password"){
-//         currentPassword.type="text"
-//       }
-//       togglePassword()
-      // else{
-        // currentPassword.type==="password";
-        // closedEye.innerHTML=closedEye
-      // }
-    // }
-    // currentPassword.type==="text"
-//   })
+// const closedEye=document.querySelector('.closed-eye');
+// const currentPassword=document.getElementById('password');
+// closedEye.addEventListener('click',()=>{
+// currentPassword.className
 // })
+document.addEventListener('DOMContentLoaded', function () {
+  const eyeIcon = document.querySelector('.closed-eye');
+  const passwordInput = document.getElementById('password');
 
+  eyeIcon.addEventListener('click', function () {
+      eyeIcon.classList.toggle('opened-eye');
+      if (eyeIcon.classList.contains('opened-eye')) {
+          passwordInput.type = 'text';
+          eyeIcon.removeClass('closed-eye').addClass('closed-eye.opened-eye');
+      } else {
+          passwordInput.type = 'password';
+      }
+  });
+});
 // Phone Number
 Array.prototype.forEach.call(
   document.body.querySelectorAll('*[data-mask]'),
