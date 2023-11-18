@@ -1,0 +1,26 @@
+.static-container {
+    max-width: 822px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-bottom: 60px;
+}
+
+.static-wrapper {
+    margin-top: 24px;
+    padding: 16px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.static-text, .static-span{
+    margin: 0;
+    color: #16191D;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    }
