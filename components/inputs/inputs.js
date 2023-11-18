@@ -2,8 +2,7 @@
 // Password
 const closedEye=document.querySelector('.closed-eye');
 const currentPassword=document.getElementById('password');
-closedEye.addEventListener('click',()=>{
-  currentPassword.
+closedEye.addEventListener('click',()=
 })
 // window.addEventListener('DOMContentLoaded',function(){
 //   const closedEye=document.querySelector('.closed-eye');
