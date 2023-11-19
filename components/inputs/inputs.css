@@ -15,7 +15,6 @@ body {
 }
 
 .form {
-   margin: 0 20px;
    font-family: var(--application_ff);
    font-size: 14px;
    line-height: 20px;
@@ -69,9 +68,7 @@ body {
    padding-right: 34px;
 }
 .password-input-wrapper .closed-eye {
-  background: url(/assets/img/closed-eye.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+   background: url(/assets/img/closed-eye.svg) no-repeat center;
    background-size: cover;
    position: absolute;
    top: 0;
@@ -83,12 +80,7 @@ body {
    height: 24px;
 }
 .password-input-wrapper .closed-eye.opened-eye {
-   background-image: url(/assets/img/eye-open-4.svg);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   width: 24px;
-   height: 24px;
+   background: url(/assets/img/open-eye.svg) no-repeat center/cover;
 }
 .password-input-wrapper .forgot-password {
    position: absolute;
@@ -120,7 +112,16 @@ body {
 
    .input {
    }
-   .form-group .closed-eye {
-      left: 290px;
+
+   .password-input-wrapper .closed-eye {
+      background: url(/assets/img/closed-eye.svg) no-repeat center/cover;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      transform: translate(50%, 37%);
+      cursor: pointer;
+      display: block;
+      width: 24px;
+      height: 24px;
    }
 }

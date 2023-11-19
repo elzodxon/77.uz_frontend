@@ -1,10 +1,6 @@
 "use strict";
 // Password
-// const closedEye=document.querySelector('.closed-eye');
-// const currentPassword=document.getElementById('password');
-// closedEye.addEventListener('click',()=>{
-// currentPassword.className
-// })
+
 document.addEventListener('DOMContentLoaded', function () {
   const eyeIcon = document.querySelector('.closed-eye');
   const passwordInput = document.getElementById('password');
