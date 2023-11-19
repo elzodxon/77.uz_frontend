@@ -2,36 +2,32 @@
   display: flex;
   padding: 8px 0px;
   gap: 8px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Inter, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 
-.pagination__button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #63676c;
+.pagination__button {
+  text-align: center;
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  border: 1px solid #d5d8db;
   background-color: transparent;
-  text-decoration: none;
+  color: var(--greys-grey-0, #63676c);
+  border: 1px solid var(--greys-grey-3, #d5d8db);
 }
 
 .pagination__button.active {
   border-radius: 8px;
   border: 1px solid rgba(56, 143, 243, 0.1);
   background: #fff;
-  color: #388ff3;
+  color: var(--Main-blue, #388ff3);
 }
-.pagination__button:hover{
+.pagination__button:hover,
+.pagination__button:hover svg path {
   cursor: pointer;
   background: #fff;
+  stroke: var(--Main-blue, #388ff3);
 }
