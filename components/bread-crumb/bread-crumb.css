@@ -32,7 +32,7 @@ body {
   top: 50%;
   border-radius: 50%;
   transform: translate(50%, -50%);
-  background-color: var(--secondary-color);
+  background-color: #B8BBBD;
 }
 
 .bread-crumb__link {
@@ -44,7 +44,7 @@ body {
   line-height: 130%; /* 18.2px */
 }
 .bread-crumb__link.active {
-  color: var(--secondary-color);
+  color: #B8BBBD;
   pointer-events: none;
 }
 
