@@ -72,6 +72,11 @@
 .development-company__link:hover {
   gap: 14px;
 }
+.footer-info__text {
+  max-width: 669px;
+  text-align: center;
+  margin: auto;
+}
 
 @media screen and (max-width: 568px) {
   .development-company__link img:nth-child(2) {

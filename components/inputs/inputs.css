@@ -18,12 +18,12 @@ body {
    font-family: var(--application_ff);
    font-size: 14px;
    line-height: 20px;
-   max-width: 400px;
    margin: 30px auto;
 }
 .form-group {
-   margin-bottom: 16px;
-   display: flex;
+   padding-top: 16px;
+
+      display: flex;
    flex-direction: column;
    gap: 8px;
 }
