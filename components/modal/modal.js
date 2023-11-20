@@ -1,18 +1,27 @@
-document.querySelector(".close").addEventListener("click", function(){
-    document.querySelector(".modal-wrapper").style.display = "none";
-})
 
-document.querySelector(".close-icon").addEventListener("click", function(){
-    document.querySelector(".modal-info").style.display = "none";
-})
+let popup = document.getElementById("popup");
 
-document.querySelector(".close-iconn").addEventListener("click", function(){
-    document.querySelector(".modal-application").style.display = "none";
-})
+function openPopup(){
+    popup.classList.add("open-popup");
+}
 
-document.querySelector(".close-icon1").addEventListener("click", function(){
-    document.querySelector(".modal-accept").style.display = "none";
-})
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+
+
+
+let poppup = document.getElementById("poppup");
+
+function opennPopup(){
+    poppup.classList.add("open-popup");
+}
+
+function closeePopup(){
+    poppup.classList.remove("open-popup");
+}
+
+
 
 
 
