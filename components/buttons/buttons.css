@@ -41,13 +41,13 @@
 }
 
 .btn-secondary {
-  background-color: var(--secondary-color);
-  border: var(--secondary-color) solid 1px;
+  background-color: var(--gray-color);
+  border: var(--gray-color) solid 1px;
   color: #000;
 }
 
 .btn-secondary:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--gray-color);
   color: #000;
 }
 
