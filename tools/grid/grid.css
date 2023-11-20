@@ -1,0 +1,100 @@
+/* global styles */
+
+body {
+  background-color: LavenderBlush;
+  color: Teal;
+  font-size: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.5;
+  margin: 0;
+  padding: 1rem;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+/* grid styles */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.container-lg {
+  max-width:1000px;
+  margin: auto;
+
+}
+
+.container-md {
+  max-width: 768px;
+  margin: auto;
+
+}
+
+.container-sm {
+  max-width: 576px;
+  margin: auto;
+
+}
+
+.container-xs {
+  max-width: 540px;
+  margin: auto;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.col {
+  background-color: pink;
+  border: LavenderBlush 2px solid;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.col-1 {
+  width: 7.18%;
+}
+.col-2 {
+  width: 15.62%;
+}
+.col-3 {
+  flex-basis: 24.06%;
+}
+.col-4 {
+  flex-basis: 32.5%;
+}
+.col-5 {
+  flex-basis: 40.94%;
+}
+.col-6 {
+  flex-basis: 49.37%;
+}
+.col-7 {
+  flex-basis: 57.79%;
+}
+.col-8 {
+  flex-basis: 66.25%;
+}
+.col-9 {
+  flex-basis: 74.691%;
+}
+.col-10 {
+  flex-basis: 83.13%;
+}
+.col-11 {
+  flex-basis: 91.57%;
+}
+.col-12 {
+  flex-basis: 100%;
+}
+/* and so on up to 12 … */
