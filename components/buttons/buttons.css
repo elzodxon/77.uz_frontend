@@ -18,6 +18,7 @@
   font-weight: 600;
   color: #fff;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
