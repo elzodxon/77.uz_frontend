@@ -22,8 +22,7 @@
       <div class="container">
         <nav class="navbar">
           <ul class="navbar__list">
-            <li id="language-wrapper" class="navbar__item">
-              <!-- <a href="" class="navbar__item-link text-sm-subtitle"> </a> -->
+            <li id="language-switcher" class="navbar__item">
               <button class="language-button text-sm-subtitle">
                 <img
                   width="20"
@@ -48,9 +47,9 @@
                   />
                 </svg>
               </button>
-              <div class="language-content active">
-                <ul class="language-list">
-                  <li class="language-item active">
+              <div class="language-content">
+                <ul class="language-content__list">
+                  <li class="language-content__item active">
                     <img
                       width="20"
                       height="20"
@@ -60,7 +59,7 @@
                     <span>РУ</span>
                   </li>
 
-                  <li class="language-item">
+                  <li class="language-content__item">
                     <img
                       width="20"
                       height="20"
@@ -72,8 +71,12 @@
                 </ul>
               </div>
             </li>
-            <li class="navbar__item call-wrapper">
-              <a id="call-link" href="" class="navbar__item-link call-link">
+            <li class="navbar__item phone-wrapper">
+              <a
+                id="phone-number"
+                href="tel:+998885005000"
+                class="navbar__item-link"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -89,20 +92,15 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <span class="call-number text-sm-subtitle">
+                <span class="phone-number text-sm-subtitle">
                   +998 88 500 50 00
                 </span>
               </a>
             </li>
           </ul>
-          <div class="navbar__logo">
-            <img
-              width="138"
-              height="72"
-              src="../../assets/img/logo.svg"
-              alt=""
-            />
-          </div>
+          <a href="/" class="header-logo">
+            <img src="../../assets/img/logo.svg" alt="" />
+          </a>
           <ul class="navbar__list">
             <li class="navbar__item">
               <a
@@ -155,9 +153,7 @@
       </div>
     </header>
 
-    <main>
-      
-    </main>
+    <main></main>
     <!-- ================== Javascript Links ================== -->
     <script src="./header.js"></script>
   </body>

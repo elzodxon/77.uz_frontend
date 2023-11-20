@@ -45,15 +45,7 @@
   margin: 0 auto;
   padding: 0 20px;
 }
-#call-link {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.call-number {
-  font-weight: 500;
-  color: var(--black-color);
-}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
