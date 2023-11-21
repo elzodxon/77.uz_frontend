@@ -16,17 +16,21 @@
   <!-- ================== Website Title ================== -->
   <title>Modal Component</title>
 </head>
-
-<div class="modal-box">
+<body>
+  
+<div class="modal" id="div">
+ <div class="modal-box">
   <button class="modal-submit btn-outline modal-btn" type="submit" style="width: 200px; margin: 20px;" onclick="openPopup()">Submit</button>
   <div class="modal-wrapper" id="popup">
-    <h3 class="modal-title">Добро пожаловать!
-      <img onclick="closePopup()" class="modal-img" src="/assets/img/close.svg" alt="Close img"
-      width="24" height="24">
-    </h3>
-    <p class="modal-description">
-      Войти в систему чтобы торговать в системе
-    </p>
+    <div class="modal-header">
+      <h3 class="modal-title">Добро пожаловать!
+        <img onclick="closePopup()" class="modal-img" src="/assets/img/close.svg" alt="Close img"
+        width="24" height="24">
+      </h3>
+      <p class="modal-description">
+        Войти в систему чтобы торговать в системе
+      </p>
+    </div>
     <form  class="modal-form">
       <label class="label modal-label" for="log-in">Логин </label>
       <input
@@ -72,20 +76,23 @@
       </svg>
       +998 97 450 45 00</button>
     </div>
-  </div>
+</div> 
   
 <div class="modal-box">
-   <div class="modal-wrapperr modal-application">
-    <h3 class="modal-title">Подать заявку
-      <img class="modal-img" src="../../assets/img/close.svg" alt="Close img"
-      width="24" height="24">
-    </h3>
-    <p class="modal-description application-text">
-      Войти в систему чтобы торговать в системе
-    </p>
+  <button class="modal-submit btn-outline modal-btn" type="submit" onclick="openingPopup()" style="width: 200px; margin: 20px;">Submit</button>
+   <div class="modal-wrapper modal-application" id="application">
+    <div class="modal-header">
+      <h3 class="modal-title">Подать заявку
+        <img onclick="closingPopup()" class="modal-img" src="../../assets/img/close.svg" alt="Close img"
+        width="24" height="24">
+      </h3>
+      <p class= "application-text">
+        Войти в систему чтобы торговать в системе
+      </p>
+    </div>
     <form  class="modal-form">
       <div class="form-group">
-        <label class="label modal-label " for="fullName">Ф.И.О. </label>
+        <label class="label modal-label application-label" for="fullName">Ф.И.О. </label>
         <input
            class="input input_text"
            type="text"
@@ -107,7 +114,7 @@
 <div class="p-input-group">
 <span class="country-code">+998</span>
 <input
-   class="input input_tel"
+   class="input input_tel application-input"
    type="tel"
    name="phone-number"
    id="phone-number"
@@ -121,27 +128,31 @@
     <p class="modal-text application-info">Если вы продавец, войдите на платформу</p>
     <button class="btn modal-btn btn-outline" type="submit">Войти</button>
   </div> 
-</div>  
+</div>   
   
   
-  <!-- <div class="modal-wrapper modal-accept">
-    <img class="modal-img close-icon1" src="/assets/img/close.svg" alt="Close img"
-    width="24" height="24">
-    <div class="accept-wrapper">
-      <img class="modal-image" src="/assets/img/list-icon.svg" alt=""
-      width="120" height="113">
+  <div class="modal-box">
+    <button class="modal-submit btn-outline modal-btn" type="submit" onclick="openpopup()" style="width: 200px; margin: 20px;">Submit</button>
+    <div class="modal-wrapper modal-accept" id="accept">
+      <img onclick="closepopup()" class="modal-img" src="/assets/img/close.svg" alt="Close img"
+      width="24" height="24">
+      <div class="accept-wrapper">
+        <img class="modal-image" src="/assets/img/list-icon.svg" alt=""
+        width="120" height="113">
+      </div>
+      <h3 class="modal-title modal-accept-title">Ваша заявка принята! </h3>
+      <p class="modal-description accept-text">
+        Наши сотрудники свяжутся с вами в ближайшее время
+      </p>
+      <button class="modal-btn btn" type="submit">
+        Спасибо
+      </button>
     </div>
-    <h3 class="modal-title modal-accept-title">Ваша заявка принята! </h3>
-    <p class="modal-description accept-text">
-      Наши сотрудники свяжутся с вами в ближайшее время
-    </p>
-    <button class="modal-btn" type="submit">
-      Спасибо
-    </button>
-  </div> -->
+  </div>
   
-  <!-- <div class="modal-noinfo">
-    <div class="model-noinfo-wrapper">
+   <div class=" model-noinfo"> 
+    <button class="modal-submit btn-outline modal-btn" type="submit" onclick="open()" style="width: 200px; margin: 20px;">Submit</button>
+    <div class="modal-wrapper model-noinfo-wrapper" id="noinfo"  >
       <svg xmlns="http://www.w3.org/2000/svg" width="128" height="156" viewBox="0 0 128 156" fill="none">
         <path d="M103.544 133C105.498 133.005 107.381 132.264 108.817 130.926C114.805 125.331 119.596 118.558 122.895 111.025C126.193 103.492 127.93 95.3571 127.997 87.1214C128.304 53.6336 101.33 26.0792 68.1448 26.0002C34.9412 25.9211 8.00004 53.0606 8.00004 86.5503C7.99056 94.8856 9.69127 103.133 12.9951 110.772C16.2989 118.411 21.1342 125.278 27.1967 130.939C28.6292 132.27 30.5072 133.006 32.4547 133H103.544Z" fill="url(#paint0_linear_1_4046)"/>
         <path d="M24.8555 132.739C24.2048 132.739 23.5604 132.61 22.9592 132.36C22.3581 132.111 21.8118 131.744 21.3517 131.283C20.8916 130.821 20.5266 130.273 20.2776 129.67C20.0286 129.067 19.9004 128.421 19.9004 127.768V42.0155C19.9004 40.6972 20.4224 39.4329 21.3517 38.5008C22.281 37.5686 23.5413 37.0449 24.8555 37.0449H61.6058L83.3699 58.877V127.768C83.3699 129.086 82.8479 130.351 81.9186 131.283C80.9894 132.215 79.729 132.739 78.4149 132.739H24.8555Z" fill="#EAEDF0"/>
@@ -178,8 +189,9 @@
         Упс! Мы не смогли найти ни одного подходящего результата по вашему запросу
       </p3>
     </div>
-  </div> -->
+  </div> 
   
+</div>
   
   <!-- ================== Javascript Links ================== -->
   <script src="./modal.js"></script>
