@@ -23,3 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+const searchInput = document.querySelector(".search__input")
+const blocker = document.querySelector(".blocker")
+
+searchInput.addEventListener("focus",(e) =>{
+  e.preventDefault();
+  blocker.classList.toggle("active")
+  document.body.classList.toggle("block")
+})
+blocker.addEventListener("click",() => {
+  document.body.classList.remove("block")
+  blocker.classList.remove("active")
+})
