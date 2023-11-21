@@ -1,3 +1,4 @@
+@import "./components/buttons/buttons.css";
 @import "./components/bread-crumb/bread-crumb.css";
 @import "./components/footer/footer.css";
 
@@ -17,7 +18,7 @@ main {
 }
 
 .hero {
-  padding-bottom: 60px;
+  padding-bottom: 82px;
 }
 
 .static-container {
