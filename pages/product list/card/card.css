@@ -27,6 +27,7 @@
 
 .card__img {
   position: relative;
+  display: flex;
 }
 
 .card__icon-like {
