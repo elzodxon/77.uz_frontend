@@ -1,72 +1,79 @@
-"use strict";
-// Password
-const closedEye=document.querySelector('.closed-eye');
-const currentPassword=document.getElementById('password');
-closedEye.addEventListener('click',()=>{
-  currentPassword.
-})
-// window.addEventListener('DOMContentLoaded',function(){
-//   const closedEye=document.querySelector('.closed-eye');
-//   const currentPassword=document.getElementById('password');
+'use strict';
 
-//   closedEye.addEventListener('click',()=>{
-//     closedEye.classList.toggle('opened-eye');
-//     function togglePassword(){
-//       if(currentPassword.type==="password"){
-//         currentPassword.type="text"
-//       }
-//       togglePassword()
-      // else{
-        // currentPassword.type==="password";
-        // closedEye.innerHTML=closedEye
-      // }
-    // }
-    // currentPassword.type==="text"
-//   })
-// })
+// Password
+document.addEventListener('DOMContentLoaded', function () {
+  const eyeIcon = document.querySelector('.closed-eye');
+  const passwordInput = document.getElementById('password');
+
+  eyeIcon.addEventListener('click', function () {
+    eyeIcon.classList.toggle('opened-eye');
+    if (eyeIcon.classList.contains('opened-eye')) {
+      passwordInput.type = 'text';
+      eyeIcon.removeClass('closed-eye').addClass('closed-eye.opened-eye');
+    } else {
+      passwordInput.type = 'password';
+    }
+  });
+});
 
 // Phone Number
-Array.prototype.forEach.call(
-  document.body.querySelectorAll('*[data-mask]'),
-  applyDataMask
-);
 
-function applyDataMask(field) {
-  var mask = field.dataset.mask.split('');
+// Use let for variables that may be reassigned
+let phoneNumberInput = document.getElementById('phone-number');
 
-  // For now, this just strips everything that's not a number
-  function stripMask(maskedData) {
-    function isDigit(char) {
-      return /\d/.test(char);
+// Attach the formatPhoneNumber function to the input event
+phoneNumberInput.addEventListener('input', function () {
+  formatPhoneNumber(phoneNumberInput);
+});
+
+// Attach the handleBackspace function to the keydown event
+phoneNumberInput.addEventListener('keydown', function (event) {
+  handleBackspace(event, phoneNumberInput);
+});
+
+function formatPhoneNumber(input) {
+  // Remove non-numeric characters
+  let phoneNumber = input.value.replace(/\D/g, '');
+
+  // Format the remaining digits
+  if (phoneNumber.length > 0) {
+    // Format the phone number as (yy)xxx-xx-xx
+    phoneNumber =
+      '(' +
+      phoneNumber.substring(0, 2) +
+      ')' +
+      phoneNumber.substring(2, 5) +
+      '-' +
+      phoneNumber.substring(5, 7) +
+      '-' +
+      phoneNumber.substring(7, 9);
+  }
+  // Set the formatted value back to the input
+  input.value = phoneNumber;
+}
+
+function handleBackspace(event, input) {
+  // Check if the pressed key is the backspace key
+  if (event.key === 'Backspace') {
+    // Remove non-numeric characters
+    let phoneNumber = input.value.replace(/\D/g, '');
+    // Remove the last digit
+    phoneNumber = phoneNumber.slice(0, -1);
+    // Format the remaining digits
+    if (phoneNumber.length > 0) {
+      phoneNumber =
+        '(' +
+        phoneNumber.substring(0, 2) +
+        ')' +
+        phoneNumber.substring(2, 5) +
+        '-' +
+        phoneNumber.substring(5, 7) +
+        '-' +
+        phoneNumber.substring(7, 9);
     }
-    return maskedData.split('').filter(isDigit);
+    // Set the formatted value back to the input
+    input.value = phoneNumber;
+    // Prevent the default backspace behavior
+    event.preventDefault();
   }
-
-  // Replace _ characters with characters from data
-  function applyMask(data) {
-    return mask
-      .map(function (char) {
-        if (char != '_') return char;
-        if (data.length == 0) return char;
-        return data.shift();
-      })
-      .join('');
-  }
-
-  function reapplyMask(data) {
-    return applyMask(stripMask(data));
-  }
-
-  function changed() {
-    var oldStart = field.selectionStart;
-    var oldEnd = field.selectionEnd;
-
-    field.value = reapplyMask(field.value);
-
-    field.selectionStart = oldStart;
-    field.selectionEnd = oldEnd;
-  }
-
-  field.addEventListener('click', changed);
-  field.addEventListener('keyup', changed);
 }
