@@ -4,7 +4,7 @@
   border-bottom: 1px solid var(--gray-color);
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
-  z-index: 100000;
+  z-index: 999;
 }
 
 .navbar {
