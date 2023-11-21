@@ -51,6 +51,7 @@
   border: 1px solid var(--gray-color);
   background: var(--input-bg-color);
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .p-info-list__item:active{
@@ -62,6 +63,15 @@
 
 .p-info-list__item:active .p-info-list__item-icon{
   color: var(--primary-color);
+}
+
+.p-info-list__item-title{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  
 }
 
 
