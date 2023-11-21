@@ -1,3 +1,30 @@
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Get all elements with the class "category-group"
+// let  categoryGroups = document.querySelectorAll(".category-group");
+
+//   // Add click event listener to each category group
+//   categoryGroups.forEach(function (categoryGroup) {
+//     categoryGroup.addEventListener("click", function () {
+//       // Toggle the "active" class on the clicked category group
+//       this.classList.toggle("active");
+//     });
+
+//     // Get all elements with the class "icon-inner" inside each category group
+//     let  iconInners = categoryGroup.querySelectorAll(".icon-inner");
+
+//     // Add click event listener to each icon-inner
+//     iconInners.forEach(function (iconInner) {
+//       iconInner.addEventListener("click", function (event) {
+//         event.stopPropagation(); // Prevents the click event from reaching the category-group
+
+//         // Toggle the "active" class on the closest ".category-union__item__inner"
+//         this.closest(".category-union__item__inner").classList.toggle("active");
+//       });
+//     });
+//   });
+// });
+
+//
 document.addEventListener("DOMContentLoaded", function () {
   // Get all elements with the class "category-group"
   var categoryGroups = document.querySelectorAll(".category-group");
@@ -5,6 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add click event listener to each category group
   categoryGroups.forEach(function (categoryGroup) {
     categoryGroup.addEventListener("click", function () {
+      // Deactivate all other category groups
+      categoryGroups.forEach(function (otherCategoryGroup) {
+        if (otherCategoryGroup !== categoryGroup) {
+          otherCategoryGroup.classList.remove("active");
+        }
+      });
+
       // Toggle the "active" class on the clicked category group
       this.classList.toggle("active");
     });
