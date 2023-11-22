@@ -4,7 +4,11 @@
   border-bottom: 1px solid var(--gray-color);
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
+<<<<<<< HEAD
   z-index: 100000;
+=======
+  z-index: 999;
+>>>>>>> ea2002f3c41666d1c279c81d5ac1fa96eec19daa
 }
 
 .navbar {
