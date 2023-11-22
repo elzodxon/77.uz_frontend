@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/elzodxon/77.uz_frontend#readme",
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "eslint": "^8.54.0",
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.29.0",
@@ -38,6 +40,10 @@
       "eslint --fix"
     ],
     "*.css": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.js": [
       "prettier --write",
       "eslint --fix"
     ]
