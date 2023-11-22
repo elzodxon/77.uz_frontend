@@ -7,7 +7,7 @@ body {
   height: 100vh;
 }
 
-.containerr {
+.wrapper {
   display: flex;
   padding: 20px;
   flex-direction: column;
@@ -16,20 +16,20 @@ body {
   gap: 16px;
   position: absolute;
   width: 782px;
-  border: 1px solid red;
   background-color: white;
 }
 
-.dropbox_dragging {
+.dropbox{
   position: absolute;
   display: none;
   width: 100vw;
   height: 100vh;
   padding: 40px;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
-.dropbox_dragging__container {
+.dropbox__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,7 +117,7 @@ body {
   line-height: unset;
 }
 
-#choose-text {
+.choose-text {
   color: var(--Main-blue, #388ff3);
   font-family: Inter;
   font-size: 14px;
@@ -127,7 +127,7 @@ body {
   display: inline;
 }
 
-#choose-text:hover{
+.choose-text:hover{
   cursor: pointer;
 }
 
@@ -179,5 +179,9 @@ body {
 }
 
 .hovered{
+  filter: opacity(1.0);
+}
+
+.full-opacity{
   filter: opacity(1.0);
 }

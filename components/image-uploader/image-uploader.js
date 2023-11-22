@@ -1,14 +1,26 @@
-let dropBox = document.getElementById("dropbox_dragging");
-let container = document.getElementById("dropbox_dragging__container");
-let array = [dropBox, container];
-let change_button = document.querySelector("#actions__change-button");
+const dropBox = document.querySelector("#dropbox");
+const container = document.querySelector("#dropbox__container");
+const chooseTexts = document.querySelectorAll(".choose-text");
+const emptyCards = document.querySelectorAll(".gallery__item-empty");
+const array = [chooseTexts, emptyCards];
+const array1 = [dropBox, container];
 
-change_button.addEventListener("click", () => { });
+array.forEach((array_item) => {
+  array_item.forEach((el) => {
+    el.addEventListener("click", () => {
+      dropBox.style.display = "flex";
+    });
+  });
+});
 
-array.forEach((element) => {
+array1.forEach((element) => {
+  element.addEventListener("click", () => {
+    dropBox.style.display = "none";
+  });
   element.addEventListener("drop", (e) => {
     e.preventDefault();
     console.log(e.dataTransfer.files);
+    dropBox.style.display = "none";
   });
   element.addEventListener("dragover", (e) => {
     e.preventDefault();
@@ -17,40 +29,48 @@ array.forEach((element) => {
   element.addEventListener("dragleave", (e) => {
     e.preventDefault();
   });
+  element.addEventListener("dragend", (e) => {
+    e.preventDefault();
+  });
 });
 
-//DOM Elements
-const boxes = document.querySelectorAll(".gallery__item");
-let box_drag;
-let box_drop;
-let image;
-let temp;
-//Loop through each boxes element
-boxes.forEach((box) => {
-  //When a draggable element dragged over a box element
-  box.addEventListener("dragover", (e) => {
-    e.preventDefault(); //Prevent default behaviour
-    box_drag = box;
-    box.classList.add("hovered");
-  });
+function dragStart(e) {
+  dragSrcEl = this;
+  e.dataTransfer.effectAllowed = "move";
+  e.dataTransfer.setData("text/html", this.innerHTML);
+  this.style.opacity = "1";
+}
 
-  //When a draggable element leaves box element
-  box.addEventListener("dragleave", () => {
-    box.classList.remove("hovered");
-  });
+function dragOver(e) {
+  e.preventDefault();
+  e.dataTransfer.dropEffect = "move";
+  return false;
+}
 
-  //When a draggable element is dropped on a box elemen
-  box.addEventListener("drop", () => {
-    box_drop = box;
-    box.classList.remove("hovered");
-    // box.querySelectorAll(".actions")[0].classList.remove("hidden");
-    // box.querySelectorAll(".gallery__item-image")[0].classList.remove("hidden");
-    // box.querySelectorAll(".gallery__item-empty")[0].classList.add("hidden");
-    // box.querySelectorAll(".gallery__item-photo")[0].src = box_drag.querySelectorAll(".gallery__item-photo")[0].src
-    box.innerHTML = box_drag.innerHTML
-    console.log(box)
-    console.log(box_drag)
-    console.log(box_drop)
+function dragDrop(e) {
+  if (dragSrcEl != this) {
+    dragSrcEl.innerHTML = this.innerHTML;
+    this.innerHTML = e.dataTransfer.getData("text/html");
+  }
+  this.draggable = "true";
+  return false;
+}
 
+function dragEnd() {
+  const listItems = document.querySelectorAll(".gallery__item");
+  [].forEach.call(listItems, function(item) {
+    item.draggable = "true";
   });
+}
+
+function addEventsDragAndDrop(el) {
+  el.addEventListener("dragstart", dragStart, false);
+  el.addEventListener("dragover", dragOver, false);
+  el.addEventListener("drop", dragDrop, false);
+  el.addEventListener("dragend", dragEnd, false);
+}
+
+const listItems = document.querySelectorAll(".gallery__item");
+[].forEach.call(listItems, function(item) {
+  addEventsDragAndDrop(item);
 });
