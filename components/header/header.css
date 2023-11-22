@@ -49,7 +49,7 @@
 .user-info.signed-in {
   display: flex;
 }
-#login-button:hover .user-name{
+#login-button:hover .user-name {
   color: var(--primary-color);
 }
 .user-info img {
@@ -71,7 +71,6 @@
   transition: 0.2s ease-in-out;
   font-weight: 600;
   line-height: 130%; /* 15.6px */
-
 }
 .login-title.signed-in {
   display: none;
@@ -194,7 +193,7 @@
   stroke: var(--primary-color);
 }
 @media screen and (max-width: 1024px) {
-  .user-name{
+  .user-name {
     display: none;
   }
 }
@@ -229,7 +228,6 @@
     height: 10px;
   }
 }
-
 
 @media screen and (max-width: 568px) {
   .login-text {

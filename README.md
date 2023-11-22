@@ -6,4 +6,3 @@
 <div align="center">
   <small>Created and maintained by CLC-Frontend Monsters with ❤️.</small>
 </div>
-
