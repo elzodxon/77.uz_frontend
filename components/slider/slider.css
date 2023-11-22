@@ -1,12 +1,12 @@
 @import "../../assets/css/variables.css";
 
-.slider__wrapper {
+.slider {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.slider {
+.slider__wrapper {
   position: relative;
   overflow: hidden;
 }
@@ -107,10 +107,10 @@
   color: #fff;
 }
 
-.slider__prev {
+.prev-btn {
   left: 10px;
 }
 
-.slider__next {
+.next-btn {
   right: 10px;
 }

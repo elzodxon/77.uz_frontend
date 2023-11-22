@@ -3,89 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slider Component</title>
+    <title>Image Slider Component</title>
     <link rel="stylesheet" href="slider.css" />
     <script src="slider.js" defer></script>
   </head>
   <body>
-    <div class="slider__wrapper">
+    <main class="container">
       <div class="slider">
-        <div class="slider__container">
-          <div class="slider__item">
-            <img
-              class="slider__item-img"
-              src="../../assets/img/SliderImg1.png"
-              alt="img"
-            />
-          </div>
-          <div class="slider__item">
-            <img
-              class="slider__item-img"
-              src="../../assets/img/SliderImg1.png"
-              alt="img"
-            />
-          </div>
-          <div class="slider__item">
-            <img
-              class="slider__item-img"
-              src="../../assets/img/SliderImg1.png"
-              alt="img"
-            />
-          </div>
-          <div class="slider__item">
-            <img
-              class="slider__item-img"
-              src="../../assets/img/SliderImg1.png"
-              alt="img"
-            />
-          </div>
+        <div class="slider__wrapper">
+          <div class="slider__container" id="sliderContainer"></div>
+          <button class="slider__btn prev-btn" onclick="changeSlide(-1)">
+            ❮
+          </button>
+          <button class="slider__btn next-btn" onclick="changeSlide(1)">
+            ❯
+          </button>
         </div>
-        <button class="slider__btn slider__prev" onclick="prevSlide()">
-          ❮
-        </button>
-        <button class="slider__btn slider__next" onclick="nextSlide()">
-          ❯
-        </button>
-      </div>
 
-      <div class="slider__card-container">
-        <div class="slider__card" onclick="showSlide(0)">
-          <div class="slider__card-content">
-            <img
-              class="slider__card-img"
-              src="../../assets/img/SliderImg1.png"
-              alt="img"
-            />
-          </div>
-        </div>
-        <div class="slider__card" onclick="showSlide(1)">
-          <div class="slider__card-content">
-            <img
-              class="slider__card-img"
-              src="../../assets/img/SliderImg1.png"
-              alt="img"
-            />
-          </div>
-        </div>
-        <div class="slider__card" onclick="showSlide(2)">
-          <div class="slider__card-content">
-            <img
-              class="slider__card-img"
-              src="../../assets/img/SliderImg1.png"
-              alt="img"
-            />
-          </div>
-        </div>
-        <div class="slider__card" onclick="showSlide(3)">
-          <div class="slider__card-content">
-            <img
-              class="slider__card-img"
-              src="../../assets/img/SliderImg1.png"
-              alt="img"
-            />
-          </div>
-        </div>
+        <div class="slider__card-container" id="cardContainer"></div>
       </div>
-    </div>
+    </main>
   </body>
 </html>
