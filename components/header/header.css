@@ -174,12 +174,12 @@
   flex: 1;
 }
 
-#phone-number {
+#telephone-number {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.phone-number {
+.telephone-number {
   font-weight: 500;
   color: var(--black-color);
 }
