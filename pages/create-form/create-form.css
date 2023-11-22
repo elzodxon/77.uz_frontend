@@ -40,6 +40,9 @@
 .form-inner .form-group {
   flex: 1;
 }
+.select-menu {
+  padding-top:8px;
+}
 
 .textarea__product-name {
   border-radius: 8px;
