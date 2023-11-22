@@ -20,7 +20,7 @@ body.block {
 .search {
   width: 100%;
   position: sticky;
-  z-index: 90000000;
+  z-index: 100;
 }
 .search__label {
   position: relative;
@@ -43,7 +43,7 @@ body.block {
   top: 0;
   right: 0;
   background-color: #16191d;
-  z-index: 10000000;
+  z-index: 200;
   opacity: 0;
   transition: all 0.2s ease-in-out;
   width: 100vw;

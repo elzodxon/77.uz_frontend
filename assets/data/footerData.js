@@ -1,10 +1,10 @@
-const dataList = [
+export const dataList = [
   { text: 'Доска объявлений', link: '#' },
   { text: 'Условия пользования', link: '#' },
   { text: '+998 88 500 50 00', link: 'tel:+998885005000' },
 ];
 
-function generateListItem(item) {
+export function generateListItem(item) {
   return `
         <li class="footer-info__item">
           <a href="${item.link}" class="footer-info__link">
@@ -14,8 +14,3 @@ function generateListItem(item) {
         </li>
       `;
 }
-const ulElement = document.getElementById('footerList');
-
-dataList.forEach((item) => {
-  ulElement.innerHTML += generateListItem(item);
-});

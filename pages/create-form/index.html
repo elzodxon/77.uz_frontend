@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- ================== Favicon link ================== -->
+
+    <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg" />
+
     <!-- ================== Google Fonts links ================== -->
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
 
     <!-- ================== Css links ================== -->
 
@@ -21,19 +27,21 @@
     <link rel="stylesheet" href="./create-form.css" />
     <link rel="stylesheet" href="../../assets/css/variables.css" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
-    <link rel="stylesheet" href="../select/select.css" />
+    <link rel="stylesheet" href="../../components/select/select.css" />
+    <link rel="stylesheet" href="../../components/prev-page-header/index.css" />
 
     <!-- ================== Website Title ================== -->
     <title>Header Component</title>
   </head>
 
   <body>
+    <!-- Header Section -->
     <header class="header">
       <div class="container">
         <nav class="navbar">
           <!-- Left navigation bar -->
-          <ul class="navbar__list">
-            <li id="language-switcher" class="navbar__item">
+          <ul class="navbar-list">
+            <li id="language-switcher" class="navbar-list__item">
               <button class="language-button text-sm-subtitle">
                 <img
                   width="20"
@@ -41,7 +49,7 @@
                   src="https://77.uz/images/flag/ru.svg"
                   alt=""
                 />
-                <span>РУ</span>
+                <span>Русский</span>
                 <svg
                   width="24"
                   height="24"
@@ -67,7 +75,7 @@
                       src="https://77.uz/images/flag/ru.svg"
                       alt=""
                     />
-                    <span>РУ</span>
+                    <span>RU</span>
                   </li>
 
                   <li class="language-content__item">
@@ -82,11 +90,11 @@
                 </ul>
               </div>
             </li>
-            <li class="navbar__item phone-wrapper">
+            <li class="navbar-list__item phone-wrapper">
               <a
-                id="phone-number"
+                id="telephone-number"
                 href="tel:+998885005000"
-                class="navbar__item-link"
+                class="navbar-list__link"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -114,12 +122,12 @@
             <img src="../../assets/img/logo.svg" alt="" />
           </a>
           <!-- Right navigation bar -->
-          <ul class="navbar__list">
-            <li class="navbar__item">
+          <ul class="navbar-list">
+            <li class="navbar-list__item">
               <a
                 id="favorite"
                 href=""
-                class="navbar__item-link text-sm-subtitle"
+                class="navbar-list__link text-sm-subtitle"
               >
                 <svg
                   width="24"
@@ -136,11 +144,11 @@
                 <span class="favorite-title"> Избранные </span>
               </a>
             </li>
-            <li class="navbar__item divider"></li>
-            <li class="navbar__item">
+            <li class="navbar-list__item divider"></li>
+            <li class="navbar-list__item">
               <button
                 href=""
-                class="navbar__item-link login-button text-sm-subtitle"
+                class="navbar-list__link login-button text-sm-subtitle"
               >
                 <span class="login-title">
                   <span class="login-text">Войти </span>
@@ -186,29 +194,46 @@
         </nav>
       </div>
     </header>
-
-    <div class="bread-crumb create-form__bread-crumb">
-      <div class="container">
-        <ul class="bread-crumb__list">
-          <li class="bread-crumb__item">
-            <a href="" class="bread-crumb__link">Главная</a>
-          </li>
-          <li class="bread-crumb__item">
-            <a href="" class="bread-crumb__link">Профиль</a>
-          </li>
-          <li class="bread-crumb__item">
-            <a href="" class="bread-crumb__link active">Создать объявления</a>
-          </li>
-        </ul>
-      </div>
+    <!-- Bread-Crumb Section -->
+    <div class="container create-form__bread-crumb">
+      <ul class="bread-crumb">
+        <li class="bread-crumb__item">
+          <a href="" class="bread-crumb__link">Главная</a>
+        </li>
+        <li class="bread-crumb__item">
+          <a href="" class="bread-crumb__link">Профиль</a>
+        </li>
+        <li class="bread-crumb__item">
+          <a href="" class="bread-crumb__link active">Создать объявления</a>
+        </li>
+      </ul>
     </div>
-
+    <!-- Main Section -->
     <main class="main">
       <div class="create-form">
         <!-- Create Form -->
-        <form class="container">
-          <!-- Create Form Title -->
-          <h1 class="create-form__title">Создать объявления</h1>
+        <form class="create-form-container">
+          <!-- Create Form Header -->
+          <div class="prev-page__header">
+            <button class="prev-page__button">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4448 24L6.66699 16M6.66699 16L14.4448 8M6.66699 16H25.3337"
+                  stroke="black"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <h1 class="prev-page__title">Создать объявления</h1>
+          </div>
           <!-- Create Form Body -->
           <div class="create-form__body">
             <!-- Contact Info -->
@@ -338,7 +363,7 @@
                   <label class="label" for="product-name">Цена </label>
                   <input
                     class="input input__product-name"
-                    type="text"
+                    type="number"
                     name="product-name"
                     id="product-name"
                     placeholder="Введите название продукта"
@@ -351,7 +376,8 @@
               <p class="agreement-terms__description">
                 <span>BOX</span>
 
-                Даю свое согласие <a class="terms-link" href="">правилами пользования</a> и
+                Даю свое согласие
+                <a class="terms-link" href="">правилами пользования</a> и
                 обработки моих данных
               </p>
               <div class="agreement-terms__buttons">
@@ -363,7 +389,7 @@
         </form>
       </div>
     </main>
-
+    <!-- Footer Section -->
     <footer class="footer">
       <div class="container">
         <!-- Footer Logo -->
@@ -377,122 +403,7 @@
             облегчает покупки и продажи, связывая продавцов с потенциальными
             клиентами.
           </p>
-          <ul class="footer-info__list">
-            <li class="footer-info__item">
-              <a href="" class="footer-info__link">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_19_1588)">
-                    <path
-                      d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
-                      fill="#388FF3"
-                    />
-                    <path
-                      d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z"
-                      fill="#388FF3"
-                    />
-                    <path
-                      d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
-                      fill="#388FF3"
-                      fill-opacity="0.64"
-                    />
-                    <path
-                      d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
-                      fill="#388FF3"
-                      fill-opacity="0.48"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_19_1588">
-                      <rect width="16" height="16" rx="8" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                Доска объявлений
-              </a>
-            </li>
-            <li class="footer-info__item">
-              <a href="" class="footer-info__link">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_19_1588)">
-                    <path
-                      d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
-                      fill="#388FF3"
-                    />
-                    <path
-                      d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z"
-                      fill="#388FF3"
-                    />
-                    <path
-                      d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
-                      fill="#388FF3"
-                      fill-opacity="0.64"
-                    />
-                    <path
-                      d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
-                      fill="#388FF3"
-                      fill-opacity="0.48"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_19_1588">
-                      <rect width="16" height="16" rx="8" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                Условия пользования
-              </a>
-            </li>
-            <li class="footer-info__item">
-              <a href="" class="footer-info__link">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_19_1588)">
-                    <path
-                      d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
-                      fill="#388FF3"
-                    />
-                    <path
-                      d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z"
-                      fill="#388FF3"
-                    />
-                    <path
-                      d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
-                      fill="#388FF3"
-                      fill-opacity="0.64"
-                    />
-                    <path
-                      d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
-                      fill="#388FF3"
-                      fill-opacity="0.48"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_19_1588">
-                      <rect width="16" height="16" rx="8" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                +998 88 500 50 00
-              </a>
-            </li>
-          </ul>
+          <ul class="footer-info__list" id="footerList"></ul>
         </div>
       </div>
       <div class="development-company">
@@ -519,7 +430,9 @@
     <!-- ================== Javascript Links ================== -->
     <script src="../../components/inputs/inputs.js"></script>
     <script src="../../components/header/header.js"></script>
-    <script src="../select/select.js"></script>
+    <script src="../../components/footer/footer.js"></script>
+    <script src="../../components/select/select.js"></script>
     <script src="./layout.js"></script>
+    <script></script>
   </body>
 </html>

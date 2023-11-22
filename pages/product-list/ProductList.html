@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./ProductList.css" />
     <link rel="stylesheet" href="../../assets/css/variables.css" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
-
+    <link rel="stylesheet" href="../../components/pagination/pagination.css" />
     <!-- ================== Website Title ================== -->
     <title>Product List</title>
 </head>
@@ -111,9 +111,199 @@
             </nav>
         </div>
     </header>
-
+    <div class="bread-crumb">
+        <div class="container">
+            <ul class="bread-crumb__list">
+                <li class="bread-crumb__item">
+                    <a href="" class="bread-crumb__link">Главная</a>
+                </li>
+                <li class="bread-crumb__item">
+                    <a href="" class="bread-crumb__link">Электроника</a>
+                </li>
+                <li class="bread-crumb__item">
+                    <a href="" class="bread-crumb__link">Фены</a>
+                </li>
+                <li class="bread-crumb__item">
+                    <a href="" class="bread-crumb__link active">457 147</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <main class="main">
-        <div class="container"></div>
+        <div class="container">
+            <div class="row">
+                <div class="filter">
+                    <h2 class="filter__title">Фильтр</h2>
+                </div>
+                <div class="product__list">
+                    <h2 class="category__title">
+                        Laptops and tablets
+                    </h2>
+                    <div class="product-content-wrapper">
+                        <p class="product__count">
+                            156 объявлений
+                        </p>
+                        <div id="list__switcher" class="list__switcher">
+                            <iconify-icon class="filter_icon" icon="bi:filter"></iconify-icon>
+                            <iconify-icon  class="switcher-icon active"
+                                icon="bi:view-stacked"></iconify-icon>
+                            <iconify-icon class="switcher-icon" icon="bi:grid"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="row__card">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card__image">
+                                    <div class="card__icon">
+                                        <iconify-icon icon="tdesign:heart"></iconify-icon>
+                                    </div>
+                                    <img class="card__img" src="../../assets/img/Image.png" alt="" />
+                                </div>
+                                <div class="content-wrapper">
+                                    <span class="city">г. Ташкент</span>
+                                    <h3 class="product_name">Кепки Corneliani Diamond for him edition.</h3>
+                                    <p class="date">Вчера, 19:20</p>
+                                    <a class="phone__number" href="tel:+998712007007">+998 71 200 70 07</a>
+                                    <p class="product__cost">
+                                        2 599 000
+                                        <span> UZS </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card__image">
+                                    <div class="card__icon">
+                                        <iconify-icon icon="tdesign:heart"></iconify-icon>
+
+                                    </div>
+
+                                    <img class="card__img" src="../../assets/img/Image.png" alt="" />
+                                </div>
+                                <div class="content-wrapper">
+                                    <span class="city">г. Ташкент</span>
+                                    <h3 class="product_name">Кепки Corneliani Diamond for him edition.</h3>
+                                    <p class="date">Вчера, 19:20</p>
+                                    <a class="phone__number" href="tel:+998712007007">+998 71 200 70 07</a>
+                                    <p class="product__cost">
+                                        2 599 000
+                                        <span> UZS </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card__image">
+                                    <div class="card__icon">
+                                        <iconify-icon icon="tdesign:heart"></iconify-icon>
+
+                                    </div>
+
+                                    <img class="card__img" src="../../assets/img/Image.png" alt="" />
+                                </div>
+                                <div class="content-wrapper">
+                                    <span class="city">г. Ташкент</span>
+                                    <h3 class="product_name">Кепки Corneliani Diamond for him edition.</h3>
+                                    <p class="date">Вчера, 19:20</p>
+                                    <a class="phone__number" href="tel:+998712007007">+998 71 200 70 07</a>
+                                    <p class="product__cost">
+                                        2 599 000
+                                        <span> UZS </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card__image">
+                                    <div class="card__icon">
+                                        <iconify-icon icon="tdesign:heart"></iconify-icon>
+
+                                    </div>
+
+                                    <img class="card__img" src="../../assets/img/Image.png" alt="" />
+                                </div>
+                                <div class="content-wrapper">
+                                    <span class="city">г. Ташкент</span>
+                                    <h3 class="product_name">Кепки Corneliani Diamond for him edition.</h3>
+                                    <p class="date">Вчера, 19:20</p>
+                                    <a class="phone__number" href="tel:+998712007007">+998 71 200 70 07</a>
+                                    <p class="product__cost">
+                                        2 599 000
+                                        <span> UZS </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card__image">
+                                    <div class="card__icon">
+                                        <iconify-icon icon="tdesign:heart"></iconify-icon>
+
+                                    </div>
+
+                                    <img class="card__img" src="../../assets/img/Image.png" alt="" />
+                                </div>
+                                <div class="content-wrapper">
+                                    <span class="city">г. Ташкент</span>
+                                    <h3 class="product_name">Кепки Corneliani Diamond for him edition.</h3>
+                                    <p class="date">Вчера, 19:20</p>
+                                    <a class="phone__number" href="tel:+998712007007">+998 71 200 70 07</a>
+                                    <p class="product__cost">
+                                        2 599 000
+                                        <span> UZS </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row__card" ></div>
+
+                    <ul class="pagination">
+                        <li>
+                            <button class="pagination__button">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4 16.8L9.59998 12L14.4 7.19999" stroke="#63676C" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pagination__button">1</button>
+                        </li>
+                        <li><button class="pagination__button active">2</button></li>
+                        <li>
+                            <button class="pagination__button">3</button>
+                        </li>
+                        <li>
+                            <button class="pagination__button">4</button>
+                        </li>
+                        <li>
+                            <button class="pagination__button">5</button>
+                        </li>
+                        <li>
+                            <button class="pagination__button">6</button>
+                        </li>
+                        <li>
+                            <button class="pagination__button">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.60002 7.20001L14.4 12L9.60002 16.8" stroke="#63676C" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -226,7 +416,8 @@
     </footer>
 
     <!-- ================== Javascript Links ================== -->
-    <script src="./layout.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="./ProductList.js"></script>
 </body>
 
 </html>

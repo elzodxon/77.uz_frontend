@@ -1,11 +1,10 @@
+
 .bread-crumb {
-  width: 100%;
-}
-.bread-crumb__list {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 16px;
+  margin-top: 100px;
 }
 .bread-crumb__circle {
   width: 4px;
