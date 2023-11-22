@@ -1,7 +1,10 @@
-.bread-crumb {
-  width: 100%;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.bread-crumb__list {
+.bread-crumb {
   display: flex;
   align-items: center;
   justify-content: flex-start;
