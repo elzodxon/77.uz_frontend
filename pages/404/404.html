@@ -9,12 +9,16 @@
 
     <!-- ================== Css links ================== -->
 
-    <link rel="stylesheet" href="./header.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/buttons/buttons.css" />
+    <link rel="stylesheet" href="./ProductList.css" />
     <link rel="stylesheet" href="../../assets/css/variables.css" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="./404.css" />
 
     <!-- ================== Website Title ================== -->
-    <title>Header Component</title>
+    <title>Product List</title>
   </head>
 
   <body>
@@ -177,8 +181,33 @@
       </div>
     </header>
 
-    <main></main>
+    <main class="main">
+      <div class="container">
+        <div class="not-found-wrapper">
+          <img
+            class="not-found-wrapper__img"
+            src="../../assets/img/404.svg"
+            alt=""
+          />
+
+          <h1 class="not-found-wrapper__title">
+            Страница, которую вы ищете, не найдена
+          </h1>
+          <p class="not-found-wrapper__subtitle">
+            Нам жаль, но, похоже, мы потеряли эту страницу, но мы не хотим
+            терять вас.
+          </p>
+
+          <a href="../../index.html" class="btn not-found-wrapper__button"
+            >Вернуться на главную</a
+          >
+        </div>
+      </div>
+    </main>
+
+
+
     <!-- ================== Javascript Links ================== -->
-    <script src="./header.js"></script>
+    <script src="./layout.js"></script>
   </body>
 </html>

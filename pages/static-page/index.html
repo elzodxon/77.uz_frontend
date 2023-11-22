@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- ================== Google Fonts links ================== -->
+    <!-- Site Meta content -->
+    <meta name="theme-color" content="#fff" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
 
-    <!-- ================== Css links ================== -->
-
-    <link rel="stylesheet" href="../../pages/layout/layout.css" />
+    <title>Static Page</title>
+    <!-- Favicon Included -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
+    <!-- Main Stylesheet Included -->
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
     <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
     <link
       rel="stylesheet"
       href="../../components/bread-crumb/bread-crumb.css"
     />
-    <link rel="stylesheet" href="../../components/header/header.css" />
-    <link rel="stylesheet" href="../../components/inputs/inputs.css" />
-    <link rel="stylesheet" href="../../components/buttons/buttons.css" />
-    <link rel="stylesheet" href="./create-form.css" />
-    <link rel="stylesheet" href="../../assets/css/variables.css" />
-    <link rel="stylesheet" href="../../assets/css/normalize.css" />
-    <link rel="stylesheet" href="../select/select.css" />
-
-    <!-- ================== Website Title ================== -->
-    <title>Header Component</title>
+    <link rel="stylesheet" href="./static-page.css" />
   </head>
 
   <body>
+    <!-- Header Section -->
+
     <header class="header">
       <div class="container">
         <nav class="navbar">
@@ -187,183 +203,174 @@
       </div>
     </header>
 
-    <div class="bread-crumb create-form__bread-crumb">
+    <div class="bread-crumb">
       <div class="container">
         <ul class="bread-crumb__list">
           <li class="bread-crumb__item">
             <a href="" class="bread-crumb__link">Главная</a>
           </li>
           <li class="bread-crumb__item">
-            <a href="" class="bread-crumb__link">Профиль</a>
-          </li>
-          <li class="bread-crumb__item">
-            <a href="" class="bread-crumb__link active">Создать объявления</a>
+            <a href="./static-page.html" class="bread-crumb__link active"
+              >Условия пользования</a
+            >
           </li>
         </ul>
       </div>
     </div>
 
-    <main class="main">
-      <div class="create-form">
-        <!-- Create Form -->
-        <form class="container">
-          <!-- Create Form Title -->
-          <h1 class="create-form__title">Создать объявления</h1>
-          <!-- Create Form Body -->
-          <div class="create-form__body">
-            <!-- Contact Info -->
-            <div class="contact-info create-form__content">
-              <p class="contact-info__title form-title">Котактная информация</p>
-              <div class="contact-info__form create-wrapper">
-                <div class="form-group">
-                  <label class="label" for="fullName">Ф.И.О. </label>
-                  <input
-                    class="input input_text"
-                    type="text"
-                    name="name"
-                    id="fullName"
-                    placeholder="Введите вашу Ф.И.О."
-                  />
-                </div>
+    <main>
+      <section class="hero">
+        <div class="static-container">
+          <h1 class="title">Условия пользования</h1>
+          <div class="static-wrapper">
+            <p class="static-text">
+              В 77.uz мы ценим и уважаем вашу частную жизнь. В этой политике
+              конфиденциальности описываются типы личной информации, которую мы
+              собираем, как мы используем и защищаем эту информацию, а также
+              ваши права в отношении ваших персональных данных, когда вы
+              посещаете наш веб-сайт или пользуетесь нашими услугами. Получая
+              доступ к 77.uz или используя его, вы соглашаетесь с методами,
+              описанными в настоящей Политике конфиденциальности.
+            </p>
 
-                <div class="form-inner">
-                  <div class="form-group">
-                    <label class="label" for="phone-number"
-                      >Телефон номер
-                    </label>
-                    <div class="p-input-group">
-                      <span class="country-code">+998</span>
-                      <input
-                        class="input input_tel"
-                        type="tel"
-                        name="phone-number"
-                        id="phone-number"
-                        required
-                        inputmode="numeric"
-                        placeholder="(__) ___-__-__"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="label" for="fullName">Адресс</label>
-                    <input
-                      class="input input_text"
-                      type="text"
-                      name="name"
-                      id="fullName"
-                      placeholder="8897+PMP, Almachi Street, Тоshkent, Узбекистан"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Product Info -->
-            <div class="product-info create-form__content">
-              <p class="product-info__title form-title">Данные продукта</p>
-              <div class="product-info__form create-wrapper">
-                <div class="form-group">
-                  <label class="label" for="product-name"
-                    >Название продукта
-                  </label>
-                  <input
-                    class="input input__product-name"
-                    type="text"
-                    name="product-name"
-                    id="product-name"
-                    placeholder="Введите название продукта"
-                  />
-                </div>
-                <div class="form-group">
-                  <label class="label" for="product-name"
-                    >Название продукта
-                  </label>
-                  <textarea
-                    class="textarea textarea__product-name"
-                    type="text"
-                    name="product-name"
-                    id="product-name"
-                    placeholder="Введите описание"
-                  ></textarea>
-                </div>
-              </div>
-            </div>
-            <!-- Product Detail -->
-            <div class="product-detail create-form__content">
-              <p class="product-detail__title form-title">Категория</p>
-              <div class="product-detail__form create-wrapper">
-                <!-- Select Wrapper -->
-                <div class="select-wrapper">
-                  <label class="select-wrapper__label" for="">Категория</label>
-
-                  <div class="select-menu" id="">
-                    <div class="select-btn">
-                      <span class="sBtn-text">Выберите категорию</span>
-                      <span class="select-btn__arrow-icon"> </span>
-                    </div>
-
-                    <ul class="options">
-                      <li class="option">
-                        <span class="option-text">Г. Ташкент</span>
-                      </li>
-
-                      <li class="option">
-                        <span class="option-text">Андижан</span>
-                      </li>
-                      <li class="option">
-                        <span class="option-text">Бухара</span>
-                      </li>
-                      <li class="option">
-                        <span class="option-text">Навои </span>
-                      </li>
-
-                      <li class="option">
-                        <span class="option-text">Самарканд</span>
-                      </li>
-                      <li class="option">
-                        <span class="option-text">Джизак </span>
-                      </li>
-
-                      <li class="option">
-                        <span class="option-text">Джизак </span>
-                      </li>
-                      <li class="option">
-                        <span class="option-text">Джизак </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="label" for="product-name">Цена </label>
-                  <input
-                    class="input input__product-name"
-                    type="text"
-                    name="product-name"
-                    id="product-name"
-                    placeholder="Введите название продукта"
-                  />
-                </div>
-              </div>
-            </div>
-            <!-- Agreement terms -->
-            <div class="agreement-terms create-form__content">
-              <p class="agreement-terms__description">
-                <span>BOX</span>
-
-                Даю свое согласие <a class="terms-link" href="">правилами пользования</a> и
-                обработки моих данных
+            <div class="static-text-wrapper">
+              <span class="static-span">
+                Информация, которую мы собираем:
+              </span>
+              <p class="static-text">
+                1.1 Личная информация: Мы можем собирать личную информацию,
+                такую как ваше имя, адрес электронной почты, контактные данные и
+                другую соответствующую информацию, которую вы добровольно
+                предоставляете нам при регистрации, совершении покупки, подписке
+                на нашу рассылку новостей или взаимодействии с нашим веб-сайтом.
               </p>
-              <div class="agreement-terms__buttons">
-                <button class="btn btn-secondary">Отменить</button>
-                <button class="btn">Опубликовать</button>
-              </div>
+              <p class="static-text">
+                1.2 Информация об использовании: Мы собираем неличную информацию
+                о вашем взаимодействии с нашим веб-сайтом, такую как ваш
+                IP-адрес, тип браузера, операционная система, информация об
+                устройстве и посещенных страницах. Эта информация помогает нам
+                анализировать тенденции, администрировать сайт и улучшать
+                пользовательский опыт.
+              </p>
+            </div>
+
+            <div class="static-text-wrapper">
+              <span class="static-span">
+                Использование собранной информации:
+              </span>
+              <p class="static-text">
+                2.1 Предоставление услуг: Мы используем собранную информацию для
+                предоставления запрашиваемых вами услуг, таких как обработка
+                бронирований, предоставление поддержки клиентов и предоставление
+                соответствующей информации о наших продуктах, рекламных акциях и
+                обновлениях.
+              </p>
+              <p class="static-text">
+                2.2 Улучшение пользовательского опыта: Мы можем использовать
+                информацию для персонализации вашего опыта, понимания
+                предпочтений пользователей, оптимизации нашего веб-сайта и
+                предложения индивидуального контента, рекомендаций и рекламы,
+                основанных на ваших интересах.
+              </p>
+            </div>
+
+            <p class="static-text">
+              2.3 Связь: Мы можем связаться с вами по электронной почте или
+              другим каналам связи, чтобы ответить на запросы, оказать помощь
+              или проинформировать вас о важных обновлениях, предложениях и
+              рекламных акциях, связанных с 77.uz. У вас есть возможность
+              отказаться от подписки на рекламные сообщения в любое время.
+            </p>
+
+            <div class="static-text-wrapper">
+              <span class="static-span"> Обмен данными и их раскрытие: </span>
+              <p class="static-text">
+                3.1 Сторонние поставщики услуг: Мы можем привлекать доверенных
+                сторонних поставщиков услуг для выполнения определенных функций
+                от нашего имени, таких как обработка платежей, анализ данных или
+                предоставление маркетинговых сообщений. Эти поставщики имеют
+                доступ к личной информации исключительно для выполнения своих
+                задач и должны защищать данные в соответствии с применимым
+                законодательством.
+              </p>
+              <p class="static-text">
+                3.2 Требования законодательства: Мы можем раскрывать личную
+                информацию, если этого требует закон, нормативные акты, судебный
+                процесс или запрос правительства. Мы также можем обеспечивать
+                соблюдение наших условий предоставления услуг и расследовать
+                потенциальные нарушения, мошенничество или проблемы
+                безопасности.
+              </p>
+            </div>
+
+            <div class="static-text-wrapper">
+              <span class="static-span"> Безопасность данных: </span>
+              <p class="static-text">
+                Мы принимаем разумные меры для защиты вашей личной информации от
+                несанкционированного доступа, раскрытия, изменения или
+                уничтожения. Однако, пожалуйста, обратите внимание, что ни один
+                способ передачи или хранения данных через Интернет не является
+                на 100% безопасным. Таким образом, мы не можем гарантировать
+                абсолютную безопасность ваших данных, и вы предоставляете
+                информацию на свой страх и риск.
+              </p>
+            </div>
+
+            <div class="static-text-wrapper">
+              <span class="static-span"> Ваши права: </span>
+              <p class="static-text">
+                Вы имеете право получать доступ, обновлять, исправлять и удалять
+                вашу личную информацию, хранящуюся в 77.uz. Вы можете
+                воспользоваться этими правами, связавшись с нами, используя
+                контактные данные, указанные ниже. Мы приложим разумные усилия,
+                чтобы оперативно реагировать на ваши запросы, с учетом любых
+                юридических обязательств или законных интересов..
+              </p>
+            </div>
+
+            <div class="static-text-wrapper">
+              <span class="static-span">
+                Файлы cookie и технологии отслеживания:
+              </span>
+              <p class="static-text">
+                Мы используем файлы cookie и аналогичные технологии отслеживания
+                для улучшения вашего удобства просмотра, анализа моделей
+                использования и сбора статистической информации. Вы можете
+                управлять своими предпочтениями в отношении файлов cookie через
+                настройки своего браузера, хотя отключение файлов cookie может
+                ограничить определенную функциональность нашего веб-сайта.
+              </p>
+            </div>
+
+            <div class="static-text-wrapper">
+              <span class="static-span"> Ссылки на сторонние веб-сайты: </span>
+              <p class="static-text">
+                Наш веб-сайт может содержать ссылки на внешние веб-сайты или
+                сервисы, которые не управляются и не контролируются 77.uz.
+                Настоящая Политика конфиденциальности не распространяется на
+                действия этих сторонних веб-сайтов, и мы рекомендуем вам
+                ознакомиться с их соответствующими политиками
+                конфиденциальности.
+              </p>
+            </div>
+
+            <div class="static-text-wrapper">
+              <span class="static-span">
+                Неприкосновенность частной жизни детей:
+              </span>
+              <p class="static-text">
+                77.uz сознательно не собирает и не хранит личную информацию от
+                лиц младше 18 лет. Если нам станет известно, что мы собрали
+                личную информацию от ребенка без согласия родителей, мы
+                предпримем шаги по удалению этой информации из наших систем.
+              </p>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </section>
     </main>
 
+    <!-- Footer Section -->
     <footer class="footer">
       <div class="container">
         <!-- Footer Logo -->
@@ -516,10 +523,10 @@
       </div>
     </footer>
 
-    <!-- ================== Javascript Links ================== -->
-    <script src="../../components/inputs/inputs.js"></script>
+    <!-- Custom Js Included -->
+
     <script src="../../components/header/header.js"></script>
-    <script src="../select/select.js"></script>
-    <script src="./layout.js"></script>
+    <script src="../../components/footer/footer.js"></script>
+    <script src="../../components/bread-crumb/bread-crumb.js"></script>
   </body>
 </html>

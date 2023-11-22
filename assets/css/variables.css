@@ -1,7 +1,10 @@
 :root {
   /* --- color variables --- */
   --primary-color: #388ff3;
+  --primary-light-color: rgba(56, 143, 243, 0.08);
   --secondary-color: #8e9297;
+  --danger-color: #e93c47;
+  --danger-light-color: #FEF0F1;
   --text-primary-color: #151515;
   --black-color: #16191d;
   --gray-color: #eaedf0;
@@ -42,15 +45,7 @@
   margin: 0 auto;
   padding: 0 20px;
 }
-#call-link {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.call-number {
-  font-weight: 500;
-  color: var(--black-color);
-}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -61,3 +56,15 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@media screen and (max-width:480px) {
+  .title {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .text-sm-subtitle {
+    font-size: 12px;
+  }
+} 
