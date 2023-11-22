@@ -20,7 +20,9 @@
   font-weight: 700;
   font-family:Inter;
 }
-
+.country-code {
+  font-size:14px;
+}
 .label {
   font-size: 14px;
 }
