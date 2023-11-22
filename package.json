@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --ext .html,.js --fix .",
-    "format": "prettier --write ."
+    "lint": "eslint --ext .html,.js .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -20,13 +22,10 @@
   },
   "homepage": "https://github.com/elzodxon/77.uz_frontend#readme",
   "devDependencies": {
-    "@commitlint/cli": "^18.4.3",
-    "@commitlint/config-conventional": "^18.4.3",
     "eslint": "^8.54.0",
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.29.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.1.0",
+    "husky": "^8.0.0",
     "prettier": "^3.1.0"
   },
   "husky": {
