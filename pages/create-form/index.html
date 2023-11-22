@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../../assets/css/variables.css" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
     <link rel="stylesheet" href="../../components/select/select.css" />
+    <link rel="stylesheet" href="../../components/prev-page-header/index.css" />
 
     <!-- ================== Website Title ================== -->
     <title>Header Component</title>
@@ -207,7 +208,7 @@
         <!-- Create Form -->
         <form class="create-form-container">
           <!-- Create Form Header -->
-          <div class="create-form__header">
+          <div class="prev-page__header">
             <button class="prev-page__button">
               <svg
                 width="32"
@@ -225,7 +226,7 @@
                 />
               </svg>
             </button>
-            <h1 class="create-form__title">Создать объявления</h1>
+            <h1 class="prev-page__title">Создать объявления</h1>
           </div>
           <!-- Create Form Body -->
           <div class="create-form__body">
@@ -356,7 +357,7 @@
                   <label class="label" for="product-name">Цена </label>
                   <input
                     class="input input__product-name"
-                    type="text"
+                    type="number"
                     name="product-name"
                     id="product-name"
                     placeholder="Введите название продукта"
