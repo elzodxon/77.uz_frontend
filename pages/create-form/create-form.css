@@ -18,6 +18,7 @@
 
 .form-title {
   font-weight: 700;
+  font-family:Inter;
 }
 
 .label {
@@ -97,9 +98,6 @@
 .terms-link:hover {
   transition: all 0.2s ease-in-out;
   text-decoration: underline;
-}
-.select-menu {
-  padding-top: 8px;
 }
 
 @media only screen and (max-width: 480px) {
