@@ -81,11 +81,9 @@
   shu kodni qo'shing */
 
 .gallery {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 100%;
   gap: 20px;
 }
 
@@ -95,6 +93,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 } */
+@media screen and (max-width: 576px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 /* Todo: 
 .gallery__item {
@@ -109,9 +112,12 @@
 */
 .gallery__item {
   display: flex;
-  width: 31%;
-  height: 164px;
-  object-fit: contain;
+  flex: 1;
+  object-fit: cover;
+  min-height: 132px;
+}
+.gallery__item-image {
+  width: 100%;
 }
 /* .gallery__item-empty ga width: 100%; ni qoshib qoying */
 .gallery__item-empty {
@@ -121,6 +127,7 @@
   align-items: center;
   text-align: center;
   padding: 0px 6px;
+  width: 100%;
   font-size: 14px;
   border-radius: 10px;
   border: 1px dashed var(--greys-grey-3, #d5d8db);
@@ -185,6 +192,7 @@
   width: 32px;
   height: 32px;
   padding: 8px;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
