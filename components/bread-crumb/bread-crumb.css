@@ -25,7 +25,7 @@
   top: 50%;
   border-radius: 50%;
   transform: translate(50%, -50%);
-  background-color: #B8BBBD;
+  background-color: #b8bbbd;
 }
 
 .bread-crumb__link {
@@ -37,7 +37,7 @@
   line-height: 130%; /* 18.2px */
 }
 .bread-crumb__link.active {
-  color: #B8BBBD;
+  color: #b8bbbd;
   pointer-events: none;
 }
 
