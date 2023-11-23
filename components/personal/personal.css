@@ -31,7 +31,7 @@
   line-height: 130%
 }
 
-.p-info-list{
+.personal-info-list{
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -42,7 +42,7 @@
   /* padding:0 ; */
 }
 
-.p-info-list__item{
+.personal-info-list__item{
   display: flex;
   align-items: center;
   gap: 8px;
@@ -54,18 +54,18 @@
   cursor: pointer;
 }
 
-.p-info-list__item:active{
+.personal-info-list__item:active{
   background-color: #FFF;
   border: 1px solid rgba(17, 124, 245, 0.10);
   background: var(--White, #FFF);
   box-shadow: 0px 0px 24px 0px #117CF51A;
 }
 
-.p-info-list__item:active .p-info-list__item-icon{
+.personal-info-list__item:active .personal-info-list__item-icon{
   color: var(--primary-color);
 }
 
-.p-info-list__item-title{
+.personal-info-list__item-title{
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
