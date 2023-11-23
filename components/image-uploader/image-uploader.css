@@ -173,15 +173,3 @@ body {
 .hidden{
   display: none;
 }
-
-.whiter{
-  filter: opacity(0.5);
-}
-
-.hovered{
-  filter: opacity(1.0);
-}
-
-.full-opacity{
-  filter: opacity(1.0);
-}
