@@ -1,27 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Get all elements with the class "category-group"
-  var categoryGroups = document.querySelectorAll('.category-group');
+  const categoryGroups = document.querySelectorAll('.category-card');
+  const categoryDropdowns = document.querySelectorAll('.category-menu');
 
-  // Add click event listener to each category group
-  categoryGroups.forEach(function (categoryGroup) {
-    categoryGroup.addEventListener('click', function () {
-      // Toggle the "active" class on the clicked category group
-      this.classList.toggle('active');
+  for (let i = 0; i < categoryGroups.length; i++) {
+    categoryGroups[i].addEventListener('click', function () {
+      categoryDropdowns[i].classList.toggle('active');
     });
-
-    // Get all elements with the class "icon-inner" inside each category group
-    var iconInners = categoryGroup.querySelectorAll('.icon-inner');
-
-    // Add click event listener to each icon-inner
-    iconInners.forEach(function (iconInner) {
-      iconInner.addEventListener('click', function (event) {
-        event.stopPropagation(); // Prevents the click event from reaching the category-group
-
-        // Toggle the "active" class on the closest ".category-union__item__inner"
-        this.closest('.category-union__item__inner').classList.toggle('active');
-      });
-    });
-  });
+  }
 });
 
 const searchInput = document.querySelector('.search__input');
@@ -34,6 +20,22 @@ const favoriteProductPath = document.querySelectorAll('.favorite-path');
 for (let i = 0; i < favoriteProductButton.length; i++) {
   favoriteProductButton[i].addEventListener('click', () => {
     favoriteProductPath[i].classList.toggle('active');
+  });
+}
+
+const backButton = document.querySelectorAll('.dropdown-menu__back');
+const categoryMenuItem = document.querySelectorAll('.category-menu__item');
+const categoryMenuItem1 = document.querySelectorAll('.category-links');
+
+for (let i = 0; i < categoryMenuItem.length; i++) {
+  categoryMenuItem[i].addEventListener('click', function () {
+    categoryMenuItem1[i].classList.toggle('active');
+  });
+}
+for (let i = 0; i < backButton.length; i++) {
+  backButton[i].addEventListener('click', function (e) {
+    e.stopPropagation();
+    categoryMenuItem1[i].classList.remove('active');
   });
 }
 

@@ -10,7 +10,7 @@
 .card:hover .card__title {
   color: var(--primary-color);
 }
-.favorite__product-button svg path.active{
+.favorite__product-button svg path.active {
   fill: red;
 }
 .card__title {
@@ -86,6 +86,9 @@
 .card-content {
   padding: 20px;
 }
+.card__currency {
+  color: var(--primary-color);
+}
 
 .card__address {
   color: var(--greys-grey-0, #63676c);
@@ -96,4 +99,31 @@
   padding: 4px 8px;
   border-radius: 6px;
   background: var(--greys-grey-4, #eaedf0);
+}
+
+@media screen and (max-width: 768px) {
+  .card__address {
+    font-size: 12px;
+  }
+  .card__cost {
+    font-size: 16px;
+  }
+  .card__title {
+    font-size: 14px;
+  }
+  .card__product-date {
+    font-size: 10px;
+  }
+  .card__phone {
+    font-size: 12px;
+  }
+  .card__address {
+    font-size: 10px;
+  }
+  .card__currency {
+    font-size: 16px;
+  }
+  .card-content {
+    padding:8px;
+  }
 }

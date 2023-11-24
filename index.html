@@ -42,8 +42,8 @@
       <div class="container">
         <nav class="navbar">
           <!-- Left navigation bar -->
-          <ul class="navbar__list">
-            <li id="language-switcher" class="navbar__item">
+          <ul class="navbar-list">
+            <li id="language-switcher" class="navbar-list__item">
               <button class="language-button text-sm-subtitle">
                 <img
                   width="20"
@@ -51,7 +51,7 @@
                   src="https://77.uz/images/flag/ru.svg"
                   alt=""
                 />
-                <span>РУ</span>
+                <span>Русский</span>
                 <svg
                   width="24"
                   height="24"
@@ -77,7 +77,7 @@
                       src="https://77.uz/images/flag/ru.svg"
                       alt=""
                     />
-                    <span>РУ</span>
+                    <span>RU</span>
                   </li>
 
                   <li class="language-content__item">
@@ -92,11 +92,11 @@
                 </ul>
               </div>
             </li>
-            <li class="navbar__item phone-wrapper">
+            <li class="navbar-list__item phone-wrapper">
               <a
-                id="phone-number"
+                id="telephone-number"
                 href="tel:+998885005000"
-                class="navbar__item-link"
+                class="navbar-list__link"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -124,12 +124,12 @@
             <img src="../../assets/img/logo.svg" alt="" />
           </a>
           <!-- Right navigation bar -->
-          <ul class="navbar__list">
-            <li class="navbar__item">
+          <ul class="navbar-list">
+            <li class="navbar-list__item">
               <a
                 id="favorite"
                 href=""
-                class="navbar__item-link text-sm-subtitle"
+                class="navbar-list__link text-sm-subtitle"
               >
                 <svg
                   width="24"
@@ -146,11 +146,11 @@
                 <span class="favorite-title"> Избранные </span>
               </a>
             </li>
-            <li class="navbar__item divider"></li>
-            <li class="navbar__item">
+            <li class="navbar-list__item divider"></li>
+            <li class="navbar-list__item">
               <button
                 href=""
-                class="navbar__item-link login-button text-sm-subtitle"
+                class="navbar-list__link login-button text-sm-subtitle"
               >
                 <span class="login-title">
                   <span class="login-text">Войти </span>
@@ -198,9 +198,9 @@
     </header>
     <!-- Body Section -->
     <main class="main">
-      <div class="category-wrapper">
+      <div class="category-section">
         <div class="container">
-         <!-- Category Search -->
+          <!-- Category Search -->
           <form class="search" action="">
             <label class="search__label" for="searchNow">
               <svg
@@ -228,839 +228,848 @@
             </label>
           </form>
           <!-- Category Section -->
-        <div class="categoty-wrapper">
-          <div class="content-header">
-            <h2 class="content-header__title title">Категории</h2>
-            <p class="content-header__subtitle subtitle">
-              Вы можете найти все категории, которые вам нужны от покупателя
-            </p>
-          </div>
+          <div class="categoty-wrapper">
+            <div class="content-header">
+              <h2 class="content-header__title title">Категории</h2>
+              <p class="content-header__subtitle subtitle">
+                Вы можете найти все категории, которые вам нужны от покупателя
+              </p>
+            </div>
+            <ul class="category-list">
+              <li class="category-group" href="" role="button">
+                <div class="category-card">
+                  <div class="category-icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="CurrentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                        fill="CurrentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div class="category-card__text">
+                    <div class="category-card__description">
+                      <h2 class="category-name">Для женщин</h2>
+                      <p class="adds-amount">4147 объявлений</p>
+                    </div>
+                    <svg
+                      class="category-revealer"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 6L12 10L8 14"
+                        stroke="#B8BBBD"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <ul class="category-menu">
+                  <li class="category-menu__item">
+                    <span class="category-menu__title">
+                      <span>Смартфоны</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6L12 10L8 14"
+                          stroke="#B8BBBD"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div class="category-links">
+                      <div class="dropdown-menu__back-title">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.1998 22.4L12.7998 16L19.1998 9.60003"
+                            stroke="#B8BBBD"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
 
-          <ul class="category-list">
-            <li class="category-group" href="" role="button">
-              <div class="category-card">
-                <div class="category-icon">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="CurrentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                        <button class="dropdown-menu__back">back</button>
+                      </div>
+                      <ul class="category-links__menu">
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="category-menu__item">
+                    <span class="category-menu__title">
+                      <span>Смартфоны</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6L12 10L8 14"
+                          stroke="#B8BBBD"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div class="category-links">
+                      <div class="dropdown-menu__back-title">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.1998 22.4L12.7998 16L19.1998 9.60003"
+                            stroke="#B8BBBD"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+
+                        <button class="dropdown-menu__back">back</button>
+                      </div>
+                      <ul class="category-links__menu">
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="category-menu__item">
+                    <span class="category-menu__title">
+                      <span>Смартфоны</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6L12 10L8 14"
+                          stroke="#B8BBBD"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div class="category-links">
+                      <div class="dropdown-menu__back-title">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.1998 22.4L12.7998 16L19.1998 9.60003"
+                            stroke="#B8BBBD"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+
+                        <button class="dropdown-menu__back">back</button>
+                      </div>
+                      <ul class="category-links__menu">
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="category-menu__item">
+                    <span class="category-menu__title">
+                      <span>Смартфоны</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6L12 10L8 14"
+                          stroke="#B8BBBD"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div class="category-links">
+                      <div class="dropdown-menu__back-title">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.1998 22.4L12.7998 16L19.1998 9.60003"
+                            stroke="#B8BBBD"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+
+                        <button class="dropdown-menu__back">back</button>
+                      </div>
+                      <ul class="category-links__menu">
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="category-menu__item">
+                    <span class="category-menu__title">
+                      <span>Смартфоны</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6L12 10L8 14"
+                          stroke="#B8BBBD"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div class="category-links">
+                      <div class="dropdown-menu__back-title">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.1998 22.4L12.7998 16L19.1998 9.60003"
+                            stroke="#B8BBBD"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+
+                        <button class="dropdown-menu__back">back</button>
+                      </div>
+                      <ul class="category-links__menu">
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="category-group" href="" role="button">
+                <div class="category-card">
+                  <div class="category-icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
                       fill="CurrentColor"
-                    />
-                  </svg>
-                </div>
-                <div class="category-card__text">
-                  <div class="category-card__description">
-                    <h2 class="category-name">Для женщин</h2>
-                    <p class="adds-amount">4147 объявлений</p>
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                        fill="CurrentColor"
+                      />
+                    </svg>
                   </div>
-                  <svg
-                    class="category-revealer"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 6L12 10L8 14"
-                      stroke="#B8BBBD"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="category-card__text">
+                    <div class="category-card__description">
+                      <h2 class="category-name">Для женщин</h2>
+                      <p class="adds-amount">4147 объявлений</p>
+                    </div>
+                    <svg
+                      class="category-revealer"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 6L12 10L8 14"
+                        stroke="#B8BBBD"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              <ul class="category-union">
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  <ul class="category-union__item__inner">
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                  </ul>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-              </ul>
-            </li>
-            <li class="category-group" href="" role="button">
-              <div class="category-card">
-                <div class="category-icon">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="CurrentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                <ul class="category-menu">
+                  <li class="category-menu__item">
+                    <span class="category-menu__title">
+                      <span>Смартфоны</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6L12 10L8 14"
+                          stroke="#B8BBBD"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div class="category-links">
+                      <div class="dropdown-menu__back-title">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.1998 22.4L12.7998 16L19.1998 9.60003"
+                            stroke="#B8BBBD"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+
+                        <button class="dropdown-menu__back">back</button>
+                      </div>
+                      <ul class="category-links__menu">
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="category-group" href="" role="button">
+                <div class="category-card">
+                  <div class="category-icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
                       fill="CurrentColor"
-                    />
-                  </svg>
-                </div>
-                <div class="category-card__text">
-                  <div class="category-card__description">
-                    <h2 class="category-name">Для женщин</h2>
-                    <p class="adds-amount">4147 объявлений</p>
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                        fill="CurrentColor"
+                      />
+                    </svg>
                   </div>
-                  <svg
-                    class="category-revealer"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 6L12 10L8 14"
-                      stroke="#B8BBBD"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="category-card__text">
+                    <div class="category-card__description">
+                      <h2 class="category-name">Для женщин</h2>
+                      <p class="adds-amount">4147 объявлений</p>
+                    </div>
+                    <svg
+                      class="category-revealer"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 6L12 10L8 14"
+                        stroke="#B8BBBD"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              <ul class="category-union">
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  <ul class="category-union__item__inner">
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                  </ul>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-              </ul>
-            </li>
-            <li class="category-group" href="" role="button">
-              <div class="category-card">
-                <div class="category-icon">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="CurrentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                <ul class="category-menu">
+                  <li class="category-menu__item">
+                    <span class="category-menu__title">
+                      <span>Смартфоны</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6L12 10L8 14"
+                          stroke="#B8BBBD"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div class="category-links">
+                      <div class="dropdown-menu__back-title">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.1998 22.4L12.7998 16L19.1998 9.60003"
+                            stroke="#B8BBBD"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+
+                        <button class="dropdown-menu__back">back</button>
+                      </div>
+                      <ul class="category-links__menu">
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="category-group" href="" role="button">
+                <div class="category-card">
+                  <div class="category-icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
                       fill="CurrentColor"
-                    />
-                  </svg>
-                </div>
-                <div class="category-card__text">
-                  <div class="category-card__description">
-                    <h2 class="category-name">Для женщин</h2>
-                    <p class="adds-amount">4147 объявлений</p>
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                        fill="CurrentColor"
+                      />
+                    </svg>
                   </div>
-                  <svg
-                    class="category-revealer"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 6L12 10L8 14"
-                      stroke="#B8BBBD"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="category-card__text">
+                    <div class="category-card__description">
+                      <h2 class="category-name">Для женщин</h2>
+                      <p class="adds-amount">4147 объявлений</p>
+                    </div>
+                    <svg
+                      class="category-revealer"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 6L12 10L8 14"
+                        stroke="#B8BBBD"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              <ul class="category-union">
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  <ul class="category-union__item__inner">
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                  </ul>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-              </ul>
-            </li>
-            <li class="category-group" href="" role="button">
-              <div class="category-card">
-                <div class="category-icon">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="CurrentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                <ul class="category-menu">
+                  <li class="category-menu__item">
+                    <span class="category-menu__title">
+                      <span>Смартфоны</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6L12 10L8 14"
+                          stroke="#B8BBBD"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div class="category-links">
+                      <div class="dropdown-menu__back-title">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.1998 22.4L12.7998 16L19.1998 9.60003"
+                            stroke="#B8BBBD"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+
+                        <button class="dropdown-menu__back">back</button>
+                      </div>
+                      <ul class="category-links__menu">
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="category-group" href="" role="button">
+                <div class="category-card">
+                  <div class="category-icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
                       fill="CurrentColor"
-                    />
-                  </svg>
-                </div>
-                <div class="category-card__text">
-                  <div class="category-card__description">
-                    <h2 class="category-name">Для женщин</h2>
-                    <p class="adds-amount">4147 объявлений</p>
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                        fill="CurrentColor"
+                      />
+                    </svg>
                   </div>
-                  <svg
-                    class="category-revealer"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 6L12 10L8 14"
-                      stroke="#B8BBBD"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="category-card__text">
+                    <div class="category-card__description">
+                      <h2 class="category-name">Для женщин</h2>
+                      <p class="adds-amount">4147 объявлений</p>
+                    </div>
+                    <svg
+                      class="category-revealer"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 6L12 10L8 14"
+                        stroke="#B8BBBD"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              <ul class="category-union">
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  <ul class="category-union__item__inner">
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                  </ul>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-              </ul>
-            </li>
-            <li class="category-group" href="" role="button">
-              <div class="category-card">
-                <div class="category-icon">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="CurrentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                <ul class="category-menu">
+                  <li class="category-menu__item">
+                    <span class="category-menu__title">
+                      <span>Смартфоны</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6L12 10L8 14"
+                          stroke="#B8BBBD"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div class="category-links">
+                      <div class="dropdown-menu__back-title">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.1998 22.4L12.7998 16L19.1998 9.60003"
+                            stroke="#B8BBBD"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+
+                        <button class="dropdown-menu__back">back</button>
+                      </div>
+                      <ul class="category-links__menu">
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="category-group" href="" role="button">
+                <div class="category-card">
+                  <div class="category-icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
                       fill="CurrentColor"
-                    />
-                  </svg>
-                </div>
-                <div class="category-card__text">
-                  <div class="category-card__description">
-                    <h2 class="category-name">Для женщин</h2>
-                    <p class="adds-amount">4147 объявлений</p>
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                        fill="CurrentColor"
+                      />
+                    </svg>
                   </div>
-                  <svg
-                    class="category-revealer"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 6L12 10L8 14"
-                      stroke="#B8BBBD"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="category-card__text">
+                    <div class="category-card__description">
+                      <h2 class="category-name">Для женщин</h2>
+                      <p class="adds-amount">4147 объявлений</p>
+                    </div>
+                    <svg
+                      class="category-revealer"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 6L12 10L8 14"
+                        stroke="#B8BBBD"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              <ul class="category-union">
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  <ul class="category-union__item__inner">
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                  </ul>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-              </ul>
-            </li>
-            <li class="category-group" href="" role="button">
-              <div class="category-card">
-                <div class="category-icon">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="CurrentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                <ul class="category-menu">
+                  <li class="category-menu__item">
+                    <span class="category-menu__title">
+                      <span>Смартфоны</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6L12 10L8 14"
+                          stroke="#B8BBBD"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div class="category-links">
+                      <div class="dropdown-menu__back-title">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.1998 22.4L12.7998 16L19.1998 9.60003"
+                            stroke="#B8BBBD"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+
+                        <button class="dropdown-menu__back">back</button>
+                      </div>
+                      <ul class="category-links__menu">
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="category-group" href="" role="button">
+                <div class="category-card">
+                  <div class="category-icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
                       fill="CurrentColor"
-                    />
-                  </svg>
-                </div>
-                <div class="category-card__text">
-                  <div class="category-card__description">
-                    <h2 class="category-name">Для женщин</h2>
-                    <p class="adds-amount">4147 объявлений</p>
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                        fill="CurrentColor"
+                      />
+                    </svg>
                   </div>
-                  <svg
-                    class="category-revealer"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 6L12 10L8 14"
-                      stroke="#B8BBBD"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="category-card__text">
+                    <div class="category-card__description">
+                      <h2 class="category-name">Для женщин</h2>
+                      <p class="adds-amount">4147 объявлений</p>
+                    </div>
+                    <svg
+                      class="category-revealer"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 6L12 10L8 14"
+                        stroke="#B8BBBD"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              <ul class="category-union">
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
+                <ul class="category-menu">
+                  <li class="category-menu__item">
+                    <span class="category-menu__title">
+                      <span>Смартфоны</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6L12 10L8 14"
+                          stroke="#B8BBBD"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div class="category-links">
+                      <div class="dropdown-menu__back-title">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.1998 22.4L12.7998 16L19.1998 9.60003"
+                            stroke="#B8BBBD"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+
+                        <button class="dropdown-menu__back">back</button>
+                      </div>
+                      <ul class="category-links__menu">
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="category-group" href="" role="button">
+                <div class="category-card">
+                  <div class="category-icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="CurrentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z"
+                        fill="CurrentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div class="category-card__text">
+                    <div class="category-card__description">
+                      <h2 class="category-name">Для женщин</h2>
+                      <p class="adds-amount">4147 объявлений</p>
+                    </div>
+                    <svg
+                      class="category-revealer"
                       width="20"
                       height="20"
                       viewBox="0 0 20 20"
@@ -1075,114 +1084,66 @@
                         stroke-linejoin="round"
                       />
                     </svg>
-                  </span>
-                  <ul class="category-union__item__inner">
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                    <li class="category-union__item__inner__item">
-                      Аксессуары
-                    </li>
-                  </ul>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-                <li class="category-union__item">
-                  Смартфоны
-                  <span
-                    ><svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 6L12 10L8 14"
-                        stroke="#B8BBBD"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+                  </div>
+                </div>
+                <ul class="category-menu">
+                  <li class="category-menu__item">
+                    <span class="category-menu__title">
+                      <span>Смартфоны</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6L12 10L8 14"
+                          stroke="#B8BBBD"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div class="category-links">
+                      <div class="dropdown-menu__back-title">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.1998 22.4L12.7998 16L19.1998 9.60003"
+                            stroke="#B8BBBD"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+
+                        <button class="dropdown-menu__back">back</button>
+                      </div>
+                      <ul class="category-links__menu">
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                        <li class="category-links__item">Аксессуары</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="container">
-        
-
         <!-- Ads Section -->
 
-        <div class="ads-wrapper">
+        <div class="ads-section">
           <div class="content-header">
             <h2 class="content-header__title title">Объявления</h2>
             <p class="content-header__subtitle subtitle">
@@ -1211,7 +1172,7 @@
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
                   <img
-                    src="./pages/product list/card/asset/images/Image.png"
+                    src="./assets/img/Image.png"
                     alt=""
                   />
                 </div>
@@ -1248,7 +1209,7 @@
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
                   <img
-                    src="./pages/product list/card/asset/images/Image.png"
+                    src="./assets/img/Image.png"
                     alt=""
                   />
                 </div>
@@ -1285,7 +1246,7 @@
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
                   <img
-                    src="./pages/product list/card/asset/images/Image.png"
+                    src="./assets/img/Image.png"
                     alt=""
                   />
                 </div>
@@ -1322,7 +1283,7 @@
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
                   <img
-                    src="./pages/product list/card/asset/images/Image.png"
+                    src="./assets/img/Image.png"
                     alt=""
                   />
                 </div>
@@ -1359,7 +1320,7 @@
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
                   <img
-                    src="./pages/product list/card/asset/images/Image.png"
+                    src="./assets/img/Image.png"
                     alt=""
                   />
                 </div>
@@ -1396,7 +1357,7 @@
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
                   <img
-                    src="./pages/product list/card/asset/images/Image.png"
+                    src="./assets/img/Image.png"
                     alt=""
                   />
                 </div>
@@ -1433,7 +1394,7 @@
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
                   <img
-                    src="./pages/product list/card/asset/images/Image.png"
+                    src="./assets/img/Image.png"
                     alt=""
                   />
                 </div>
@@ -1470,7 +1431,7 @@
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
                   <img
-                    src="./pages/product list/card/asset/images/Image.png"
+                    src="./assets/img/Image.png"
                     alt=""
                   />
                 </div>
@@ -1507,7 +1468,7 @@
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
                   <img
-                    src="./pages/product list/card/asset/images/Image.png"
+                    src="./assets/img/Image.png"
                     alt=""
                   />
                 </div>
@@ -1544,7 +1505,7 @@
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
                   <img
-                    src="./pages/product list/card/asset/images/Image.png"
+                    src="./assets/img/Image.png"
                     alt=""
                   />
                 </div>
@@ -1721,5 +1682,6 @@
 
     <!-- Custom Js Included -->
     <script src="js/custom.js"></script>
+    <script src="components/header/header.js"></script>
   </body>
 </html>
