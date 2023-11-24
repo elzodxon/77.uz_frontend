@@ -20,8 +20,7 @@ body.block {
 .search {
   width: 100%;
   position: sticky;
-  z-index: 1500
-  ;
+  z-index: 1500;
 }
 .search__label {
   position: relative;
@@ -211,11 +210,12 @@ body.block {
 }
 .category-menu {
   position: absolute;
-  width:100%;
+  width: 100%;
   padding: 24px 27px;
   border-radius: 0 12px;
   display: none;
   left: 0;
+  grid-area: 1/-1;
   background-color: white;
   filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.02));
   border: 1px solid #eaedf0;
@@ -358,8 +358,6 @@ body.block {
 .category-links.active .category-links__item {
   display: block;
 }
-
-
 
 .category-links.active .icon-inner {
   display: inline-block;
