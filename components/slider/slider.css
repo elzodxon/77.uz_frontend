@@ -32,26 +32,26 @@
   height: 100%;
 }
 
-.slider__card-container {
+.navigation-card {
   display: flex;
   overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
 
-.slider__card-container::-webkit-scrollbar {
+.navigation-card::-webkit-scrollbar {
   width: 8px;
 }
 
-.slider__card-container::-webkit-scrollbar-thumb {
+.navigation-card::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
 
-.slider__card-container::-webkit-scrollbar-track {
+.navigation-card::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
-.slider__card {
+.navigation-wrapper {
   width: 110px;
   height: 64px;
   display: flex;
@@ -65,7 +65,7 @@
   position: relative;
 }
 
-.slider__card-content {
+.navigation-wrapper__content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -73,12 +73,12 @@
   justify-content: center;
 }
 
-.slider__card-img {
+.navigation-wrapper__img {
   border-radius: 8px;
   height: 100%;
 }
 
-.slider__card.active .slider__card-content::before {
+.navigation-wrapper.active .navigation-wrapper__content::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -87,7 +87,7 @@
   border-radius: 6px;
 }
 
-.slider__btn {
+.slider__wrapper button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -102,7 +102,7 @@
   transition: 0.3s all ease-in-out;
 }
 
-.slider__btn:hover {
+.slider__wrapper button:hover {
   background-color: var(--primary-color);
   color: #fff;
 }

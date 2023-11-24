@@ -32,18 +32,18 @@ function renderSliderImages() {
 }
 
 function renderSliderCards() {
-  const container = document.getElementById("cardContainer");
+  const container = document.getElementById("navigationContainer");
 
   images.forEach((imageUrl, index) => {
     const card = document.createElement("div");
-    card.classList.add("slider__card");
+    card.classList.add("navigation-wrapper");
     card.onclick = () => showSlide(index);
 
     const cardContent = document.createElement("div");
-    cardContent.classList.add("slider__card-content");
+    cardContent.classList.add("navigation-wrapper__content");
 
     const img = document.createElement("img");
-    img.classList.add("slider__card-img");
+    img.classList.add("navigation-wrapper__img");
     img.src = imageUrl;
     img.alt = `img ${index + 1}`;
 
@@ -55,7 +55,7 @@ function renderSliderCards() {
 
 function showSlide(index) {
   const container = document.getElementById("sliderContainer");
-  const cards = document.querySelectorAll(".slider__card");
+  const cards = document.querySelectorAll(".navigation-wrapper");
 
   const itemWidth = container.offsetWidth;
   container.style.transform = `translateX(-${index * itemWidth}px)`;
