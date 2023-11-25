@@ -20,6 +20,7 @@ body.block {
 .search {
   width: 100%;
   position: sticky;
+  z-index: 1400;
 }
 .search__label {
   position: relative;
@@ -49,7 +50,7 @@ body.block {
 }
 .blocker.active {
   display: block;
-  opacity: 0.56;
+  opacity: 0.36;
 }
 .search__label svg {
   display: block;
@@ -365,6 +366,9 @@ body.block {
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(3, 1fr);
+}
+.address-image {
+  padding-top: 8px;
 }
 .footer {
   margin-top: 72px;

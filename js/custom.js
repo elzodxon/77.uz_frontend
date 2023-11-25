@@ -23,8 +23,8 @@ for (let i = 0; i < favoriteProductButton.length; i++) {
 
 searchInput.addEventListener('focus', (e) => {
   e.preventDefault();
-  blocker.classList.toggle('active');
-  document.body.classList.toggle('block');
+  blocker.classList.add('active');
+  document.body.classList.add('active');
 });
 blocker.addEventListener('click', () => {
   document.body.classList.remove('block');
@@ -388,7 +388,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const registration = document.querySelector('#registration'),
   registrationBtn = document.querySelector('#registration-btn'),
-  registrationCloseBtn = document.querySelector('#registration-close-btn');
+  registrationCloseBtn = document.querySelector('#registration-close-btn'),
+  submitBtn = document.querySelector('#submitBtn'),
+  addressSubmitBtn = document.querySelector('#address-submit-btn'),
+  continueBtn = document.querySelector('#continue-registration'),
+  toLoginBtn = document.querySelector('#to-login'),
+  addressBtn = document.querySelector('#address-password');
 
 const forgetPassword = document.querySelector('#forget-password'),
   forgetBtn = document.querySelector('#icon-close'),
@@ -398,21 +403,43 @@ const allModals = document.querySelectorAll('.center');
 
 const input = document.querySelectorAll('.input');
 
-function chechInputValue() {
+const chechInputValue = () => {
   for (let i = 0; i < input.length; i++) {
-    if (input[i].length === 0) {
-      input[i].classList.add('active');
+    if (input[i].value.length === 0) {
+      input[i].classList.add('error');
     } else {
-      input[i].classList.remove('active');
+      input[i].classList.remove('error');
     }
   }
-}
+};
 
 registrationBtn.addEventListener('click', (e) => {
   e.preventDefault();
   registration.classList.toggle('active');
   blocker.classList.toggle('active');
   document.body.classList.toggle('block');
+});
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  chechInputValue();
+});
+
+continueBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  chechInputValue();
+
+  for (let i = 0; i < allModals.length; i++) {
+    allModals[i].classList.remove('active');
+  }
+
+  addressBtn.classList.add('active');
+});
+toLoginBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  for (let i = 0; i < allModals.length; i++) {
+    allModals[i].classList.remove('active');
+  }
+  registration.classList.toggle('active');
 });
 
 registrationCloseBtn.addEventListener('click', (e) => {
@@ -485,6 +512,7 @@ blocker.addEventListener('click', () => {
 
 applicationCloseBtn.addEventListener('click', () => {
   blocker.classList.remove('active');
+  application.classList.remove('active');
   document.body.classList.remove('block');
 });
 
@@ -495,5 +523,50 @@ document.addEventListener('keydown', function (e) {
       blocker.classList.remove('active');
       document.body.classList.remove('block');
     }
+  }
+});
+
+// -------------------------------------------------THIRD BTN JS-----------------------------------------------------------//
+
+const acceptance = document.querySelector('#acceptance'),
+  acceptBtn = document.querySelector('#accept'),
+  closeBtnThird = document.querySelector('#close-icon'),
+  registeredBtn = document.querySelector('#registered-button');
+
+acceptBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  for (let i = 0; i < allModals.length; i++) {
+    allModals[i].classList.remove('active');
+  }
+
+  blocker.classList.add('active');
+  document.body.classList.add('block');
+
+  acceptance.classList.add('active');
+});
+
+closeBtnThird.addEventListener('click', () => {
+  acceptance.classList.remove('active');
+  blocker.classList.remove('active');
+  document.body.classList.remove('block');
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    if (acceptance.classList.contains('active')) {
+      acceptance.classList.remove('active');
+      blocker.classList.remove('active');
+      document.body.classList.remove('block');
+    }
+  }
+});
+
+registeredBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  blocker.classList.remove('active');
+  document.body.classList.remove('block');
+  for (let i = 0; i < allModals.length; i++) {
+    allModals[i].classList.remove('active');
   }
 });
