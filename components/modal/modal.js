@@ -126,6 +126,7 @@ const registration = document.querySelector("#registration"),
         forgetPassword.classList.remove("active")
     );
 
+    
     registrationCloseBtn.addEventListener("click", () =>
     registration.classList.remove("active")
 );

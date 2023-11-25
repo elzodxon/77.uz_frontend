@@ -20,7 +20,6 @@ body.block {
 .search {
   width: 100%;
   position: sticky;
-  z-index: 1500;
 }
 .search__label {
   position: relative;

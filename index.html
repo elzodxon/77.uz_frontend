@@ -18,10 +18,12 @@
     <!-- ================== Google Fonts links ================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
     <!-- Main Stylesheet Included -->
     <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
@@ -29,6 +31,7 @@
     <link rel="stylesheet" href="./assets/css/variables.css" />
     <link rel="stylesheet" href="./components/footer/footer.css" />
     <link rel="stylesheet" href="./pages/product list/card/card.css" />
+    <link rel="stylesheet" href="./components/modal/modal.css" />
     <link
       rel="stylesheet"
       href="./components/content-header/content-header.css"
@@ -36,7 +39,168 @@
   </head>
 
   <body>
+    <!-- Background blocker -->
     <div class="blocker"></div>
+
+    <!-- Modals Section -->
+
+    <!-- 1) Login Modal -->
+
+    <div class="center registration-modal" id="registration">
+      <div class="modal">
+        <div class="modal-header modal-wrapper">
+          <h2 class="modal-title">Добро пожаловать!</h2>
+          <button class="close-btn close" id="registration-close-btn">
+            <img
+              class="close-img"
+              src="../../assets/img/modal-img/close-icon.svg"
+              alt="Close icon"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <h3 class="modal-subtitle modal-subtitlee">
+          Войти в систему чтобы торговать в системе
+        </h3>
+        <form class="modal-body">
+          <div class="form-group">
+            <label class="label modal-label" for="log-in">Логин </label>
+            <input
+              class="input input__login"
+              type="text"
+              name="log-in"
+              id="log-in"
+              placeholder="Введите логин"
+              required
+            />
+          </div>
+          <!-- Password -->
+          <div class="form-group password-modal">
+            <label class="label modal-label" for="password">Пароль </label>
+            <div class="password-input-wrapper">
+              <input
+                class="input input-password"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Введите пароль"
+                required
+              />
+              <div class="closed-eye"></div>
+              <a href="#" id="icon-close">Забыли пароль?</a>
+            </div>
+          </div>
+          <div class="modal-footer fifth">
+            <button type="submit" class="btn third-btn">Войти</button>
+            <p class="modal-text">Хотите стать продавцом?</p>
+            <button id="application-btn" type="submit" class="btn btn-outline">
+              Подать заявку
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 2) Forget Password Modal -->
+
+    <div class="center forget-modal" id="forget-password">
+      <div class="modal">
+        <div class="modal-header">
+          <button class="close-btn" id="btn-close">
+            <img
+              class="close-img"
+              src="../../assets/img/modal-img/close-icon.svg"
+              alt="Close icon"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <div class="modal-body modal-fourth">
+          <h3 class="modal-subtitle">
+            Забыли пароль? Для восстановления пароля обратитесь администратору
+          </h3>
+        </div>
+        <div class="modal-footer fourth">
+          <a class="fourth-btn btn" href="tel:998974504500">
+            +998 97 450 45 00</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- 3) Aplication Modal -->
+
+    <div class="center" id="application">
+      <div class="modal">
+        <div class="modal-header modal-wrapper">
+          <h2 class="modal-title">Подать заявку</h2>
+          <button class="close-btn close" id="application-close-btn">
+            <img
+              class="close-img"
+              src="../../assets/img/modal-img/close-icon.svg"
+              alt="Close icon"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <h3 class="modal-subtitle modal-subtitlee">
+          Войти в систему чтобы торговать в системе
+        </h3>
+        <form class="modal-body">
+          <!-- Name -->
+          <div class="form-group">
+            <label class="label modal-label" for="fullName">Ф.И.О. </label>
+            <input
+              class="input input_text"
+              type="text"
+              name="name"
+              id="fullName"
+              placeholder="Введите вашу Ф.И.О."
+            />
+          </div>
+          <!-- Product name -->
+          <div class="form-group">
+            <label class="label modal-label" for="product-name"
+              >Название продукта
+            </label>
+            <input
+              class="input input__product-name"
+              type="text"
+              name="product-name"
+              id="product-name"
+              placeholder="Введите название продукта"
+            />
+          </div>
+          <!-- Phone number -->
+          <div class="form-group">
+            <label class="label modal-label" for="phone-number"
+              >Телефон номер
+            </label>
+            <div class="p-input-group">
+              <span class="country-code">+998</span>
+              <input
+                class="input input_tel"
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                required
+                inputmode="numeric"
+                placeholder="  (__) ___-__-__"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="modal-footer seven">
+          <button class="btn third-btn">Продолжить</button>
+          <p class="seven-text">Если вы продавец, войдите на платформу</p>
+          <button id="registration" class="btn btn-outline">Войти</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <button class="btn" id="registration-btn">Button</button> -->
+
     <!-- Header Section -->
     <header class="header">
       <div class="container">
@@ -150,6 +314,7 @@
             <li class="navbar-list__item">
               <button
                 href=""
+                id="registration-btn"
                 class="navbar-list__link login-button text-sm-subtitle"
               >
                 <span class="login-title">
@@ -196,6 +361,7 @@
         </nav>
       </div>
     </header>
+
     <!-- Body Section -->
     <main class="main">
       <div class="category-section">
@@ -726,10 +892,7 @@
                 </button>
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
-                  <img
-                    src="./assets/img/Image.png"
-                    alt=""
-                  />
+                  <img src="./assets/img/Image.png" alt="" />
                 </div>
                 <div class="card-content">
                   <span class="card__address">Tashkent</span>
@@ -763,10 +926,7 @@
                 </button>
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
-                  <img
-                    src="./assets/img/Image.png"
-                    alt=""
-                  />
+                  <img src="./assets/img/Image.png" alt="" />
                 </div>
                 <div class="card-content">
                   <span class="card__address">Tashkent</span>
@@ -800,10 +960,7 @@
                 </button>
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
-                  <img
-                    src="./assets/img/Image.png"
-                    alt=""
-                  />
+                  <img src="./assets/img/Image.png" alt="" />
                 </div>
                 <div class="card-content">
                   <span class="card__address">Tashkent</span>
@@ -837,10 +994,7 @@
                 </button>
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
-                  <img
-                    src="./assets/img/Image.png"
-                    alt=""
-                  />
+                  <img src="./assets/img/Image.png" alt="" />
                 </div>
                 <div class="card-content">
                   <span class="card__address">Tashkent</span>
@@ -874,10 +1028,7 @@
                 </button>
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
-                  <img
-                    src="./assets/img/Image.png"
-                    alt=""
-                  />
+                  <img src="./assets/img/Image.png" alt="" />
                 </div>
                 <div class="card-content">
                   <span class="card__address">Tashkent</span>
@@ -911,10 +1062,7 @@
                 </button>
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
-                  <img
-                    src="./assets/img/Image.png"
-                    alt=""
-                  />
+                  <img src="./assets/img/Image.png" alt="" />
                 </div>
                 <div class="card-content">
                   <span class="card__address">Tashkent</span>
@@ -948,10 +1096,7 @@
                 </button>
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
-                  <img
-                    src="./assets/img/Image.png"
-                    alt=""
-                  />
+                  <img src="./assets/img/Image.png" alt="" />
                 </div>
                 <div class="card-content">
                   <span class="card__address">Tashkent</span>
@@ -985,10 +1130,7 @@
                 </button>
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
-                  <img
-                    src="./assets/img/Image.png"
-                    alt=""
-                  />
+                  <img src="./assets/img/Image.png" alt="" />
                 </div>
                 <div class="card-content">
                   <span class="card__address">Tashkent</span>
@@ -1022,10 +1164,7 @@
                 </button>
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
-                  <img
-                    src="./assets/img/Image.png"
-                    alt=""
-                  />
+                  <img src="./assets/img/Image.png" alt="" />
                 </div>
                 <div class="card-content">
                   <span class="card__address">Tashkent</span>
@@ -1059,10 +1198,7 @@
                 </button>
                 <div class="card__img">
                   <i clas class="fa card__icon-like fa-heart-o"></i>
-                  <img
-                    src="./assets/img/Image.png"
-                    alt=""
-                  />
+                  <img src="./assets/img/Image.png" alt="" />
                 </div>
                 <div class="card-content">
                   <span class="card__address">Tashkent</span>
@@ -1238,5 +1374,6 @@
     <!-- Custom Js Included -->
     <script src="js/custom.js"></script>
     <script src="components/header/header.js"></script>
+    <script src="components/inputs/inputs.js"></script>
   </body>
 </html>

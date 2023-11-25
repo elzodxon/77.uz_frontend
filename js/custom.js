@@ -5,6 +5,16 @@ const favoriteProductButton = document.querySelectorAll(
 );
 const favoriteProductPath = document.querySelectorAll('.favorite-path');
 
+searchInput.addEventListener('focus', (e) => {
+  e.preventDefault();
+  blocker.classList.toggle('active');
+  document.body.classList.toggle('block');
+});
+blocker.addEventListener('click', () => {
+  document.body.classList.remove('block');
+  blocker.classList.remove('active');
+});
+
 for (let i = 0; i < favoriteProductButton.length; i++) {
   favoriteProductButton[i].addEventListener('click', () => {
     favoriteProductPath[i].classList.toggle('active');
@@ -346,7 +356,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const windowWidth = window.innerWidth;
   console.log(`Window Width: ${windowWidth}px`);
 
-
   categoryList.innerHTML = generateCategoryCards(jsonData);
 
   const backButton = document.querySelectorAll('.dropdown-menu__back');
@@ -372,5 +381,119 @@ document.addEventListener('DOMContentLoaded', function () {
       e.stopPropagation();
       categoryMenuItem1[i].classList.remove('active');
     });
+  }
+});
+
+// -------------------------------------------------Sixth BTN JS-----------------------------------------------------------//
+
+const registration = document.querySelector('#registration'),
+  registrationBtn = document.querySelector('#registration-btn'),
+  registrationCloseBtn = document.querySelector('#registration-close-btn');
+
+const forgetPassword = document.querySelector('#forget-password'),
+  forgetBtn = document.querySelector('#icon-close'),
+  closeBtnFourth = document.querySelector('#btn-close');
+
+const allModals = document.querySelectorAll('.center');
+
+const input = document.querySelectorAll('.input');
+
+function chechInputValue() {
+  for (let i = 0; i < input.length; i++) {
+    if (input[i].length === 0) {
+      input[i].classList.add('active');
+    } else {
+      input[i].classList.remove('active');
+    }
+  }
+}
+
+registrationBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  registration.classList.toggle('active');
+  blocker.classList.toggle('active');
+  document.body.classList.toggle('block');
+});
+
+registrationCloseBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  registration.classList.remove('active');
+  blocker.classList.remove('active');
+  document.body.classList.remove('block');
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    if (registration.classList.contains('active')) {
+      registration.classList.remove('active');
+      blocker.classList.remove('active');
+      document.body.classList.remove('block');
+    }
+  }
+});
+
+forgetBtn.addEventListener('click', () => {
+  for (let i = 0; i < allModals.length; i++) {
+    allModals[i].classList.remove('active');
+  }
+
+  forgetPassword.classList.add('active');
+});
+
+blocker.addEventListener('click', () => {
+  forgetPassword.classList.remove('active');
+  blocker.classList.remove('active');
+});
+
+closeBtnFourth.addEventListener('click', () => {
+  forgetPassword.classList.remove('active');
+  blocker.classList.remove('active');
+  document.body.classList.remove('block');
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    if (forgetPassword.classList.contains('active')) {
+      forgetPassword.classList.remove('active');
+      blocker.classList.remove('active');
+      document.body.classList.remove('block');
+    }
+  }
+});
+
+// -------------------------------------------------Seventh BTN JS-----------------------------------------------------------//
+
+const application = document.querySelector('#application'),
+  applicationBtn = document.querySelector('#application-btn'),
+  applicationCloseBtn = document.querySelector('#application-close-btn');
+
+applicationBtn.addEventListener('click', () => {
+  for (let i = 0; i < allModals.length; i++) {
+    allModals[i].classList.remove('active');
+  }
+
+  application.classList.add('active');
+  blocker.classList.add('active');
+  document.body.classList.add('block');
+});
+
+blocker.addEventListener('click', () => {
+  blocker.classList.remove('active');
+  document.body.classList.remove('block');
+  application.classList.remove('active');
+});
+
+applicationCloseBtn.addEventListener('click', () => {
+  blocker.classList.remove('active');
+  document.body.classList.remove('block');
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    if (application.classList.contains('active')) {
+      application.classList.remove('active');
+      blocker.classList.remove('active');
+      document.body.classList.remove('block');
+    }
   }
 });

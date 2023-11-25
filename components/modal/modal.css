@@ -1,21 +1,9 @@
 @import "../inputs/inputs.css";
 @import "../buttons/buttons.css";
 
-.center {
-    position: relative; 
-    height: 70vh;
-    width: 100%;
-    background-color: #e3f2fd;
-}
 
-.overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    pointer-events: none;
-}
+
+
 
 .modal {
     display: flex;
@@ -45,6 +33,7 @@
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%);
+    z-index: 6000;
 }
 
  .modal-btn, .modal {
@@ -135,7 +124,19 @@
     margin-bottom: 20px;
 }
 
-
+#icon-close {
+    color: var(--Main-blue, #388FF3);
+    text-align: right;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    padding-top: 8px;
+    line-height: 130%; /* 15.6px */
+}
+#icon-close:hover {
+    text-decoration: underline;
+}
 .modal-title {
     margin: 0;
     text-align: center;
