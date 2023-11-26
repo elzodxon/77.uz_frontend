@@ -19,17 +19,26 @@ document.addEventListener('DOMContentLoaded', function () {
 // Phone Number
 
 // Use let for variables that may be reassigned
-let phoneNumberInput = document.getElementById('phone-number');
+let phoneNumberInput = document.querySelectorAll('.input_tel');
 
 // Attach the formatPhoneNumber function to the input event
-phoneNumberInput.addEventListener('input', function () {
-  formatPhoneNumber(phoneNumberInput);
-});
 
-// Attach the handleBackspace function to the keydown event
-phoneNumberInput.addEventListener('keydown', function (event) {
-  handleBackspace(event, phoneNumberInput);
-});
+for (let i = 0; i < phoneNumberInput.length; i++) {
+  phoneNumberInput[i].addEventListener('input', function () {
+    formatPhoneNumber(phoneNumberInput[i]);
+  });
+}
+
+for (let i = 0; i < phoneNumberInput.length; i++) {
+  phoneNumberInput[i].addEventListener('keydown', function (event) {
+    handleBackspace(event, phoneNumberInput[i]);
+  });
+}
+
+// // Attach the handleBackspace function to the keydown event
+// phoneNumberInput.addEventListener('keydown', function (event) {
+//   handleBackspace(event, phoneNumberInput);
+// });
 
 function formatPhoneNumber(input) {
   // Remove non-numeric characters

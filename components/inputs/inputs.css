@@ -106,7 +106,7 @@ body {
    position: absolute;
    top: 0;
    left: 0;
-   transform: translate(30%, 52%);
+   transform: translate(30%, 55%);
    z-index: 1;
 }
 .error {
