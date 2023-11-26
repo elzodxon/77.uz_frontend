@@ -1,0 +1,26 @@
+.product-single {
+  height: 100vh;
+  background-color: #f0f3f7;
+  padding-top: 120px;
+}
+
+.product-single__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-single__details {
+  display: flex;
+  width: 882px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.product-single__info {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+}

@@ -15,15 +15,20 @@
     />
     <link rel="stylesheet" href="../../assets/css/variables.css" />
     <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/slider/slider.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/product-info/ProductInfo.css"
+    />
     <link rel="stylesheet" href="../../main.css" />
     <link rel="stylesheet" href="../../components/buttons/buttons.css" />
-
     <!-- Script Link -->
     <script src="../../components/header/header.js" defer></script>
+    <script src="../../components/slider/slider.js" defer></script>
   </head>
   <body>
     <!-- Header Section -->
-
     <header class="header">
       <div class="container">
         <nav class="navbar">
@@ -158,5 +163,61 @@
         </nav>
       </div>
     </header>
+    <main class="product-single">
+      <div class="container">
+        <div class="product-single__wrapper">
+          <div class="product-single__details">
+            <div class="product-single__info">
+              <div class="slider">
+                <div class="slider__wrapper">
+                  <div class="slider__container" id="sliderContainer"></div>
+                  <button class="prev-btn" onclick="changeSlide(-1)">❮</button>
+                  <button class="next-btn" onclick="changeSlide(1)">❯</button>
+                </div>
+                <div class="navigation-card" id="navigationContainer"></div>
+              </div>
+            </div>
+            <div class="product-single__info">
+              <div class="product-info">
+                <h2 class="product-info__title">Описание</h2>
+                <br />
+                <p class="product-info__description">
+                  Мультистайлер Dyson Airwrap Complete Long в цветe Vinca blue и
+                  Rose Бесплатная доставка по ТАШКЕНТУ!!! 100% оригинал С новыми
+                  цилиндрами для завивки и волнения в обоих направлениях,
+                  щетками для контроля и придания формы, а также
+                  многофункциональной сушилкой для разглаживания Coanda для
+                  сушки,разглаживания и сокрытия разлетающихся волос 3 В
+                  комплектацию входят 30-мм цилиндрические насадки Airwrap для
+                  завивки, 40-мм цилиндрические насадки Airwrap для завивки
+                  <br />
+                  <br />
+                  Круглая щетка для создания объема, Мягкая щетка для
+                  выпрямления, Жесткая щетка для выпрямление Особенности фена В
+                  комплекте Чехол для хранения Термостойкий коврик Щетка для
+                  очистки Для длинных до груди или более длинных волос. Пoдxoдит
+                  для разных типoв вoлoc.
+                  <br />
+                  <br />
+                  Сoздaние лoконoв и волн. Pазглаживaниe. Высушивaние вoлос. Без
+                  экстpeмальныx тeмперaтур. В последней версии 2022 Года
+                  появились новые насадки, такие как: - обновлённый цилиндр для
+                  завивки, предусматривающий поток воздуха в двух направлениях,
+                  то есть больше не нужно переставлять насадки. По вопросам
+                  пишите в телеграм на номер
+                </p>
+              </div>
+            </div>
+            <div class="product-single__info">
+              <h2>Продавец</h2>
+            </div>
+          </div>
+          <div class="product-single__sidebar">
+            <div class="product-single__info">Info</div>
+            <div class="product-single__info">Map</div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
