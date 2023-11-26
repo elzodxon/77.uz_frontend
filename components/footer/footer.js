@@ -1,6 +1,6 @@
 const dataList = [
   { text: 'Доска объявлений', link: '#' },
-  { text: 'Условия пользования', link: '../../static-page.html' },
+  { text: 'Условия пользования', link: './pages/static-page/index.html' },
   { text: '+998 88 500 50 00', link: 'tel:+998885005000' },
 ];
 
