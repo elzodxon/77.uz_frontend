@@ -89,4 +89,12 @@
   .product-single__wrapper {
     flex-wrap: wrap;
   }
+
+  .product-single__seller {
+    display: none;
+  }
+
+  .product-single__sidebar {
+    width: 100%;
+  }
 }
