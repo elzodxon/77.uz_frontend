@@ -1,15 +1,16 @@
 const dropBox = document.querySelector("#dropbox");
 const container = document.querySelector("#dropbox__container");
 const img_elements = document.querySelectorAll("img");
-// const chooseTexts = document.querySelectorAll(".choose-text");
-// const emptyCards = document.querySelectorAll(".gallery__item-empty");
-// const array = [chooseTexts, emptyCards];
 const array1 = [dropBox, container];
 
 function render() {
   const chooseTexts = document.querySelectorAll(".choose-text");
   const emptyCards = document.querySelectorAll(".gallery__item-empty");
   const array = [chooseTexts, emptyCards];
+
+  img_elements.forEach(element => {
+    element.draggable = false
+  })
 
   array.forEach((array_item) => {
     array_item.forEach((el) => {
