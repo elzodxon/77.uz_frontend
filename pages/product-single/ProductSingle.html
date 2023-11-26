@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Single</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- Style Links -->
     <link rel="stylesheet" href="ProductSingle.css" />
     <link rel="stylesheet" href="../../components/header/header.css" />
@@ -15,15 +19,32 @@
     />
     <link rel="stylesheet" href="../../assets/css/variables.css" />
     <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/slider/slider.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/address-info/addressInfo.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/bread-crumb/bread-crumb.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/profile-info/profileInfo.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/product-info/ProductInfo.css"
+    />
     <link rel="stylesheet" href="../../main.css" />
     <link rel="stylesheet" href="../../components/buttons/buttons.css" />
-
     <!-- Script Link -->
     <script src="../../components/header/header.js" defer></script>
+    <script src="../../components/slider/slider.js" defer></script>
   </head>
   <body>
     <!-- Header Section -->
-
     <header class="header">
       <div class="container">
         <nav class="navbar">
@@ -158,5 +179,296 @@
         </nav>
       </div>
     </header>
+    <main class="product-single">
+      <div class="container">
+        <div class="bread-crumb">
+          <div class="container">
+            <ul class="bread-crumb__list">
+              <li class="bread-crumb__item">
+                <a href="" class="bread-crumb__link">Главная</a>
+              </li>
+              <li class="bread-crumb__item">
+                <a href="" class="bread-crumb__link">Электроника</a>
+              </li>
+              <li class="bread-crumb__item">
+                <a href="" class="bread-crumb__link">Фены</a>
+              </li>
+              <li class="bread-crumb__item">
+                <a href="" class="bread-crumb__link active">457 147</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="product-single__wrapper">
+          <div class="product-single__details">
+            <div class="product-single__info">
+              <div class="slider">
+                <div class="slider__wrapper">
+                  <div class="slider__container" id="sliderContainer"></div>
+                  <button class="prev-btn" onclick="changeSlide(-1)">❮</button>
+                  <button class="next-btn" onclick="changeSlide(1)">❯</button>
+                </div>
+                <div class="navigation-card" id="navigationContainer"></div>
+              </div>
+              <h2 class="product-desctiption">
+                Стайлер для волос Dyson Airwrap Complete Long в цветe Vinca blue
+                и Rose
+              </h2>
+              <div class="price-info">
+                <h2 class="price">6 520 000 <span>UZS</span></h2>
+                <button class="btn">+998 71 200 70 07</button>
+              </div>
+            </div>
+            <div class="product-single__info">
+              <div class="product-info">
+                <h2 class="product-info__title">Описание</h2>
+                <br />
+                <p class="product-info__description">
+                  Мультистайлер Dyson Airwrap Complete Long в цветe Vinca blue и
+                  Rose Бесплатная доставка по ТАШКЕНТУ!!! 100% оригинал С новыми
+                  цилиндрами для завивки и волнения в обоих направлениях,
+                  щетками для контроля и придания формы, а также
+                  многофункциональной сушилкой для разглаживания Coanda для
+                  сушки,разглаживания и сокрытия разлетающихся волос 3 В
+                  комплектацию входят 30-мм цилиндрические насадки Airwrap для
+                  завивки, 40-мм цилиндрические насадки Airwrap для завивки
+                  <br />
+                  <br />
+                  Круглая щетка для создания объема, Мягкая щетка для
+                  выпрямления, Жесткая щетка для выпрямление Особенности фена В
+                  комплекте Чехол для хранения Термостойкий коврик Щетка для
+                  очистки Для длинных до груди или более длинных волос. Пoдxoдит
+                  для разных типoв вoлoc.
+                  <br />
+                  <br />
+                  Сoздaние лoконoв и волн. Pазглаживaниe. Высушивaние вoлос. Без
+                  экстpeмальныx тeмперaтур. В последней версии 2022 Года
+                  появились новые насадки, такие как: - обновлённый цилиндр для
+                  завивки, предусматривающий поток воздуха в двух направлениях,
+                  то есть больше не нужно переставлять насадки. По вопросам
+                  пишите в телеграм на номер
+                </p>
+              </div>
+            </div>
+            <div class="product-single__seller">
+              <h2>Продавец</h2>
+              <div class="product-single__seller-wrapper">
+                <div class="profile__info">
+                  <img
+                    class="profile__info-img"
+                    src="../../assets/img/ProfilePhoto.png"
+                    alt="img"
+                  />
+                  <div class="profile__info-details">
+                    <h2 class="profile__info-name">
+                      Малика Абдурахимова <br />
+                      <span>ID: 1326547</span>
+                    </h2>
+                  </div>
+                </div>
+                <p>+998 71 200 70 07</p>
+              </div>
+            </div>
+          </div>
+          <div class="product-single__sidebar">
+            <div class="product-single__info">
+              <div class="profile__info">
+                <img
+                  class="profile__info-img"
+                  src="../../assets/img/ProfilePhoto.png"
+                  alt="img"
+                />
+                <div class="profile__info-details">
+                  <h2 class="profile__info-name">
+                    Малика Абдурахимова <br />
+                    <span>ID: 1326547</span>
+                  </h2>
+                </div>
+              </div>
+              <h2 class="profile__info-number">+998 71 200 70 07</h2>
+              <button class="btn btn-secondary">Все объявления</button>
+            </div>
+            <div class="product-single__info">
+              <div class="address__info">
+                <div class="address__info-section">
+                  <h2 class="address__info-title">Местоположение</h2>
+                  <p class="address__info-devider"></p>
+                  <p class="address__info-text">
+                    <img src="../../assets/img/marker.svg" alt="Markerx" />
+                    г.Ташкент, ул.Олмачи 1-й проезд 13 дом
+                  </p>
+                </div>
+                <img
+                  class="address__info-map"
+                  src="../../assets/img/Map.png"
+                  alt="map"
+                />
+              </div>
+            </div>
+            <button class="btn btn-light-primary">
+              Скачать в галерею
+              <i class="btn__icon fa fa-cloud-download" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="container">
+          <!-- Footer Logo -->
+          <a class="footer-logo" href="">
+            <img
+              width="122"
+              height="64"
+              src="../../assets/img/logo.svg"
+              alt=""
+            />
+          </a>
+          <!-- Footer Info -->
+          <div class="footer-info">
+            <p class="footer-info__text subtitle text-center">
+              77.uz marketplace - это виртуальная платформа в Узбекистане,
+              которая облегчает покупки и продажи, связывая продавцов с
+              потенциальными клиентами.
+            </p>
+            <ul class="footer-info__list">
+              <li class="footer-info__item">
+                <a href="" class="footer-info__link">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_19_1588)">
+                      <path
+                        d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
+                        fill="#388FF3"
+                      />
+                      <path
+                        d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z"
+                        fill="#388FF3"
+                      />
+                      <path
+                        d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
+                        fill="#388FF3"
+                        fill-opacity="0.64"
+                      />
+                      <path
+                        d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
+                        fill="#388FF3"
+                        fill-opacity="0.48"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_19_1588">
+                        <rect width="16" height="16" rx="8" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  Доска объявлений
+                </a>
+              </li>
+              <li class="footer-info__item">
+                <a href="" class="footer-info__link">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_19_1588)">
+                      <path
+                        d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
+                        fill="#388FF3"
+                      />
+                      <path
+                        d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z"
+                        fill="#388FF3"
+                      />
+                      <path
+                        d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
+                        fill="#388FF3"
+                        fill-opacity="0.64"
+                      />
+                      <path
+                        d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
+                        fill="#388FF3"
+                        fill-opacity="0.48"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_19_1588">
+                        <rect width="16" height="16" rx="8" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  Условия пользования
+                </a>
+              </li>
+              <li class="footer-info__item">
+                <a href="" class="footer-info__link">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_19_1588)">
+                      <path
+                        d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
+                        fill="#388FF3"
+                      />
+                      <path
+                        d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z"
+                        fill="#388FF3"
+                      />
+                      <path
+                        d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
+                        fill="#388FF3"
+                        fill-opacity="0.64"
+                      />
+                      <path
+                        d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
+                        fill="#388FF3"
+                        fill-opacity="0.48"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_19_1588">
+                        <rect width="16" height="16" rx="8" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  +998 88 500 50 00
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="development-company">
+          <div class="development-company-wrapper container">
+            <p class="development-company__text copyright">
+              <strong>© 77.uz</strong>
+              <span> 2023. Все права защищены</span>
+            </p>
+
+            <a
+              href="https://uic.group/"
+              target="_blank"
+              class="development-company__link"
+            >
+              <span>
+                <img src="../../assets/img/uic.group.svg" alt="" />
+              </span>
+              <img src="../../assets/img/uic.group.text.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
