@@ -7,13 +7,6 @@
    box-sizing: border-box;
    outline: inherit;
 }
-html,
-body {
-   background-color: #fff;
-   height: 100%;
-   box-sizing: inherit;
-}
-
 .form {
    font-family: var(--application_ff);
    font-size: 14px;
