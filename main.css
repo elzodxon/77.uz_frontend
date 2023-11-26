@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 @import "./components/buttons/buttons.css";
 @import "./components/bread-crumb/bread-crumb.css";
 @import "./components/footer/footer.css";
@@ -23,7 +21,7 @@ main {
   padding-bottom: 82px;
 }
 
-.static-container {
+.static {
   max-width: 822px;
   width: 100%;
   margin: 0 auto;
@@ -48,4 +46,3 @@ main {
   font-weight: 400;
   line-height: 20px; /* 142.857% */
 }
->>>>>>> e6853c56229c75f3cc5e581e8513055f987592f7

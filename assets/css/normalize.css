@@ -1,7 +1,5 @@
 @charset "utf-8";
-
-/*** Fonts Face CSS ***/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import './fonts.css';
 
 /**** CSS Variables ****/
 
@@ -41,7 +39,7 @@ body {
   background-color: #f0f3f7;
 }
 
-img {
+img { 
   border: 0px !important;
   outline: none;
   width: 100%;
