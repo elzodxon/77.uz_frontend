@@ -1,4 +1,3 @@
-
 .bread-crumb {
   display: flex;
   align-items: center;
@@ -14,7 +13,7 @@
 .bread-crumb__item {
   position: relative;
 }
-.bread-crumb__item:not(:first-child):before {
+.bread-crumb__item:not(:first-child)::before {
   content: '';
   position: absolute;
   top: 0;
@@ -24,7 +23,10 @@
   top: 50%;
   border-radius: 50%;
   transform: translate(50%, -50%);
-  background-color: #B8BBBD;
+  background-color: #b8bbbd;
+}
+.bread-crumb__item.item-active::before {
+  background-color: var(--primary-color);
 }
 
 .bread-crumb__link {
@@ -36,7 +38,7 @@
   line-height: 130%; /* 18.2px */
 }
 .bread-crumb__link.active {
-  color: #B8BBBD;
+  color: #b8bbbd;
   pointer-events: none;
 }
 
