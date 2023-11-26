@@ -5,6 +5,9 @@
   gap: 20px;
   padding-top: 24px;
 }
+.bread-crumb {
+  padding-top: 100px;
+}
 .create-form__content {
   padding: 20px;
   border-radius: 12px;
