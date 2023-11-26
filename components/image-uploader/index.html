@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="./image-uploader.css" />
   <link rel="stylesheet" href="../../assets/css/variables.css" />
-  <link rel="stylesheet" href="../../assets/css/normalize.css" />
+  <!-- <link rel="stylesheet" href="../../assets/css/normalize.css" /> -->
 
   <!-- ================== Website Title ================== -->
   <title>Document</title>
@@ -33,46 +33,6 @@
   <div class="container">
     <div class="wrapper">
       <div class="gallery">
-        <div class="gallery__item" draggable="true">
-          <div class="gallery__item-empty hidden" draggable="false">
-            <img src="../../assets/img/image-add.svg" />
-            <h3>Перетащите изображение сюда</h3>
-            <span>Перетащите свое изображение сюда или
-              <p class="choose-text">выберите</p>
-            </span>
-          </div>
-          <div class="gallery__item-image">
-            <div class="actions">
-              <button class="actions__button change-button">
-                <img class="actions__button-image" draggable="false" src="../../assets/img/change-button.svg" />
-              </button>
-              <button class="actions__button">
-                <img class="actions__button-image" src="../../assets/img/trash-button.svg" />
-              </button>
-            </div>
-            <img class="gallery__item-photo" src="car.png" draggable="false" />
-          </div>
-        </div>
-        <div class="gallery__item">
-          <div class="gallery__item-empty" draggable="false">
-            <img src="../../assets/img/image-add.svg" />
-            <h3>Перетащите изображение сюда</h3>
-            <span>Перетащите свое изображение сюда или
-              <p class="choose-text">выберите</p>
-            </span>
-          </div>
-          <div class="gallery__item-image hidden">
-            <div class="actions hidden">
-              <button  draggable="false" class="actions__button">
-                <img class="actions__button-image" draggable="false" src="../../assets/img/change-button.svg" />
-              </button>
-              <button class="actions__button">
-                <img class="actions__button-image" src="../../assets/img/trash-button.svg" />
-              </button>
-            </div>
-            <img class="gallery__item-photo" draggable="false" src="" />
-          </div>
-        </div>
         <div class="gallery__item">
           <div class="gallery__item-empty hidden" draggable="false">
             <img src="../../assets/img/image-add.svg" />
@@ -93,6 +53,28 @@
             <img class="gallery__item-photo" draggable="false" src="car.png" />
           </div>
         </div>
+
+        <div class="gallery__item">
+          <div class="gallery__item-empty" draggable="false">
+            <img src="../../assets/img/image-add.svg" />
+            <h3>Перетащите изображение сюда</h3>
+            <span>Перетащите свое изображение сюда или
+              <p class="choose-text">выберите</p>
+            </span>
+          </div>
+          <div class="gallery__item-image hidden">
+            <div class="actions hidden">
+              <button draggable="false" class="actions__button">
+                <img class="actions__button-image" draggable="false" src="../../assets/img/change-button.svg" />
+              </button>
+              <button class="actions__button">
+                <img class="actions__button-image" src="../../assets/img/trash-button.svg" />
+              </button>
+            </div>
+            <img class="gallery__item-photo" draggable="false" src="" />
+          </div>
+        </div>
+
       </div>
     </div>
 
