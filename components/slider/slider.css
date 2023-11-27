@@ -9,6 +9,7 @@
 .slider__wrapper {
   position: relative;
   overflow: hidden;
+  border-radius: 16px;
 }
 
 .slider__container {

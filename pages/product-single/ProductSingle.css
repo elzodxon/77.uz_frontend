@@ -28,6 +28,10 @@
   line-height: 130%;
 }
 
+.price {
+  font-size: 28px;
+}
+
 .price span {
   color: var(--primary-color);
   font-size: 18px;
