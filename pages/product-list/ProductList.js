@@ -1,5 +1,8 @@
+// Todo: Copy paste qilganga yarasha, chopish kerak:)))
 const languageButton = document.querySelector('.language-button')
 const languageContent = document.querySelector('.language-content')
+
+
 const switchers = document.querySelectorAll(
   '.product-list__view-icons .product-list__view-icon',
 )
@@ -38,9 +41,12 @@ languageButton.addEventListener('click', (e) => {
   languageContent.classList.toggle('active')
 })
 
+// Todo: Refactor this function
 // ------------------- Style switcher ----------------------
 switchers.forEach(function (switcher) {
   switcher.addEventListener('click', function () {
+
+      // Todo: remove unnecessary loop
     switchers.forEach(function (switcher) {
       switcher.classList.remove('active')
     })
@@ -49,9 +55,12 @@ switchers.forEach(function (switcher) {
 
     var view = switcher.getAttribute('data-view')
 
+      // Todo: remove unnecessary loop
     view_wraps.forEach(function (view) {
       view.style.display = 'none'
     })
+
+      // Todo: render only one view
     if (view == 'list-view') {
       list_view.style.display = 'block'
     } else {
@@ -60,11 +69,14 @@ switchers.forEach(function (switcher) {
   })
 })
 
+
+// Todo: Refactor this function and rendering function. PERFORMANCE!!!!
 // ------------------- Get Product Func --------------------
 function productGetList(productList) {
   productList.forEach((product) => {
     const list_card = document.createElement('div')
     const grid_card = document.createElement('div')
+
     list_card.classList.add('list-view__card')
     grid_card.classList.add('grid-view__card')
 
@@ -152,6 +164,8 @@ function dateFormatter(date) {
   return formattedDate
 }
 
+
+// Todo: Refactor Naming -> formatMoney maybe?
 // ------------------- Numbers with space Func -------------
 function numbersWithSpace(number) {
   const formattedNum = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
@@ -159,6 +173,8 @@ function numbersWithSpace(number) {
   return formattedNum
 }
 
+
+// Todo: Refactor this function
 // ------------------- Phone num Formatter Func ------------
 function formatPhoneNumber(phoneNumber) {
   // Remove non-digit characters from the phone number
@@ -193,6 +209,7 @@ function handleCardIconClick(event) {
       if (product) {
         product.is_liked = !product.is_liked
 
+          // Todo: refactor style changing
         icon.style.color = product.is_liked ? 'red' : 'white'
       } else {
         console.log('Product not found with id:', product.id)
