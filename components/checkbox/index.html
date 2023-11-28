@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -46,11 +46,31 @@
     <div class="container">
       <div class="checkbox-group checkbox-disabled">
         <label class="checkbox">
-          <input class="default-checkbox checkbox-disabled" type="checkbox" />
+          <input
+            class="default-checkbox checkbox-disabled"
+            type="checkbox"
+            id="option-all"
+            onchange="checkAll(this)"
+          />
           <div class="checkbox__checkmark"></div>
-          <p class="checkbox__body">example-title</p>
+          <p class="checkbox__body">all</p>
         </label>
+        <div class="" >
+          <label class="checkbox checkbox-child">
+            <input class="default-checkbox checkbox-disabled" type="checkbox" />
+            <div class="checkbox__checkmark"></div>
+            <p class="checkbox__body">example-title</p>
+          </label>
+          <label class="checkbox checkbox-child">
+            <input class="default-checkbox checkbox-disabled" type="checkbox" />
+            <div class="checkbox__checkmark"></div>
+            <p class="checkbox__body">example-title</p>
+          </label>
+        </div>
+        
+       
       </div>
     </div>
+    <script src="./checkbox.js"></script>
   </body>
 </html>

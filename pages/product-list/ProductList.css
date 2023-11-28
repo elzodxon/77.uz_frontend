@@ -33,8 +33,21 @@ body {
   font-size: 20px;
   font-family: Inter;
   font-weight: 600;
+  padding-bottom: 16px;
+}
+.filter-sub__title {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  color: #63676c;
 }
 
+.filter-btn{
+
+  margin-top: 30px;
+
+}
 .product-list {
   flex-basis: 72%;
 }
