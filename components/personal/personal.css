@@ -54,14 +54,14 @@
   cursor: pointer;
 }
 
-.personal-info-list__item:active{
+.personal-info-list__item--active{
   background-color: #FFF;
   border: 1px solid rgba(17, 124, 245, 0.10);
   background: var(--White, #FFF);
   box-shadow: 0px 0px 24px 0px #117CF51A;
 }
 
-.personal-info-list__item:active .personal-info-list__item-icon{
+.personal-info-list__item--active .personal-info-list__item-icon{
   color: var(--primary-color);
 }
 
