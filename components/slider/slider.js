@@ -1,11 +1,9 @@
 let currentIndex = 0;
 
 const images = [
-  "../../assets/img/SliderImg1.png",
-  "../../assets/img/SliderImg1.png",
-  "../../assets/img/SliderImg1.png",
-  "../../assets/img/SliderImg1.png",
-  "../../assets/img/SliderImg1.png",
+  "../../assets/img/slider/SliderImg1.png",
+  "../../assets/img/slider/SliderImg2.png",
+  "../../assets/img/slider/SliderImg3.png",
 ];
 
 function initializeSlider() {

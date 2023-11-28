@@ -75,8 +75,10 @@
 }
 
 .navigation-wrapper__img {
-  border-radius: 8px;
   height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .navigation-wrapper.active .navigation-wrapper__content::before {
