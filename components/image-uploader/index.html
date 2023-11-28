@@ -32,21 +32,17 @@
   <!-- Sortable List  -->
   <div class="container">
     <div class="wrapper">
-      <div class="gallery">
+      <div class="gallery" id="gallery">
+
+        <div id="gallery-wrapper"></div>
         <div class="gallery__item">
-          <div class="gallery__item-empty hidden" draggable="false">
-            <img src="../../assets/img/image-add.svg" />
-            <h3>Перетащите изображение сюда</h3>
-            <span>Перетащите свое изображение сюда или
-              <p class="choose-text">выберите</p>
-            </span>
-          </div>
-          <div class="gallery__item-image" draggable="true">
-            <div class="actions">
-              <button id="actions__change-button" class="actions__button">
-                <img class="actions__button-image" src="../../assets/img/change-button.svg" />
+
+          <div class="gallery__item-image">
+            <div class="actions ">
+              <button draggable="false" class="actions__button">
+                <img class="actions__button-image" draggable="false" src="../../assets/img/change-button.svg" />
               </button>
-              <button id="actions__trash-button" class="actions__button">
+              <button class="remove-image actions__button">
                 <img class="actions__button-image" src="../../assets/img/trash-button.svg" />
               </button>
             </div>
@@ -60,6 +56,8 @@
             <h3>Перетащите изображение сюда</h3>
             <span>Перетащите свое изображение сюда или
               <p class="choose-text">выберите</p>
+              
+              <input id="files" type="file" >
             </span>
           </div>
           <div class="gallery__item-image hidden">
