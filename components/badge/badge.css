@@ -1,0 +1,10 @@
+.badge {
+  color: var(--greys-grey-0, #63676c);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--greys-grey-4, #eaedf0);
+}

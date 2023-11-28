@@ -38,8 +38,19 @@
   font-weight: 400;
   line-height: 130%; /* 18.2px */
 }
+.create-form {
+  width: 100%;
+  max-width: 822px;
+  margin: auto;
+}
 
 .container {
+  max-width: 1224px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.create-form-container {
   max-width: 1224px;
   width: 100%;
   margin: 0 auto;
@@ -55,4 +66,22 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .text-sm-subtitle {
+    font-size: 12px;
+  }
+  .create-form-container {
+    padding: 0;
+  }
+  .container {
+    padding: 0 16px;
+  }
 }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider Component</title>
+    <link rel="stylesheet" href="slider.css" />
+    <script src="slider.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <div class="slider">
+        <div class="slider__wrapper">
+          <div class="slider__container" id="sliderContainer"></div>
+          <button class="prev-btn" onclick="changeSlide(-1)">❮</button>
+          <button class="next-btn" onclick="changeSlide(1)">❯</button>
+        </div>
+
+        <div class="navigation-card" id="navigationContainer"></div>
+      </div>
+    </main>
+  </body>
+</html>

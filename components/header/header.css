@@ -4,7 +4,7 @@
   border-bottom: 1px solid var(--gray-color);
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
-  z-index: 999;
+  z-index: 2000;
 }
 
 .navbar {
@@ -13,24 +13,26 @@
   justify-content: space-between;
   align-items: center;
 }
-.navbar__list {
+.navbar-list {
   position: relative;
   display: flex;
   align-items: center;
   gap: 16px;
 }
-.navbar__item.divider {
+.navbar-list__item.divider {
   width: 1px;
   height: 32px;
   background-color: var(--gray-color);
 }
-.navbar__item-link {
+.navbar-list__link {
   color: var(--black-color);
 }
 .header-logo {
   position: absolute;
   left: 50%;
   top: 0;
+  padding: 12px;
+  z-index: 999999999;
   transform: translate(-50%);
   padding: 14px 16px;
   background-color: red;
@@ -106,26 +108,31 @@
 #favorite:hover {
   color: var(--primary-color);
 }
-
+#language-switcher img {
+  width: 24px;
+  height: 24px;
+}
 .language-content {
   position: absolute;
   opacity: 0;
-  transform: translateY(10px);
+  left: 0;
+  transform: translateY(20px);
   pointer-events: none;
+  background-color: white;
   transition: 0.15s ease-in-out;
+  border-radius: 6px;
+  box-shadow: 0 2px 28px #17181a33;
 }
 .language-content.active {
   pointer-events: all;
   opacity: 1;
-  transform: translateY(0px);
-  background-color: white;
-  box-shadow: 0 2px 28px #17181a33;
-  border-radius: 6px;
+  transform: translateY(10px);
 }
 
 .language-content__list {
   display: flex;
-  align-items: center;
+  width: 100%;
+  min-width: 100%;
   flex-direction: column;
 }
 .language-content__item {
@@ -134,6 +141,10 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
+}
+.language-content__item img {
+  width: 24px;
+  height: 24px;
 }
 .language-content__item.active {
   color: var(--primary-color);
@@ -165,12 +176,12 @@
   flex: 1;
 }
 
-#phone-number {
+#telephone-number {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.phone-number {
+.telephone-number {
   font-weight: 500;
   color: var(--black-color);
 }
@@ -214,9 +225,7 @@
     cursor: pointer;
     background: var(--gray-color);
   }
-  .header-logo {
-    padding: 12px;
-  }
+
   .user-name {
     display: none;
   }

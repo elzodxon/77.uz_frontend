@@ -1,124 +1,133 @@
 :root {
-  --label-color: #63676c;
-  --application_ff: 'Inter', sans-serif;
-  --placeholder-color: #b8bbbd;
+   --label-color: #63676c;
+   --application_ff: "Inter", sans-serif;
+   --placeholder-color: #b8bbbd;
 }
 * {
-  box-sizing: border-box;
-  outline: inherit;
+   box-sizing: border-box;
+   outline: inherit;
 }
-html,
-body {
-  background-color: #fff;
-  height: 100%;
-  box-sizing: inherit;
+.form {
+   font-family: var(--application_ff);
+   font-size: 14px;
+   line-height: 20px;
+   margin: 30px auto;
 }
+.form-group {
+   padding-top: 16px;
 
-.log-in-form {
-  margin: 0 20px;
-  font-family: var(--application_ff);
-  font-size: 14px;
-  line-height: 20px;
-}
-.input-card {
-  margin-bottom: 16px;
-  position: relative;
-  /* display: flex; */
-  /* flex-direction: column; */
+      display: flex;
+   flex-direction: column;
+   gap: 8px;
 }
 .label {
-  color: var(--label-color);
-  font-weight: 500;
-  display: inline-block;
-  margin-bottom: 0px;
+   color: var(--label-color);
+   font-weight: 500;
+   display: inline-block;
+}
+.country-code {
+   font-size: 14px;
 }
 .input {
-  display: block;
-  align-items: center;
-  align-self: stretch;
-  border: none;
-  border-radius: 8px;
-  background: #f0f3f7;
-  margin-top: 8px;
-  color: #16191d;
-  font-weight: 400;
-  padding: 12px 184px 12px 12px;
+   display: flex;
+   align-items: center;
+   align-self: stretch;
+   border: 1px solid transparent;
+   border-radius: 8px;
+   background: #f0f3f7;
+   color: #16191d;
+   font-weight: 400;
+   padding: 12px;
+   flex-direction: column;
+   position: relative;
+   width: 100%;
+   outline: none;
+   transition: all 0.3s ease-in-out;
 }
 .input:focus {
-  border: 1px solid #388ff3;
-  background: #fff;
+   border-color: #388ff3;
+   background: #fff;
 }
-/* .input.input-text{
-} */
 .input::placeholder {
-  color: var(--placeholder-color);
-  font-weight: 400;
-  padding-right: 182px;
+   color: var(--placeholder-color);
+   font-weight: 400;
 }
 .input__product-name {
-  display: flex;
-  align-items: center;
-  align-self: stretch;
-  padding-left: 12px;
+   display: flex;
+   align-items: center;
+   align-self: stretch;
 }
-.input__product-name::placeholder {
-  display: flex;
-  align-items: center;
-  align-self: stretch;
+.password-input-wrapper {
+   position: relative;
 }
-.input-card .closed-eye {
-  position: absolute;
-  display: block;
-  background-image: url(/assets/img/eye-closed.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  top: 35px;
-  left: 320px;
-  width: 24px;
-  height: 24px;
+.input-password {
+   padding-right: 34px;
 }
-.input-card .closed-eye.opened-eye {
-  background-image: url(/assets/img/eye-open-4.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 24px;
-  height: 24px;
+.password-input-wrapper .closed-eye {
+   background: url(/assets/img/closed-eye.svg) no-repeat center;
+   background-size: cover;
+   position: absolute;
+   top: 0;
+   right: 20px;
+   transform: translate(50%, 37%);
+   cursor: pointer;
+   display: block;
+   width: 24px;
+   height: 24px;
 }
-.input-card .forgot-password {
-  position: absolute;
-  top: 70px;
-  color: #388ff3;
-  text-align: right;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 130%;
-  text-decoration: none;
+.password-input-wrapper .closed-eye.opened-eye {
+   background: url(/assets/img/open-eye.svg) no-repeat center/cover;
 }
-
+.password-input-wrapper .forgot-password {
+   position: absolute;
+   top: 8px;
+   left: 5px;
+   transform: translateY(270%);
+   color: #388ff3;
+   text-align: right;
+   font-size: 12px;
+   font-weight: 400;
+   line-height: 130%;
+   text-decoration: none;
+}
+.p-input-group{
+   position: relative;
+   display: flex;
+   align-items: center;
+}
+.input_tel{
+   padding-left: 45px;
+}
+.p-input-group .country-code{
+   position: absolute;
+   top: 0;
+   left: 0;
+   transform: translate(30%, 55%);
+   z-index: 1;
+}
 .error {
-  border: 1px solid #e93c47;
-  background: #f0f3f7;
-  border-radius: 8px;
-}
-.phone-num-box {
-  display: flex;
-  align-items: center;
+   border: 1px solid #e93c47;
+   background: #f0f3f7;
+   border-radius: 8px;
 }
 
 @media only screen and (max-width: 500px) {
-  .log-in-form {
-    width: 100%;
-    padding: 10px 20px 16px 0px;
-  }
-  .input-card {
-    padding-right: 10px;
-  }
-  .input {
-    padding: 12px 150px 12px 12px;
-  }
-  .input-card .closed-eye {
-    left: 290px;
-  }
+   .form {
+      width: 100%;
+   }
+
+   .input {
+   }
+
+   .password-input-wrapper .closed-eye {
+      background: url(/assets/img/closed-eye.svg) no-repeat center/cover;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      transform: translate(50%, 37%);
+      cursor: pointer;
+      display: block;
+      width: 24px;
+      height: 24px;
+   }
 }

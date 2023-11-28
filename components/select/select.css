@@ -1,0 +1,73 @@
+/* ===== Google Font Import - Poppins ===== */
+
+.select-wrapper__label {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--placeholder-color);
+}
+
+.select-menu .select-btn {
+  display: flex;
+  background-color: var(--input-bg-color);
+  padding: 10px 10px 10px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 8px;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.select-btn__arrow-icon::after {
+  display: block;
+  content: '';
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  background-image: url(../../assets/img/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+}
+
+.select-menu.active .select-btn .select-btn__arrow-icon {
+  transform: rotate(180deg);
+  transition: 0.3s ease-in-out;
+}
+
+.select-menu .options {
+  max-height: 312px;
+  overflow-y: auto;
+  margin-top: 8px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 28px 0px rgba(23, 24, 26, 0.2);
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 1200;
+}
+
+.select-menu.active .options {
+  display: block;
+}
+
+.options .option {
+  display: flex;
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 5px;
+  border-bottom: 1px solid var(--gray-color);
+  align-items: center;
+  background: #fff;
+}
+
+.options .option:hover {
+  background: #f2f2f2;
+}
+
+.option .option-text {
+  font-size: 18px;
+  color: var(--black-color);
+}

@@ -3,6 +3,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+   width: 100%;
   background-image: url('../../assets/img/BG\ \(Pattern\).svg');
 }
 .footer-info {
@@ -41,6 +42,10 @@
   transition: 0.2s ease-in-out;
   line-height: 130%; /* 26px */
 }
+.footer-info__link img{
+  width: 16px;
+  height: 16px;
+}
 .footer-info__link:hover {
   color: var(--primary-color);
 }
@@ -71,6 +76,11 @@
 }
 .development-company__link:hover {
   gap: 14px;
+}
+.footer-info__text {
+  max-width: 669px;
+  text-align: center;
+  margin: auto;
 }
 
 @media screen and (max-width: 568px) {
