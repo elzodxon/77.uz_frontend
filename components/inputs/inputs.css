@@ -25,6 +25,9 @@
    font-weight: 500;
    display: inline-block;
 }
+.country-code {
+   font-size: 14px;
+}
 .input {
    display: flex;
    align-items: center;

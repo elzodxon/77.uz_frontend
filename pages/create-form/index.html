@@ -41,287 +41,9 @@
   </head>
 
   <body>
-    <div class="main-modal">
-      <!-- Background blocker -->
-      <div class="blocker"></div>
+    <div class="blocker"></div>
 
-      <!-- Modals Section -->
 
-      <!-- 1) Login Modal -->
-
-      <div class="center registration-modal" id="registration">
-        <div class="modal">
-          <div class="modal-header modal-wrapper">
-            <h2 class="modal-title">Добро пожаловать!</h2>
-            <button class="close-btn close" id="registration-close-btn">
-              <img
-                class="close-img"
-                src="../../assets/img/modal-img/close-icon.svg"
-                alt="Close icon"
-                width="24"
-                height="24"
-              />
-            </button>
-          </div>
-          <h3 class="modal-subtitle modal-subtitlee">
-            Войти в систему чтобы торговать в системе
-          </h3>
-          <form class="modal-body">
-            <div class="form-group">
-              <label class="label modal-label" for="log-in">Логин </label>
-              <input
-                class="input input__login"
-                type="text"
-                name="log-in"
-                id="log-in"
-                placeholder="Введите логин"
-              />
-            </div>
-            <!-- Password -->
-            <div class="form-group password-modal">
-              <label class="label modal-label" for="password">Пароль </label>
-              <div class="password-input-wrapper">
-                <input
-                  class="input input-password"
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Введите пароль"
-                />
-                <div class="closed-eye"></div>
-                <a href="#" id="icon-close">Забыли пароль?</a>
-              </div>
-            </div>
-            <div class="modal-footer fifth">
-              <button id="submitBtn" type="submit" class="btn third-btn">
-                Войти
-              </button>
-              <p class="modal-text">Хотите стать продавцом?</p>
-              <button
-                id="application-btn"
-                type="submit"
-                class="btn btn-outline"
-              >
-                Подать заявку
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <!-- 2) Forget Password Modal -->
-
-      <div class="center forget-modal" id="forget-password">
-        <div class="modal">
-          <div class="modal-header">
-            <button class="close-btn" id="btn-close">
-              <img
-                class="close-img"
-                src="../../assets/img/modal-img/close-icon.svg"
-                alt="Close icon"
-                width="24"
-                height="24"
-              />
-            </button>
-          </div>
-          <div class="modal-body modal-fourth">
-            <h3 class="modal-subtitle">
-              Забыли пароль? Для восстановления пароля обратитесь администратору
-            </h3>
-          </div>
-          <div class="modal-footer fourth">
-            <a class="fourth-btn btn" href="tel:998974504500">
-              +998 97 450 45 00</a
-            >
-          </div>
-        </div>
-      </div>
-      <!-- 3) Aplication Modal -->
-
-      <div class="center" id="application">
-        <div class="modal">
-          <div class="modal-header modal-wrapper">
-            <h2 class="modal-title">Подать заявку</h2>
-            <button class="close-btn close" id="application-close-btn">
-              <img
-                class="close-img"
-                src="../../assets/img/modal-img/close-icon.svg"
-                alt="Close icon"
-                width="24"
-                height="24"
-              />
-            </button>
-          </div>
-          <h3 class="modal-subtitle modal-subtitlee">
-            Войти в систему чтобы торговать в системе
-          </h3>
-          <form class="modal-body">
-            <!-- Name -->
-            <div class="form-group">
-              <label class="label modal-label" for="fullName">Ф.И.О. </label>
-              <input
-                class="input input_text"
-                type="text"
-                name="name"
-                id="fullName"
-                placeholder="Введите вашу Ф.И.О."
-              />
-            </div>
-            <!-- Product name -->
-            <div class="form-group">
-              <label class="label modal-label" for="product-name"
-                >Название продукта
-              </label>
-              <input
-                class="input input__product-name"
-                type="text"
-                name="product-name"
-                id="product-name"
-                placeholder="Введите название продукта"
-              />
-            </div>
-            <!-- Select Wrapper -->
-            <div class="select-wrapper">
-              <label class="select-wrapper__label" for="">Категория</label>
-
-              <div class="select-menu" id="">
-                <div class="select-btn">
-                  <span class="sBtn-text">Выберите категорию</span>
-                  <span class="select-btn__arrow-icon"> </span>
-                </div>
-
-                <ul class="options">
-                  <li class="option">
-                    <span class="option-text">Г. Ташкент</span>
-                  </li>
-
-                  <li class="option">
-                    <span class="option-text">Андижан</span>
-                  </li>
-                  <li class="option">
-                    <span class="option-text">Бухара</span>
-                  </li>
-                  <li class="option">
-                    <span class="option-text">Навои </span>
-                  </li>
-
-                  <li class="option">
-                    <span class="option-text">Самарканд</span>
-                  </li>
-                  <li class="option">
-                    <span class="option-text">Джизак </span>
-                  </li>
-
-                  <li class="option">
-                    <span class="option-text">Джизак </span>
-                  </li>
-                  <li class="option">
-                    <span class="option-text">Джизак </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Phone number -->
-            <div class="form-group">
-              <label class="label modal-label" for="phone-number"
-                >Телефон номер
-              </label>
-              <div class="p-input-group">
-                <span class="country-code">+998</span>
-                <input
-                  class="input input_tel"
-                  type="tel"
-                  name="phone-number"
-                  id="phone-number"
-                  required
-                  inputmode="numeric"
-                  placeholder="  (__) ___-__-__"
-                />
-              </div>
-            </div>
-          </form>
-          <div class="modal-footer seven">
-            <button id="continue-registration" class="btn third-btn">
-              Продолжить
-            </button>
-            <p class="seven-text">Если вы продавец, войдите на платформу</p>
-            <button id="to-login" class="btn btn-outline">Войти</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4) Address Modal -->
-
-      <div class="center address-modal" id="address-password">
-        <div class="modal">
-          <div class="modal-header modal-wrapper">
-            <h2 class="modal-title">Введите адресс</h2>
-            <button class="close-btn close" id="address-close-btn">
-              <img
-                class="close-img"
-                src="../../assets/img/modal-img/close-icon.svg"
-                alt="Close icon"
-                width="24"
-                height="24"
-              />
-            </button>
-          </div>
-          <h3 class="modal-subtitle modal-subtitlee">
-            Войти в систему чтобы торговать в системе
-          </h3>
-          <img
-            class="address-image"
-            src="../../assets/img/category/address.svg"
-            alt=""
-          />
-          <form class="modal-body">
-            <div class="form-group">
-              <label class="label modal-label" for="address">Адресс </label>
-              <input
-                class="input input__login"
-                type="text"
-                name="log-in"
-                id="address"
-                placeholder="Введите свой адрес"
-              />
-            </div>
-            <div class="modal-footer">
-              <button id="accept" type="submit" class="btn btn-primary">
-                Подать заявку
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <!-- 5) Acceptance Modal -->
-
-      <div class="center" id="acceptance">
-        <div class="modal">
-          <div class="modal-header">
-            <button class="close-btn" id="close-icon">
-              <img
-                class="close-img"
-                src="../../assets/img/modal-img/close-icon.svg"
-                alt="Close icon"
-                width="24"
-                height="24"
-              />
-            </button>
-          </div>
-          <div class="modal-body modal-third">
-            <h2 class="modal-title">Ваша заявка принята!</h2>
-            <h3 class="modal-subtitle modal-sub">
-              Наши сотрудники свяжутся с вами в ближайшее время
-            </h3>
-          </div>
-          <div class="footer third">
-            <button id="registered-button" class="btn third-btn">
-              Спасибо
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Header Section -->
     <header class="header">
@@ -488,10 +210,7 @@
     <div class="container create-form__bread-crumb">
       <ul class="bread-crumb">
         <li class="bread-crumb__item">
-          <a href="" class="bread-crumb__link">Главная</a>
-        </li>
-        <li class="bread-crumb__item">
-          <a href="" class="bread-crumb__link">Профиль</a>
+          <a href="../../index.html" class="bread-crumb__link">Главная</a>
         </li>
         <li class="bread-crumb__item">
           <a href="" class="bread-crumb__link active">Создать объявления</a>
@@ -841,6 +560,287 @@
         </div>
       </div>
     </footer>
+
+        <div class="main-modal">
+      <!-- Background blocker -->
+
+      <!-- Modals Section -->
+
+      <!-- 1) Login Modal -->
+
+      <div class="center registration-modal" id="registration">
+        <div class="modal">
+          <div class="modal-header modal-wrapper">
+            <h2 class="modal-title">Добро пожаловать!</h2>
+            <button class="close-btn close" id="registration-close-btn">
+              <img
+                class="close-img"
+                src="../../assets/img/modal-img/close-icon.svg"
+                alt="Close icon"
+                width="24"
+                height="24"
+              />
+            </button>
+          </div>
+          <h3 class="modal-subtitle modal-subtitlee">
+            Войти в систему чтобы торговать в системе
+          </h3>
+          <form class="modal-body">
+            <div class="form-group">
+              <label class="label modal-label" for="log-in">Логин </label>
+              <input
+                class="input input__login"
+                type="text"
+                name="log-in"
+                id="log-in"
+                placeholder="Введите логин"
+              />
+            </div>
+            <!-- Password -->
+            <div class="form-group password-modal">
+              <label class="label modal-label" for="password">Пароль </label>
+              <div class="password-input-wrapper">
+                <input
+                  class="input input-password"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Введите пароль"
+                />
+                <div class="closed-eye"></div>
+                <a href="#" id="icon-close">Забыли пароль?</a>
+              </div>
+            </div>
+            <div class="modal-footer fifth">
+              <button id="submitBtn" type="submit" class="btn third-btn">
+                Войти
+              </button>
+              <p class="modal-text">Хотите стать продавцом?</p>
+              <button
+                id="application-btn"
+                type="submit"
+                class="btn btn-outline"
+              >
+                Подать заявку
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- 2) Forget Password Modal -->
+
+      <div class="center forget-modal" id="forget-password">
+        <div class="modal">
+          <div class="modal-header">
+            <button class="close-btn" id="btn-close">
+              <img
+                class="close-img"
+                src="../../assets/img/modal-img/close-icon.svg"
+                alt="Close icon"
+                width="24"
+                height="24"
+              />
+            </button>
+          </div>
+          <div class="modal-body modal-fourth">
+            <h3 class="modal-subtitle">
+              Забыли пароль? Для восстановления пароля обратитесь администратору
+            </h3>
+          </div>
+          <div class="modal-footer fourth">
+            <a class="fourth-btn btn" href="tel:998974504500">
+              +998 97 450 45 00</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- 3) Aplication Modal -->
+
+      <div class="center" id="application">
+        <div class="modal">
+          <div class="modal-header modal-wrapper">
+            <h2 class="modal-title">Подать заявку</h2>
+            <button class="close-btn close" id="application-close-btn">
+              <img
+                class="close-img"
+                src="../../assets/img/modal-img/close-icon.svg"
+                alt="Close icon"
+                width="24"
+                height="24"
+              />
+            </button>
+          </div>
+          <h3 class="modal-subtitle modal-subtitlee">
+            Войти в систему чтобы торговать в системе
+          </h3>
+          <form class="modal-body">
+            <!-- Name -->
+            <div class="form-group">
+              <label class="label modal-label" for="fullName">Ф.И.О. </label>
+              <input
+                class="input input_text"
+                type="text"
+                name="name"
+                id="fullName"
+                placeholder="Введите вашу Ф.И.О."
+              />
+            </div>
+            <!-- Product name -->
+            <div class="form-group">
+              <label class="label modal-label" for="product-name"
+                >Название продукта
+              </label>
+              <input
+                class="input input__product-name"
+                type="text"
+                name="product-name"
+                id="product-name"
+                placeholder="Введите название продукта"
+              />
+            </div>
+            <!-- Select Wrapper -->
+            <div class="select-wrapper">
+              <label class="select-wrapper__label" for="">Категория</label>
+
+              <div class="select-menu" id="">
+                <div class="select-btn">
+                  <span class="sBtn-text">Выберите категорию</span>
+                  <span class="select-btn__arrow-icon"> </span>
+                </div>
+
+                <ul class="options">
+                  <li class="option">
+                    <span class="option-text">Г. Ташкент</span>
+                  </li>
+
+                  <li class="option">
+                    <span class="option-text">Андижан</span>
+                  </li>
+                  <li class="option">
+                    <span class="option-text">Бухара</span>
+                  </li>
+                  <li class="option">
+                    <span class="option-text">Навои </span>
+                  </li>
+
+                  <li class="option">
+                    <span class="option-text">Самарканд</span>
+                  </li>
+                  <li class="option">
+                    <span class="option-text">Джизак </span>
+                  </li>
+
+                  <li class="option">
+                    <span class="option-text">Джизак </span>
+                  </li>
+                  <li class="option">
+                    <span class="option-text">Джизак </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Phone number -->
+            <div class="form-group">
+              <label class="label modal-label" for="phone-number"
+                >Телефон номер
+              </label>
+              <div class="p-input-group">
+                <span class="country-code">+998</span>
+                <input
+                  class="input input_tel"
+                  type="tel"
+                  name="phone-number"
+                  id="phone-number"
+                  required
+                  inputmode="numeric"
+                  placeholder="  (__) ___-__-__"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="modal-footer seven">
+            <button id="continue-registration" class="btn third-btn">
+              Продолжить
+            </button>
+            <p class="seven-text">Если вы продавец, войдите на платформу</p>
+            <button id="to-login" class="btn btn-outline">Войти</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4) Address Modal -->
+
+      <div class="center address-modal" id="address-password">
+        <div class="modal">
+          <div class="modal-header modal-wrapper">
+            <h2 class="modal-title">Введите адресс</h2>
+            <button class="close-btn close" id="address-close-btn">
+              <img
+                class="close-img"
+                src="../../assets/img/modal-img/close-icon.svg"
+                alt="Close icon"
+                width="24"
+                height="24"
+              />
+            </button>
+          </div>
+          <h3 class="modal-subtitle modal-subtitlee">
+            Войти в систему чтобы торговать в системе
+          </h3>
+          <img
+            class="address-image"
+            src="../../assets/img/category/address.svg"
+            alt=""
+          />
+          <form class="modal-body">
+            <div class="form-group">
+              <label class="label modal-label" for="address">Адресс </label>
+              <input
+                class="input input__login"
+                type="text"
+                name="log-in"
+                id="address"
+                placeholder="Введите свой адрес"
+              />
+            </div>
+            <div class="modal-footer">
+              <button id="accept" type="submit" class="btn btn-primary">
+                Подать заявку
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- 5) Acceptance Modal -->
+
+      <div class="center" id="acceptance">
+        <div class="modal">
+          <div class="modal-header">
+            <button class="close-btn" id="close-icon">
+              <img
+                class="close-img"
+                src="../../assets/img/modal-img/close-icon.svg"
+                alt="Close icon"
+                width="24"
+                height="24"
+              />
+            </button>
+          </div>
+          <div class="modal-body modal-third">
+            <h2 class="modal-title">Ваша заявка принята!</h2>
+            <h3 class="modal-subtitle modal-sub">
+              Наши сотрудники свяжутся с вами в ближайшее время
+            </h3>
+          </div>
+          <div class="footer third">
+            <button id="registered-button" class="btn third-btn">
+              Спасибо
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ================== Javascript Links ================== -->
     <script src="../../components/image-uploader/image-uploader.js"></script>
