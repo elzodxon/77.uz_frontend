@@ -120,6 +120,15 @@ body {
   cursor: pointer;
 }
 
+.list-view__card-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
 .grid-view__card-image {
   width: 100%;
   height: 100%;
@@ -132,6 +141,9 @@ body {
 
 .grid-view__card-content {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .list-view__card-content {
   padding: 12px 12px 12px 0;
@@ -173,6 +185,9 @@ body {
   font-weight: 600;
   margin: 16px 0 0 0;
 }
+.grid-view__card-title:hover {
+  color: blue;
+}
 .list-view__card-title {
   color: #16191d;
   font-size: 18px;
@@ -180,6 +195,10 @@ body {
   font-weight: 600;
   margin: 10px 0 0 0;
 }
+.list-view__card-title:hover {
+  color: blue;
+}
+
 .grid-view__card-date {
   color: #8e9297;
   font-size: 14px;

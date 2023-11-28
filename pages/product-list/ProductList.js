@@ -1,4 +1,3 @@
-/* eslint-disable no-debugger */
 const languageButton = document.querySelector('.language-button')
 const languageContent = document.querySelector('.language-content')
 const switchers = document.querySelectorAll(
@@ -9,24 +8,37 @@ const list_view = document.querySelector('.list-view')
 const grid_view = document.querySelector('.grid-view')
 const listWrapper = document.getElementById('list-view__wrapper')
 const gridWrapper = document.getElementById('grid-view__wrapper')
-const cardIcons = document.getElementById('grid_icon')
+const cardIcons = document.getElementsByClassName('icon')
+let productList = []
 
+// ------------------- FETCH Products ----------------------
 document.addEventListener('DOMContentLoaded', function () {
   // Fetch the JSON file
   fetch('./ProductList.json')
     .then((response) => response.json())
     .then((data) => {
       // Once the data is loaded, call a function to render it
-      productGetList(data.productList)
+      productList = data.productList
+      productGetList(productList)
+
+      return productList
     })
     .catch((error) => console.error('Error fetching data:', error))
+
+  document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('icon')) {
+      handleCardIconClick(event)
+    }
+  })
 })
 
+// ------------------- Language switcher -------------------
 languageButton.addEventListener('click', (e) => {
   e.preventDefault()
   languageContent.classList.toggle('active')
 })
 
+// ------------------- Style switcher ----------------------
 switchers.forEach(function (switcher) {
   switcher.addEventListener('click', function () {
     switchers.forEach(function (switcher) {
@@ -48,6 +60,7 @@ switchers.forEach(function (switcher) {
   })
 })
 
+// ------------------- Get Product Func --------------------
 function productGetList(productList) {
   productList.forEach((product) => {
     const list_card = document.createElement('div')
@@ -58,15 +71,16 @@ function productGetList(productList) {
     // ----------------Card list style--------------------
     list_card.innerHTML = `
             <div class="list-view__card-symbols">
+           
               <img class="list-view__card-image card-image" src="${
                 product.photo
               }" alt="Product photo" />
             </div>
             <div class="list-view__card-content">
               <div class="list-view__top-content">
-                <h3 class="list-view__card-title card-title">
+                <a href="#" class="list-view__card-title card-title">
                ${product.name}
-                </h3>
+                </a>
                 <span class="badge card-address"> ${
                   product.address.district.name
                 }</span>
@@ -90,8 +104,10 @@ function productGetList(productList) {
     // ----------------Card grid style--------------------
     grid_card.innerHTML = `
             <div class="grid-view__card-symbols">
-              <div id="grid_icon" class="grid-view__card-icon">
-              <iconify-icon id="icon"  icon="tabler:heart-filled"></iconify-icon>
+              <div  class="grid-view__card-icon">
+              <iconify-icon id="${
+                product.id
+              }" class="icon" icon="tabler:heart-filled"></iconify-icon>
               </div>
               <img class="grid-view__card-image card-image" src="${
                 product.photo
@@ -101,23 +117,25 @@ function productGetList(productList) {
               <span class="badge card-address">${
                 product.address.district.name
               }</span>
-              <h3 class="grid-view__card-title card-title">${product.name}</h3>
+              <a href="#" class="grid-view__card-title card-title">${
+                product.name
+              }</a>
               <p class="grid-view__card-date card-date">${dateFormatter(
                 product.published_at,
               )}</p>
               <a class="grid-view__card-number card-phoneNum" href="tel:${
                 product.seller.phone_number
-              }">${product.seller.phone_number}</a>
-              <p class="grid-view__card-price card-price"> ${
-                product.price
-              }<span> UZS </span></p>
+              }">${formatPhoneNumber(product.seller.phone_number)}</a>
+              <p class="grid-view__card-price card-price"> ${numbersWithSpace(
+                product.price,
+              )}<span> UZS </span></p>
             </div>`
     gridWrapper.appendChild(grid_card)
 
-    // ---------------- Is Like Function -----------------
   })
 }
 
+// ------------------- Date formatter Func -----------------
 function dateFormatter(date) {
   const dateObject = new Date(date)
 
@@ -134,17 +152,51 @@ function dateFormatter(date) {
   return formattedDate
 }
 
-// Loop through each element and add a click event listener
-console.log(cardIcons)
-for (let i = 0; i < cardIcons.length; i++) {
-  debugger
-  cardIcons[i].addEventListener('click', handleCardIconClick)
+// ------------------- Numbers with space Func -------------
+function numbersWithSpace(number) {
+  const formattedNum = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+
+  return formattedNum
 }
 
-// Your function to be called on icon click
-function handleCardIconClick() {
-  debugger
+// ------------------- Phone num Formatter Func ------------
+function formatPhoneNumber(phoneNumber) {
+  // Remove non-digit characters from the phone number
+  const cleanedNumber = phoneNumber.replace(/\D/g, '')
 
-  // Your logic for the click event
-  alert('Icon clicked!')
+  // Apply the desired formatting
+  const formattedNumber = `+${cleanedNumber.slice(0, 3)}-${cleanedNumber.slice(
+    3,
+    5,
+  )}-${cleanedNumber.slice(5, 8)}-${cleanedNumber.slice(
+    8,
+    10,
+  )}-${cleanedNumber.slice(10)}`
+
+  return formattedNumber
+}
+
+// ------------------- Find Product By Icon ID -------------
+function findProductByIconId(icon) {
+  const foundProduct = productList.find((product) => product.id == icon.id)
+
+  return foundProduct
+
+  // return product found by icon id
+}
+
+// ------------------- IsLiked or Not Func -----------------
+function handleCardIconClick(event) {
+  for (const icon of cardIcons) {
+    if (icon.id === event.target.id) {
+      const product = findProductByIconId(icon)
+      if (product) {
+        product.is_liked = !product.is_liked
+
+        icon.style.color = product.is_liked ? 'red' : 'white'
+      } else {
+        console.log('Product not found with id:', product.id)
+      }
+    }
+  }
 }
