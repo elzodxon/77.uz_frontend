@@ -371,6 +371,11 @@ body.block {
 .footer {
   margin-top: 72px;
 }
+.favorite-path {
+}
+.favorite-path.active {
+  fill: #e93c47;
+}
 @media screen and (max-width: 1180px) {
 }
 @media screen and (max-width: 768px) {

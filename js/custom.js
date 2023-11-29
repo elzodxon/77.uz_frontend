@@ -1,21 +1,10 @@
 const searchInput = document.querySelector('.search__input');
 
-const favoriteProductButton = document.querySelectorAll(
-  '.favorite__product-button'
-);
-const favoriteProductPath = document.querySelectorAll('.favorite-path');
-
 searchInput.addEventListener('focus', (e) => {
   e.preventDefault();
   blocker.classList.toggle('active');
   document.body.classList.toggle('block');
 });
-
-for (let i = 0; i < favoriteProductButton.length; i++) {
-  favoriteProductButton[i].addEventListener('click', () => {
-    favoriteProductPath[i].classList.toggle('active');
-  });
-}
 
 searchInput.addEventListener('focus', (e) => {
   e.preventDefault();
@@ -375,4 +364,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
-
