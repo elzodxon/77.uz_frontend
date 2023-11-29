@@ -146,6 +146,9 @@
   width: 24px;
   height: 24px;
 }
+.language-content__item:hover {
+  color: var(--primary-color);
+}
 .language-content__item.active {
   color: var(--primary-color);
 }
