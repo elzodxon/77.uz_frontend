@@ -382,3 +382,69 @@ body.block {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Global styles */
+.wrapper {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+
+/* Utility classes */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-x-center {
+    display: flex;
+    align-items: center;
+
+}
+
+.flex-y-center {
+    display: flex;
+    justify-content: center;
+}
+
+.py-8 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  flex-basis: 25%;
+  flex-shrink: 0;
+}
+
+.main {
+  flex-basis: calc(75% - 24px);
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-basis: 100%;
+  }
+
+  .main {
+    flex-basis: 100%;
+  }
+
+}
