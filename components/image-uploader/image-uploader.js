@@ -89,90 +89,72 @@
 //
 // render();
 
-const fileInput = document.querySelector("#files");
+const fileInput = document.querySelector('#files');
 const files = [];
 
-const deleteButton = document.querySelectorAll(".remove-image");
+const gallery = document.querySelector('#gallery-wrapper');
 
 // Create gallery card
 const createGalleryCard = (id, image) => {
-
-  return ` <div class="gallery__item" >
-          <div class="gallery__item-image" draggable="true">
-            <div class="actions">
-              <button id="actions__change-button" class="actions__button">
-                <img class="actions__button-image" src="../../assets/img/change-button.svg" />
-              </button>
-              <button  class="remove-image actions__button" data-id="${id}">
-                <img class="actions__button-image" src="../../assets/img/trash-button.svg" />
-              </button>
+  return `<div class="gallery__item">
+            <div class="gallery__item-image" draggable="true">
+              <div class="actions">
+                <button id="actions__change-button" class="actions__button">
+                  <img class="actions__button-image" src="../../assets/img/change-button.svg" />
+                </button>
+                <button class="remove-image actions__button" data-id="${id}">
+                  <img class="actions__button-image" src="../../assets/img/trash-button.svg" />
+                </button>
+              </div>
+              <img class="gallery__item-photo" draggable="false" src="${image}" />
             </div>
-            <img class="gallery__item-photo" draggable="false" src="${image}" />
-          </div>
-        </div>
-`
-}
+          </div>`;
+};
 
 // Remove image
 const removeImage = (id) => {
   files.forEach((element, index) => {
     if (element.id === id) {
-      files.splice(index, 1)
+      files.splice(index, 1);
     }
-  })
+  });
 
-  renderImages()
-}
-
-
-
+  renderImages();
+};
 
 // Render images
 const renderImages = () => {
-  const gallery = document.querySelector("#gallery-wrapper");
-
-  gallery.innerHTML = ``;
+  gallery.innerHTML = '';
 
   files.forEach((element) => {
     const reader = new FileReader();
     reader.onload = () => {
-      const card = document.createElement("div");
-
+      const card = document.createElement('div');
       card.innerHTML = createGalleryCard(element.id, reader.result);
-
       gallery.append(card);
-
     };
 
-    console.log(reader)
     reader.readAsDataURL(element.file);
   });
 };
 
-fileInput.addEventListener("change", (e) => {
-
+fileInput.addEventListener('change', (e) => {
   const file = {
-    id: Math.random()*1000,
+    id: Math.random() * 1000,
     file: e.target.files[0],
-  }
+  };
 
   files.push(file);
 
+  renderImages();
+});
 
-  renderImages()
+// Event delegation for dynamically created delete buttons
+document.addEventListener('click', (e) => {
+  const target = e.target;
 
-})
-
-
-deleteButton.forEach((element) => {
-  console.log(element)
-  element.addEventListener("click", (e) => {
-
-    console.log(e)
-
-
-    // const id = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.id
-    // removeImage(id)
-  })
-})
-
+  if (target.classList.contains('remove-image')) {
+    const id = target.getAttribute('data-id');
+    removeImage(parseFloat(id));
+  }
+});
