@@ -252,7 +252,7 @@
                 <div class="form-group">
                   <label class="label" for="fullName">Ф.И.О. </label>
                   <input
-                    class="input input_text"
+                    class="input create-input input_text"
                     type="text"
                     name="name"
                     id="fullName"
@@ -268,11 +268,10 @@
                     <div class="p-input-group">
                       <span class="country-code">+998</span>
                       <input
-                        class="input input_tel"
+                        class="input create-input input_tel"
                         type="tel"
                         name="phone-number"
                         id="phone-number"
-                        required
                         inputmode="numeric"
                         placeholder="(__) ___-__-__"
                       />
@@ -282,7 +281,7 @@
                   <div class="form-group">
                     <label class="label" for="fullName">Адресс</label>
                     <input
-                      class="input input_text"
+                      class="input create-input input_text"
                       type="text"
                       name="name"
                       id="fullName"
@@ -301,7 +300,7 @@
                     >Название продукта
                   </label>
                   <input
-                    class="input input__product-name"
+                    class="input create-input input__product-name"
                     type="text"
                     name="product-name"
                     id="product-name"
@@ -313,7 +312,7 @@
                     >Название продукта
                   </label>
                   <textarea
-                    class="textarea textarea__product-name"
+                    class="textarea create-input textarea__product-name"
                     type="text"
                     name="product-name"
                     id="product-name"
@@ -371,7 +370,7 @@
                 <div class="form-group">
                   <label class="label" for="product-name">Цена </label>
                   <input
-                    class="input input__product-name"
+                    class="input create-input input__product-name"
                     type="number"
                     name="product-name"
                     id="product-name"
@@ -516,7 +515,7 @@
               </p>
               <div class="agreement-terms__buttons">
                 <button class="btn btn-secondary">Отменить</button>
-                <button class="btn">Опубликовать</button>
+                <button type="submit" class="btn create-submit-button">Опубликовать</button>
               </div>
             </div>
           </div>
@@ -702,7 +701,7 @@
             <div class="select-wrapper">
               <label class="select-wrapper__label" for="">Категория</label>
 
-              <div class="select-menu" id="">
+              <div class="select-menu create-input" id="">
                 <div class="select-btn">
                   <span class="sBtn-text">Выберите категорию</span>
                   <span class="select-btn__arrow-icon"> </span>
@@ -752,7 +751,6 @@
                   type="tel"
                   name="phone-number"
                   id="phone-number"
-                  required
                   inputmode="numeric"
                   placeholder="  (__) ___-__-__"
                 />
@@ -849,7 +847,7 @@
     <script src="../../components/footer/footer.js"></script>
     <script src="../../js/modal.js"></script>
     <script src="../../components/select/select.js"></script>
-    <script src="./layout.js"></script>
+    <script src="./create-form.js"></script>
     <script></script>
   </body>
 </html>
