@@ -139,7 +139,6 @@
 <li class="navbar-list__item divider"></li>
 <li class="navbar-list__item">
   <button
-  href=""
   class="navbar-list__link login-button text-sm-subtitle"
   >
   <!-- <span class="login-title">
@@ -200,6 +199,7 @@
     
     <div class="container">
       
+      <!------------------ Bread-Crumb-------------------- -->
       
       <ul class="bread-crumb">
         <li class="bread-crumb__item">
@@ -209,17 +209,18 @@
           <a href="" class="bread-crumb__link active">Профиль</a>
         </li>
       </ul>
-
+      <!------------------ Bread-Crumb-------------------- -->
+      
       <div>
         <a class="back-link" href="/"><img class="arrow-left-icon" src="../../assets/img/profile/arrow-left-icon.svg" alt="arrow-left-icon" width="34" height="34"></a>
-
+        
       </div>
       
-      <span>
-        <link rel="stylesheet" href="">
-      </span>
       
       <div class="profile-wrapper">
+        
+        
+        <!------------ Sidebar---------- -->
         
         <div class="sidebar">
           <div class="personal">
@@ -234,231 +235,279 @@
                 
               </div>
               
-              <ul class="personal-info-list">
-                <li class="personal-info-list__item  personal-info-list__item--active">
+              <div class="personal__buttons">
+                <button id="button1" class=" personal__innerButton btn-active">
                   <svg class="personal-info-list__item-icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.467 2.4c1.178 0 2.133.942 2.133 2.104v3.592c0 1.162-.955 2.104-2.133 2.104h-3.2c-1.179 0-2.134-.942-2.134-2.104V4.504c0-1.162.955-2.104 2.134-2.104h3.2ZM4.533 2.4C3.355 2.4 2.4 3.342 2.4 4.504v3.592c0 1.162.955 2.104 2.133 2.104h3.2c1.178 0 2.134-.942 2.134-2.104V4.504c0-1.162-.956-2.104-2.134-2.104h-3.2ZM19.467 13.8c1.178 0 2.133.942 2.133 2.104v3.592c0 1.162-.955 2.104-2.133 2.104h-3.2c-1.179 0-2.134-.942-2.134-2.104v-3.592c0-1.162.955-2.104 2.134-2.104h3.2ZM4.533 13.8c-1.178 0-2.133.942-2.133 2.104v3.592c0 1.162.955 2.104 2.133 2.104h3.2c1.178 0 2.134-.942 2.134-2.104v-3.592c0-1.162-.956-2.104-2.134-2.104h-3.2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
                   
-                  <p class="personal-info-list__item-title">
-                    Мои объявления
-                  </p>
-                </li>
+                  Мои объявления
+                </button>
                 
-                <li class="personal-info-list__item">
-                  
+                <button id="button2" class="personal__innerButton">
                   <svg  class="personal-info-list__item-icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.4 19.2c.461-.517 2.62-2.893 3.254-2.893h6.692c.918 0 2.79 1.97 3.254 2.664m3-6.971a9.6 9.6 0 1 1-19.2 0 9.6 9.6 0 0 1 19.2 0Zm-6.161-2.272C15.439 7.896 13.893 6.4 12 6.4c-1.892 0-3.438 1.496-3.438 3.328 0 1.831 1.546 3.328 3.438 3.328 1.893 0 3.439-1.497 3.439-3.328Z" stroke="currentColor" stroke-width="2"/>
                   </svg>
                   
-                  <p class="personal-info-list__item-title">
-                    Персональные данные
-                  </p>
-                </li>
-              </ul>
+                  Персональные данные
+                </button>
+              </div>
               
               <button class="btn btn-secondary sign-out-btn"> 
                 <span class="sign-out-btn__icon"></span>
                 Выход 
               </button>
               
-              <div>
-                
-              </div>
+              
+            
               
               
               
             </div>
+            
+            
+          
           </div>
         </div>
         
+        <!-------------- Sidebar---------- -->
         
-        <div class="profile-content">
+        
+        <div class="profile-content main" id="content-container">
           
-          <div class="profile-content__summary">
-            <h1 class="profile-content__title">
-              Мои объявления
-            </h1>
+          
+          <div class="my-ads" id="content1">
+            <div class="profile-content__summary">
+              <h1 class="profile-content__title">
+                Мои объявления
+              </h1>
+              
+              <button class="btn ads-btn">Создать объявление</button>
+            </div>
             
-            <button class="btn ads-btn">Создать объявление</button>
+            
+            
+            
+            <div class="profile__ads">
+              
+              <div class="card">
+                <div class="card__image">
+                  <div class="card__icon">
+                    <iconify-icon icon="tdesign:heart"></iconify-icon>
+                  </div>
+                  <img
+                  class="card__img"
+                  src="../../assets/img/profile/ads-dyson.png"
+                  alt=""
+                  />
+                </div>
+                <div class="content-wrapper">
+                  <span class="city">г. Ташкент</span>
+                  <h3 class="product_name">
+                    Стайлер для волос Dyson airwrap complete long
+                  </h3>
+                  <p class="date">Вчера, 19:20</p>
+                  <a class="phone__number" href="tel:+998712007007"
+                  >+998 71 200 70 07</a
+                  >
+                  <p class="product__cost">
+                    2 599 000
+                    <span> UZS </span>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card__image">
+                  <div class="card__icon">
+                    <!-- <iconify-icon icon="tdesign:heart"></iconify-icon> -->
+                  </div>
+                  
+                  
+                  
+                  
+                  <img
+                  class="card__img"
+                  src="../../assets/img/profile/ads-watch-desktop.png"
+                  alt=""
+                  />
+                </div>
+                <div class="content-wrapper">
+                  <span class="city">г. Ташкент</span>
+                  <h3 class="product_name">
+                    Apple Watch Series 8 - USA Non active
+                  </h3>
+                  <p class="date">Вчера, 19:20</p>
+                  <a class="phone__number" href="tel:+998712007007"
+                  >+998 71 200 70 07</a
+                  >
+                  <p class="product__cost">
+                    2 599 000
+                    <span> UZS </span>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card__image">
+                  <div class="card__icon">
+                    <iconify-icon icon="tdesign:heart"></iconify-icon>
+                  </div>
+                  <img
+                  class="card__img"
+                  src="../../assets/img/profile/ads-car.png"
+                  alt=""
+                  />
+                </div>
+                <div class="content-wrapper">
+                  <span class="city">г. Ташкент</span>
+                  <h3 class="product_name">
+                    Chevrolet Onix 1.2 Turbo в наличии
+                  </h3>
+                  <p class="date">Вчера, 19:20</p>
+                  <a class="phone__number" href="tel:+998712007007"
+                  >+998 71 200 70 07</a
+                  >
+                  <p class="product__cost">
+                    2 599 000
+                    <span> UZS </span>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card__image">
+                  <div class="card__icon">
+                    <iconify-icon icon="tdesign:heart"></iconify-icon>
+                  </div>
+                  <img
+                  class="card__img"
+                  src="../../assets/img/profile/ads-sneaker-desktop.png"
+                  alt=""
+                  />
+                </div>
+                <div class="content-wrapper">
+                  <span class="city">г. Ташкент</span>
+                  <h3 class="product_name">
+                    Оригинальные кроссовки Nike Air Max 97
+                  </h3>
+                  <p class="date">Вчера, 19:20</p>
+                  <a class="phone__number" href="tel:+998712007007"
+                  >+998 71 200 70 07</a
+                  >
+                  <p class="product__cost">
+                    2 599 000
+                    <span> UZS </span>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card__image">
+                  <div class="card__icon">
+                    <iconify-icon icon="tdesign:heart"></iconify-icon>
+                  </div>
+                  <img
+                  class="card__img"
+                  src="../../assets/img/profile/ads-car.png"
+                  alt=""
+                  />
+                </div>
+                <div class="content-wrapper">
+                  <span class="city">г. Ташкент</span>
+                  <h3 class="product_name">
+                    Лучший кроссовер Geely Monjaro Limited Edition
+                  </h3>
+                  <p class="date">Вчера, 19:20</p>
+                  <a class="phone__number" href="tel:+998712007007"
+                  >+998 71 200 70 07</a
+                  >
+                  <p class="product__cost">
+                    2 599 000
+                    <span> UZS </span>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card__image">
+                  <div class="card__icon">
+                    <iconify-icon icon="tdesign:heart"></iconify-icon>
+                  </div>
+                  <img
+                  class="card__img"
+                  src="../../assets/img/profile/ads-cap.png"
+                  alt=""
+                  />
+                </div>
+                <div class="content-wrapper">
+                  <span class="city">г. Ташкент</span>
+                  <h3 class="product_name">
+                    Лучший кроссовер Geely Monjaro Limited Edition
+                  </h3>
+                  <p class="date">Вчера, 19:20</p>
+                  <a class="phone__number" href="tel:+998712007007"
+                  >+998 71 200 70 07</a
+                  >
+                  <p class="product__cost">
+                    2 599 000
+                    <span> UZS </span>
+                  </p>
+                </div>
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+            </div>
           </div>
           
           
-          
-          
-          <div class="profile__ads">
+          <div class="personal-details hidden" id="content2">
+            <h1 class="personal-details__title">
+              Персональные данные
+            </h1>
             
-            <div class="card">
-              <div class="card__image">
-                <div class="card__icon">
-                  <iconify-icon icon="tdesign:heart"></iconify-icon>
-                </div>
-                <img
-                class="card__img"
-                src="../../assets/img/profile/ads-dyson.png"
-                alt=""
-                />
-              </div>
-              <div class="content-wrapper">
-                <span class="city">г. Ташкент</span>
-                <h3 class="product_name">
-                  Стайлер для волос Dyson airwrap complete long
-                </h3>
-                <p class="date">Вчера, 19:20</p>
-                <a class="phone__number" href="tel:+998712007007"
-                >+998 71 200 70 07</a
-                >
-                <p class="product__cost">
-                  2 599 000
-                  <span> UZS </span>
-                </p>
-              </div>
-            </div>
-            
-            <div class="card">
-              <div class="card__image">
-                <div class="card__icon">
-                  <!-- <iconify-icon icon="tdesign:heart"></iconify-icon> -->
-                </div>
+            <div class="personal-details__box">
+              
+              <div class="personal-details__wrapper">
+                <img class="personal-details__img" src="../../assets/img/personal-details/avatar-img.png" alt="person showing his watch with car in the background" width="92"  height="92">
                 
                 
+                <div class="personal-details__contents">
+                  <h2 class="personal-details__subtitle">
+                    Шохрух Шавкиев
+                  </h2>
+                  
+                  
+                  <div class="personal-details__link-wrapper">
+                    <a class="personal-details__phone-link info-link" href="tel:+998880331805">+998 88 033 18 05</a>
+                    <a class="personal-details__adress info-link" href="https://maps.app.goo.gl/iqouRWCba6kMUBVQA" target="_blank">8897+PMP, Almachi Street, Тоshkent, Узбекистан</a> 
+                  </div>
+                  
+                  
+                </div>
+              </div>
+              
+              
+              <div class="personal-details__footer wrapper">
+                <img src="../../assets/img/personal-details/information-circle-icon.svg" alt="information circle contained icon" width="24" height="24">
                 
-                
-                <img
-                class="card__img"
-                src="../../assets/img/profile/ads-watch-desktop.png"
-                alt=""
-                />
-              </div>
-              <div class="content-wrapper">
-                <span class="city">г. Ташкент</span>
-                <h3 class="product_name">
-                  Apple Watch Series 8 - USA Non active
-                </h3>
-                <p class="date">Вчера, 19:20</p>
-                <a class="phone__number" href="tel:+998712007007"
-                >+998 71 200 70 07</a
-                >
-                <p class="product__cost">
-                  2 599 000
-                  <span> UZS </span>
+                <p class="personal-details__extraInfo">
+                  
+                  
+                  Для изменения данных обратитесь к оператору
+                  
+                  <a class="personal-detail__extraInfo-tel" href="tel:1548">1547</a>
+                  
                 </p>
               </div>
+              
+              
             </div>
-            
-            <div class="card">
-              <div class="card__image">
-                <div class="card__icon">
-                  <iconify-icon icon="tdesign:heart"></iconify-icon>
-                </div>
-                <img
-                class="card__img"
-                src="../../assets/img/profile/ads-car.png"
-                alt=""
-                />
-              </div>
-              <div class="content-wrapper">
-                <span class="city">г. Ташкент</span>
-                <h3 class="product_name">
-                  Chevrolet Onix 1.2 Turbo в наличии
-                </h3>
-                <p class="date">Вчера, 19:20</p>
-                <a class="phone__number" href="tel:+998712007007"
-                >+998 71 200 70 07</a
-                >
-                <p class="product__cost">
-                  2 599 000
-                  <span> UZS </span>
-                </p>
-              </div>
-            </div>
-            
-            <div class="card">
-              <div class="card__image">
-                <div class="card__icon">
-                  <iconify-icon icon="tdesign:heart"></iconify-icon>
-                </div>
-                <img
-                class="card__img"
-                src="../../assets/img/profile/ads-sneaker-desktop.png"
-                alt=""
-                />
-              </div>
-              <div class="content-wrapper">
-                <span class="city">г. Ташкент</span>
-                <h3 class="product_name">
-                  Оригинальные кроссовки Nike Air Max 97
-                </h3>
-                <p class="date">Вчера, 19:20</p>
-                <a class="phone__number" href="tel:+998712007007"
-                >+998 71 200 70 07</a
-                >
-                <p class="product__cost">
-                  2 599 000
-                  <span> UZS </span>
-                </p>
-              </div>
-            </div>
-            
-            <div class="card">
-              <div class="card__image">
-                <div class="card__icon">
-                  <iconify-icon icon="tdesign:heart"></iconify-icon>
-                </div>
-                <img
-                class="card__img"
-                src="../../assets/img/profile/ads-car.png"
-                alt=""
-                />
-              </div>
-              <div class="content-wrapper">
-                <span class="city">г. Ташкент</span>
-                <h3 class="product_name">
-                  Лучший кроссовер Geely Monjaro Limited Edition
-                </h3>
-                <p class="date">Вчера, 19:20</p>
-                <a class="phone__number" href="tel:+998712007007"
-                >+998 71 200 70 07</a
-                >
-                <p class="product__cost">
-                  2 599 000
-                  <span> UZS </span>
-                </p>
-              </div>
-            </div>
-            
-            <div class="card">
-              <div class="card__image">
-                <div class="card__icon">
-                  <iconify-icon icon="tdesign:heart"></iconify-icon>
-                </div>
-                <img
-                class="card__img"
-                src="../../assets/img/profile/ads-cap.png"
-                alt=""
-                />
-              </div>
-              <div class="content-wrapper">
-                <span class="city">г. Ташкент</span>
-                <h3 class="product_name">
-                  Лучший кроссовер Geely Monjaro Limited Edition
-                </h3>
-                <p class="date">Вчера, 19:20</p>
-                <a class="phone__number" href="tel:+998712007007"
-                >+998 71 200 70 07</a
-                >
-                <p class="product__cost">
-                  2 599 000
-                  <span> UZS </span>
-                </p>
-              </div>
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            
             
           </div>
           

@@ -31,48 +31,46 @@
   line-height: 130%
 }
 
-.personal-info-list{
+.personal__buttons{
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 12px; 
   padding: 16px 0;
+  border-top: 1px solid var(--gray-color);
+  border-bottom: 1px solid var(--gray-color);
+  
   margin-bottom: 16px;
-  border-top: 1px solid var(--gray-color) ;
-  border-bottom: 1px solid var(--gray-color) ;
-  /* padding:0 ; */
 }
 
-.personal-info-list__item{
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.personal__innerButton{
+  width: 100%;
   padding: 10px 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--black-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 19.6px */
+  border: none;
   border-radius: 8px;
-  border: 1px solid var(--gray-color);
-  background: var(--input-bg-color);
-  transition: 0.3s ease-in-out;
+  background-color: var(--input-bg-color);
   cursor: pointer;
 }
 
-.personal-info-list__item--active{
+.btn-active{
   background-color: #FFF;
   border: 1px solid rgba(17, 124, 245, 0.10);
   background: var(--White, #FFF);
   box-shadow: 0px 0px 24px 0px #117CF51A;
 }
 
-.personal-info-list__item--active .personal-info-list__item-icon{
+.btn-active .personal-info-list__item-icon{
   color: var(--primary-color);
 }
 
-.personal-info-list__item-title{
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  letter-spacing: 0px;
-  text-align: left;
-  
-}
+
 
 
 .btn {
@@ -98,7 +96,7 @@
 
 .btn:active {
   filter: brightness(100%);
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
 }
 
 .btn-secondary {
@@ -118,3 +116,36 @@
   font-size: 20px;
 }
 
+
+.sign-out-btn{
+  position: relative;
+  z-index: 15;
+}
+
+.sign-out-btn__icon::before{
+  position: absolute;
+  z-index: 16;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../../assets/img/profile/exit-icon.svg);
+  background-repeat: no-repeat;
+  top: calc(50% - 10px);
+  left: calc(50% - 52px);
+}
+
+
+/* .btn-personal-details{
+  
+} */
+
+
+@media screen and (max-width:426px) {
+
+  .personal__buttons{
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+  
+}
