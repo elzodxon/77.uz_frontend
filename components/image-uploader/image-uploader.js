@@ -53,10 +53,12 @@ dropbox.addEventListener('dragenter', (e) => {
   dropbox.classList.add('active'); // Add active class to dropbox
 });
 
+// !!! REMOVED TO FIX BUG: dropbbox disappaering, and image is opening in whole tab !!!
+
 // Handle dragleave event on dropbox
-dropbox.addEventListener('dragleave', () => {
-  dropbox.classList.remove('active'); // Remove active class when leaving the dropbox area
-});
+// dropbox.addEventListener('dragleave', () => {
+//   dropbox.classList.remove('active'); // Remove active class when leaving the dropbox area
+// });
 
 
 // Prevent default behavior for dragover to allow dropping
@@ -104,3 +106,9 @@ document.addEventListener('click', (e) => {
     removeImage(parseFloat(id));
   }
 });
+
+window.addEventListener("dragenter",(e)=>{
+
+  e.preventDefault();
+  dropbox.classList.add('active'); // Add active class to dropbox
+})
