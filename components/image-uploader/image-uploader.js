@@ -6,7 +6,7 @@ let files = [];
 // Create gallery card
 const createGalleryCard = (id, image) => {
   return `
-          <div class="gallery__item" draggable="true">
+          <div class="gallery__item" draggable="true" ondragstart="dragStart(e)" ondragover="dragOver(e)"  ondrop="dragDrop(e)" ondragend="dragEnd()">
           <div class="gallery__item-image" draggable="true">
             <div class="actions" draggable="false">
               <button  class="actions__button" draggable="false">
@@ -44,11 +44,12 @@ gallery.innerHTML = ''
     reader.onload = () => {
       const card = document.createElement('div');
       card.innerHTML = createGalleryCard(element.id, reader.result);
-      gallery.append(card);
+      gallery.appendChild(card);
     };
 
     reader.readAsDataURL(element.file);
   });
+  makeDraggable()
 };
 
 // Handle dragenter event on dropbox
@@ -156,7 +157,12 @@ function addEventsDragAndDrop(el) {
   el.addEventListener("dragend", dragEnd, false);
 }
 
-const listItems = document.querySelectorAll(".gallery__item");
-[].forEach.call(listItems, function(item) {
-  addEventsDragAndDrop(item);
-});
+function makeDraggable(){
+
+  const listItems = document.getElementsByClassName(".gallery__item");
+  [].forEach.call(listItems, function(item) {
+    addEventsDragAndDrop(item);
+  });
+  console.log(listItems)
+
+}
