@@ -34,7 +34,7 @@
   height: 100vh;
   padding: 40px;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 10;
+  z-index: 10001;
 }
 .dropbox.active  {
   display: block;
