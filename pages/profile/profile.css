@@ -595,14 +595,18 @@
   }
 }
 
+@media screen and (max-width:480px) {
+  .back-link {
+    display: inline-block;
+  }
+}
+
 @media screen and (max-width: 426px) {
   .bread-crumb {
     display: none;
   }
 
-  .back-link {
-    display: inline-block;
-  }
+  
 
   .profile-wrapper {
     flex-direction: column;
