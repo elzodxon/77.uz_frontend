@@ -2,10 +2,15 @@
   --greys-grey-1: #8e9297;
 }
 
-body {
+/* Bu bodyni olib tashlasangiz boladi, agar componentni markazga olmoqchi bolsangiz yana display: flex;
+  align-items: center;
+  justify-content: center; larni qoshing  */
+
+/* body {
   width: 100vw;
   height: 100vh;
-}
+} */
+/* Wrapper divni html dan olib tashlagandan song bu yerda turishi shart emas */
 
 .wrapper {
   display: flex;
@@ -15,18 +20,24 @@ body {
   align-items: flex-start;
   gap: 16px;
   position: absolute;
-  width: 782px;
+  max-width: 782px;
+  margin: auto;
   background-color: white;
 }
 
-.dropbox{
-  position: absolute;
+.dropbox {
+  position: fixed;
   display: none;
   width: 100vw;
+  left: 0;
+  top: 0;
   height: 100vh;
   padding: 40px;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 10;
+  z-index: 10001;
+}
+.dropbox.active  {
+  display: block;
 }
 
 .dropbox__container {
@@ -67,23 +78,60 @@ body {
   line-height: 130%; /* 23.4px */
   width: 338px;
 }
+/* Todo: .galellery ni boshidagi 5qatorni olib tashlab   
 
-.gallery {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  width: 100%;
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  max-width: 100%;  
+  
+  shu kodni qo'shing */
+
+.gallery-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 100%;
   gap: 20px;
 }
-
-.gallery__item {
-  display: flex;
-  width: 31%;
-  height: 164px;
-  object-fit: contain;
+.drop-image__item {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+/* Todo: bu kod esa shu wrapperni responsive ligini taminlaydi
+@media screen and (max-width: 576px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
+@media screen and (max-width: 576px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+/* Todo: 
+.gallery__item {
+  display: flex;
+  flex: 1;
+  object-fit: cover;
+  min-height: 132px;
+}
+.gallery__item-image {
+  width: 100%;
+} shu kodni keyingi kod bilan alishtiring
+*/
+.gallery__item {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 132px;
+}
+.gallery__item-image {
+  width: 100%;
+  object-fit: cover;
+}
+/* .gallery__item-empty ga width: 100%; ni qoshib qoying */
 .gallery__item-empty {
   display: flex;
   flex-direction: column;
@@ -91,10 +139,18 @@ body {
   align-items: center;
   text-align: center;
   padding: 0px 6px;
+  gap: 4px;
+  padding: 30px 0;
+  width: 100%;
+  margin-top: 20px;
   font-size: 14px;
   border-radius: 10px;
   border: 1px dashed var(--greys-grey-3, #d5d8db);
   background: var(--greys-grey-bg, #f0f3f7);
+}
+.gallery__item-photo {
+  width: 100%;
+  height: auto;
 }
 
 .gallery__item-empty img {
@@ -126,8 +182,9 @@ body {
   line-height: 130%;
   display: inline;
 }
-
-.choose-text:hover{
+.choose-file {
+}
+.choose-text:hover {
   cursor: pointer;
 }
 
@@ -149,12 +206,13 @@ body {
   align-items: flex-start;
   gap: 8px;
 }
-
+/* .actions__button bunga   cursor: pointer; ni qoshing action bolganligi uchun kerak */
 .actions__button {
   display: flex;
   width: 32px;
   height: 32px;
   padding: 8px;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
@@ -169,6 +227,6 @@ body {
   flex-shrink: 0;
 }
 
-.hidden{
+.hidden {
   display: none;
 }

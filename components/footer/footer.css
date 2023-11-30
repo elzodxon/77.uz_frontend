@@ -42,6 +42,10 @@
   transition: 0.2s ease-in-out;
   line-height: 130%; /* 26px */
 }
+.footer-info__link img{
+  width: 16px;
+  height: 16px;
+}
 .footer-info__link:hover {
   color: var(--primary-color);
 }
