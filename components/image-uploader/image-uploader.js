@@ -1,23 +1,25 @@
 const fileInput = document.querySelector('#files');
 const gallery = document.querySelector('#gallery-wrapper');
 const dropbox = document.getElementById('dropbox');
-const files = [];
+let files = [];
 
 // Create gallery card
 const createGalleryCard = (id, image) => {
-  return `<div class="gallery__item">
-            <div class="gallery__item-image" draggable="true">
-              <div class="actions">
-                <button id="actions__change-button" class="actions__button">
-                  <img class="actions__button-image" src="../../assets/img/change-button.svg" />
-                </button>
-                <button class="remove-image actions__button" data-id="${id}">
-                  <img class="actions__button-image" src="../../assets/img/trash-button.svg" />
-                </button>
-              </div>
-              <img class="gallery__item-photo" draggable="false" src="${image}" />
+  return `
+          <div class="gallery__item" draggable="true">
+          <div class="gallery__item-image" draggable="true">
+            <div class="actions" draggable="false">
+              <button  class="actions__button" draggable="false">
+                <img class="actions__button-image" draggable="false" src="../../assets/img/change-button.svg" />
+              </button>
+              <button class="remove-image actions__button" draggable="false" data-id="${id}">
+                <img class="actions__button-image"  draggable="false" src="../../assets/img/trash-button.svg" />
+              </button>
             </div>
-          </div>`;
+            <img class="gallery__item-photo" draggable="false" src="${image}" />
+          </div>
+        </div>
+          `;
 };
 
 // Remove image
@@ -27,14 +29,16 @@ const removeImage = (id) => {
       files.splice(index, 1);
     }
   });
-
   renderImages();
 };
 
+// Remove image
+
+
+
 // Render images
 const renderImages = () => {
-  gallery.innerHTML = '';
-
+gallery.innerHTML = ''
   files.forEach((element) => {
     const reader = new FileReader();
     reader.onload = () => {
@@ -63,6 +67,7 @@ dropbox.addEventListener('dragenter', (e) => {
 
 // Prevent default behavior for dragover to allow dropping
 dropbox.addEventListener('dragover', (e) => {
+window.removeEventListener('dragenter')
   e.preventDefault();
 });
 
@@ -98,17 +103,60 @@ fileInput.addEventListener('change', (e) => {
 });
 
 // Event delegation for dynamically created delete buttons
-document.addEventListener('click', (e) => {
-  const target = e.target;
+// document.addEventListener('click', (e) => {
+//   const target = e.target;
+//   if (target.classList.contains('remove-image')) {
+//     const id = target.getAttribute('data-id');
+//     removeImage(parseFloat(id));
+//   }
+//   renderImages()
+// });
 
-  if (target.classList.contains('remove-image')) {
-    const id = target.getAttribute('data-id');
-    removeImage(parseFloat(id));
-  }
-});
 
-window.addEventListener("dragenter",(e)=>{
+
+let dragSrcEl;
+
+function dragStart(e) {
+
+  dragSrcEl = this;
+  e.dataTransfer.effectAllowed = "move";
+  e.dataTransfer.setData("text/html", this.innerHTML);
+  return false;
+}
+
+function dragOver(e) {
 
   e.preventDefault();
-  dropbox.classList.add('active'); // Add active class to dropbox
-})
+  e.dataTransfer.dropEffect = "move";
+  return false;
+}
+
+function dragDrop(e) {
+  if (dragSrcEl != this) {
+    dragSrcEl.innerHTML = this.innerHTML;
+    this.innerHTML = e.dataTransfer.getData("text/html");
+  }
+
+  return false;
+}
+
+function dragEnd() {
+  const listItems = document.querySelectorAll(".gallery__item");
+  [].forEach.call(listItems, function(item) {
+    item.draggable = "true";
+  });
+
+  return false;
+}
+
+function addEventsDragAndDrop(el) {
+  el.addEventListener("dragstart", dragStart, false);
+  el.addEventListener("dragover", dragOver, false);
+  el.addEventListener("drop", dragDrop, false);
+  el.addEventListener("dragend", dragEnd, false);
+}
+
+const listItems = document.querySelectorAll(".gallery__item");
+[].forEach.call(listItems, function(item) {
+  addEventsDragAndDrop(item);
+});
