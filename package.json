@@ -1,0 +1,51 @@
+{
+  "name": "77.uz_frontend",
+  "version": "1.0.0",
+  "description": "- You can find all the categories you need from a buyer\r   <img src=\"../../assets/img/77-uz.png\" alt=\"\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .html,.js .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elzodxon/77.uz_frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elzodxon/77.uz_frontend/issues"
+  },
+  "homepage": "https://github.com/elzodxon/77.uz_frontend#readme",
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.html": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.css": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}

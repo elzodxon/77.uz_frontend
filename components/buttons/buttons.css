@@ -66,22 +66,22 @@
 .btn-light-primary {
   background-color: var(--primary-light-color);
   border: var(--primary-light-color) solid 1px;
-  color: #388FF3;
+  color: #388ff3;
 }
 
 .btn-light-primary:hover {
   background-color: var(--primary-light-color);
-  color: #388FF3;
+  color: #388ff3;
 }
 .btn-light-danger {
   background-color: var(--danger-light-color);
   border: var(--danger-light-color) solid 1px;
-  color: #E93C47;
+  color: #e93c47;
 }
 
 .btn-light-danger:hover {
   background-color: var(--danger-light-color);
-  color: #E93C47;
+  color: #e93c47;
 }
 
 .btn-disabled {

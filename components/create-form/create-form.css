@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.create-form {
+  width: 100%;
+}
+.create-form__body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+.create-form__content {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: white;
+}

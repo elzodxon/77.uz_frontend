@@ -1,6 +1,19 @@
-/* ===== Google Font Import - Poppins ===== */
+::-webkit-scrollbar{
+  width: 4px;
+}
 
-.select-wrapper__label {
+::-webkit-scrollbar-thumb {
+  background: #D5D8DB ;
+  border-radius: 8px
+}
+.select{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.select-label{
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -8,9 +21,9 @@
   color: var(--placeholder-color);
 }
 
-.select-menu .select-btn {
+.select-menu .select-btn{
   display: flex;
-  background-color: var(--input-bg-color);
+  background-color:var(--input-bg-color);
   padding: 10px 10px 10px 12px;
   font-size: 14px;
   font-weight: 400;
@@ -18,21 +31,21 @@
   align-items: center;
   cursor: pointer;
   justify-content: space-between;
+  
 }
 
-.select-btn__arrow-icon::after {
-  display: block;
-  content: '';
-  width: 24px;
-  height: 24px;
-  top: 50%;
-  background-image: url(../../assets/img/icon-arrow-down.svg);
-  background-repeat: no-repeat;
+
+
+
+.select-menu__icon{
+  transition:  0.3s ease-in-out;
+
 }
 
-.select-menu.active .select-btn .select-btn__arrow-icon {
-  transform: rotate(180deg);
-  transition: 0.3s ease-in-out;
+/* Change transform as you want */
+
+.select-menu.active .select-menu__btn .select-menu__icon{
+  transform: rotate(-90deg);
 }
 
 .select-menu .options {
@@ -61,6 +74,21 @@
   border-bottom: 1px solid var(--gray-color);
   align-items: center;
   background: #fff;
+
+  position: relative;
+  z-index: 1;
+}
+
+.selected-option::after{
+  position: absolute;
+  z-index: 2;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(../../assets/img/select/checkmark.png);
+  background-repeat: no-repeat;
+  top: 15px;
+  right: 15px;
 }
 
 .options .option:hover {
