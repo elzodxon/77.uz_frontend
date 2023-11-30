@@ -2,7 +2,7 @@ const dataList = [
   { text: 'Доска объявлений', link: '#' },
   { text: 'Условия пользования', link: './pages/static-page/index.html' },
   { text: '+998 88 500 50 00', link: 'tel:+998885005000' },
-];
+]
 
 function generateListItem(item) {
   return `
@@ -12,10 +12,10 @@ function generateListItem(item) {
             ${item.text}
           </a>
         </li>
-      `;
+      `
 }
-const ulElement = document.getElementById('footerList');
+const ulElement = document.getElementById('footerList')
 
 dataList.forEach((item) => {
-  ulElement.innerHTML += generateListItem(item);
-});
+  ulElement.innerHTML += generateListItem(item)
+})

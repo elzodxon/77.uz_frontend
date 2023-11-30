@@ -1,131 +1,4 @@
-* {
-  outline: inherit;
-  box-sizing: border-box;
-}
-html,
 body {
-  background-color: #fff;
-  height: 100%;
-  width: 100%;
-  max-width: 1400px;
-  box-sizing: inherit;
-  font-family: 'Inter', sans-serif;
-}
-.search {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.search__label {
-  display: flex;
-  align-items: center;
-  border-radius: 8px;
-  border: 1px solid #eaedf0;
-  background: #fff;
-  padding: 20px 0px 20px 20px;
-}
-.search__label svg {
-  display: block;
-  align-self: center;
-  margin-right: 10px;
-  width: 24px;
-  height: 24px;
-}
-.search__input {
-  display: block;
-  border: none;
-  border-radius: 8px;
-  background: #fff;
-  padding: 20px 420px 20px 0px;
-}
-.input::placeholder {
-  color: #b8bbbd;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%;
-}
-.btn {
-  display: block;
-  padding: 11px 28px 12px 28px;
-  flex-shrink: 0;
-  border: none;
-  border-radius: 6px;
-  background: #16191d;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 130%;
-  cursor: pointer;
-}
-.search__btn {
-  margin-right: 10px;
-}
-/* Category */
-.categoty-wrapper {
-  text-align: center;
-  padding: 0 40px;
-}
-.category-title {
-  color: #16191d;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 130%;
-  margin: 0;
-  margin-bottom: 8px;
-}
-.category-description {
-  color: #8e9297;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-}
-.category-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 60px;
-  padding: 40px 30px;
-}
-.category-card {
-  display: block;
-  display: flex;
-  padding: 22px 10px 22px 44px;
-  border-radius: 12px;
-  border: 1px solid #eaedf0;
-  background: #fff;
-  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.02);
-  text-decoration: none;
-  position: relative;
-  gap: 20px 40px;
-}
-
-.category-card .category-icon {
-  display: block;
-  /* padding: 16px; */
-  position: absolute;
-  transform: translate(-117%, -16%);
-  padding: 15px;
-  cursor: pointer;
-  border: 1px solid #eaedf0;
-  background: #fff;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
-}
-.category-card:hover,
-.category-card:hover .category-icon {
-  border: 1px solid #388ff3;
-  background: #fff;
-  border-radius: 12px;
-}
-.category-card:active .category-icon,
-.category-card:active .category-icon path {
-  background-color: #388ff3;
-  /* stroke: #fff; */
-  fill: #fff;
-}
-.category-card__text {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -312,8 +185,6 @@ body.block {
   cursor: pointer;
 }
 .category-card .category-name {
-  margin: 0;
-  padding-right: 100px;
   overflow: hidden;
   color: #16191d;
   text-overflow: ellipsis;
@@ -323,8 +194,6 @@ body.block {
   line-height: normal;
 }
 .category-card .adds-amount {
-  display: block;
-  overflow: hidden;
   color: #8e9297;
   text-overflow: ellipsis;
   padding: 0;
@@ -333,11 +202,6 @@ body.block {
   font-weight: 400;
   line-height: 130%;
 }
-/* .category-revealer{ */
-/* display: block;
-  position: absolute;
-  transform: translate(750%, 10%);
-} */
 .category-revealer {
   transform: rotate(0deg);
   transition: all 0.5s ease;
@@ -507,6 +371,11 @@ body.block {
 .footer {
   margin-top: 72px;
 }
+.favorite-path {
+}
+.favorite-path.active {
+  fill: #e93c47;
+}
 @media screen and (max-width: 1180px) {
 }
 @media screen and (max-width: 768px) {
@@ -520,11 +389,9 @@ body.block {
 }
 
 /* Global styles */
-.wrapper {
-  margin-top: 80px;
-  margin-bottom: 60px;
+.wrapper-crumb {
+  margin-top: 100px;
 }
-
 
 /* Utility classes */
 
@@ -539,19 +406,18 @@ body.block {
 }
 
 .flex-x-center {
-    display: flex;
-    align-items: center;
-
+  display: flex;
+  align-items: center;
 }
 
 .flex-y-center {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .py-8 {
-    padding-top: 32px;
-    padding-bottom: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .row {
@@ -582,5 +448,4 @@ body.block {
   .main {
     flex-basis: 100%;
   }
-
 }

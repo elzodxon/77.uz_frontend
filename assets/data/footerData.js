@@ -2,7 +2,7 @@ export const dataList = [
   { text: 'Доска объявлений', link: '#' },
   { text: 'Условия пользования', link: '#' },
   { text: '+998 88 500 50 00', link: 'tel:+998885005000' },
-];
+]
 
 export function generateListItem(item) {
   return `
@@ -12,5 +12,5 @@ export function generateListItem(item) {
             ${item.text}
           </a>
         </li>
-      `;
+      `
 }

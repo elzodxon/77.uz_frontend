@@ -57,8 +57,8 @@ function formatPhoneNumber(input) {
       '-' +
       phoneNumber.substring(7, 9)
   }
+  
   // Set the formatted value back to the input
-
   input.value = phoneNumber
 }
 
@@ -86,7 +86,7 @@ function handleBackspace(event, input) {
 
     // Set the formatted value back to the input
     input.value = phoneNumber
-    
+
     // Prevent the default backspace behavior
     event.preventDefault()
   }
