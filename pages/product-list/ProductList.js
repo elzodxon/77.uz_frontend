@@ -3,7 +3,7 @@ const languageContent = document.querySelector('.language-content')
 const header = document.getElementById('list__switcher')
 const icons = header.getElementsByClassName('switcher-icon')
 
-languageButton.addEventListener('click', e => {
+languageButton.addEventListener('click', (e) => {
   e.preventDefault()
   languageContent.classList.toggle('active')
 })

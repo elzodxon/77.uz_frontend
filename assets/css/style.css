@@ -393,7 +393,6 @@ body.block {
   margin-top: 100px;
 }
 
-
 /* Utility classes */
 
 .flex {
@@ -407,19 +406,18 @@ body.block {
 }
 
 .flex-x-center {
-    display: flex;
-    align-items: center;
-
+  display: flex;
+  align-items: center;
 }
 
 .flex-y-center {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .py-8 {
-    padding-top: 32px;
-    padding-bottom: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .row {
@@ -450,5 +448,4 @@ body.block {
   .main {
     flex-basis: 100%;
   }
-
 }

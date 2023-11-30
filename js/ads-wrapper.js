@@ -46,7 +46,7 @@ const data = [
     imageLink: `./assets/img/Image.png`,
   },
   // Add more objects as needed
-];
+]
 
 // Function to generate HTML for each item
 const generateHTML = (item) => `
@@ -88,23 +88,23 @@ const generateHTML = (item) => `
       </div>
     </div>
   </li>
-`;
+`
 
 // Get the parent container where you want to append the items
-const adsContainer = document.querySelector('.ads-wrapper');
+const adsContainer = document.querySelector('.ads-wrapper')
 
 // Iterate over the data and append the generated HTML to the container
 data.forEach((item) => {
-  adsContainer.innerHTML += generateHTML(item);
-});
+  adsContainer.innerHTML += generateHTML(item)
+})
 
 const favoriteProductButton = document.querySelectorAll(
-  '.favorite__product-button'
-);
-const favoriteProductPath = document.querySelectorAll('.favorite-path');
+  '.favorite__product-button',
+)
+const favoriteProductPath = document.querySelectorAll('.favorite-path')
 
 for (let i = 0; i < favoriteProductButton.length; i++) {
   favoriteProductButton[i].addEventListener('click', () => {
-    favoriteProductPath[i].classList.toggle('active');
-  });
+    favoriteProductPath[i].classList.toggle('active')
+  })
 }

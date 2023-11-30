@@ -1,19 +1,18 @@
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D5D8DB ;
-  border-radius: 8px
+  background: #d5d8db;
+  border-radius: 8px;
 }
-.select{
+.select {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-
-.select-label{
+.select-label {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -21,9 +20,9 @@
   color: var(--placeholder-color);
 }
 
-.select-menu .select-btn{
+.select-menu .select-btn {
   display: flex;
-  background-color:var(--input-bg-color);
+  background-color: var(--input-bg-color);
   padding: 10px 10px 10px 12px;
   font-size: 14px;
   font-weight: 400;
@@ -31,20 +30,15 @@
   align-items: center;
   cursor: pointer;
   justify-content: space-between;
-  
 }
 
-
-
-
-.select-menu__icon{
-  transition:  0.3s ease-in-out;
-
+.select-menu__icon {
+  transition: 0.3s ease-in-out;
 }
 
 /* Change transform as you want */
 
-.select-menu.active .select-menu__btn .select-menu__icon{
+.select-menu.active .select-menu__btn .select-menu__icon {
   transform: rotate(-90deg);
 }
 
@@ -79,10 +73,10 @@
   z-index: 1;
 }
 
-.selected-option::after{
+.selected-option::after {
   position: absolute;
   z-index: 2;
-  content: "";
+  content: '';
   width: 24px;
   height: 24px;
   background-image: url(../../assets/img/select/checkmark.png);

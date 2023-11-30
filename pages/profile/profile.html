@@ -1,147 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- ================== Google Fonts links ================== -->
-  
-  <!-- ================== Css links ================== -->
-  
-  
-  <link rel="stylesheet" href="../../components/personal/personal.css">
-  <link rel="stylesheet" href="../../components/bread-crumb/bread-crumb.css">
-  <link rel="stylesheet" href="../../components/header/header.css">
-  <link rel="stylesheet" href="../../components/footer/footer.css">
-  <link rel="stylesheet" href="./profile.css" />
-  <link rel="stylesheet" href="../../assets/css/variables.css" />
-  <link rel="stylesheet" href="../../assets/css/normalize.css" />
-  
-  
-  <!-- ================== Website Title ================== -->
-  <title>Profile</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-  
-  <!------------------- Header ------------------------->
-  
-  
-  <header class="header">
-    <div class="container">
-      <nav class="navbar">
-        <!-- Left navigation bar -->
-        <ul class="navbar-list">
-          <li id="language-switcher" class="navbar-list__item">
-            <button class="language-button text-sm-subtitle">
-              <img
-              width="20"
-              height="20"
-              src="https://77.uz/images/flag/ru.svg"
-              alt=""
-              />
-              <span>Русский</span>
-              <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+    <!-- ================== Google Fonts links ================== -->
+
+    <!-- ================== Css links ================== -->
+
+    <link rel="stylesheet" href="../../components/personal/personal.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/bread-crumb/bread-crumb.css"
+    />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="./profile.css" />
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+
+    <!-- ================== Website Title ================== -->
+    <title>Profile</title>
+  </head>
+
+  <body>
+    <!------------------- Header ------------------------->
+
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <!-- Left navigation bar -->
+          <ul class="navbar-list">
+            <li id="language-switcher" class="navbar-list__item">
+              <button class="language-button text-sm-subtitle">
+                <img
+                  width="20"
+                  height="20"
+                  src="https://77.uz/images/flag/ru.svg"
+                  alt=""
+                />
+                <span>Русский</span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.8 9.5999L12 14.3999L7.19999 9.5999"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="language-content">
+                <ul class="language-content__list">
+                  <li class="language-content__item active">
+                    <img
+                      width="20"
+                      height="20"
+                      src="https://77.uz/images/flag/ru.svg"
+                      alt=""
+                    />
+                    <span>RU</span>
+                  </li>
+
+                  <li class="language-content__item">
+                    <img
+                      width="20"
+                      height="20"
+                      src="https://77.uz/images/flag/uz.svg"
+                      alt=""
+                    />
+                    <span>UZ</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="navbar-list__item phone-wrapper">
+              <a
+                id="phone-number"
+                href="tel:+998885005000"
+                class="navbar-list__link"
               >
-              <path
-              d="M16.8 9.5999L12 14.3999L7.19999 9.5999"
-              stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-          <div class="language-content">
-            <ul class="language-content__list">
-              <li class="language-content__item active">
-                <img
-                width="20"
-                height="20"
-                src="https://77.uz/images/flag/ru.svg"
-                alt=""
-                />
-                <span>RU</span>
-              </li>
-              
-              <li class="language-content__item">
-                <img
-                width="20"
-                height="20"
-                src="https://77.uz/images/flag/uz.svg"
-                alt=""
-                />
-                <span>UZ</span>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="navbar-list__item phone-wrapper">
-          <a
-          id="phone-number"
-          href="tel:+998885005000"
-          class="navbar-list__link"
-          >
-          <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          >
-          <path
-          d="M17.2197 15.6425C17.2197 15.6425 16.2541 16.5909 16.0175 16.8689C15.6321 17.2802 15.1779 17.4745 14.5825 17.4745C14.5253 17.4745 14.4642 17.4745 14.407 17.4706C13.2735 17.3983 12.2202 16.9565 11.4302 16.5794C9.27009 15.5359 7.37333 14.0543 5.79715 12.1767C4.49576 10.6113 3.62561 9.16405 3.04933 7.61014C2.69441 6.66179 2.56465 5.92292 2.6219 5.22594C2.66006 4.78034 2.8318 4.4109 3.14856 4.09479L4.44996 2.79605C4.63696 2.62085 4.83542 2.52563 5.03005 2.52563C5.27049 2.52563 5.46513 2.67036 5.58725 2.79224C5.59107 2.79605 5.59488 2.79986 5.5987 2.80366C5.8315 3.02076 6.05285 3.24546 6.28565 3.48541C6.40396 3.60728 6.52609 3.72916 6.64821 3.85484L7.6901 4.89459C8.09464 5.29831 8.09464 5.67155 7.6901 6.07527C7.57942 6.18572 7.47256 6.29617 7.36188 6.40281C7.0413 6.73035 7.29314 6.47903 6.96111 6.7761C6.95348 6.78372 6.94584 6.78753 6.94203 6.79514C6.61382 7.12268 6.67488 7.44261 6.74357 7.6597C6.74739 7.67113 6.75121 7.68255 6.75502 7.69398C7.02599 8.34906 7.40763 8.96605 7.98772 9.70112L7.99154 9.70493C9.04487 10.9999 10.1554 12.0091 11.3805 12.7823C11.537 12.8813 11.6973 12.9613 11.8499 13.0375C11.9873 13.106 12.1171 13.1708 12.2278 13.2393C12.243 13.2469 12.2583 13.2584 12.2736 13.266C12.4033 13.3307 12.5254 13.3612 12.6514 13.3612C12.9681 13.3612 13.1666 13.1632 13.2315 13.0984L13.9795 12.3519C14.1093 12.2224 14.3154 12.0662 14.5558 12.0662C14.7924 12.0662 14.9871 12.2148 15.1054 12.3442C15.1092 12.3481 15.1092 12.3481 15.113 12.3519L17.2159 14.4504C17.609 14.8389 17.2197 15.6425 17.2197 15.6425Z"
-          stroke="#B8BBBD"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          />
-        </svg>
-        <span class="phone-number text-sm-subtitle">
-          +998 88 500 50 00
-        </span>
-      </a>
-    </li>
-  </ul>
-  <!-- Header Logo -->
-  <a href="/" class="header-logo">
-    <img src="../../assets/img/logo.svg" alt="" />
-  </a>
-  <!-- Right navigation bar -->
-  <ul class="navbar-list">
-    <li class="navbar-list__item">
-      <a
-      id="favorite"
-      href=""
-      class="navbar-list__link text-sm-subtitle"
-      >
-      <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      >
-      <path
-      d="M20.2036 14.2826C20.596 13.8939 20.5991 13.2608 20.2105 12.8684C19.8218 12.476 19.1887 12.4729 18.7963 12.8616L20.2036 14.2826ZM12 21.0001L11.2963 21.7106C11.686 22.0966 12.3139 22.0966 12.7036 21.7106L12 21.0001ZM5.20364 12.8616C4.81124 12.4729 4.17808 12.476 3.78945 12.8684C3.40081 13.2608 3.40386 13.8939 3.79627 14.2826L5.20364 12.8616ZM3.80255 14.2888C4.19837 14.6739 4.83147 14.6653 5.21664 14.2695C5.6018 13.8737 5.59317 13.2406 5.19735 12.8554L3.80255 14.2888ZM12 7.00607L11.1974 7.60259C11.3854 7.85565 11.6819 8.00519 11.9972 8.00607C12.3125 8.00694 12.6097 7.85906 12.7992 7.60705L12 7.00607ZM18.7992 12.8646C18.4052 13.2517 18.3995 13.8848 18.7865 14.2788C19.1735 14.6728 19.8067 14.6785 20.2007 14.2915L18.7992 12.8646ZM18.7963 12.8616L11.2963 20.2896L12.7036 21.7106L20.2036 14.2826L18.7963 12.8616ZM12.7036 20.2896L5.20364 12.8616L3.79627 14.2826L11.2963 21.7106L12.7036 20.2896ZM5.19735 12.8554C4.11839 11.8055 3.72034 10.2386 4.16734 8.80102L2.25753 8.20719C1.58703 10.3636 2.18411 12.7139 3.80255 14.2888L5.19735 12.8554ZM4.16734 8.80102C4.61434 7.36341 5.83068 6.29855 7.31476 6.04555L6.97867 4.07399C4.75254 4.45349 2.92803 6.05078 2.25753 8.20719L4.16734 8.80102ZM7.31476 6.04555C8.79885 5.79255 10.2993 6.39428 11.1974 7.60259L12.8026 6.40955C11.4555 4.59709 9.2048 3.6945 6.97867 4.07399L7.31476 6.04555ZM12.7992 7.60705C13.701 6.40768 15.1983 5.81394 16.677 6.0693L17.0173 4.09847C14.7993 3.71543 12.5534 4.60604 11.2007 6.40509L12.7992 7.60705ZM16.677 6.0693C18.1557 6.32466 19.3671 7.38616 19.8144 8.81853L21.7235 8.22231C21.0525 6.07377 19.2354 4.48152 17.0173 4.09847L16.677 6.0693ZM19.8144 8.81853C20.2618 10.2509 19.8698 11.8131 18.7992 12.8646L20.2007 14.2915C21.8065 12.7142 22.3945 10.3709 21.7235 8.22231L19.8144 8.81853Z"
-      fill="#388FF3"
-      />
-    </svg>
-    <span class="favorite-title"> Избранные </span>
-  </a>
-</li>
-<li class="navbar-list__item divider"></li>
-<li class="navbar-list__item">
-  <button
-  class="navbar-list__link login-button text-sm-subtitle"
-  >
-  <!-- <span class="login-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M17.2197 15.6425C17.2197 15.6425 16.2541 16.5909 16.0175 16.8689C15.6321 17.2802 15.1779 17.4745 14.5825 17.4745C14.5253 17.4745 14.4642 17.4745 14.407 17.4706C13.2735 17.3983 12.2202 16.9565 11.4302 16.5794C9.27009 15.5359 7.37333 14.0543 5.79715 12.1767C4.49576 10.6113 3.62561 9.16405 3.04933 7.61014C2.69441 6.66179 2.56465 5.92292 2.6219 5.22594C2.66006 4.78034 2.8318 4.4109 3.14856 4.09479L4.44996 2.79605C4.63696 2.62085 4.83542 2.52563 5.03005 2.52563C5.27049 2.52563 5.46513 2.67036 5.58725 2.79224C5.59107 2.79605 5.59488 2.79986 5.5987 2.80366C5.8315 3.02076 6.05285 3.24546 6.28565 3.48541C6.40396 3.60728 6.52609 3.72916 6.64821 3.85484L7.6901 4.89459C8.09464 5.29831 8.09464 5.67155 7.6901 6.07527C7.57942 6.18572 7.47256 6.29617 7.36188 6.40281C7.0413 6.73035 7.29314 6.47903 6.96111 6.7761C6.95348 6.78372 6.94584 6.78753 6.94203 6.79514C6.61382 7.12268 6.67488 7.44261 6.74357 7.6597C6.74739 7.67113 6.75121 7.68255 6.75502 7.69398C7.02599 8.34906 7.40763 8.96605 7.98772 9.70112L7.99154 9.70493C9.04487 10.9999 10.1554 12.0091 11.3805 12.7823C11.537 12.8813 11.6973 12.9613 11.8499 13.0375C11.9873 13.106 12.1171 13.1708 12.2278 13.2393C12.243 13.2469 12.2583 13.2584 12.2736 13.266C12.4033 13.3307 12.5254 13.3612 12.6514 13.3612C12.9681 13.3612 13.1666 13.1632 13.2315 13.0984L13.9795 12.3519C14.1093 12.2224 14.3154 12.0662 14.5558 12.0662C14.7924 12.0662 14.9871 12.2148 15.1054 12.3442C15.1092 12.3481 15.1092 12.3481 15.113 12.3519L17.2159 14.4504C17.609 14.8389 17.2197 15.6425 17.2197 15.6425Z"
+                    stroke="#B8BBBD"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="phone-number text-sm-subtitle">
+                  +998 88 500 50 00
+                </span>
+              </a>
+            </li>
+          </ul>
+          <!-- Header Logo -->
+          <a href="/" class="header-logo">
+            <img src="../../assets/img/logo.svg" alt="" />
+          </a>
+          <!-- Right navigation bar -->
+          <ul class="navbar-list">
+            <li class="navbar-list__item">
+              <a
+                id="favorite"
+                href=""
+                class="navbar-list__link text-sm-subtitle"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.2036 14.2826C20.596 13.8939 20.5991 13.2608 20.2105 12.8684C19.8218 12.476 19.1887 12.4729 18.7963 12.8616L20.2036 14.2826ZM12 21.0001L11.2963 21.7106C11.686 22.0966 12.3139 22.0966 12.7036 21.7106L12 21.0001ZM5.20364 12.8616C4.81124 12.4729 4.17808 12.476 3.78945 12.8684C3.40081 13.2608 3.40386 13.8939 3.79627 14.2826L5.20364 12.8616ZM3.80255 14.2888C4.19837 14.6739 4.83147 14.6653 5.21664 14.2695C5.6018 13.8737 5.59317 13.2406 5.19735 12.8554L3.80255 14.2888ZM12 7.00607L11.1974 7.60259C11.3854 7.85565 11.6819 8.00519 11.9972 8.00607C12.3125 8.00694 12.6097 7.85906 12.7992 7.60705L12 7.00607ZM18.7992 12.8646C18.4052 13.2517 18.3995 13.8848 18.7865 14.2788C19.1735 14.6728 19.8067 14.6785 20.2007 14.2915L18.7992 12.8646ZM18.7963 12.8616L11.2963 20.2896L12.7036 21.7106L20.2036 14.2826L18.7963 12.8616ZM12.7036 20.2896L5.20364 12.8616L3.79627 14.2826L11.2963 21.7106L12.7036 20.2896ZM5.19735 12.8554C4.11839 11.8055 3.72034 10.2386 4.16734 8.80102L2.25753 8.20719C1.58703 10.3636 2.18411 12.7139 3.80255 14.2888L5.19735 12.8554ZM4.16734 8.80102C4.61434 7.36341 5.83068 6.29855 7.31476 6.04555L6.97867 4.07399C4.75254 4.45349 2.92803 6.05078 2.25753 8.20719L4.16734 8.80102ZM7.31476 6.04555C8.79885 5.79255 10.2993 6.39428 11.1974 7.60259L12.8026 6.40955C11.4555 4.59709 9.2048 3.6945 6.97867 4.07399L7.31476 6.04555ZM12.7992 7.60705C13.701 6.40768 15.1983 5.81394 16.677 6.0693L17.0173 4.09847C14.7993 3.71543 12.5534 4.60604 11.2007 6.40509L12.7992 7.60705ZM16.677 6.0693C18.1557 6.32466 19.3671 7.38616 19.8144 8.81853L21.7235 8.22231C21.0525 6.07377 19.2354 4.48152 17.0173 4.09847L16.677 6.0693ZM19.8144 8.81853C20.2618 10.2509 19.8698 11.8131 18.7992 12.8646L20.2007 14.2915C21.8065 12.7142 22.3945 10.3709 21.7235 8.22231L19.8144 8.81853Z"
+                    fill="#388FF3"
+                  />
+                </svg>
+                <span class="favorite-title"> Избранные </span>
+              </a>
+            </li>
+            <li class="navbar-list__item divider"></li>
+            <li class="navbar-list__item">
+              <button class="navbar-list__link login-button text-sm-subtitle">
+                <!-- <span class="login-title">
     <span class="login-text">Войти </span>
     <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -160,413 +157,406 @@
   </svg>
 </span> -->
 
-<span class="user-info">
-  <img src="../../assets/img/user.svg" alt="" />
-  <span class="user-name">Шохрух Шавкиев</span>
-  <svg
-  width="20"
-  height="20"
-  viewBox="0 0 20 20"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
-  >
-  <path
-  d="M8 6L12 10L8 14"
-  stroke="#8E9297"
-  stroke-width="1.5"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  />
-</svg>
-</span>
-</button>
-</li>
-</ul>
-</nav>
-</div>
-</header>
-
-
-<!------------------- Header ------------------------->
-
-<main>
-  
-  
-  
-  
-  
-  <div class="profile">
-    
-    <div class="container">
-      
-      <!------------------ Bread-Crumb-------------------- -->
-      
-      <ul class="bread-crumb">
-        <li class="bread-crumb__item">
-          <a href="" class="bread-crumb__link">Главная</a>
-        </li>
-        <li class="bread-crumb__item">
-          <a href="" class="bread-crumb__link active">Профиль</a>
-        </li>
-      </ul>
-      <!------------------ Bread-Crumb-------------------- -->
-      
-      <div>
-        <a class="back-link" href="/"><img class="arrow-left-icon" src="../../assets/img/profile/arrow-left-icon.svg" alt="arrow-left-icon" width="34" height="34"></a>
-        
-      </div>
-      
-      
-      <div class="profile-wrapper">
-        
-        
-        <!------------ Sidebar---------- -->
-        
-        <div class="sidebar">
-          <div class="personal">
-            <div class="personal-wrapper">
-              
-              <div class="personal__info">
-                <img class="personal__img" src="../../assets/img/profile_img.png" alt="personal photo" width="54" height="54">
-                
-                <p class="personal__name">
-                  Шохрух <br> Шавкиев
-                </p>
-                
-              </div>
-              
-              <div class="personal__buttons">
-                <button id="button1" class=" personal__innerButton btn-active">
-                  <svg class="personal-info-list__item-icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.467 2.4c1.178 0 2.133.942 2.133 2.104v3.592c0 1.162-.955 2.104-2.133 2.104h-3.2c-1.179 0-2.134-.942-2.134-2.104V4.504c0-1.162.955-2.104 2.134-2.104h3.2ZM4.533 2.4C3.355 2.4 2.4 3.342 2.4 4.504v3.592c0 1.162.955 2.104 2.133 2.104h3.2c1.178 0 2.134-.942 2.134-2.104V4.504c0-1.162-.956-2.104-2.134-2.104h-3.2ZM19.467 13.8c1.178 0 2.133.942 2.133 2.104v3.592c0 1.162-.955 2.104-2.133 2.104h-3.2c-1.179 0-2.134-.942-2.134-2.104v-3.592c0-1.162.955-2.104 2.134-2.104h3.2ZM4.533 13.8c-1.178 0-2.133.942-2.133 2.104v3.592c0 1.162.955 2.104 2.133 2.104h3.2c1.178 0 2.134-.942 2.134-2.104v-3.592c0-1.162-.956-2.104-2.134-2.104h-3.2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-                  
-                  Мои объявления
-                </button>
-                
-                <button id="button2" class="personal__innerButton">
-                  <svg  class="personal-info-list__item-icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.4 19.2c.461-.517 2.62-2.893 3.254-2.893h6.692c.918 0 2.79 1.97 3.254 2.664m3-6.971a9.6 9.6 0 1 1-19.2 0 9.6 9.6 0 0 1 19.2 0Zm-6.161-2.272C15.439 7.896 13.893 6.4 12 6.4c-1.892 0-3.438 1.496-3.438 3.328 0 1.831 1.546 3.328 3.438 3.328 1.893 0 3.439-1.497 3.439-3.328Z" stroke="currentColor" stroke-width="2"/>
+                <span class="user-info">
+                  <img src="../../assets/img/user.svg" alt="" />
+                  <span class="user-name">Шохрух Шавкиев</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 6L12 10L8 14"
+                      stroke="#8E9297"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
-                  
-                  Персональные данные
-                </button>
-              </div>
-              
-              <button class="btn btn-secondary sign-out-btn"> 
-                <span class="sign-out-btn__icon"></span>
-                Выход 
+                </span>
               </button>
-              
-              
-            
-              
-              
-              
-            </div>
-            
-            
-          
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!------------------- Header ------------------------->
+
+    <main>
+      <div class="profile">
+        <div class="container">
+          <!------------------ Bread-Crumb-------------------- -->
+
+          <ul class="bread-crumb">
+            <li class="bread-crumb__item">
+              <a href="" class="bread-crumb__link">Главная</a>
+            </li>
+            <li class="bread-crumb__item">
+              <a href="" class="bread-crumb__link active">Профиль</a>
+            </li>
+          </ul>
+          <!------------------ Bread-Crumb-------------------- -->
+
+          <div>
+            <a class="back-link" href="/"
+              ><img
+                class="arrow-left-icon"
+                src="../../assets/img/profile/arrow-left-icon.svg"
+                alt="arrow-left-icon"
+                width="34"
+                height="34"
+            /></a>
           </div>
-        </div>
-        
-        <!-------------- Sidebar---------- -->
-        
-        
-        <div class="profile-content main" id="content-container">
-          
-          
-          <div class="my-ads" id="content1">
-            <div class="profile-content__summary">
-              <h1 class="profile-content__title">
-                Мои объявления
-              </h1>
-              
-              <button class="btn ads-btn">Создать объявление</button>
+
+          <div class="profile-wrapper">
+            <!------------ Sidebar---------- -->
+
+            <div class="sidebar">
+              <div class="personal">
+                <div class="personal-wrapper">
+                  <div class="personal__info">
+                    <img
+                      class="personal__img"
+                      src="../../assets/img/profile_img.png"
+                      alt="personal photo"
+                      width="54"
+                      height="54"
+                    />
+
+                    <p class="personal__name">
+                      Шохрух <br />
+                      Шавкиев
+                    </p>
+                  </div>
+
+                  <div class="personal__buttons">
+                    <button
+                      id="button1"
+                      class="personal__innerButton btn-active"
+                    >
+                      <svg
+                        class="personal-info-list__item-icon"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.467 2.4c1.178 0 2.133.942 2.133 2.104v3.592c0 1.162-.955 2.104-2.133 2.104h-3.2c-1.179 0-2.134-.942-2.134-2.104V4.504c0-1.162.955-2.104 2.134-2.104h3.2ZM4.533 2.4C3.355 2.4 2.4 3.342 2.4 4.504v3.592c0 1.162.955 2.104 2.133 2.104h3.2c1.178 0 2.134-.942 2.134-2.104V4.504c0-1.162-.956-2.104-2.134-2.104h-3.2ZM19.467 13.8c1.178 0 2.133.942 2.133 2.104v3.592c0 1.162-.955 2.104-2.133 2.104h-3.2c-1.179 0-2.134-.942-2.134-2.104v-3.592c0-1.162.955-2.104 2.134-2.104h3.2ZM4.533 13.8c-1.178 0-2.133.942-2.133 2.104v3.592c0 1.162.955 2.104 2.133 2.104h3.2c1.178 0 2.134-.942 2.134-2.104v-3.592c0-1.162-.956-2.104-2.134-2.104h-3.2Z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+
+                      Мои объявления
+                    </button>
+
+                    <button id="button2" class="personal__innerButton">
+                      <svg
+                        class="personal-info-list__item-icon"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.4 19.2c.461-.517 2.62-2.893 3.254-2.893h6.692c.918 0 2.79 1.97 3.254 2.664m3-6.971a9.6 9.6 0 1 1-19.2 0 9.6 9.6 0 0 1 19.2 0Zm-6.161-2.272C15.439 7.896 13.893 6.4 12 6.4c-1.892 0-3.438 1.496-3.438 3.328 0 1.831 1.546 3.328 3.438 3.328 1.893 0 3.439-1.497 3.439-3.328Z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                      </svg>
+
+                      Персональные данные
+                    </button>
+                  </div>
+
+                  <button class="btn btn-secondary sign-out-btn">
+                    <span class="sign-out-btn__icon"></span>
+                    Выход
+                  </button>
+                </div>
+              </div>
             </div>
-            
-            
-            
-            
-            <div class="profile__ads">
-              
-              <div class="card">
-                <div class="card__image">
-                  <div class="card__icon">
-                    <iconify-icon icon="tdesign:heart"></iconify-icon>
-                  </div>
-                  <img
-                  class="card__img"
-                  src="../../assets/img/profile/ads-dyson.png"
-                  alt=""
-                  />
+
+            <!-------------- Sidebar---------- -->
+
+            <div class="profile-content main" id="content-container">
+              <div class="my-ads" id="content1">
+                <div class="profile-content__summary">
+                  <h1 class="profile-content__title">Мои объявления</h1>
+
+                  <button class="btn ads-btn">Создать объявление</button>
                 </div>
-                <div class="content-wrapper">
-                  <span class="city">г. Ташкент</span>
-                  <h3 class="product_name">
-                    Стайлер для волос Dyson airwrap complete long
-                  </h3>
-                  <p class="date">Вчера, 19:20</p>
-                  <a class="phone__number" href="tel:+998712007007"
-                  >+998 71 200 70 07</a
-                  >
-                  <p class="product__cost">
-                    2 599 000
-                    <span> UZS </span>
-                  </p>
+
+                <div class="profile__ads">
+                  <div class="card">
+                    <div class="card__image">
+                      <div class="card__icon">
+                        <iconify-icon icon="tdesign:heart"></iconify-icon>
+                      </div>
+                      <img
+                        class="card__img"
+                        src="../../assets/img/profile/ads-dyson.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-wrapper">
+                      <span class="city">г. Ташкент</span>
+                      <h3 class="product_name">
+                        Стайлер для волос Dyson airwrap complete long
+                      </h3>
+                      <p class="date">Вчера, 19:20</p>
+                      <a class="phone__number" href="tel:+998712007007"
+                        >+998 71 200 70 07</a
+                      >
+                      <p class="product__cost">
+                        2 599 000
+                        <span> UZS </span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__image">
+                      <div class="card__icon">
+                        <!-- <iconify-icon icon="tdesign:heart"></iconify-icon> -->
+                      </div>
+
+                      <img
+                        class="card__img"
+                        src="../../assets/img/profile/ads-watch-desktop.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-wrapper">
+                      <span class="city">г. Ташкент</span>
+                      <h3 class="product_name">
+                        Apple Watch Series 8 - USA Non active
+                      </h3>
+                      <p class="date">Вчера, 19:20</p>
+                      <a class="phone__number" href="tel:+998712007007"
+                        >+998 71 200 70 07</a
+                      >
+                      <p class="product__cost">
+                        2 599 000
+                        <span> UZS </span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__image">
+                      <div class="card__icon">
+                        <iconify-icon icon="tdesign:heart"></iconify-icon>
+                      </div>
+                      <img
+                        class="card__img"
+                        src="../../assets/img/profile/ads-car.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-wrapper">
+                      <span class="city">г. Ташкент</span>
+                      <h3 class="product_name">
+                        Chevrolet Onix 1.2 Turbo в наличии
+                      </h3>
+                      <p class="date">Вчера, 19:20</p>
+                      <a class="phone__number" href="tel:+998712007007"
+                        >+998 71 200 70 07</a
+                      >
+                      <p class="product__cost">
+                        2 599 000
+                        <span> UZS </span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__image">
+                      <div class="card__icon">
+                        <iconify-icon icon="tdesign:heart"></iconify-icon>
+                      </div>
+                      <img
+                        class="card__img"
+                        src="../../assets/img/profile/ads-sneaker-desktop.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-wrapper">
+                      <span class="city">г. Ташкент</span>
+                      <h3 class="product_name">
+                        Оригинальные кроссовки Nike Air Max 97
+                      </h3>
+                      <p class="date">Вчера, 19:20</p>
+                      <a class="phone__number" href="tel:+998712007007"
+                        >+998 71 200 70 07</a
+                      >
+                      <p class="product__cost">
+                        2 599 000
+                        <span> UZS </span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__image">
+                      <div class="card__icon">
+                        <iconify-icon icon="tdesign:heart"></iconify-icon>
+                      </div>
+                      <img
+                        class="card__img"
+                        src="../../assets/img/profile/ads-car.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-wrapper">
+                      <span class="city">г. Ташкент</span>
+                      <h3 class="product_name">
+                        Лучший кроссовер Geely Monjaro Limited Edition
+                      </h3>
+                      <p class="date">Вчера, 19:20</p>
+                      <a class="phone__number" href="tel:+998712007007"
+                        >+998 71 200 70 07</a
+                      >
+                      <p class="product__cost">
+                        2 599 000
+                        <span> UZS </span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__image">
+                      <div class="card__icon">
+                        <iconify-icon icon="tdesign:heart"></iconify-icon>
+                      </div>
+                      <img
+                        class="card__img"
+                        src="../../assets/img/profile/ads-cap.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-wrapper">
+                      <span class="city">г. Ташкент</span>
+                      <h3 class="product_name">
+                        Лучший кроссовер Geely Monjaro Limited Edition
+                      </h3>
+                      <p class="date">Вчера, 19:20</p>
+                      <a class="phone__number" href="tel:+998712007007"
+                        >+998 71 200 70 07</a
+                      >
+                      <p class="product__cost">
+                        2 599 000
+                        <span> UZS </span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              
-              <div class="card">
-                <div class="card__image">
-                  <div class="card__icon">
-                    <!-- <iconify-icon icon="tdesign:heart"></iconify-icon> -->
+
+              <div class="personal-details hidden" id="content2">
+                <h1 class="personal-details__title">Персональные данные</h1>
+
+                <div class="personal-details__box">
+                  <div class="personal-details__wrapper">
+                    <img
+                      class="personal-details__img"
+                      src="../../assets/img/personal-details/avatar-img.png"
+                      alt="person showing his watch with car in the background"
+                      width="92"
+                      height="92"
+                    />
+
+                    <div class="personal-details__contents">
+                      <h2 class="personal-details__subtitle">Шохрух Шавкиев</h2>
+
+                      <div class="personal-details__link-wrapper">
+                        <a
+                          class="personal-details__phone-link info-link"
+                          href="tel:+998880331805"
+                          >+998 88 033 18 05</a
+                        >
+                        <a
+                          class="personal-details__adress info-link"
+                          href="https://maps.app.goo.gl/iqouRWCba6kMUBVQA"
+                          target="_blank"
+                          >8897+PMP, Almachi Street, Тоshkent, Узбекистан</a
+                        >
+                      </div>
+                    </div>
                   </div>
-                  
-                  
-                  
-                  
-                  <img
-                  class="card__img"
-                  src="../../assets/img/profile/ads-watch-desktop.png"
-                  alt=""
-                  />
-                </div>
-                <div class="content-wrapper">
-                  <span class="city">г. Ташкент</span>
-                  <h3 class="product_name">
-                    Apple Watch Series 8 - USA Non active
-                  </h3>
-                  <p class="date">Вчера, 19:20</p>
-                  <a class="phone__number" href="tel:+998712007007"
-                  >+998 71 200 70 07</a
-                  >
-                  <p class="product__cost">
-                    2 599 000
-                    <span> UZS </span>
-                  </p>
+
+                  <div class="personal-details__footer wrapper">
+                    <img
+                      src="../../assets/img/personal-details/information-circle-icon.svg"
+                      alt="information circle contained icon"
+                      width="24"
+                      height="24"
+                    />
+
+                    <p class="personal-details__extraInfo">
+                      Для изменения данных обратитесь к оператору
+
+                      <a class="personal-detail__extraInfo-tel" href="tel:1548"
+                        >1547</a
+                      >
+                    </p>
+                  </div>
                 </div>
               </div>
-              
-              <div class="card">
-                <div class="card__image">
-                  <div class="card__icon">
-                    <iconify-icon icon="tdesign:heart"></iconify-icon>
-                  </div>
-                  <img
-                  class="card__img"
-                  src="../../assets/img/profile/ads-car.png"
-                  alt=""
-                  />
-                </div>
-                <div class="content-wrapper">
-                  <span class="city">г. Ташкент</span>
-                  <h3 class="product_name">
-                    Chevrolet Onix 1.2 Turbo в наличии
-                  </h3>
-                  <p class="date">Вчера, 19:20</p>
-                  <a class="phone__number" href="tel:+998712007007"
-                  >+998 71 200 70 07</a
-                  >
-                  <p class="product__cost">
-                    2 599 000
-                    <span> UZS </span>
-                  </p>
-                </div>
-              </div>
-              
-              <div class="card">
-                <div class="card__image">
-                  <div class="card__icon">
-                    <iconify-icon icon="tdesign:heart"></iconify-icon>
-                  </div>
-                  <img
-                  class="card__img"
-                  src="../../assets/img/profile/ads-sneaker-desktop.png"
-                  alt=""
-                  />
-                </div>
-                <div class="content-wrapper">
-                  <span class="city">г. Ташкент</span>
-                  <h3 class="product_name">
-                    Оригинальные кроссовки Nike Air Max 97
-                  </h3>
-                  <p class="date">Вчера, 19:20</p>
-                  <a class="phone__number" href="tel:+998712007007"
-                  >+998 71 200 70 07</a
-                  >
-                  <p class="product__cost">
-                    2 599 000
-                    <span> UZS </span>
-                  </p>
-                </div>
-              </div>
-              
-              <div class="card">
-                <div class="card__image">
-                  <div class="card__icon">
-                    <iconify-icon icon="tdesign:heart"></iconify-icon>
-                  </div>
-                  <img
-                  class="card__img"
-                  src="../../assets/img/profile/ads-car.png"
-                  alt=""
-                  />
-                </div>
-                <div class="content-wrapper">
-                  <span class="city">г. Ташкент</span>
-                  <h3 class="product_name">
-                    Лучший кроссовер Geely Monjaro Limited Edition
-                  </h3>
-                  <p class="date">Вчера, 19:20</p>
-                  <a class="phone__number" href="tel:+998712007007"
-                  >+998 71 200 70 07</a
-                  >
-                  <p class="product__cost">
-                    2 599 000
-                    <span> UZS </span>
-                  </p>
-                </div>
-              </div>
-              
-              <div class="card">
-                <div class="card__image">
-                  <div class="card__icon">
-                    <iconify-icon icon="tdesign:heart"></iconify-icon>
-                  </div>
-                  <img
-                  class="card__img"
-                  src="../../assets/img/profile/ads-cap.png"
-                  alt=""
-                  />
-                </div>
-                <div class="content-wrapper">
-                  <span class="city">г. Ташкент</span>
-                  <h3 class="product_name">
-                    Лучший кроссовер Geely Monjaro Limited Edition
-                  </h3>
-                  <p class="date">Вчера, 19:20</p>
-                  <a class="phone__number" href="tel:+998712007007"
-                  >+998 71 200 70 07</a
-                  >
-                  <p class="product__cost">
-                    2 599 000
-                    <span> UZS </span>
-                  </p>
-                </div>
-              </div>
-              
-              
-              
-              
-              
-              
-              
-              
-              
             </div>
           </div>
-          
-          
-          <div class="personal-details hidden" id="content2">
-            <h1 class="personal-details__title">
-              Персональные данные
-            </h1>
-            
-            <div class="personal-details__box">
-              
-              <div class="personal-details__wrapper">
-                <img class="personal-details__img" src="../../assets/img/personal-details/avatar-img.png" alt="person showing his watch with car in the background" width="92"  height="92">
-                
-                
-                <div class="personal-details__contents">
-                  <h2 class="personal-details__subtitle">
-                    Шохрух Шавкиев
-                  </h2>
-                  
-                  
-                  <div class="personal-details__link-wrapper">
-                    <a class="personal-details__phone-link info-link" href="tel:+998880331805">+998 88 033 18 05</a>
-                    <a class="personal-details__adress info-link" href="https://maps.app.goo.gl/iqouRWCba6kMUBVQA" target="_blank">8897+PMP, Almachi Street, Тоshkent, Узбекистан</a> 
-                  </div>
-                  
-                  
-                </div>
-              </div>
-              
-              
-              <div class="personal-details__footer wrapper">
-                <img src="../../assets/img/personal-details/information-circle-icon.svg" alt="information circle contained icon" width="24" height="24">
-                
-                <p class="personal-details__extraInfo">
-                  
-                  
-                  Для изменения данных обратитесь к оператору
-                  
-                  <a class="personal-detail__extraInfo-tel" href="tel:1548">1547</a>
-                  
-                </p>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-          
-          
         </div>
       </div>
-      
-    </div>
-    
-  </div>
-</main>
+    </main>
 
+    <!--------------------- Footer ------------------>
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer Logo -->
+        <a class="footer-logo" href="">
+          <img width="122" height="64" src="../../assets/img/logo.svg" alt="" />
+        </a>
+        <!-- Footer Info -->
+        <div class="footer-info">
+          <p class="footer-info__text subtitle text-center">
+            77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+            облегчает покупки и продажи, связывая продавцов с потенциальными
+            клиентами.
+          </p>
+          <ul class="footer-info__list" id="footerList"></ul>
+        </div>
+      </div>
+      <div class="development-company">
+        <div class="development-company-wrapper container">
+          <p class="development-company__text copyright">
+            <strong>© 77.uz</strong>
+            <span> 2023. Все права защищены</span>
+          </p>
 
+          <a
+            href="https://uic.group/"
+            target="_blank"
+            class="development-company__link"
+          >
+            <span>
+              <img src="../../assets/img/uic.group.svg" alt="" />
+            </span>
+            <img src="../../assets/img/uic.group.text.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!--------------------- Footer ------------------>
 
+    <!-- ================== Javascript Links ================== -->
 
-<!--------------------- Footer ------------------>
-<footer class="footer">
-  <div class="container">
-    <!-- Footer Logo -->
-    <a class="footer-logo" href="">
-      <img width="122" height="64" src="../../assets/img/logo.svg" alt="" />
-    </a>
-    <!-- Footer Info -->
-    <div class="footer-info">
-      <p class="footer-info__text subtitle text-center">
-        77.uz marketplace - это виртуальная платформа в Узбекистане, которая
-        облегчает покупки и продажи, связывая продавцов с потенциальными
-        клиентами.
-      </p>
-      <ul class="footer-info__list" id="footerList"></ul>
-    </div>
-  </div>
-  <div class="development-company">
-    <div class="development-company-wrapper container">
-      <p class="development-company__text copyright">
-        <strong>© 77.uz</strong>
-        <span> 2023. Все права защищены</span>
-      </p>
-      
-      <a
-      href="https://uic.group/"
-      target="_blank"
-      class="development-company__link"
-      >
-      <span>
-        <img src="../../assets/img/uic.group.svg" alt="" />
-      </span>
-      <img src="../../assets/img/uic.group.text.svg" alt="" />
-    </a>
-  </div>
-</div>
-</footer>
-<!--------------------- Footer ------------------>
-
-
-<!-- ================== Javascript Links ================== -->
-
-<script src="../../components/footer/footer.js"></script>
-<script src="../../components/header/header.js"></script>
-<script src="./profile.js"></script>
-</body>
+    <script src="../../components/footer/footer.js"></script>
+    <script src="../../components/header/header.js"></script>
+    <script src="./profile.js"></script>
+  </body>
 </html>

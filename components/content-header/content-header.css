@@ -9,9 +9,7 @@
   flex-direction: column;
 }
 .content-header__title {
-
 }
 .content-header__subtitle {
   color: var(--secondary-color);
 }
-

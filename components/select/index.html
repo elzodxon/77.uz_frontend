@@ -1,88 +1,76 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- ================== Google Fonts links ================== -->
-  
-  <!-- ================== Css links ================== -->
-  
-  <link rel="stylesheet" href="./select.css" />
-  <link rel="stylesheet" href="../../assets/css/variables.css" />
-  <link rel="stylesheet" href="../../assets/css/normalize.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- ================== Google Fonts links ================== -->
 
+    <!-- ================== Css links ================== -->
 
-  
-  <!-- ================== Website Title ================== -->
-  <title>Select Component</title>
-</head>
+    <link rel="stylesheet" href="./select.css" />
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
 
+    <!-- ================== Website Title ================== -->
+    <title>Select Component</title>
+  </head>
 
-<body>
+  <body>
+    <div class="select">
+      <label class="select-label" for="">Адресс</label>
 
-  <div class="select">
-    <label class="select-label" for="">Адресс</label>
+      <div class="select-menu" id="">
+        <div class="select-menu__btn">
+          <span class="select-menu__context">Выберите свой адрес</span>
 
-    <div class="select-menu" id="">
-      <div class="select-menu__btn">
-        <span class="select-menu__context">Выберите свой адрес</span>
-      
-        <span>
-            <img class="select-menu__icon" src="../../assets/img/icon-arrow-down.svg" alt="chevron-up icon" width="24" height="24">
-        </span>
+          <span>
+            <img
+              class="select-menu__icon"
+              src="../../assets/img/icon-arrow-down.svg"
+              alt="chevron-up icon"
+              width="24"
+              height="24"
+            />
+          </span>
+        </div>
+
+        <ul class="options">
+          <li class="option">
+            <span class="option-text">Г. Ташкент</span>
+          </li>
+
+          <li class="option">
+            <span class="option-text">Андижан</span>
+          </li>
+          <li class="option">
+            <span class="option-text">Бухара</span>
+          </li>
+          <li class="option">
+            <span class="option-text">Навои </span>
+          </li>
+
+          <li class="option">
+            <span class="option-text">Самарканд</span>
+          </li>
+          <li class="option">
+            <span class="option-text">Джизак </span>
+          </li>
+
+          <li class="option">
+            <span class="option-text">Джизак </span>
+          </li>
+          <li class="option">
+            <span class="option-text">Джизак </span>
+          </li>
+        </ul>
       </div>
-      
-      <ul class="options">
-  
-        <li class="option">
-          
-          <span class="option-text">Г. Ташкент</span>
-        </li>
-  
-        <li class="option">
-          <span class="option-text">Андижан</span>
-        </li>
-        <li class="option">
-          
-          <span class="option-text">Бухара</span>
-        </li>
-        <li class="option">
-          
-          <span class="option-text">Навои </span>
-        </li>
-        
-        <li class="option">
-          
-          <span class="option-text">Самарканд</span>
-        </li><li class="option">
-          
-          <span class="option-text">Джизак </span>
-        </li>
-
-        <li class="option">
-          
-          <span class="option-text">Джизак </span>
-        </li><li class="option">
-          
-          <span class="option-text">Джизак </span>
-        </li>
-  
-        
-        
-      </ul>
     </div>
-  </div>
 
+    <!-- Region Select -->
 
-
-
-
-  <!-- Region Select -->
-
-<!-- 
+    <!-- 
   <div class="select">
     <label class="select-label" for="">Регион</label>
 
@@ -137,19 +125,10 @@
       </ul>
     </div>
   </div> -->
-  
-  
-  <!-- Region Select -->
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <!-- ================== Javascript Links ================== -->
-  <script src="./select.js"></script>
-</body>
+
+    <!-- Region Select -->
+
+    <!-- ================== Javascript Links ================== -->
+    <script src="./select.js"></script>
+  </body>
 </html>

@@ -1,4 +1,3 @@
-
 /* Utility classes */
 
 .flex {
@@ -14,7 +13,6 @@
 .flex-x-center {
   display: flex;
   align-items: center;
-  
 }
 
 .flex-y-center {
@@ -42,51 +40,40 @@
   flex-basis: calc(75% - 24px);
   flex-shrink: 0;
 }
-.hidden{
+.hidden {
   display: none;
 }
 
-
-
-.user-info{
+.user-info {
   display: block;
 }
 
-
-.bread-crumb{
+.bread-crumb {
   margin: 0 0 32px 0;
-  padding-top: 112px
-  
+  padding-top: 112px;
 }
 
-.back-link{
+.back-link {
   display: none;
   padding-top: 112px;
   margin-bottom: 32px;
 }
 
-.arrow-left-icon{
+.arrow-left-icon {
   max-width: 32px;
   max-height: 32px;
 }
 
-.profile-wrapper{
-  
+.profile-wrapper {
   display: flex;
   margin-bottom: 46px;
   gap: 24px;
 }
 
-
 /* .sidebar{
   max-width: 278px;
   width: 100%;
 }  */
-
-
-
-
-
 
 .btn {
   position: relative;
@@ -127,16 +114,15 @@
   color: #000;
 }
 
-
-.sign-out-btn{
+.sign-out-btn {
   position: relative;
   z-index: 15;
 }
 
-.sign-out-btn__icon::before{
+.sign-out-btn__icon::before {
   position: absolute;
   z-index: 16;
-  content: "";
+  content: '';
   width: 20px;
   height: 20px;
   background-image: url(../../assets/img/profile/exit-icon.svg);
@@ -145,22 +131,21 @@
   left: calc(50% - 52px);
 }
 
-
 .btn__icon {
   padding: 0 10px;
   font-size: 20px;
 }
 
-.ads-btn{
+.ads-btn {
   max-width: 223px;
   font-size: 14px;
   text-align: left;
 }
 
-.ads-btn::after{
+.ads-btn::after {
   position: absolute;
   z-index: 2;
-  content: "";
+  content: '';
   width: 20px;
   height: 20px;
   background-image: url(../../assets/img/profile/plus-icon.svg);
@@ -169,38 +154,31 @@
   right: calc(50% - 98px);
 }
 
-
-
-.profile-content{
+.profile-content {
   width: 100%;
 }
 
-
-.profile-content__summary{
+.profile-content__summary {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
 }
 
-.profile-content__title{
+.profile-content__title {
   font-size: 32px;
   font-weight: 700;
   line-height: 42px;
   letter-spacing: 0px;
   text-align: left;
-  
 }
 
-.profile__ads{
+.profile__ads {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 24px;
   grid-row-gap: 24px;
-  
 }
-
-
 
 .card {
   border-radius: 12px;
@@ -272,18 +250,15 @@
   font-weight: 500;
 }
 
-
-
-
 /*----------- Personal Details  --------- */
 
-.wrapper{
+.wrapper {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.personal-details__title{
+.personal-details__title {
   font-size: 32px;
   font-weight: 700;
   line-height: 42px;
@@ -292,30 +267,30 @@
   margin-bottom: 24px;
 }
 
-.personal-details__box{
+.personal-details__box {
   width: 100%;
   padding: 24px;
   background-color: #fff;
   border-radius: 12px;
 }
 
-.personal-details__wrapper{
+.personal-details__wrapper {
   display: flex;
   gap: 24px;
   margin-bottom: 28px;
 }
 
-.personal-details__img{
+.personal-details__img {
   max-width: 92px;
   height: 92px;
   border-radius: 50%;
 }
 
-.personal-details__contents{
+.personal-details__contents {
   width: 100%;
 }
 
-.personal-details__subtitle{
+.personal-details__subtitle {
   color: var(--black-color);
   font-size: 24px;
   font-style: normal;
@@ -324,24 +299,20 @@
   margin-bottom: 16px;
 }
 
-.personal-details__link-wrapper{
+.personal-details__link-wrapper {
   display: flex;
   gap: 16px;
 }
 
-
-
-.personal-details__phone-link{
+.personal-details__phone-link {
   max-width: 205px;
   width: 100%;
   position: relative;
-  z-index: 1;  
-  
+  z-index: 1;
 }
 
-
-.personal-details__phone-link::before{
-  content: "";
+.personal-details__phone-link::before {
+  content: '';
   width: 24px;
   height: 24px;
   position: absolute;
@@ -352,14 +323,13 @@
   left: 8px;
 }
 
-
-.personal-details__adress{
+.personal-details__adress {
   position: relative;
   z-index: 1;
 }
 
-.personal-details__adress::before{
-  content: "";
+.personal-details__adress::before {
+  content: '';
   width: 24px;
   height: 24px;
   position: absolute;
@@ -370,10 +340,8 @@
   left: 8px;
 }
 
-
-
-.info-link{
-  padding: 8px 16px 8px 40px ;
+.info-link {
+  padding: 8px 16px 8px 40px;
   border-radius: 8px;
   color: var(--black-color);
   font-size: 16px;
@@ -382,7 +350,7 @@
   background-color: var(--gray-color);
 }
 
-.personal-details__extraInfo{
+.personal-details__extraInfo {
   color: #000;
   font-size: 16px;
   font-style: normal;
@@ -390,7 +358,7 @@
   line-height: 130%;
 }
 
-.personal-detail__extraInfo-tel{
+.personal-detail__extraInfo-tel {
   color: var(--primary-color);
   font-family: Inter;
   font-size: 20px;
@@ -399,114 +367,74 @@
   line-height: 130%; /* 26px */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 426px){
-  
-  
-  .personal-details__title{
+@media screen and (max-width: 426px) {
+  .personal-details__title {
     display: none;
   }
-  
-  .personal-details__box{
+
+  .personal-details__box {
     padding: 16px;
     border-radius: 8px;
   }
-  
-  .personal-details__wrapper{
+
+  .personal-details__wrapper {
     flex-direction: column;
     align-items: center;
     gap: 12px;
     margin-bottom: 0;
   }
-  
-  .personal-details__img{
+
+  .personal-details__img {
     max-width: 54px;
     max-height: 54px;
   }
-  
-  .personal-details__subtitle{
+
+  .personal-details__subtitle {
     margin-bottom: 24px;
     text-align: center;
     line-height: 130%;
     font-size: 16px;
   }
-  
-  .personal-details__link-wrapper{
+
+  .personal-details__link-wrapper {
     flex-direction: column;
     gap: 12px;
   }
-  
-  .personal-details__phone-link{
+
+  .personal-details__phone-link {
     max-width: 100%;
   }
-  
-  .personal-details__footer{
+
+  .personal-details__footer {
     display: none;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*----------- Personal Details  --------- */
 
-
-
-@media screen and (max-width: 768px){
-  
-  
+@media screen and (max-width: 768px) {
   .row {
     flex-direction: column;
   }
-  
-  .profile-wrapper{
+
+  .profile-wrapper {
     flex-direction: column;
   }
-  
+
   .sidebar {
     flex-basis: 100%;
   }
-  
+
   .main {
     flex-basis: 100%;
   }
-  
-  
-  
-  .profile-content__summary{
+
+  .profile-content__summary {
     flex-direction: column;
     margin-bottom: 16px;
   }
-  
-  .profile-content__title{
-    
+
+  .profile-content__title {
     font-size: 24px;
     font-weight: 700;
     line-height: 29px;
@@ -514,9 +442,8 @@
     text-align: left;
     margin-bottom: 16px;
   }
-  
-  
-  .ads-btn{
+
+  .ads-btn {
     max-width: 100%;
     font-size: 14px;
     font-weight: 600;
@@ -524,31 +451,30 @@
     letter-spacing: 0px;
     text-align: left;
   }
-  
-  
-  .profile__ads{
+
+  .profile__ads {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 18px;
     grid-row-gap: 16px;
   }
-  
-  .card{
+
+  .card {
     border-radius: 12px;
   }
-  
-  .content-wrapper{
+
+  .content-wrapper {
     padding: 12px;
   }
-  
-  .city{
+
+  .city {
     font-size: 12px;
     font-weight: 400;
     line-height: 13px;
     letter-spacing: 0em;
-    text-align: left;    
+    text-align: left;
   }
-  
-  .product_name{
+
+  .product_name {
     font-size: 16px;
     font-weight: 600;
     line-height: 18px;
@@ -556,8 +482,8 @@
     text-align: left;
     margin: 8px 0 0 0;
   }
-  
-  .date{
+
+  .date {
     font-size: 12px;
     font-weight: 400;
     line-height: 13px;
@@ -565,165 +491,144 @@
     text-align: left;
     margin: 4px 0 0 0;
   }
-  
-  .phone__number{
+
+  .phone__number {
     font-size: 14px;
     font-weight: 600;
     line-height: 16px;
-    
   }
-  .product__cost{
+  .product__cost {
     font-size: 18px;
     font-weight: 700;
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
     margin: 8px 0 0 0;
-    
   }
-  
-  .personal-details__title{
+
+  .personal-details__title {
     display: none;
   }
-  
-  .personal-details__box{
+
+  .personal-details__box {
     padding: 16px;
     border-radius: 8px;
   }
-  
-  .personal-details__wrapper{
+
+  .personal-details__wrapper {
     flex-direction: column;
     align-items: center;
     gap: 12px;
     margin-bottom: 0;
   }
-  
-  .personal-details__img{
+
+  .personal-details__img {
     max-width: 54px;
     max-height: 54px;
   }
-  
-  .personal-details__subtitle{
+
+  .personal-details__subtitle {
     margin-bottom: 24px;
     text-align: center;
     line-height: 130%;
     font-size: 16px;
   }
-  
-  .personal-details__link-wrapper{
+
+  .personal-details__link-wrapper {
     flex-direction: column;
     gap: 12px;
   }
-  
-  .personal-details__phone-link{
+
+  .personal-details__phone-link {
     max-width: 100%;
   }
-  
-  .personal-details__footer{
+
+  .personal-details__footer {
     display: none;
   }
 }
-
-
-
-
-
 
 @media screen and (max-width: 568px) {
-  
-  
-  
-  .sidebar{
+  .sidebar {
     max-width: 100%;
   }
-  
-  .personal-details__title{
+
+  .personal-details__title {
     display: none;
   }
-  
-  .personal-details__box{
+
+  .personal-details__box {
     padding: 16px;
     border-radius: 8px;
   }
-  
-  .personal-details__wrapper{
+
+  .personal-details__wrapper {
     flex-direction: column;
     align-items: center;
     gap: 12px;
     margin-bottom: 0;
   }
-  
-  .personal-details__img{
+
+  .personal-details__img {
     max-width: 54px;
     max-height: 54px;
   }
-  
-  .personal-details__subtitle{
+
+  .personal-details__subtitle {
     margin-bottom: 24px;
     text-align: center;
     line-height: 130%;
     font-size: 16px;
   }
-  
-  .personal-details__link-wrapper{
+
+  .personal-details__link-wrapper {
     flex-direction: column;
     gap: 12px;
   }
-  
-  .personal-details__phone-link{
+
+  .personal-details__phone-link {
     max-width: 100%;
   }
-  
-  .personal-details__footer{
+
+  .personal-details__footer {
     display: none;
   }
-  
-  
 }
 
-
-
-
-
-
-
-@media screen and (max-width: 426px){
-  
-  .bread-crumb{
+@media screen and (max-width: 426px) {
+  .bread-crumb {
     display: none;
   }
-  
-  .back-link{
+
+  .back-link {
     display: inline-block;
   }
-  
-  .profile-wrapper{
+
+  .profile-wrapper {
     flex-direction: column;
-    gap: 32px   ;
+    gap: 32px;
   }
-  
-  .sidebar{
+
+  .sidebar {
     max-width: 100%;
   }
-  
-  .personal-info-list{
+
+  .personal-info-list {
     border-bottom: none;
     margin: 0;
     padding-bottom: 0;
   }
-  
-  
+
   .personal-wrapper .btn {
     display: none;
   }
-  
-  .profile-content__summary{
+
+  .profile-content__summary {
     flex-direction: column;
     /* margin-bottom: 16px; */
   }
-  
-  .profile-content__title{
-    
+
+  .profile-content__title {
     font-size: 28px;
     font-weight: 700;
     line-height: 35px;
@@ -731,42 +636,39 @@
     text-align: left;
     margin-bottom: 16px;
   }
-  
-  
-  .ads-btn{
+
+  .ads-btn {
     max-width: 100%;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
     letter-spacing: 0px;
     text-align: left;
-    
   }
-  
-  .profile__ads{
+
+  .profile__ads {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 12px;
     grid-row-gap: 16px;
   }
-  
-  
-  .card{
+
+  .card {
     border-radius: 12px;
   }
-  
-  .content-wrapper{
+
+  .content-wrapper {
     padding: 8px;
   }
-  
-  .city{
+
+  .city {
     font-size: 10px;
     font-weight: 400;
     line-height: 13px;
     letter-spacing: 0em;
-    text-align: left;    
+    text-align: left;
   }
-  
-  .product_name{
+
+  .product_name {
     font-size: 14px;
     font-weight: 600;
     line-height: 18px;
@@ -774,8 +676,8 @@
     text-align: left;
     margin: 8px 0 0 0;
   }
-  
-  .date{
+
+  .date {
     font-size: 10px;
     font-weight: 400;
     line-height: 13px;
@@ -783,14 +685,13 @@
     text-align: left;
     margin: 4px 0 0 0;
   }
-  
-  .phone__number{
+
+  .phone__number {
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
-    
   }
-  .product__cost{
+  .product__cost {
     font-size: 16px;
     font-weight: 700;
     line-height: 21px;
@@ -798,6 +699,4 @@
     text-align: left;
     margin: 8px 0 0 0;
   }
-  
 }
-
