@@ -1,8 +1,3 @@
-// Todo: Copy paste qilganga yarasha, chopish kerak:)))
-const languageButton = document.querySelector('.language-button')
-const languageContent = document.querySelector('.language-content')
-
-
 const switchers = document.querySelectorAll(
   '.product-list__view-icons .product-list__view-icon',
 )
@@ -33,12 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
       handleCardIconClick(event)
     }
   })
-})
-
-// ------------------- Language switcher -------------------
-languageButton.addEventListener('click', (e) => {
-  e.preventDefault()
-  languageContent.classList.toggle('active')
 })
 
 // Todo: Refactor this function

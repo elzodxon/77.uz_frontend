@@ -1,13 +1,22 @@
 .radio-group {
   display: flex;
   align-items: center;
+  /* flex-direction: column; */
   gap: 8px;
+  padding: 10px 0px;
+}
+.radio-group:nth-child(3) {
+  border-top: solid 1px #eaedf0;
+  border-bottom: solid 1px #eaedf0;
 }
 .radio-group.radio-disabled .radio-label {
-  color: #555;
+  color: #16191d;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 500;
 }
 .radio-group.radio-disabled .default-radio:checked {
-  border: 5px solid #d5d8db;
+  border: 5px solid #388ff3;
 }
 .default-radio {
   position: relative;

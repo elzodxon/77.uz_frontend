@@ -45,12 +45,11 @@
   transition: opacity 0.25s ease;
 }
 .checkbox .checkbox__body {
-  color: var(--black);
-  font-family: Inter;
-  cursor: pointer;
+  color: #16191D;
   font-size: 14px;
-  font-style: normal;
+  font-family: Inter;
   font-weight: 500;
+  cursor: pointer;
   line-height: 130%; /* 18.2px */
 }
 .checkbox-group.checkbox-disabled
@@ -59,9 +58,9 @@
   ~ .checkbox__checkmark {
   background-color: var(--primary-color);
 }
-.checkbox-group.checkbox-disabled .checkbox__body {
+/* .checkbox-group.checkbox-disabled .checkbox__body {
   color: #555;
-}
+} */
 .checkbox .default-checkbox:checked ~ .checkbox__checkmark {
   background-color: var(--primary-color);
 }
