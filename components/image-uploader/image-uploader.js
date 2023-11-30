@@ -45,6 +45,7 @@ const renderImages = () => {
 
     reader.readAsDataURL(element.file);
   });
+  makeDraggable()
 };
 
 // Handle dragenter event on dropbox
@@ -93,6 +94,13 @@ fileInput.addEventListener('change', (e) => {
   files.push(file);
 
   renderImages();
+
+  const listItems = document.querySelectorAll(".gallery__item");
+  [].forEach.call(listItems, function(item) {
+    addEventsDragAndDrop(item);
+  });
+
+  makeDraggable()
 });
 
 // Event delegation for dynamically created delete buttons
@@ -104,3 +112,62 @@ document.addEventListener('click', (e) => {
     removeImage(parseFloat(id));
   }
 });
+
+
+
+
+
+
+let dragSrcEl;
+
+function dragStart(e) {
+    dragSrcEl = this;
+    e.dataTransfer.effectAllowed = "move";
+    e.dataTransfer.setData("text/html", this.innerHTML);
+  console.log("dragggg")
+    return false;
+}
+
+function dragOver(e) {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "move";
+  console.log("dragggg")
+    return false;
+}
+
+function dragDrop(e) {
+    if (dragSrcEl != this) {
+        dragSrcEl.innerHTML = this.innerHTML;
+        this.innerHTML = e.dataTransfer.getData("text/html");
+    }
+  console.log("dragggg")
+    return false;
+}
+
+function dragEnd() {
+    const listItems = document.querySelectorAll(".gallery__item");
+    [].forEach.call(listItems, function (item) {
+        item.draggable = "true";
+    });
+  console.log("dragggg")
+    return false;
+}
+
+function addEventsDragAndDrop(el) {
+    el.addEventListener("dragstart", dragStart, false);
+    el.addEventListener("dragover", dragOver, false);
+    el.addEventListener("drop", dragDrop, false);
+    el.addEventListener("dragend", dragEnd, false);
+}
+
+makeDraggable = () => {
+    let listItems = document.querySelectorAll(".gallery__item");
+    [].forEach.call(listItems, function (item) {
+        addEventsDragAndDrop(item);
+
+      console.log("dragggg")
+    });
+  console.log(listItems)
+}
+
+makeDraggable()
