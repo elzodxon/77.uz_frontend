@@ -74,6 +74,21 @@
   border-bottom: 1px solid var(--gray-color);
   align-items: center;
   background: #fff;
+
+  position: relative;
+  z-index: 1;
+}
+
+.selected-option::after{
+  position: absolute;
+  z-index: 2;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(../../assets/img/select/checkmark.png);
+  background-repeat: no-repeat;
+  top: 15px;
+  right: 15px;
 }
 
 .options .option:hover{
