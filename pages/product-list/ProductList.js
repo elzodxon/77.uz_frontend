@@ -34,15 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
 // ------------------- Style switcher ----------------------
 switchers.forEach(function (switcher) {
   switcher.addEventListener('click', function () {
-
-      // Todo: remove unnecessary loop
     switchers.forEach(function (switcher) {
       switcher.classList.remove('active')
     })
 
     switcher.classList.add('active')
 
-    var view = switcher.getAttribute('data-view')
+    const view = switcher.getAttribute('data-view')
 
       // Todo: remove unnecessary loop
     view_wraps.forEach(function (view) {

@@ -1,9 +1,12 @@
+const adsContainer = document.getElementById('ads-wrapper')
+
+const cardIcons = document.getElementsByClassName('icon')
 let productList = []
 
 // ------------------- FETCH Products ----------------------
 document.addEventListener('DOMContentLoaded', function () {
   // Fetch the JSON file
-  fetch('./ProductList.json')
+  fetch('pages/product-list/ProductList.json')
     .then((response) => response.json())
     .then((data) => {
       // Once the data is loaded, call a function to render it
@@ -24,10 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // ------------------- Get Product Func --------------------
 function productGetList(productList) {
   productList.forEach((product) => {
-    const list_card = document.createElement('div')
     const grid_card = document.createElement('div')
 
-    list_card.classList.add('list-view__card')
     grid_card.classList.add('grid-view__card')
 
     // ----------------Card grid style--------------------
@@ -59,16 +60,91 @@ function productGetList(productList) {
                 product.price,
               )}<span> UZS </span></p>
             </div>`
-
+            adsContainer.appendChild(grid_card)
   })
 }
+
+
+// ------------------- Date formatter Func -----------------
+function dateFormatter(date) {
+  const dateObject = new Date(date)
+
+  // Extract the individual components of the date
+  const day = dateObject.getDate()
+  const month = dateObject.getMonth() + 1 // Months are zero-based, so add 1
+  const year = dateObject.getFullYear()
+
+  // Format the date components as 'DD-MM-YYYY'
+  const formattedDate = `${day < 10 ? '0' : ''}${day}-${
+    month < 10 ? '0' : ''
+  }${month}-${year}`
+
+  return formattedDate
+}
+
+
+// Todo: Refactor Naming -> formatMoney maybe?
+// ------------------- Numbers with space Func -------------
+function numbersWithSpace(number) {
+  const formattedNum = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+
+  return formattedNum
+}
+
+
+// Todo: Refactor this function
+// ------------------- Phone num Formatter Func ------------
+function formatPhoneNumber(phoneNumber) {
+  // Remove non-digit characters from the phone number
+  const cleanedNumber = phoneNumber.replace(/\D/g, '')
+
+  // Apply the desired formatting
+  const formattedNumber = `+${cleanedNumber.slice(0, 3)}-${cleanedNumber.slice(
+    3,
+    5,
+  )}-${cleanedNumber.slice(5, 8)}-${cleanedNumber.slice(
+    8,
+    10,
+  )}-${cleanedNumber.slice(10)}`
+
+  return formattedNumber
+}
+
+// ------------------- Find Product By Icon ID -------------
+function findProductByIconId(icon) {
+  const foundProduct = productList.find((product) => product.id == icon.id)
+
+  return foundProduct
+
+  // return product found by icon id
+}
+
+
+// ------------------- IsLiked or Not Func -----------------
+function handleCardIconClick(event) {
+  for (const icon of cardIcons) {
+    if (icon.id === event.target.id) {
+      const product = findProductByIconId(icon)
+      if (product) {
+        product.is_liked = !product.is_liked
+
+          // Todo: refactor style changing
+        icon.style.color = product.is_liked ? 'red' : 'white'
+      } else {
+        console.log('Product not found with id:', product.id)
+      }
+    }
+  }
+}
+
+
 // Get the parent container where you want to append the items
-const adsContainer = document.querySelector('.ads-wrapper')
+// const adsContainer = document.querySelector('.ads-wrapper')
 
 // Iterate over the data and append the generated HTML to the container
-data.forEach((item) => {
-  adsContainer.innerHTML += generateHTML(item)
-})
+// data.forEach((item) => {
+//   adsContainer.innerHTML += generateHTML(item)
+// })
 
 const favoriteProductButton = document.querySelectorAll(
   '.favorite__product-button',

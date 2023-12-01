@@ -34,6 +34,7 @@
       "is_liked": false,
       "updated_time": "2023-11-16T16:32:00.134939+05:00"
     },
+
     {
       "id": 1,
       "name": "T-Shirt",
@@ -56,6 +57,216 @@
       },
       "seller": {
         "id": 1,
+        "full_name": "Ergashev Axrorbek Azamovich",
+        "phone_number": "+998770075521",
+        "profile_photo": null
+      },
+      "extra": {
+        "is_mine": false,
+        "status": "active",
+        "expires_at": "14.02.2024"
+      },
+      "is_liked": false,
+      "updated_time": "2023-11-16T16:32:00.134939+05:00"
+    },
+
+    {
+      "id": 2,
+      "name": "T-Shirt",
+      "slug": "T-Shirt",
+      "price": 2000000,
+      "photo": "https://learnopencv.com/wp-content/uploads/2021/04/image-15.png",
+      "published_at": "2023-11-16T15:24:37.758522+05:00",
+      "address": {
+        "district": {
+          "id": 2,
+          "name": "Sirg`ali tumani",
+          "region": {
+            "id": 2,
+            "name": "Toshkent shahri"
+          }
+        },
+        "name": "Yangixayot tumani",
+        "lat": 43.0,
+        "long": 43.0
+      },
+      "seller": {
+        "id": 2,
+        "full_name": "Ergashev Axrorbek Azamovich",
+        "phone_number": "+998770075521",
+        "profile_photo": null
+      },
+      "extra": {
+        "is_mine": false,
+        "status": "active",
+        "expires_at": "14.02.2024"
+      },
+      "is_liked": false,
+      "updated_time": "2023-11-16T16:32:00.134939+05:00"
+    },
+    
+    {
+      "id": 3,
+      "name": "T-Shirt",
+      "slug": "T-Shirt",
+      "price": 2000000,
+      "photo": "https://learnopencv.com/wp-content/uploads/2021/04/image-15.png",
+      "published_at": "2023-11-16T15:24:37.758522+05:00",
+      "address": {
+        "district": {
+          "id": 3,
+          "name": "Sirg`ali tumani",
+          "region": {
+            "id": 3,
+            "name": "Toshkent shahri"
+          }
+        },
+        "name": "Yangixayot tumani",
+        "lat": 43.0,
+        "long": 43.0
+      },
+      "seller": {
+        "id": 3,
+        "full_name": "Ergashev Axrorbek Azamovich",
+        "phone_number": "+998770075521",
+        "profile_photo": null
+      },
+      "extra": {
+        "is_mine": false,
+        "status": "active",
+        "expires_at": "14.02.2024"
+      },
+      "is_liked": false,
+      "updated_time": "2023-11-16T16:32:00.134939+05:00"
+    },
+
+    {
+      "id": 4,
+      "name": "T-Shirt4",
+      "slug": "T-Shirt",
+      "price": 2000000,
+      "photo": "https://learnopencv.com/wp-content/uploads/2021/04/image-15.png",
+      "published_at": "2023-11-16T15:24:37.758522+05:00",
+      "address": {
+        "district": {
+          "id": 4,
+          "name": "Sirg`ali tumani",
+          "region": {
+            "id": 4,
+            "name": "Toshkent shahri"
+          }
+        },
+        "name": "Yangixayot tumani",
+        "lat": 43.0,
+        "long": 43.0
+      },
+      "seller": {
+        "id": 4,
+        "full_name": "Ergashev Axrorbek Azamovich",
+        "phone_number": "+998770075521",
+        "profile_photo": null
+      },
+      "extra": {
+        "is_mine": false,
+        "status": "active",
+        "expires_at": "14.02.2024"
+      },
+      "is_liked": false,
+      "updated_time": "2023-11-16T16:32:00.134939+05:00"
+    },
+
+    {
+      "id": 5,
+      "name": "T-Shirt5",
+      "slug": "T-Shirt",
+      "price": 2000000,
+      "photo": "https://learnopencv.com/wp-content/uploads/2021/04/image-15.png",
+      "published_at": "2023-11-16T15:24:37.758522+05:00",
+      "address": {
+        "district": {
+          "id": 5,
+          "name": "Sirg`ali tumani",
+          "region": {
+            "id": 5,
+            "name": "Toshkent shahri"
+          }
+        },
+        "name": "Yangixayot tumani",
+        "lat": 43.0,
+        "long": 43.0
+      },
+      "seller": {
+        "id": 5,
+        "full_name": "Ergashev Axrorbek Azamovich",
+        "phone_number": "+998770075521",
+        "profile_photo": null
+      },
+      "extra": {
+        "is_mine": false,
+        "status": "active",
+        "expires_at": "14.02.2024"
+      },
+      "is_liked": false,
+      "updated_time": "2023-11-16T16:32:00.134939+05:00"
+    },
+
+    {
+      "id": 6,
+      "name": "T-Shirt6",
+      "slug": "T-Shirt",
+      "price": 2000000,
+      "photo": "https://learnopencv.com/wp-content/uploads/2021/04/image-15.png",
+      "published_at": "2023-11-16T15:24:37.758522+05:00",
+      "address": {
+        "district": {
+          "id": 6,
+          "name": "Sirg`ali tumani",
+          "region": {
+            "id": 6,
+            "name": "Toshkent shahri"
+          }
+        },
+        "name": "Yangixayot tumani",
+        "lat": 43.0,
+        "long": 43.0
+      },
+      "seller": {
+        "id": 6,
+        "full_name": "Ergashev Axrorbek Azamovich",
+        "phone_number": "+998770075521",
+        "profile_photo": null
+      },
+      "extra": {
+        "is_mine": false,
+        "status": "active",
+        "expires_at": "14.02.2024"
+      },
+      "is_liked": false,
+      "updated_time": "2023-11-16T16:32:00.134939+05:00"
+    },
+
+    {
+      "id": 7,
+      "name": "Jeans",
+      "slug": "T-Shirt",
+      "price": 2000000,
+      "photo": "https://learnopencv.com/wp-content/uploads/2021/04/image-15.png",
+      "published_at": "2023-11-16T15:24:37.758522+05:00",
+      "address": {
+        "district": {
+          "id": 7,
+          "name": "Sirg`ali tumani",
+          "region": {
+            "id": 7,
+            "name": "Toshkent shahri"
+          }
+        },
+        "name": "Yangixayot tumani",
+        "lat": 43.0,
+        "long": 43.0
+      },
+      "seller": {
+        "id": 7,
         "full_name": "Ergashev Axrorbek Azamovich",
         "phone_number": "+998770075521",
         "profile_photo": null
