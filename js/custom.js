@@ -1,4 +1,5 @@
 const searchInput = document.querySelector('.search__input')
+const searchContent = document.querySelector(".search")
 const blocker = document.querySelector('.blocker')
 
 blocker.addEventListener('click', () => {
@@ -7,15 +8,17 @@ blocker.addEventListener('click', () => {
 })
 searchInput.addEventListener('focus', (e) => {
   e.preventDefault()
-  blocker.classList.toggle('active')
-  document.body.classList.toggle('block')
+  blocker.classList.add('active')
+  document.body.classList.add('block')
+  searchContent.classList.add("active")
+})
+searchInput.addEventListener('blur', (e) => {
+  e.preventDefault()
+  blocker.classList.remove('active')
+  document.body.classList.remove('block')
+  searchContent.classList.remove("active")
 })
 
-searchInput.addEventListener('focus', (e) => {
-  e.preventDefault()
-  blocker.classList.add('active')
-  document.body.classList.add('active')
-})
 
 document.addEventListener('DOMContentLoaded', function () {
   const categoryList = document.getElementById('categoryList')
