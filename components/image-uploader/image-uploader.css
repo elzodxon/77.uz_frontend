@@ -174,13 +174,15 @@
 }
 
 .choose-text {
+display: inline;
+  position: relative;
   color: var(--Main-blue, #388ff3);
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
-  display: inline;
+
 }
 .choose-file {
 }
@@ -229,4 +231,9 @@
 
 .hidden {
   display: none;
+}
+
+#files{
+  position: absolute;
+  visibility: hidden;
 }
