@@ -1,6 +1,5 @@
 const searchInput = document.querySelector('.search__input')
 const searchContent = document.querySelector(".search")
-const blocker = document.querySelector('.blocker')
 
 blocker.addEventListener('click', () => {
   document.body.classList.remove('block')

@@ -227,6 +227,7 @@ body.block {
   border-radius: 0 12px;
   display: none;
   left: 0;
+  z-index: 10;
   grid-area: 1/-1;
   background-color: white;
   filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.02));
