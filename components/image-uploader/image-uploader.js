@@ -99,7 +99,6 @@ fileInput.addEventListener('change', (e) => {
     renderImages();
 });
 
-// Event delegation for dynamically created delete buttons
 // document.addEventListener('click', (e) => {
 //   const target = e.target;
 //   if (target.classList.contains('remove-image')) {
