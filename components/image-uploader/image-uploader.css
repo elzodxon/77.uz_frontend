@@ -36,7 +36,7 @@
   background: rgba(0, 0, 0, 0.5);
   z-index: 10001;
 }
-.dropbox.active  {
+.dropbox.active {
   display: block;
 }
 

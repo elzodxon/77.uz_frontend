@@ -1,19 +1,19 @@
-const searchInput = document.querySelector('.search__input');
+const searchInput = document.querySelector('.search__input')
 
 searchInput.addEventListener('focus', (e) => {
-  e.preventDefault();
-  blocker.classList.toggle('active');
-  document.body.classList.toggle('block');
-});
+  e.preventDefault()
+  blocker.classList.toggle('active')
+  document.body.classList.toggle('block')
+})
 
 searchInput.addEventListener('focus', (e) => {
-  e.preventDefault();
-  blocker.classList.add('active');
-  document.body.classList.add('active');
-});
+  e.preventDefault()
+  blocker.classList.add('active')
+  document.body.classList.add('active')
+})
 
 document.addEventListener('DOMContentLoaded', function () {
-  const categoryList = document.getElementById('categoryList');
+  const categoryList = document.getElementById('categoryList')
 
   const jsonData = [
     {
@@ -262,25 +262,25 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
     },
     // Add more data as needed
-  ];
+  ]
 
   function generateSubsubcategoryLinks(subsubcategories) {
     return subsubcategories
       .map((subsub) => {
-        const subsubTitle = Object.keys(subsub)[0];
-        const subsubLink = subsub[subsubTitle];
-        return `<li class="category-links__item">${subsubLink}</li>`;
+        const subsubTitle = Object.keys(subsub)[0]
+        const subsubLink = subsub[subsubTitle]
+        return `<li class="category-links__item">${subsubLink}</li>`
       })
-      .join('');
+      .join('')
   }
 
   function generateSubcategoryLinks(subcategories) {
     return subcategories
       .map((subcategory) => {
-        const subcategoryTitle = subcategory.subcategoryTitle;
+        const subcategoryTitle = subcategory.subcategoryTitle
         const subsubcategoryLinks = generateSubsubcategoryLinks(
-          subcategory.subsubcategories
-        );
+          subcategory.subsubcategories,
+        )
 
         return `
         <li class="category-menu__item">
@@ -300,9 +300,9 @@ document.addEventListener('DOMContentLoaded', function () {
             <ul class="category-links__menu">${subsubcategoryLinks}</ul>
           </div>
         </li>
-      `;
+      `
       })
-      .join('');
+      .join('')
   }
 
   function generateCategoryCards(categories) {
@@ -325,42 +325,42 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
           </div>
           <ul class="category-menu">${generateSubcategoryLinks(
-            category.subcategories
+            category.subcategories,
           )}</ul>
         </li>
-      `;
-        return categoryCard;
+      `
+        return categoryCard
       })
-      .join('');
+      .join('')
   }
 
-  const windowWidth = window.innerWidth;
-  console.log(`Window Width: ${windowWidth}px`);
+  const windowWidth = window.innerWidth
+  console.log(`Window Width: ${windowWidth}px`)
 
-  categoryList.innerHTML = generateCategoryCards(jsonData);
+  categoryList.innerHTML = generateCategoryCards(jsonData)
 
-  const backButton = document.querySelectorAll('.dropdown-menu__back');
-  const categoryMenuItem = document.querySelectorAll('.category-menu__item');
-  const categoryMenuItem1 = document.querySelectorAll('.category-links');
+  const backButton = document.querySelectorAll('.dropdown-menu__back')
+  const categoryMenuItem = document.querySelectorAll('.category-menu__item')
+  const categoryMenuItem1 = document.querySelectorAll('.category-links')
 
-  const categoryGroups = document.querySelectorAll('.category-card');
-  const categoryDropdowns = document.querySelectorAll('.category-menu');
+  const categoryGroups = document.querySelectorAll('.category-card')
+  const categoryDropdowns = document.querySelectorAll('.category-menu')
 
   for (let i = 0; i < categoryGroups.length; i++) {
     categoryGroups[i].addEventListener('click', function () {
-      categoryDropdowns[i].classList.toggle('active');
-    });
+      categoryDropdowns[i].classList.toggle('active')
+    })
   }
 
   for (let i = 0; i < categoryMenuItem.length; i++) {
     categoryMenuItem[i].addEventListener('click', function () {
-      categoryMenuItem1[i].classList.toggle('active');
-    });
+      categoryMenuItem1[i].classList.toggle('active')
+    })
   }
   for (let i = 0; i < backButton.length; i++) {
     backButton[i].addEventListener('click', function (e) {
-      e.stopPropagation();
-      categoryMenuItem1[i].classList.remove('active');
-    });
+      e.stopPropagation()
+      categoryMenuItem1[i].classList.remove('active')
+    })
   }
-});
+})

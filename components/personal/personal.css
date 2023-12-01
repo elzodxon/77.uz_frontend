@@ -1,10 +1,10 @@
-.personal-wrapper{
+.personal-wrapper {
   padding: 16px;
   border-radius: 12px;
   background: #fff;
 }
 
-.personal__info{
+.personal__info {
   margin-bottom: 16px;
   display: flex;
   padding: 16px;
@@ -12,58 +12,63 @@
   align-items: center;
   border-radius: 8px;
   border: 1px solid var(--gray-color);
-  background: #FFF;
+  background: #fff;
 }
 
-.personal__img{
+.personal__img {
   width: 54px;
   height: 54px;
   border-radius: 80px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   backdrop-filter: blur(80px);
 }
 
-.personal__name{
+.personal__name {
   max-width: 148px;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 130%
+  line-height: 130%;
 }
 
-.p-info-list{
+.personal__buttons {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 16px 0;
+  border-top: 1px solid var(--gray-color);
+  border-bottom: 1px solid var(--gray-color);
+
   margin-bottom: 16px;
-  border-top: 1px solid var(--gray-color) ;
-  border-bottom: 1px solid var(--gray-color) ;
-  /* padding:0 ; */
 }
 
-.p-info-list__item{
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.personal__innerButton {
+  width: 100%;
   padding: 10px 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--black-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 19.6px */
+  border: none;
   border-radius: 8px;
-  border: 1px solid var(--gray-color);
-  background: var(--input-bg-color);
-  transition: 0.3s ease-in-out;
+  background-color: var(--input-bg-color);
+  cursor: pointer;
 }
 
-.p-info-list__item:active{
-  background-color: #FFF;
-  border: 1px solid rgba(17, 124, 245, 0.10);
-  background: var(--White, #FFF);
-  box-shadow: 0px 0px 24px 0px #117CF51A;
+.btn-active {
+  background-color: #fff;
+  border: 1px solid rgba(17, 124, 245, 0.1);
+  background: var(--White, #fff);
+  box-shadow: 0px 0px 24px 0px #117cf51a;
 }
 
-.p-info-list__item:active .p-info-list__item-icon{
+.btn-active .personal-info-list__item-icon {
   color: var(--primary-color);
 }
-
 
 .btn {
   width: 100%;
@@ -88,7 +93,7 @@
 
 .btn:active {
   filter: brightness(100%);
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
 }
 
 .btn-secondary {
@@ -102,9 +107,36 @@
   color: #000;
 }
 
-
 .btn__icon {
   padding: 0 10px;
   font-size: 20px;
 }
 
+.sign-out-btn {
+  position: relative;
+  z-index: 15;
+}
+
+.sign-out-btn__icon::before {
+  position: absolute;
+  z-index: 16;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(../../assets/img/profile/exit-icon.svg);
+  background-repeat: no-repeat;
+  top: calc(50% - 10px);
+  left: calc(50% - 52px);
+}
+
+/* .btn-personal-details{
+  
+} */
+
+@media screen and (max-width: 426px) {
+  .personal__buttons {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+}

@@ -3,7 +3,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-   width: 100%;
+  width: 100%;
   background-image: url('../../assets/img/BG\ \(Pattern\).svg');
 }
 .footer-info {
@@ -42,7 +42,7 @@
   transition: 0.2s ease-in-out;
   line-height: 130%; /* 26px */
 }
-.footer-info__link img{
+.footer-info__link img {
   width: 16px;
   height: 16px;
 }

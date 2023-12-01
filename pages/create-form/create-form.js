@@ -1,13 +1,13 @@
-const createInputs = document.querySelectorAll('.create-input');
-const createSubmutButton = document.querySelector('.create-submit-button');
-console.log(createSubmutButton);
+const createInputs = document.querySelectorAll('.create-input')
+const createSubmutButton = document.querySelector('.create-submit-button')
+console.log(createSubmutButton)
 
 createSubmutButton.addEventListener('click', (e) => {
-  e.preventDefault();
+  e.preventDefault()
   createInputs.forEach((input) => {
     if (input.value.length === 0) {
-      input.classList.add('error');
+      input.classList.add('error')
     }
-    return;
-  });
-});
+    return
+  })
+})

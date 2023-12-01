@@ -1,38 +1,38 @@
-'use strict';
+'use strict'
 
 // Password
 document.addEventListener('DOMContentLoaded', function () {
-  const eyeIcon = document.querySelector('.closed-eye');
-  const passwordInput = document.getElementById('password');
+  const eyeIcon = document.querySelector('.closed-eye')
+  const passwordInput = document.getElementById('password')
 
   eyeIcon.addEventListener('click', function () {
-    eyeIcon.classList.toggle('opened-eye');
+    eyeIcon.classList.toggle('opened-eye')
     if (eyeIcon.classList.contains('opened-eye')) {
-      passwordInput.type = 'text';
-      eyeIcon.removeClass('closed-eye').addClass('closed-eye.opened-eye');
+      passwordInput.type = 'text'
+      eyeIcon.removeClass('closed-eye').addClass('closed-eye.opened-eye')
     } else {
-      passwordInput.type = 'password';
+      passwordInput.type = 'password'
     }
-  });
-});
+  })
+})
 
 // Phone Number
 
 // Use let for variables that may be reassigned
-let phoneNumberInput = document.querySelectorAll('.input_tel');
+let phoneNumberInput = document.querySelectorAll('.input_tel')
 
 // Attach the formatPhoneNumber function to the input event
 
 for (let i = 0; i < phoneNumberInput.length; i++) {
   phoneNumberInput[i].addEventListener('input', function () {
-    formatPhoneNumber(phoneNumberInput[i]);
-  });
+    formatPhoneNumber(phoneNumberInput[i])
+  })
 }
 
 for (let i = 0; i < phoneNumberInput.length; i++) {
   phoneNumberInput[i].addEventListener('keydown', function (event) {
-    handleBackspace(event, phoneNumberInput[i]);
-  });
+    handleBackspace(event, phoneNumberInput[i])
+  })
 }
 
 // // Attach the handleBackspace function to the keydown event
@@ -42,7 +42,7 @@ for (let i = 0; i < phoneNumberInput.length; i++) {
 
 function formatPhoneNumber(input) {
   // Remove non-numeric characters
-  let phoneNumber = input.value.replace(/\D/g, '');
+  let phoneNumber = input.value.replace(/\D/g, '')
 
   // Format the remaining digits
   if (phoneNumber.length > 0) {
@@ -55,19 +55,19 @@ function formatPhoneNumber(input) {
       '-' +
       phoneNumber.substring(5, 7) +
       '-' +
-      phoneNumber.substring(7, 9);
+      phoneNumber.substring(7, 9)
   }
   // Set the formatted value back to the input
-  input.value = phoneNumber;
+  input.value = phoneNumber
 }
 
 function handleBackspace(event, input) {
   // Check if the pressed key is the backspace key
   if (event.key === 'Backspace') {
     // Remove non-numeric characters
-    let phoneNumber = input.value.replace(/\D/g, '');
+    let phoneNumber = input.value.replace(/\D/g, '')
     // Remove the last digit
-    phoneNumber = phoneNumber.slice(0, -1);
+    phoneNumber = phoneNumber.slice(0, -1)
     // Format the remaining digits
     if (phoneNumber.length > 0) {
       phoneNumber =
@@ -78,11 +78,11 @@ function handleBackspace(event, input) {
         '-' +
         phoneNumber.substring(5, 7) +
         '-' +
-        phoneNumber.substring(7, 9);
+        phoneNumber.substring(7, 9)
     }
     // Set the formatted value back to the input
-    input.value = phoneNumber;
+    input.value = phoneNumber
     // Prevent the default backspace behavior
-    event.preventDefault();
+    event.preventDefault()
   }
 }

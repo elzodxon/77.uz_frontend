@@ -50,7 +50,10 @@
   font-weight: 500;
   line-height: 130%; /* 18.2px */
 }
-.checkbox-group.checkbox-disabled .checkbox .default-checkbox:checked ~ .checkbox__checkmark {
+.checkbox-group.checkbox-disabled
+  .checkbox
+  .default-checkbox:checked
+  ~ .checkbox__checkmark {
   background-color: #d5d8db;
 }
 .checkbox-group.checkbox-disabled .checkbox__body {

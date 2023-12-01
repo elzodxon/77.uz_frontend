@@ -1,4 +1,4 @@
-@import "../../assets/css/variables.css";
+@import '../../assets/css/variables.css';
 
 .slider {
   display: flex;
@@ -82,7 +82,7 @@
 }
 
 .navigation-wrapper.active .navigation-wrapper__content::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
