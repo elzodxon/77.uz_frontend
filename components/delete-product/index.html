@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Product</title>
+    <link rel="stylesheet" href="../modal/modal.css" />
+    <link rel="stylesheet" href="deleteProduct.css" />
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+  </head>
+  <body>
+    <div class="product-delete center" id="exit-wrapper">
+      <button class="btn modal-btn btn-danger" id="delete">Delete</button>
+      <span class="overlay"></span>
+      <div class="modal">
+        <div class="modal-header">
+          <button class="close-btn" id="close">
+            <img
+              class="close-img"
+              src="../../assets/img/modal-img/close-icon.svg"
+              alt="Close icon"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <div class="modal-body modal-before">
+          <h2 class="modal-title">Удалить объявление</h2>
+          <h3 class="modal-subtitle">
+            Вы точно хотите удалить объявление, все ваши данные о продукте будут
+            потеряны
+          </h3>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary">Отменить</button>
+          <button class="btn btn-danger">Выход</button>
+        </div>
+      </div>
+    </div>
+    <script src="../modal/modal.js"></script>
+  </body>
+</html>
