@@ -1,218 +1,203 @@
-// MAIN SEARCH
-const searchInput = document.querySelector('.search__input');
-const blocker = document.querySelector('.blocker');
+//  MAIN SEARCH
+const searchInput = document.querySelector(".search__input");
+const blocker = document.querySelector(".blocker");
 const favoriteProductButton = document.querySelectorAll(
-  '.favorite__product-button'
+   ".favorite__product-button"
 );
-const favoriteProductPath = document.querySelectorAll('.favorite-path');
-const searchSuggestion = document.getElementById('m-search-suggestion');
+const favoriteProductPath = document.querySelectorAll(".favorite-path");
+const searchSuggestion = document.getElementById("m-search-suggestion");
 
 for (let i = 0; i < favoriteProductButton.length; i++) {
-  favoriteProductButton[i].addEventListener('click', () => {
-    favoriteProductPath[i].classList.toggle('active');
-  });
+   favoriteProductButton[i].addEventListener("click", () => {
+      favoriteProductPath[i].classList.toggle("active");
+   });
 }
 
-searchInput.addEventListener('focus', (e) => {
-  e.preventDefault();
-  blocker.classList.toggle('active');
-  searchSuggestion.classList.toggle('active')
-  document.body.classList.toggle('block');
+searchInput.addEventListener("focus", (e) => {
+   e.preventDefault();
+   blocker.classList.toggle("active");
+   searchSuggestion.classList.toggle("active");
+   document.body.classList.toggle("block");
 });
-blocker.addEventListener('click', () => {
-  document.body.classList.remove('block');
-  blocker.classList.remove('active');
-  searchSuggestion.classList.remove('active')
+blocker.addEventListener("click", () => {
+   document.body.classList.remove("block");
+   blocker.classList.remove("active");
+   searchSuggestion.classList.remove("active");
 });
 
 //CATEGORY
-  const categoryCards = document.querySelectorAll('.category-card');
-  categoryCards.forEach(function(card) {
-    card.addEventListener('click', function() {
+const categoryCards = document.querySelectorAll(".category-card");
+categoryCards.forEach(function (card) {
+   card.addEventListener("click", function () {
       // Remove "active" class from all category cards
-      categoryCards.forEach(function(c) {
-        c.classList.remove('active');
+      categoryCards.forEach(function (c) {
+         c.classList.remove("active");
       });
       // Add "active" class to the clicked category card
-      card.classList.add('active');
-    });
-  });
-;
+      card.classList.add("active");
+   });
+});
 //---------CATEGORY LIST----------///////////
-document.addEventListener('DOMContentLoaded', function () {
-  const categoryList = document.getElementById('category-list');
+document.addEventListener("DOMContentLoaded", function () {
+   const categoryList = document.getElementById("category-list");
 
-  const jsonData = [
-    {
-      title: 'Electronics',
-      addsAmount: '4147 объявлений',
-      subcategories: [
-        {
-          subcategoryTitle: 'Smartphone',
-          subsubcategories: [
-            { subcategoryInnerItem: 'Iphone' },
-            { subcategoryInnerItem: 'Samsung' },
-          ],
-        },
-        {
-          subcategoryTitle: 'Accessory',
-          subsubcategories: [
-            { subcategoryInnerItem: 'Earphone' },
-            { subcategoryInnerItem: 'Headphone' },
-          ],
-        },
-        // Add more subcategories as needed
-      ],
-    },
-    {
-      title: 'For men',
-      addsAmount: '4147 объявлений',
-      subcategories: [
-        {
-          subcategoryTitle: 'Смартфоны',
-          subsubcategories: [
-            { subcategoryInnerItem: 'example-link-1' },
-            { subcategoryInnerItem: 'example-link-2' },
-          ],
-        },
-        {
-          subcategoryTitle: 'Аксессуары',
-          subsubcategories: [
-            { subcategoryInnerItem: 'example-link-3' },
-            { subcategoryInnerItem: 'example-link-4' },
-          ],
-        },
-        // Add more subcategories as needed
-      ],
-    },
-    {
-      title: 'For women',
-      addsAmount: '4147 объявлений',
-      subcategories: [
-        {
-          subcategoryTitle: 'Смартфоны',
-          subsubcategories: [
-            { subcategoryInnerItem: 'example-link-1' },
-            { subcategoryInnerItem: 'example-link-2' },
-          ],
-        },
-        {
-          subcategoryTitle: 'Аксессуары',
-          subsubcategories: [
-            { subcategoryInnerItem: 'example-link-3' },
-            { subcategoryInnerItem: 'example-link-4' },
-          ],
-        },
-        // Add more subcategories as needed
-      ],
-    },
-    {
-      title: 'Smart Home',
-      addsAmount: '4147 объявлений',
-      subcategories: [
-        {
-          subcategoryTitle: 'Smart Kitchen tools',
-          subsubcategories: [
-            { subcategoryInnerItem: 'Ember Temperature Control Smart Mug' },
-            { subcategoryInnerItem: 'Instant Pot Air Fryer Lid 6 in 1' },
-          ],
-        },
-        {
-          subcategoryTitle: 'Аксессуары',
-          subsubcategories: [
-            { subcategoryInnerItem: 'example-link-3' },
-            { subcategoryInnerItem: 'example-link-4' },
-          ],
-        },
-        // Add more subcategories as needed
-      ],
-    },
-    {
-      title: 'Computers',
-      addsAmount: '4147 объявлений',
-      subcategories: [
-        {
-          subcategoryTitle: 'Laptops',
-          subsubcategories: [
-            { subcategoryInnerItem: 'Acer Aspire 3' },
-            { subcategoryInnerItem: 'MacMini' },
-          ],
-        },
-        {
-          subcategoryTitle: 'Monitors',
-          subsubcategories: [
-            { subcategoryInnerItem: 'LG Monitors' },
-            { subcategoryInnerItem: 'Samsung Monitors' },
-          ],
-        },
-        // Add more subcategories as needed
-      ],
-    },
-    {
-      title: 'For Children',
-      addsAmount: '4147 объявлений',
-      subcategories: [
-        {
-          subcategoryTitle: 'Clothes',
-          subsubcategories: [
-            { subcategoryInnerItem: "Jacket" },
-            { subcategoryInnerItem: 'Cap' },
-          ],
-        },
-        {
-          subcategoryTitle: 'Entertainment',
-          subsubcategories: [
-            { subcategoryInnerItem: 'Ball' },
-            { subcategoryInnerItem: 'Bicycle' },
-          ],
-        },
-        // Add more subcategories as needed
-      ],
-    },
-    {
-      title: 'Furniture',
-      addsAmount: '4147 объявлений',
-      subcategories: [
-        {
-          subcategoryTitle: "Kids' furniture",
-          subsubcategories: [
-            { subcategoryInnerItem: 'Bed' },
-            { subcategoryInnerItem: 'Table'}
-          ],
-        },
-        {
-          subcategoryTitle: 'Sitting Room',
-          subsubcategories: [
-            { subcategoryInnerItem: 'Chair' },
-            { subcategoryInnerItem: 'Sofa' },
-          ],
-        },
-        // Add more subcategories as needed
-      ],
-    },
-    // Add more data as needed
-  ];
+   const jsonData = [
+      {
+         title: "Electronics",
+         addsAmount: "4147 объявлений",
+         subcategories: [
+            {
+               subcategoryTitle: "Smartphone",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Iphone" },
+                  { subcategoryInnerItem: "Samsung" },
+               ],
+            },
+            {
+               subcategoryTitle: "Speakers",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Best Speaker Ever" },
+                  { subcategoryInnerItem: "CST( Cant Stop Talking" },
+               ],
+            },
+            {
+               subcategoryTitle: "Accessory",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Earphone" },
+                  { subcategoryInnerItem: "Headphone" },
+               ],
+            },
+            // Add more subcategories as needed
+         ],
+      },
+      {
+         title: "Shoes",
+         addsAmount: "4147 объявлений",
+         subcategories: [
+            {
+               subcategoryTitle: "Men's shoes",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Sneakers" },
+                  { subcategoryInnerItem: "Boots" },
+               ],
+            },
+            {
+               subcategoryTitle: "Women's shoes",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Sneakers" },
+                  { subcategoryInnerItem: "Boots" },
+               ],
+            },
+            // Add more subcategories as needed
+         ],
+      },
+      {
+         title: "Smart Home",
+         addsAmount: "4147 объявлений",
+         subcategories: [
+            {
+               subcategoryTitle: "Kitchen",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Ajoyib" },
+                  { subcategoryInnerItem: "Havo " },
+               ],
+            },
+            {
+               subcategoryTitle: "Sitting Room",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Air-conditioner" },
+                  { subcategoryInnerItem: "TV" },
+                  { subcategoryInnerItem: "Wi-Fi" },
+               ],
+            },
+            // Add more subcategories as needed
+         ],
+      },
+      {
+         title: "Kids",
+         addsAmount: "4147 объявлений",
+         subcategories: [
+            {
+               subcategoryTitle: "Entertainment",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Ball" },
+                  { subcategoryInnerItem: "Hockey" },
+               ],
+            },
+            {
+               subcategoryTitle: "Education",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Books" },
+                  { subcategoryInnerItem: "Pen" },
+               ],
+            },
+            // Add more subcategories as needed
+         ],
+      },
+      {
+         title: "Electronics",
+         addsAmount: "4147 объявлений",
+         subcategories: [
+            {
+               subcategoryTitle: "Smartphone",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Iphone" },
+                  { subcategoryInnerItem: "Samsung" },
+               ],
+            },
+            {
+               subcategoryTitle: "Accessory",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Earphone" },
+                  { subcategoryInnerItem: "Headphone" },
+               ],
+            },
+            // Add more subcategories as needed
+         ],
+      },
+      {
+         title: "Education",
+         addsAmount: "4147 объявлений",
+         subcategories: [
+            {
+               subcategoryTitle: "Tools",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Kindle" },
+                  { subcategoryInnerItem: "Calculator" },
+               ],
+            },
+            {
+               subcategoryTitle: "Books",
+               subsubcategories: [
+                  { subcategoryInnerItem: "Make it happen" },
+                  { subcategoryInnerItem: "Sleepy" },
+               ],
+            },
+            // Add more subcategories as needed
+         ],
+      },
+      // Add more data as needed
+   ];
 
+   function generateSubsubcategoryLinks(subsubcategories) {
+      return subsubcategories
+         .map((subsub) => {
+            const subsubTitle = Object.keys(subsub)[0];
+            const subsubLink = subsub[subsubTitle];
+            return `<li><a class="category-links__item" href="#">${subsubLink}</a></li>`;
+         })
+         .join("");
+   }
 
-  function generateSubsubcategoryLinks(subsubcategories) {
-   return subsubcategories
-       .map((subsub) => {
-           const subsubTitle = Object.keys(subsub)[0];
-           const subsubLink = subsub[subsubTitle];
-           return `<li class="category-links__item">${subsubLink}</li>`;
-       })
-       .join('');
-}
-
-function generateSubcategoryLinks(subcategories) {
-   return subcategories
-       .map((subcategory) => {
-           const subcategoryTitle = subcategory.subcategoryTitle;
-           const subsubcategoryLinks = generateSubsubcategoryLinks(
+   function generateSubcategoryLinks(subcategories) {
+      return subcategories
+         .map((subcategory) => {
+            const subcategoryTitle = subcategory.subcategoryTitle;
+            const subsubcategoryLinks = generateSubsubcategoryLinks(
                subcategory.subsubcategories
-           );
+            );
 
-           return `
+            return `
                <li class="category-menu__item">
                    <span class="category-menu__title">
                        <span>${subcategoryTitle}</span>
@@ -227,18 +212,18 @@ function generateSubcategoryLinks(subcategories) {
                            </svg>
                            <button class="dropdown-menu__back">${subcategoryTitle}</button>
                        </div>
-                       <ul><a class="category-links__menu" href="#">${subsubcategoryLinks}</a></ul>
+                       <ul class="category-links__menu">${subsubcategoryLinks}</ul>
                    </div>
                </li>
            `;
-       })
-       .join('');
-}
+         })
+         .join("");
+   }
 
-function generateCategoryCards(categories) {
-   return categories
-       .map((category) => {
-           const categoryCard = `
+   function generateCategoryCards(categories) {
+      return categories
+         .map((category) => {
+            const categoryCard = `
                <li class="category-group" role="button">
                    <div class="category-card">
                        <div class="category-icon">
@@ -264,130 +249,176 @@ function generateCategoryCards(categories) {
                        </div>
                    </div>
                    <ul class="category-menu">${generateSubcategoryLinks(
-               category.subcategories
-           )}</ul>
+                      category.subcategories
+                   )}</ul>
                </li>
            `;
-           return categoryCard;
-       })
-       .join('');
-}
-
-const windowWidth = window.innerWidth;
-console.log(`Window Width: ${windowWidth}px`);
-
-categoryList.innerHTML = generateCategoryCards(jsonData);
-
-const backButton = document.querySelectorAll('.dropdown-menu__back');
-const categoryMenuItem = document.querySelectorAll('.category-menu__item');
-const categoryMenuItem1 = document.querySelectorAll('.category-links');
-
-const categoryGroups = document.querySelectorAll('.category-card');
-const categoryDropdowns = document.querySelectorAll('.category-menu');
-
-for (let i = 0; i < categoryGroups.length; i++) {
-   categoryGroups[i].addEventListener('click', function () {
-       categoryDropdowns[i].classList.toggle('active');
-   });
-}
-
-for (let i = 0; i < categoryMenuItem.length; i++) {
-   categoryMenuItem[i].addEventListener('click', function () {
-       categoryMenuItem1[i].classList.toggle('active');
-   });
-}
-for (let i = 0; i < backButton.length; i++) {
-   backButton[i].addEventListener('click', function (e) {
-       e.stopPropagation();
-       categoryMenuItem1[i].classList.remove('active');
-   });
-};
-
-///////////------SEARCH SUGGESTION-------///////
-const searchInput = document.getElementById('searchNow');
-const searchSuggestion = document.getElementById('m-search-suggestion');
-const mSearchSuggestionTitle = document.querySelector('.m-search-suggestion-title');
-
-// SEARCH
-function generateSearchSuggestion(inputValue) {
-   const inputValueLowerCase = inputValue.toLowerCase();
-
-   const exactMatch = jsonData.find(category => category.title.toLowerCase() === inputValueLowerCase);
-   if (exactMatch) {
-       return `<div class="m-search-suggestion__card"><h3 class="m-search-suggestion__title">${exactMatch.title}</h3></div>`;
+            return categoryCard;
+         })
+         .join("");
    }
 
-    const partialMatches = jsonData.filter(category => {
-       const categoryTitle = category.title.toLowerCase();
-       const subcategoryTitles = category.subcategories.map(subcategory => subcategory.subcategoryTitle.toLowerCase());
-       const subsubcategoryTitles = category.subcategories.flatMap(subcategory => subcategory.subsubcategories.map(item => Object.values(item)[0].toLowerCase()));
-       return [categoryTitle, ...subcategoryTitles, ...subsubcategoryTitles].some(title => title.includes(inputValueLowerCase));
-   });
+   const windowWidth = window.innerWidth;
+   console.log(`Window Width: ${windowWidth}px`);
 
-   if (partialMatches.length > 0) {
-       return partialMatches.map(category => {
-           const categoryTitle = category.title;
-           return `
+   categoryList.innerHTML = generateCategoryCards(jsonData);
+
+   const backButton = document.querySelectorAll(".dropdown-menu__back");
+   const categoryMenuItem = document.querySelectorAll(".category-menu__item");
+   const categoryMenuItem1 = document.querySelectorAll(".category-links");
+
+   const categoryGroups = document.querySelectorAll(".category-card");
+   const categoryDropdowns = document.querySelectorAll(".category-menu");
+
+   for (let i = 0; i < categoryGroups.length; i++) {
+      categoryGroups[i].addEventListener("click", function () {
+         categoryDropdowns[i].classList.toggle("active");
+      });
+   }
+
+   for (let i = 0; i < categoryMenuItem.length; i++) {
+      categoryMenuItem[i].addEventListener("click", function () {
+         categoryMenuItem1[i].classList.toggle("active");
+      });
+   }
+   for (let i = 0; i < backButton.length; i++) {
+      backButton[i].addEventListener("click", function (e) {
+         e.stopPropagation();
+         categoryMenuItem1[i].classList.remove("active");
+      });
+   }
+
+   ///////////------SEARCH SUGGESTION-------///////
+
+   const searchInput = document.getElementById("searchNow");
+   const searchSuggestion = document.getElementById("m-search-suggestion");
+   const mSearchSuggestionTitle = document.querySelector(
+      ".m-search-suggestion-title"
+   );
+
+   // SEARCH
+   function generateSearchSuggestion(inputValue) {
+      const inputValueLowerCase = inputValue.toLowerCase();
+
+      const exactMatch = jsonData.find(
+         (category) => category.title.toLowerCase() === inputValueLowerCase
+      );
+      if (exactMatch) {
+         return `<p>Recommendation  </p>
+         <div class="m-search-suggestion__card">
+         <a class="m-search-suggestion__title" href="#">
+         <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M14.1057 14.2L17 17M16.0667 9.53333C16.0667 13.1416 13.1416 16.0667 9.53333 16.0667C5.92507 16.0667 3 13.1416 3 9.53333C3 5.92507 5.92507 3 9.53333 3C13.1416 3 16.0667 5.92507 16.0667 9.53333Z" stroke="#388FF3" stroke-width="1.5" stroke-linecap="round"/>
+           </svg>
+         ${exactMatch.title}
+         </a>
+         <svg class="icon-right" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 6L12 10L8 14" stroke="CurrentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+         </div>
+         `;
+      }
+
+      const partialMatches = jsonData.filter((category) => {
+         const categoryTitle = category.title.toLowerCase();
+         const subcategoryTitles = category.subcategories.map((subcategory) =>
+            subcategory.subcategoryTitle.toLowerCase()
+         );
+         const subsubcategoryTitles = category.subcategories.flatMap(
+            (subcategory) =>
+               subcategory.subsubcategories.map((item) =>
+                  Object.values(item)[0].toLowerCase()
+               )
+         );
+         return [categoryTitle, subcategoryTitles, subsubcategoryTitles].some(
+            (title) => title.includes(inputValueLowerCase)
+         );
+      });
+
+      if (partialMatches.length > 0) {
+         return partialMatches
+            .map((category) => {
+               const categoryTitle = category.title;
+               return `
            <div class="m-search-suggestion__card">
-           <h3 class="m-search-suggestion__title">
-           ${highlightMatchingLetters(categoryTitle, inputValue)}
-           </h3></div>`;
-       })
-       .join('');
-   }
+           <a class="m-search-suggestion__title" href="">
+           <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M14.1057 14.2L17 17M16.0667 9.53333C16.0667 13.1416 13.1416 16.0667 9.53333 16.0667C5.92507 16.0667 3 13.1416 3 9.53333C3 5.92507 5.92507 3 9.53333 3C13.1416 3 16.0667 5.92507 16.0667 9.53333Z" stroke="#388FF3" stroke-width="1.5" stroke-linecap="round"/>
+           </svg>
 
-   return `<div class="m-search-suggestion__card" style="cursor: default">
+           ${highlightMatchingLetters(categoryTitle, inputValue)}
+           </a>
+           <svg class="icon-right" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 6L12 10L8 14" stroke="CurrentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>`;
+            })
+            .join("");
+      }
+
+      return `
+      <div class="m-search-suggestion__card" style="background:#fff; cursor:default;">
                <div class="search-error">
                    <img src="/assets/img/category/search-error.svg" alt="" width="120" height="107">
                    <h4>Ничего не найдено</h4>
-                   <p>Упс! Мы не смогли найти ни одного подходящего результата по вашему запросу</p>
+                   <p>Упс! Мы не смогли найти ни одного  <br> подходящего результата по вашему запросу</p>
                </div>
            </div>`;
-}
+   }
 
-// SEARCH INPUT EVENT LISTENER
-searchInput.addEventListener('input', function () {
-   const inputValue = searchInput.value.trim();
-   const searchSuggestions = generateSearchSuggestion(inputValue);
+   // SEARCH INPUT EVENT LISTENER
+   searchInput.addEventListener("input", function () {
+      const inputValue = searchInput.value.trim();
+      const searchSuggestions = generateSearchSuggestion(inputValue);
 
-   searchSuggestion.innerHTML = searchSuggestions;
-   searchSuggestion.classList.toggle('active', inputValue.length > 0 && searchSuggestions.length > 0);
+      searchSuggestion.innerHTML = searchSuggestions;
+      searchSuggestion.classList.toggle(
+         "active",
+         inputValue.length > 0 && searchSuggestions.length > 0
+      );
+      updateSearchSuggestionTitle(inputValue);
+   });
+
+   // UPDATE SEARCH SUGGESTION TITLE
+   function updateSearchSuggestionTitle(inputValue) {
+      const searchHistory =
+         JSON.parse(localStorage.getItem("searchHistory")) || [];
+      if (searchHistory.length === 0 && inputValue.length === 0) {
+         mSearchSuggestionTitle.textContent = "No History";
+      } else {
+         mSearchSuggestionTitle.textContent =
+            inputValue.length > 0 ? "Recommendation" : "История поиска";
+      }
+   }
+   //
+   // SAVE SEARCH HISTORY
+   function saveSearchHistory(searchTerm) {
+      const searchHistory =
+         JSON.parse(localStorage.getItem("searchHistory")) || [];
+      searchHistory.unshift(searchTerm);
+      localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+   }
+   saveSearchHistory();
+
+   // HIGHLIGHT MATCHING LETTERS
+   function highlightMatchingLetters(title, inputValue) {
+      const lowerCaseTitle = title.toLowerCase();
+      const lowerCaseInput = inputValue.toLowerCase();
+      const matchStart = lowerCaseTitle.indexOf(lowerCaseInput);
+
+      if (matchStart === -1) {
+         return title;
+      }
+
+      const matchEnd = matchStart + lowerCaseInput.length;
+      const highlightedPart =
+         title.substring(0, matchStart) +
+         `<span style="background-color: yellow;">${title.substring(
+            matchStart,
+            matchEnd
+         )}</span>` +
+         title.substring(matchEnd);
+
+      return highlightedPart;
+   }
 });
-
-// UPDATE SEARCH SUGGESTION TITLE
-function updateSearchSuggestionTitle() {
-   const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-   if (searchHistory.length === 0) {
-       mSearchSuggestionTitle.textContent = 'No History';
-   } else {
-       mSearchSuggestionTitle.textContent = 'История поиска';
-   }
-}
-updateSearchSuggestionTitle();
-
-// SAVE SEARCH HISTORY
-function saveSearchHistory(searchTerm) {
-   const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-   searchHistory.unshift(searchTerm);
-   localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
-}
-saveSearchHistory();
-
-// HIGHLIGHT MATCHING LETTERS
-function highlightMatchingLetters(title, inputValue) {
-   const lowerCaseTitle = title.toLowerCase();
-   const lowerCaseInput = inputValue.toLowerCase();
-   const matchStart = lowerCaseTitle.indexOf(lowerCaseInput);
-
-   if (matchStart === -1) {
-       return title;
-   }
-
-   const matchEnd = matchStart + lowerCaseInput.length;
-   const highlightedPart = title.substring(0, matchStart) +
-                           `<span style="background-color: yellow;">${title.substring(matchStart, matchEnd)}</span>` +
-                           title.substring(matchEnd);
-
-   return highlightedPart;
-}
-})
