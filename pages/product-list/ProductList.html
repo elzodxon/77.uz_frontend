@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="../../components/buttons/buttons.css" />
   <link rel="stylesheet" href="../../components/radio-button/index.css" />
   <link rel="stylesheet" href="../../components/select/select.css">
+  <link rel="stylesheet" href="https://pagination.js.org/dist/2.1.4/pagination.css"/>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://pagination.js.org/dist/2.1.4/pagination.min.js"></script>
   <!-- ================== Website Title ================== -->
   <title>77.uz | Product List</title>
 </head>
@@ -382,6 +385,7 @@
           <div class="product-list__wrapper">
             <p class="product-list__count">156 объявлений</p>
             <div id="list__switchers" class="product-list__switcher">
+              <!--  Todo: chop icon             -->
               <iconify-icon class="filter_icon" icon="bi:filter"></iconify-icon>
               <div class="product-list__view-icons">
                 <iconify-icon data-view="grid-view" class="product-list__view-icon active"
@@ -392,50 +396,18 @@
             </div>
           </div>
           <!-- Product grid view -->
-          <div class="view-wrap grid-view" style="display: block">
-            <div id="grid-view__wrapper" class="grid-view__row"></div>
+          <div id="grid" class="view-wrap grid-view" style="display: block">
+            <div id="grid-view__wrapper" class="grid-view__row">
+            
+            </div>
           </div>
           <!-- Product list view -->
-          <div class="view-wrap list-view" style="display: none">
-            <div class="list-view__row">
+          <div  class="view-wrap list-view" style="display: none">
+            <div id="list"  class="list-view__row">
               <div id="list-view__wrapper" class="list-view__wrapper"></div>
             </div>
           </div>
-          <!-- Pagination -->
-          <ul class="pagination">
-            <li>
-              <button class="pagination__button">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.4 16.8L9.59998 12L14.4 7.19999" stroke="#63676C" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </button>
-            </li>
-            <li>
-              <button class="pagination__button">1</button>
-            </li>
-            <li><button class="pagination__button active">2</button></li>
-            <li>
-              <button class="pagination__button">3</button>
-            </li>
-            <li>
-              <button class="pagination__button">4</button>
-            </li>
-            <li>
-              <button class="pagination__button">5</button>
-            </li>
-            <li>
-              <button class="pagination__button">6</button>
-            </li>
-            <li>
-              <button class="pagination__button">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.60002 7.20001L14.4 12L9.60002 16.8" stroke="#63676C" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </li>
-          </ul>
+        
         </div>
       </div>
     </div>
@@ -545,6 +517,7 @@
   </footer>
 
   <!-- ================== Javascript Links ================== -->
+
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <script src="../../components/header/header.js"></script>
   <script src="../../components/checkbox/checkbox.js"></script>
