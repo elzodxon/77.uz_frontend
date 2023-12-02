@@ -1,6 +1,4 @@
-const switchers = document.querySelectorAll(
-    '.product-list__view-icons .product-list__view-icon',
-)
+const switchers = document.querySelectorAll('.product-list__view-icons .product-list__view-icon',)
 const view_wraps = document.querySelectorAll('.view-wrap')
 const list_view = document.querySelector('.list-view')
 const grid_view = document.querySelector('.grid-view')
@@ -16,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
         .then((response) => response.json())
         .then((data) => {
             // Once the data is loaded, call a function to render it
-            productList = data.productList
-            productGetList(productList)
-
+            productList = classifyPages(data.productList, 10)
+            console.log(Object.keys(productList).length)
+            renderPagination(Object.keys(productList).length)
             return productList
         })
         .catch((error) => console.error('Error fetching data:', error))
@@ -71,30 +69,22 @@ function productGetList(productList) {
         list_card.innerHTML = `
             <div class="list-view__card-symbols">
            
-              <img class="list-view__card-image card-image" src="${
-            product.photo
-        }" alt="Product photo" />
+              <img class="list-view__card-image card-image" src="${product.photo}" alt="Product photo" />
             </div>
             <div class="list-view__card-content">
               <div class="list-view__top-content">
                 <a href="#" class="list-view__card-title card-title">
                ${product.name}
                 </a>
-                <span class="badge card-address"> ${
-            product.address.district.name
-        }</span>
+                <span class="badge card-address"> ${product.address.district.name}</span>
               </div>
               <div class="list-view__bottom-content">
                 <p class="list-view__card-price card-price">
                ${product.price}<span> UZS </span>
                 </p>
                 <div>
-                  <p class="list-view__card-date card-date"> ${dateFormatter(
-            product.published_at,
-        )}</p>
-                  <a class="list-view__card-number card-phoneNum" href="tel:${
-            product.seller.phone_number
-        }">${product.seller.phone_number}</a>
+                  <p class="list-view__card-date card-date"> ${dateFormatter(product.published_at,)}</p>
+                  <a class="list-view__card-number card-phoneNum" href="tel:${product.seller.phone_number}">${product.seller.phone_number}</a>
                 </div>
               </div>
             </div>`
@@ -104,30 +94,16 @@ function productGetList(productList) {
         grid_card.innerHTML = `
             <div class="grid-view__card-symbols">
               <div  class="grid-view__card-icon">
-              <iconify-icon id="${
-            product.id
-        }" class="icon" icon="tabler:heart-filled"></iconify-icon>
+              <iconify-icon id="${product.id}" class="icon" icon="tabler:heart-filled"></iconify-icon>
               </div>
-              <img class="grid-view__card-image card-image" src="${
-            product.photo
-        }" alt="Product photo" />
+              <img class="grid-view__card-image card-image" src="${product.photo}" alt="Product photo" />
             </div>
             <div class="grid-view__card-content">
-              <span class="badge card-address">${
-            product.address.district.name
-        }</span>
-              <a href="#" class="grid-view__card-title card-title">${
-            product.name
-        }</a>
-              <p class="grid-view__card-date card-date">${dateFormatter(
-            product.published_at,
-        )}</p>
-              <a class="grid-view__card-number card-phoneNum" href="tel:${
-            product.seller.phone_number
-        }">${formatPhoneNumber(product.seller.phone_number)}</a>
-              <p class="grid-view__card-price card-price"> ${numbersWithSpace(
-            product.price,
-        )}<span> UZS </span></p>
+              <span class="badge card-address">${product.address.district.name}</span>
+              <a href="#" class="grid-view__card-title card-title">${product.name}</a>
+              <p class="grid-view__card-date card-date">${dateFormatter(product.published_at,)}</p>
+              <a class="grid-view__card-number card-phoneNum" href="tel:${product.seller.phone_number}">${formatPhoneNumber(product.seller.phone_number)}</a>
+              <p class="grid-view__card-price card-price"> ${numbersWithSpace(product.price,)}<span> UZS </span></p>
             </div>`
         gridWrapper.appendChild(grid_card)
 
@@ -144,9 +120,7 @@ function dateFormatter(date) {
     const year = dateObject.getFullYear()
 
     // Format the date components as 'DD-MM-YYYY'
-    const formattedDate = `${day < 10 ? '0' : ''}${day}-${
-        month < 10 ? '0' : ''
-    }${month}-${year}`
+    const formattedDate = `${day < 10 ? '0' : ''}${day}-${month < 10 ? '0' : ''}${month}-${year}`
 
     return formattedDate
 }
@@ -168,13 +142,7 @@ function formatPhoneNumber(phoneNumber) {
     const cleanedNumber = phoneNumber.replace(/\D/g, '')
 
     // Apply the desired formatting
-    const formattedNumber = `+${cleanedNumber.slice(0, 3)}-${cleanedNumber.slice(
-        3,
-        5,
-    )}-${cleanedNumber.slice(5, 8)}-${cleanedNumber.slice(
-        8,
-        10,
-    )}-${cleanedNumber.slice(10)}`
+    const formattedNumber = `+${cleanedNumber.slice(0, 3)}-${cleanedNumber.slice(3, 5,)}-${cleanedNumber.slice(5, 8)}-${cleanedNumber.slice(8, 10,)}-${cleanedNumber.slice(10)}`
 
     return formattedNumber
 }
@@ -205,24 +173,59 @@ function handleCardIconClick(event) {
     }
 }
 
-const paginationButtons = document.querySelectorAll(".pagination__button")
-paginationButtons.forEach(el => {
-    el.addEventListener('click', () => {
-        const activePaginationButton = document.querySelector(".pagination__button.active")
-        if (!(el.childNodes.length > 1)) {
-            activateButton(el,activePaginationButton)
-        } else if(el.classList.contains("next")){
-            activateButton(activePaginationButton.parentElement.nextElementSibling.firstElementChild,activePaginationButton)
-        }else{
 
-            activateButton(activePaginationButton.parentElement.previousElementSibling.firstElementChild,activePaginationButton)
-        }
+// ------------------- Change Active Pagination Button -----------------
+function activateButton(el, activePaginationButton) {
+    // if (!(el.childNodes.length > 1)) {
+        activePaginationButton.classList.remove('active')
+        el..classList.add('active')
+    // }
+}
+
+window.addEventListener('DOMNodeInserted',()=>{
+    const paginationButtons = document.querySelectorAll(".pagination__button")
+    paginationButtons.forEach(el => {
+        el.addEventListener('click', () => {
+            const activePaginationButton = document.querySelector(".pagination__button.active")
+            if (!(el.childNodes.length > 1)) {
+                activateButton(el, activePaginationButton)
+            } else if (el.classList.contains("next")) {
+                activateButton(activePaginationButton.parentElement.nextElementSibling.firstElementChild, activePaginationButton)
+
+            } else {
+                activateButton(activePaginationButton.parentElement.previousElementSibling.firstElementChild, activePaginationButton)
+            }
+        })
     })
+
 })
 
-function activateButton(el,activePaginationButton) {
-    if (!(el.childNodes.length > 1)) {
-        activePaginationButton.classList.remove('active')
-        el.classList.add('active')
+
+function classifyPages(cards, limit) {
+    const tempPages = {}
+    const pagesCount = Math.floor(cards.length / limit) + (cards.length % limit === 0 ? 0 : 1)
+    let a = 0, b = limit;
+    for (let i = 0; i < pagesCount; i++) {
+        tempPages[i + 1] = cards.slice(a, b + 1)
+        a = b + 1;
+        b += limit;
+    }
+    return tempPages
+}
+
+function createPaginationButton(number) {
+    return `<button itemid="${number}" class="pagination__button">${number}</button>`
+}
+
+function renderPagination(size) {
+    const nextPaginationButton = document.querySelectorAll(".pagination")[0].lastElementChild
+    for (let i = 1; i<=size; i++) {
+        const listItem = document.createElement('li')
+
+        listItem.innerHTML = createPaginationButton(i)
+        if (i===1){
+            listItem.firstElementChild.classList.add('active')
+        }
+        nextPaginationButton.parentNode.insertBefore(listItem, nextPaginationButton)
     }
 }

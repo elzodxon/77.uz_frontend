@@ -303,6 +303,7 @@ body {
     margin-top: 72px;
 }
 
+
 @media (min-width: 569px) and (max-width: 720px) {
     .row {
         display: unset;
