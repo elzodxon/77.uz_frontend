@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <!-- ================== Font Awesome links================== -->
-      <link
-         rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-         crossorigin="anonymous"
-         referrerpolicy="no-referrer" />
-
       <!-- ================== Google Fonts links ================== -->
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,8 +12,8 @@
          rel="stylesheet" />
       <!-- ================== Css links ================== -->
 
-      <!-- <link rel="stylesheet" href="../../assets/css/normalize.css" /> -->
-      <!-- <link rel="stylesheet" href="../../assets/css/variables.css" /> -->
+      <link rel="stylesheet" href="../../assets/css/normalize.css" />
+      <link rel="stylesheet" href="../../assets/css/variables.css" />
       <link rel="stylesheet" href="./inputs.css" />
 
       <!-- ================== Website Title ================== -->
@@ -30,19 +21,19 @@
    </head>
 
    <body>
-      <form action="" class="log-in-form">
+      <form action="" class="form">
          <!-- Name -->
-         <div class="input-card">
-            <label class="label" for="name">Ф.И.О. </label>
+         <div class="form-group">
+            <label class="label" for="fullName">Ф.И.О. </label>
             <input
                class="input input_text"
                type="text"
                name="name"
-               id="name"
+               id="fullName"
                placeholder="Введите вашу Ф.И.О." />
          </div>
          <!-- Product name -->
-         <div class="input-card">
+         <div class="form-group">
             <label class="label" for="product-name">Название продукта </label>
             <input
                class="input input__product-name"
@@ -52,7 +43,7 @@
                placeholder="Введите название продукта" />
          </div>
          <!-- Log-in -->
-         <div class="input-card">
+         <div class="form-group">
             <label class="label" for="log-in">Логин </label>
             <input
                class="input input__login"
@@ -62,39 +53,42 @@
                placeholder="Введите логин" />
          </div>
          <!-- Password -->
-         <div class="input-card">
+         <div class="form-group">
             <label class="label" for="password">Пароль </label>
-            <input
-               class="input input-password"
-               type="password"
-               name="password"
-               id="password"
-               placeholder="Введите пароль"
-               onclick="togglePassword()" />
-            <div class="closed-eye"></div>
-            <a href="#" class="forgot-password">Забыли пароль?</a>
+            <div class="password-input-wrapper">
+               <input
+                  class="input input-password"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Введите пароль"
+                   />
+                   <div class="closed-eye"></div>
+                   <a href="#" class="forgot-password">Забыли пароль?</a>
+
+            </div>
          </div>
          <!-- Phone number -->
-         <div class="input-card">
+         <div class="form-group">
             <label class="label" for="phone-number">Телефон номер </label>
+<div class="p-input-group">
+   <span class="country-code">+998</span>
+   <input
+           class="input input_tel"
+           type="tel"
+           name="phone-number"
+           id="phone-number"
+           required
+           inputmode="numeric"
+           placeholder="(__) ___-__-__"
+   />
+</div>
 
-            <input
-               class="input input_tel"
-               type="tel"
-               name="phone-number"
-               id="phone-number"
-               required
-               inputmode="numeric"
-               type="text"
-               value="+998(__) ___-__-__"
-               data-mask="+___(__) ___-__-__"
-               onkeydown="phomeNumberFormatter" />
+
          </div>
       </form>
       <!-- ================== Javascript Links
       ================== -->
-      <script src="./inputs.js"></script>
+      <script src="inputs.js"></script>
    </body>
 </html>
-=======
->>>>>>> 9293f24a41f09c768d4bc4dcc49375ff32f2f739

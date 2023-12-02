@@ -1,21 +1,125 @@
-body {
-  display: flex;
-  align-items: center;
-  height: 100vh;
-  justify-content: center;
-}
-
 .create-form {
   width: 100%;
+  max-width: 782px;
+  margin: auto;
 }
 .create-form__body {
   display: flex;
   width: 100%;
   flex-direction: column;
   gap: 20px;
+  padding-top: 24px;
 }
 .create-form__content {
-  padding: 20px; 
+  padding: 20px;
   border-radius: 12px;
   background-color: white;
+}
+.create-form__title {
+  color: var(--black-color);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 41.6px */
+}
+.form-title {
+  font-weight: 700;
+}
+.create-form__bread-crumb {
+  margin-top: 100px;
+  padding: 12px 0;
+}
+.label {
+  font-size: 14px;
+}
+.main {
+  padding-top: 20px;
+}
+.form-inner {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.form-inner .form-group {
+  width: 100%;
+}
+.form-inner .form-group {
+  flex: 1;
+}
+.textarea__product-name {
+  border-radius: 8px;
+  min-height: 84px;
+  padding: 12px;
+  font-family: Inter;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+  line-height: 20px; /* 142.857% */
+
+  background: var(--greys-grey-bg, #f0f3f7);
+}
+.product-detail__form {
+  position: relative;
+}
+.textarea__product-name::placeholder {
+  color: var(--placeholder-color);
+  font-weight: 400;
+}
+.textarea__product-name:focus {
+  border-color: #388ff3;
+  background: #fff;
+}
+.select-wrapper {
+  position: relative;
+  padding-top: 20px;
+}
+.options {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+.agreement-terms {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.agreement-terms__description {
+  color: var(--black-color);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 15.6px */
+}
+.agreement-terms__buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.terms-link {
+  color: var(--primary-color);
+}
+.terms-link:hover {
+  transition: all 0.2s ease-in-out;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 568px) {
+  .form-inner {
+    flex-direction: column;
+    gap: 0;
+  }
+  .agreement-terms {
+    flex-direction: column;
+  }
+  .agreement-terms__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .agreement-terms__buttons .btn{
+    width: 100%;
+  }
 }
