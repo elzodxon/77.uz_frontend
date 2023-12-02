@@ -1,0 +1,7 @@
+.product-delete {
+  height: 100%;
+}
+
+.modal-before::before {
+  background-image: url(../../assets/img/modal-img/trash.svg);
+}
