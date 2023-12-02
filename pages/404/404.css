@@ -19,8 +19,6 @@ body {
   margin-bottom: 108px;
 }
 .not-found-wrapper__img {
-  max-width: 567px;
-  margin: auto;
 }
 .not-found-wrapper__title {
   color: var(--black-color);
@@ -43,4 +41,5 @@ body {
 }
 .not-found-wrapper__button {
   margin-top: 40px;
+  max-width: 246px;
 }

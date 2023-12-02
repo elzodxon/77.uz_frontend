@@ -90,20 +90,22 @@
   line-height: 130%;
   text-decoration: none;
 }
-.p-input-group {
-  position: relative;
-  display: flex;
-  align-items: center;
+.p-input-group{
+   position: relative;
+   display: flex;
+   align-items: center;
+   font-size: 14px;
 }
 .input_tel {
   padding-left: 45px;
 }
-.p-input-group .country-code {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(30%, 55%);
-  z-index: 1;
+.p-input-group .country-code{
+   position: absolute;
+   top: 0;
+   left: 0;
+   transform: translate(30%, 52%);
+   z-index: 1;
+   font-size: 14px;
 }
 .error {
   border: 1px solid #e93c47;

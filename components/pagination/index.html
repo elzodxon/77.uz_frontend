@@ -1,81 +1,73 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ================== Google Fonts links ================== -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ================== Css links ================== -->
+  <!-- ================== Google Fonts links ================== -->
 
-    <link rel="stylesheet" href="./pagination.css" />
-    <link rel="stylesheet" href="../../assets/css/variables.css" />
-    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+  <!-- ================== Css links ================== -->
 
-    <!-- ================== Website Title ================== -->
-    <title>Pagination Component</title>
-  </head>
+  <link rel="stylesheet" href="./pagination.css" />
+  <link rel="stylesheet" href="../../assets/css/variables.css" />
+  <link rel="stylesheet" href="../../assets/css/normalize.css" />
 
-  <body>
-    <ul class="pagination">
-      <li>
-        <button class="pagination__button">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M14.4 16.8L9.59998 12L14.4 7.19999"
-              stroke="#63676C"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+  <!-- ================== Website Title ================== -->
+  <title>Pagination Component</title>
+</head>
+
+<body>
+  <!-- <ul class="pagination">
+    <li>
+      <button class="pagination__button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.4 16.8L9.59998 12L14.4 7.19999" stroke="#63676C" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button class="pagination__button">1</button>
+    </li>
+    <li><button class="pagination__button active">2</button></li>
+    <li>
+      <button class="pagination__button">3</button>
+    </li>
+    <li>
+      <button class="pagination__button">4</button>
+    </li>
+    <li>
+      <button class="pagination__button">5</button>
+    </li>
+    <li>
+      <button class="pagination__button">6</button>
+    </li>
+    <li>
+      <button class="pagination__button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.60002 7.20001L14.4 12L9.60002 16.8" stroke="#63676C" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+    </li>
+  </ul> -->
+
+  <div id="post-list"></div>
+
+    <div class="pagination">
+        <button id="prev"><iconify-icon icon="ooui:next-rtl"></iconify-icon></button>
+        <div id="pages"></div>
+        <button id="next"><iconify-icon icon="ooui:next-ltr"></iconify-icon>
         </button>
-      </li>
-      <li>
-        <button class="pagination__button">1</button>
-      </li>
-      <li><button class="pagination__button active">2</button></li>
-      <li>
-        <button class="pagination__button">3</button>
-      </li>
-      <li>
-        <button class="pagination__button">4</button>
-      </li>
-      <li>
-        <button class="pagination__button">5</button>
-      </li>
-      <li>
-        <button class="pagination__button">6</button>
-      </li>
-      <li>
-        <button class="pagination__button">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.60002 7.20001L14.4 12L9.60002 16.8"
-              stroke="#63676C"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-      </li>
-    </ul>
+    </div>
+    <script src="script.js"></script>
 
-    <!-- ================== Javascript Links ================== -->
-    <script src="./pagination.js"></script>
-  </body>
+
+  <!-- ================== Javascript Links ================== -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="./pagination.js"></script>
+</body>
+
 </html>

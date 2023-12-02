@@ -1,16 +1,23 @@
 const searchInput = document.querySelector('.search__input')
+const searchContent = document.querySelector(".search")
 
-searchInput.addEventListener('focus', (e) => {
-  e.preventDefault()
-  blocker.classList.toggle('active')
-  document.body.classList.toggle('block')
+blocker.addEventListener('click', () => {
+  document.body.classList.remove('block')
+  blocker.classList.remove('active')
 })
-
 searchInput.addEventListener('focus', (e) => {
   e.preventDefault()
   blocker.classList.add('active')
-  document.body.classList.add('active')
+  document.body.classList.add('block')
+  searchContent.classList.add("active")
 })
+searchInput.addEventListener('blur', (e) => {
+  e.preventDefault()
+  blocker.classList.remove('active')
+  document.body.classList.remove('block')
+  searchContent.classList.remove("active")
+})
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const categoryList = document.getElementById('categoryList')
@@ -48,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             { bags: 'example-link-4' },
           ],
         },
+
         // Add more subcategories as needed
       ],
     },
@@ -83,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
             { bags: 'example-link-4' },
           ],
         },
+
         // Add more subcategories as needed
       ],
     },
@@ -118,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
             { bags: 'example-link-4' },
           ],
         },
+
         // Add more subcategories as needed
       ],
     },
@@ -153,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
             { bags: 'example-link-4' },
           ],
         },
+
         // Add more subcategories as needed
       ],
     },
@@ -188,6 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
             { bags: 'example-link-4' },
           ],
         },
+
         // Add more subcategories as needed
       ],
     },
@@ -223,6 +235,7 @@ document.addEventListener('DOMContentLoaded', function () {
             { bags: 'example-link-4' },
           ],
         },
+
         // Add more subcategories as needed
       ],
     },
@@ -258,9 +271,11 @@ document.addEventListener('DOMContentLoaded', function () {
             { bags: 'example-link-4' },
           ],
         },
+
         // Add more subcategories as needed
       ],
     },
+
     // Add more data as needed
   ]
 
@@ -269,6 +284,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .map((subsub) => {
         const subsubTitle = Object.keys(subsub)[0]
         const subsubLink = subsub[subsubTitle]
+
         return `<li class="category-links__item">${subsubLink}</li>`
       })
       .join('')
@@ -329,6 +345,7 @@ document.addEventListener('DOMContentLoaded', function () {
           )}</ul>
         </li>
       `
+
         return categoryCard
       })
       .join('')

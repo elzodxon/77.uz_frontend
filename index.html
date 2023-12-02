@@ -7,7 +7,7 @@
 
     <!-- Site Meta content -->
     <meta name="theme-color" content="#fff" />
-    <meta name="description" content="" />
+    <meta name="description"  content="" />
     <meta property="og:title" content="" />
     <meta property="og:type" content="" />
     <meta property="og:url" content="" />
@@ -22,25 +22,20 @@
     <!-- ================== Google Fonts links ================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
     <!-- Main Stylesheet Included -->
     <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./components/header/header.css" />
     <link rel="stylesheet" href="./assets/css/variables.css" />
     <link rel="stylesheet" href="./components/footer/footer.css" />
-    <link rel="stylesheet" href="./pages/product list/card/card.css" />
+    <link rel="stylesheet" href="./pages/product-list/ProductList.css" />
     <link rel="stylesheet" href="./components/modal/modal.css" />
     <link rel="stylesheet" href="./components/select/select.css" />
     <link
       rel="stylesheet"
       href="./components/content-header/content-header.css"
     />
+    <link rel="stylesheet" href="../77.uz_frontend/components/buttons/buttons.css">
   </head>
 
   <body>
@@ -57,7 +52,7 @@
                 <img
                   width="20"
                   height="20"
-                  src="https://77.uz/images/flag/ru.svg"
+                  src="./assets/img/header/ru.svg"
                   alt=""
                 />
                 <span>Русский</span>
@@ -83,7 +78,7 @@
                     <img
                       width="20"
                       height="20"
-                      src="https://77.uz/images/flag/ru.svg"
+                      src="./assets/img/header/ru.svg"
                       alt=""
                     />
                     <span>RU</span>
@@ -93,7 +88,7 @@
                     <img
                       width="20"
                       height="20"
-                      src="https://77.uz/images/flag/uz.svg"
+                      src="/assets/img/header/uz.svg"
                       alt=""
                     />
                     <span>UZ</span>
@@ -235,7 +230,7 @@
                 id="searchNow"
                 placeholder="Что вы ищите?"
               />
-              <button class="btn search__btn" role="search">Поиск</button>
+              <button class="search__btn" role="search">Поиск</button>
             </label>
           </form>
           <!-- Category Section -->
@@ -261,7 +256,7 @@
             </p>
           </div>
 
-          <ul class="ads-wrapper__list ads-wrapper"></ul>
+          <div id="ads-wrapper" class="ads-wrapper__list ads-wrapper"></div>
         </div>
       </div>
     </main>
@@ -442,47 +437,58 @@
               />
             </div>
             <!-- Select Wrapper -->
-            <div class="select-wrapper">
-              <label class="select-wrapper__label" for="">Категория</label>
+<div class="form-group">
+      <div class="select">
+      <label class="select-label" for="">Адресс</label>
 
-              <div class="select-menu" id="">
-                <div class="select-btn">
-                  <span class="sBtn-text">Выберите категорию</span>
-                  <span class="select-btn__arrow-icon"> </span>
-                </div>
+      <div class="select-menu" id="">
+        <div class="select-menu__btn">
+          <span class="select-menu__context">Выберите свой адрес</span>
 
-                <ul class="options">
-                  <li class="option">
-                    <span class="option-text">Г. Ташкент</span>
-                  </li>
+          <span>
+            <img
+              class="select-menu__icon"
+              src="../../assets/img/icon-arrow-down.svg"
+              alt="chevron-up icon"
+              width="24"
+              height="24"
+            />
+          </span>
+        </div>
 
-                  <li class="option">
-                    <span class="option-text">Андижан</span>
-                  </li>
-                  <li class="option">
-                    <span class="option-text">Бухара</span>
-                  </li>
-                  <li class="option">
-                    <span class="option-text">Навои </span>
-                  </li>
+        <ul class="options">
+          <li class="option">
+            <span class="option-text">Г. Ташкент</span>
+          </li>
 
-                  <li class="option">
-                    <span class="option-text">Самарканд</span>
-                  </li>
-                  <li class="option">
-                    <span class="option-text">Джизак </span>
-                  </li>
+          <li class="option">
+            <span class="option-text">Андижан</span>
+          </li>
+          <li class="option">
+            <span class="option-text">Бухара</span>
+          </li>
+          <li class="option">
+            <span class="option-text">Навои </span>
+          </li>
 
-                  <li class="option">
-                    <span class="option-text">Джизак </span>
-                  </li>
-                  <li class="option">
-                    <span class="option-text">Джизак </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <li class="option">
+            <span class="option-text">Самарканд</span>
+          </li>
+          <li class="option">
+            <span class="option-text">Джизак </span>
+          </li>
 
+          <li class="option">
+            <span class="option-text">Джизак </span>
+          </li>
+          <li class="option">
+            <span class="option-text">Джизак </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+</div>
             <!-- Phone number -->
             <div class="form-group">
               <label class="label modal-label" for="phone-number"
@@ -586,6 +592,7 @@
     </div>
 
     <!-- Custom Js Included -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/custom.js"></script>
     <script src="components/footer/footer.js"></script>
@@ -593,5 +600,6 @@
     <script src="components/inputs/inputs.js"></script>
     <script src="components/select/select.js"></script>
     <script src="/js/ads-wrapper.js"></script>
+
   </body>
 </html>

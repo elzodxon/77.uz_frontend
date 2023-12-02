@@ -57,6 +57,7 @@ function formatPhoneNumber(input) {
       '-' +
       phoneNumber.substring(7, 9)
   }
+  
   // Set the formatted value back to the input
   input.value = phoneNumber
 }
@@ -66,8 +67,10 @@ function handleBackspace(event, input) {
   if (event.key === 'Backspace') {
     // Remove non-numeric characters
     let phoneNumber = input.value.replace(/\D/g, '')
+
     // Remove the last digit
     phoneNumber = phoneNumber.slice(0, -1)
+
     // Format the remaining digits
     if (phoneNumber.length > 0) {
       phoneNumber =
@@ -80,8 +83,10 @@ function handleBackspace(event, input) {
         '-' +
         phoneNumber.substring(7, 9)
     }
+
     // Set the formatted value back to the input
     input.value = phoneNumber
+
     // Prevent the default backspace behavior
     event.preventDefault()
   }

@@ -26,6 +26,17 @@ body {
   border-radius: 12px;
   height: auto;
   padding: 16px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.filter:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: brown !important;
+  background-color: antiquewhite !important;
+  font-weight: bold !important;
 }
 
 .filter__title {
@@ -33,12 +44,42 @@ body {
   font-size: 20px;
   font-family: Inter;
   font-weight: 600;
+  padding-bottom: 16px;
 }
 
-.product__list {
-  flex-basis: 72%;
+.filter-tools__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
 }
-.category__title {
+.filter-sub__title {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  color: #63676c;
+  padding-bottom: 8px;
+}
+.filter_icon {
+  display: none;
+}
+
+.filter-btn {
+  position: absolute;
+  bottom: 16px;
+  width: calc(100% - 32px) !important;
+  margin-top: 30px !important;
+}
+
+.filter-btn__wrapper {
+  margin-top: 70px;
+}
+
+.product-list {
+  flex-basis: calc(75% - 30px);
+}
+.product-list__title {
   color: #16191d;
   font-size: 32px;
   font-family: Inter;
@@ -46,64 +87,131 @@ body {
   padding: 10px 0 38px 0;
 }
 
-.product-content-wrapper {
+.product-list__wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
 }
 
-.product__count {
+.product-list__count {
   color: #8e9297;
   font-size: 14px;
   font-family: Inter;
   font-weight: 500;
 }
 
-.list__switcher {
+.product-list__switcher {
+  display: flex;
+  gap: 10px;
   font-size: 28px;
   color: #d5d8db;
 }
 
-.list__switcher iconify-icon:active {
+.product-list__switcher iconify-icon:active {
   color: #388ff3;
 }
 
 .active,
-.switcher-icon:hover {
+.product-list__view-icon:hover {
   color: #388ff3;
+  cursor: pointer;
 }
 
-.row__card {
+.grid-view__row {
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  gap: 24px 24px;
+}
+.list-view__row {
+  display: flex;
   gap: 24px 24px;
 }
 
-.card {
+.list-view__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grid-view__card {
   border-radius: 12px;
   position: relative;
   overflow: hidden;
   z-index: 0;
+  background: white;
 }
-.card__icon {
+
+.list-view__card {
+  border-radius: 12px;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  background: white;
+  width: 100%;
+}
+
+.grid-view__card-icon {
   position: absolute;
   top: 12px;
   left: 12px;
   font-size: 40px;
   color: white;
+  cursor: pointer;
 }
-.card__img {
+
+.list-view__card-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.grid-view__card-image {
   width: 100%;
   height: 100%;
 }
 
-.content-wrapper {
-  padding: 20px;
-  background: white;
+.list-view__card-image {
+  max-width: 200px;
+  height: 100%;
 }
 
-.city {
+.grid-view__card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.list-view__card-content {
+  padding: 12px 12px 12px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.list-view__top-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-view__bottom-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-view__bottom-content div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.badge {
   background: var(--gray-color);
   color: #63676c;
   font-size: 14px;
@@ -111,94 +219,146 @@ body {
   font-weight: 400;
   border-radius: 6px;
   padding: 4px 8px;
+  margin: 10px 0 0 0;
 }
-.product_name {
+.grid-view__card-title {
   color: #16191d;
   font-size: 18px;
   font-family: Inter;
   font-weight: 600;
   margin: 16px 0 0 0;
 }
-.date {
+.grid-view__card-title:hover {
+  color: blue;
+}
+.list-view__card-title {
+  color: #16191d;
+  font-size: 18px;
+  font-family: Inter;
+  font-weight: 600;
+  margin: 10px 0 0 0;
+}
+.list-view__card-title:hover {
+  color: blue;
+}
+
+.grid-view__card-date {
   color: #8e9297;
   font-size: 14px;
   font-family: Inter;
   font-weight: 400;
   margin: 8px 0;
 }
+.list-view__card-date {
+  color: #8e9297;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 400;
+  /* margin: 8px 0; */
+}
 
-.phone__number {
+.grid-view__card-number {
   color: #8e9297;
   font-size: 16px;
   font-family: Inter;
   font-weight: 600;
 }
 
-.product__cost {
+.list-view__card-number {
+  color: #8e9297;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 600;
+}
+.grid-view__card-price {
   color: #16191d;
   font-size: 24px;
   font-family: Inter;
   font-weight: 700;
   margin: 16px 0 0 0;
 }
+.list-view__card-price {
+  color: #16191d;
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 700;
+  /* margin: 50px 0 0 0; */
+}
 
-.product__cost span {
+.grid-view__card-price span {
   color: #388ff3;
   font-size: 16px;
   font-family: Inter;
   font-weight: 500;
 }
-.product__list__pagination {
-  justify-self: center;
+
+.list-view__card-price span {
+  color: #388ff3;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 500;
 }
+
 .footer {
   margin-top: 72px;
 }
 
+@media (min-width: 569px) and (max-width: 720px) {
+  .row {
+    display: unset;
+  }
+}
+
 @media screen and (max-width: 568px) {
-  .main {
-    flex-grow: 1;
-    padding-top: 87px;
+  .row {
+    display: unset;
   }
-  .footer {
-    margin-top: 101px;
-  }
-  .row__card {
+  .grid-view__row {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     gap: 20px 20px;
   }
-  .card__icon {
+  .grid-view__card-icon {
     font-size: 24px;
   }
   .filter {
+    width: 100%;
     display: none;
   }
-  .content-wrapper {
+  .filter_icon {
+    display: block;
+  }
+  .grid-view__card-content {
     padding: 8px;
   }
-  .city {
+  .badge {
     font-size: 10px;
   }
-  .product_name {
+  .grid-view__card-title {
     font-size: 14px;
     margin: 8px 0 0 0;
   }
-  .date {
+  .grid-view__card-date {
     font-size: 10px;
     margin: 4px 0;
   }
 
-  .phone__number {
+  .grid-view__card-number {
     font-size: 12px;
   }
 
-  .product__cost {
+  .grid-view__card-price {
     font-size: 16px;
     margin: 8px 0 0 0;
   }
 
-  .product__cost span {
+  .grid-view__card-price span {
     font-size: 12px;
+  }
+  .list-view__bottom-content div {
+    flex-direction: column;
+  }
+  .product-list__title {
+    font-size: 26px;
   }
 }

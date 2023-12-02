@@ -21,6 +21,7 @@
       rel="stylesheet"
       href="../../components/bread-crumb/bread-crumb.css"
     />
+        <link rel="stylesheet" href="../../assets/css/style.css" />
     <link rel="stylesheet" href="../../components/header/header.css" />
     <link rel="stylesheet" href="../../components/inputs/inputs.css" />
     <link rel="stylesheet" href="../../components/buttons/buttons.css" />
@@ -30,14 +31,14 @@
     <link rel="stylesheet" href="../../components/select/select.css" />
     <link rel="stylesheet" href="../../components/prev-page-header/index.css" />
     <link rel="stylesheet" href="../../components/modal/modal.css" />
-    <link rel="stylesheet" href="../../assets/css/style.css" />
+
     <link
       rel="stylesheet"
       href="../../components/image-uploader/image-uploader.css"
     />
 
     <!-- ================== Website Title ================== -->
-    <title>Header Component</title>
+    <title>77.uz | Create Form </title>
   </head>
 
   <body>
@@ -67,7 +68,7 @@
                 <img
                   width="20"
                   height="20"
-                  src="https://77.uz/images/flag/ru.svg"
+                  src="../../assets/img/header/ru.svg"
                   alt=""
                 />
                 <span>Русский</span>
@@ -93,7 +94,7 @@
                     <img
                       width="20"
                       height="20"
-                      src="https://77.uz/images/flag/ru.svg"
+                      src="../../assets/img/header/ru.svg"
                       alt=""
                     />
                     <span>RU</span>
@@ -103,7 +104,7 @@
                     <img
                       width="20"
                       height="20"
-                      src="https://77.uz/images/flag/uz.svg"
+                      src="/assets/img/header/uz.svg"
                       alt=""
                     />
                     <span>UZ</span>
@@ -339,45 +340,56 @@
               <p class="product-detail__title form-title">Категория</p>
               <div class="product-detail__form create-wrapper">
                 <!-- Select Wrapper -->
-                <div class="select-wrapper">
-                  <label class="select-wrapper__label" for="">Категория</label>
+                <div class="form-group">
+                      <div class="select">
+      <label class="select-label" for="">Адресс</label>
 
-                  <div class="select-menu" id="">
-                    <div class="select-btn">
-                      <span class="sBtn-text">Выберите категорию</span>
-                      <span class="select-btn__arrow-icon"> </span>
-                    </div>
+      <div class="select-menu" id="">
+        <div class="select-menu__btn">
+          <span class="select-menu__context">Выберите свой адрес</span>
 
-                    <ul class="options">
-                      <li class="option">
-                        <span class="option-text">Г. Ташкент</span>
-                      </li>
+          <span>
+            <img
+              class="select-menu__icon"
+              src="../../assets/img/icon-arrow-down.svg"
+              alt="chevron-up icon"
+              width="24"
+              height="24"
+            />
+          </span>
+        </div>
 
-                      <li class="option">
-                        <span class="option-text">Андижан</span>
-                      </li>
-                      <li class="option">
-                        <span class="option-text">Бухара</span>
-                      </li>
-                      <li class="option">
-                        <span class="option-text">Навои </span>
-                      </li>
+        <ul class="options">
+          <li class="option">
+            <span class="option-text">Г. Ташкент</span>
+          </li>
 
-                      <li class="option">
-                        <span class="option-text">Самарканд</span>
-                      </li>
-                      <li class="option">
-                        <span class="option-text">Джизак </span>
-                      </li>
+          <li class="option">
+            <span class="option-text">Андижан</span>
+          </li>
+          <li class="option">
+            <span class="option-text">Бухара</span>
+          </li>
+          <li class="option">
+            <span class="option-text">Навои </span>
+          </li>
 
-                      <li class="option">
-                        <span class="option-text">Джизак </span>
-                      </li>
-                      <li class="option">
-                        <span class="option-text">Джизак </span>
-                      </li>
-                    </ul>
-                  </div>
+          <li class="option">
+            <span class="option-text">Самарканд</span>
+          </li>
+          <li class="option">
+            <span class="option-text">Джизак </span>
+          </li>
+
+          <li class="option">
+            <span class="option-text">Джизак </span>
+          </li>
+          <li class="option">
+            <span class="option-text">Джизак </span>
+          </li>
+        </ul>
+      </div>
+    </div>
                 </div>
 
                 <div class="form-group">
@@ -404,7 +416,7 @@
 
                   <div class="drop-image__item">
                     <div class="gallery__item-empty" draggable="false">
-                      <img src="../../assets/img/image-add.svg" />
+                      <img src="../../assets/img/image-add.svg" alt=""/>
                       <h3>Перетащите изображение сюда</h3>
                       <span
                         >Перетащите свое изображение сюда или

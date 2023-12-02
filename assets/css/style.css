@@ -13,14 +13,11 @@ body.block {
   pointer-events: none;
   width: 100%;
   height: 100%;
-  z-index: 2000;
+  z-index: 120;
 }
 .main {
   width: 100%;
   flex: 1;
-}
-.main.category {
-  margin-top: 156px;
 }
 .country-code {
   font-size: 14px;
@@ -32,7 +29,24 @@ body.block {
 .search {
   width: 100%;
   position: sticky;
-  z-index: 1999;
+  z-index: 50;
+  margin-top: 46px;
+}
+.search.active {
+  z-index: 120;
+}
+.search__btn {
+  display: block;
+  padding: 11px 28px 12px 28px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 6px;
+  background: #16191d;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%;
+  cursor: pointer;
 }
 .search__label {
   position: relative;
@@ -56,7 +70,7 @@ body.block {
   top: 0;
   right: 0;
   background-color: #16191d;
-  z-index: 1200;
+  z-index: 100;
   opacity: 0;
   transition: all 0.2s ease-in-out;
 }
@@ -213,11 +227,11 @@ body.block {
   border-radius: 0 12px;
   display: none;
   left: 0;
+  z-index: 10;
   grid-area: 1/-1;
   background-color: white;
   filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.02));
   border: 1px solid #eaedf0;
-  z-index: 888;
   top: calc(100% + 20px);
   border-radius: 12px;
   border: 1px solid var(--greys-grey-4, #eaedf0);
@@ -363,7 +377,7 @@ body.block {
 .ads-wrapper__list {
   display: grid;
   gap: 24px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 .address-image {
   padding-top: 8px;

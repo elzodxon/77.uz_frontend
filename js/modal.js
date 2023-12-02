@@ -1,11 +1,6 @@
 // -------------------------------------------------Sixth BTN JS-----------------------------------------------------------//
-
 const blocker = document.querySelector('.blocker')
 
-blocker.addEventListener('click', () => {
-  document.body.classList.remove('block')
-  blocker.classList.remove('active')
-})
 
 const registration = document.querySelector('#registration'),
   registrationBtn = document.querySelector('#registration-btn'),
