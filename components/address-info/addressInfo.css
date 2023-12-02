@@ -1,18 +1,9 @@
 @import '../../assets/css/variables.css';
 
-.address-info {
-  border-radius: 16px;
-  background: #ffffff;
-}
-
-.address-info__.address-info__section {
-  padding: 10px;
-}
-
 .address-info__title {
   color: #16191d;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 130%;
 }
 
