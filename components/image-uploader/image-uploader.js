@@ -48,9 +48,7 @@ dropbox.addEventListener('dragover', (e) => {
 // Handle drop event on dropbox
 dropbox.addEventListener('drop', (e) => {
     e.preventDefault();
-
     const droppedFiles = e.dataTransfer.files;
-
     if (droppedFiles.length > 0) {
         const file = {
             id: Math.random() * 1000, file: droppedFiles[0],
@@ -58,7 +56,6 @@ dropbox.addEventListener('drop', (e) => {
         files.push(file);
         renderImages()
     }
-
     dropbox.classList.remove('active');
 });
 
@@ -132,8 +129,18 @@ window.addEventListener("DOMNodeInserted", () => {
 })
 
 window.addEventListener("dragenter",activateDropbox)
-
+dropbox.addEventListener('click',hideDropbox)
 function activateDropbox(e) {
     e.preventDefault()
     dropbox.classList.add('active')
 }
+
+function hideDropbox(e){
+    e.preventDefault()
+    dropbox.classList.remove('active')
+}
+
+const dropboxFloat = document.querySelectorAll('.dropbox__float')[0]
+dropboxFloat.addEventListener('click',()=>{
+   fileInput.click()
+})
