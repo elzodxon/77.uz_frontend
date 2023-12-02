@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-if ! head -1 "$1" | grep -qE "^(feat|fix|ci|chore|docs|test|style|refactor|pref|build|revert)(\(.+?\))?: .{1,}$"; then
+if ! head -1 "$1" | grep -qE "^(feat|fix|ci|chore|docs|test|style|refactor|pref|build|merge|revert)(\(.+?\))?: .{1,}$"; then
     echo "Aborting commit. Your commit message is invalid." >&2
     exit 1
 fi
