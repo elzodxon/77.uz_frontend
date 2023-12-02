@@ -6,7 +6,6 @@ let files = [];
 // Create gallery card
 const createGalleryCard = (id, image) => {
     return `
-          <div class="gallery__item">
           <div class="gallery__item-image" draggable="true">
             <div class="actions" draggable="false">
               <button  class="actions__button" draggable="false">
@@ -18,22 +17,8 @@ const createGalleryCard = (id, image) => {
             </div>
             <img class="gallery__item-photo" draggable="false" src="${image}" />
           </div>
-        </div>
           `;
 };
-
-// Remove image
-// const removeImage = (id) => {
-//   files.forEach((element, index) => {
-//     if (element.id === id) {
-//       files.splice(index, 1);
-//     }
-//   });
-//   renderImages();
-// };
-
-// Remove image
-
 
 // Render images
 const renderImages = () => {
@@ -42,6 +27,7 @@ const renderImages = () => {
         const reader = new FileReader();
         reader.onload = () => {
             const card = document.createElement('div');
+            card.classList.add("gallery__item")
             card.innerHTML = createGalleryCard(element.id, reader.result);
             gallery.append(card);
         };
@@ -52,20 +38,10 @@ const renderImages = () => {
 // Handle dragenter event on dropbox
 dropbox.addEventListener('dragenter', (e) => {
     e.preventDefault();
-    dropbox.classList.add('active'); // Add active class to dropbox
 });
-
-// !!! REMOVED TO FIX BUG: dropbbox disappaering, and image is opening in whole tab !!!
-
-// Handle dragleave event on dropbox
-// dropbox.addEventListener('dragleave', () => {
-//   dropbox.classList.remove('active'); // Remove active class when leaving the dropbox area
-// });
-
 
 // Prevent default behavior for dragover to allow dropping
 dropbox.addEventListener('dragover', (e) => {
-    window.removeEventListener('dragenter')
     e.preventDefault();
 });
 
@@ -77,12 +53,10 @@ dropbox.addEventListener('drop', (e) => {
 
     if (droppedFiles.length > 0) {
         const file = {
-            id: Math.random() * 1000,
-            file: droppedFiles[0],
+            id: Math.random() * 1000, file: droppedFiles[0],
         };
-
         files.push(file);
-
+        renderImages()
     }
 
     dropbox.classList.remove('active');
@@ -90,8 +64,7 @@ dropbox.addEventListener('drop', (e) => {
 
 fileInput.addEventListener('change', (e) => {
     const file = {
-        id: Math.random() * 1000,
-        file: e.target.files[0],
+        id: Math.random() * 1000, file: e.target.files[0],
     };
 
     files.push(file);
@@ -99,22 +72,14 @@ fileInput.addEventListener('change', (e) => {
     renderImages();
 });
 
-// document.addEventListener('click', (e) => {
-//   const target = e.target;
-//   if (target.classList.contains('remove-image')) {
-//     const id = target.getAttribute('data-id');
-//     removeImage(parseFloat(id));
-//   }
-//   renderImages()
-// });
-
-
 let dragSrcEl;
 
 function dragStart(e) {
+    window.removeEventListener('dragenter',activateDropbox)
     dragSrcEl = this;
     e.dataTransfer.effectAllowed = "move";
     e.dataTransfer.setData("text/html", this.innerHTML);
+
     return false;
 }
 
@@ -129,7 +94,7 @@ function dragDrop(e) {
         dragSrcEl.innerHTML = this.innerHTML;
         this.innerHTML = e.dataTransfer.getData("text/html");
     }
-
+    window.addEventListener('dragenter',activateDropbox)
     return false;
 }
 
@@ -138,7 +103,6 @@ function dragEnd() {
     [].forEach.call(listItems, function (item) {
         item.draggable = "true";
     });
-
     return false;
 }
 
@@ -155,4 +119,21 @@ window.addEventListener("DOMNodeInserted", () => {
         addEventsDragAndDrop(el)
     })
     console.log(listItems)
+
+    const removeButtons = document.querySelectorAll('.remove-image');
+    removeButtons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+            const galleryItem = event.target.closest('.gallery__item');
+            galleryItem.remove();
+            const id = event.target.getAttribute('data-id');
+            files = files.filter((element) => element.id !== parseFloat(id));
+        });
+    });
 })
+
+window.addEventListener("dragenter",activateDropbox)
+
+function activateDropbox(e) {
+    e.preventDefault()
+    dropbox.classList.add('active')
+}
