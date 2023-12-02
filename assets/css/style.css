@@ -145,6 +145,7 @@ body {
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -162,6 +163,13 @@ body {
 .flex-y-center {
   display: flex;
   justify-content: center;
+}
+
+.flex-x-between {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .py-8 {

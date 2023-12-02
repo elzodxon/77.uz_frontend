@@ -1,0 +1,9 @@
+.price span {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.product-single__number {
+  color: #000000;
+  font-weight: bold;
+}
