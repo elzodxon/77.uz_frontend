@@ -124,7 +124,7 @@ body {
   gap: 24px 24px;
 }
 .list-view__row {
-  display: flex;
+  /* display: flex; */
   gap: 24px 24px;
 }
 

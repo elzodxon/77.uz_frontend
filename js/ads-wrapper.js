@@ -1,4 +1,6 @@
-const adsContainer = document.getElementById('ads-wrapper')
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+// const adsContainer = document.getElementById('ads-wrapper')
 
 const cardIcons = document.getElementsByClassName('icon')
 let productList = []
@@ -26,44 +28,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ------------------- Get Product Func --------------------
 function productGetList(productList) {
-  productList.forEach((product) => {
-    const grid_card = document.createElement('div')
+  $('#main').pagination({
+    dataSource: productList,
+    pageSize: 8,
 
-    grid_card.classList.add('grid-view__card')
-
-    // ----------------Card grid style--------------------
-    grid_card.innerHTML = `
-            <div class="grid-view__card-symbols">
-              <div  class="grid-view__card-icon">
+    callback: function (data, pagination) {
+      let wrapper = $('#main .ads-wrapper').empty()
+      $.each(data, function (i, product) {
+        $('#main .ads-wrapper').append(`
+        <div class="grid-view__card" >
+          <div class="grid-view__card-symbols">
+            <div  class="grid-view__card-icon">
               <iconify-icon id="${
                 product.id
-              }" class="icon" icon="tabler:heart-filled"></iconify-icon>
-              </div>
-              <img class="grid-view__card-image card-image" src="${
-                product.photo
-              }" alt="Product photo" />
+                  }" class="icon" icon="tabler:heart-filled"></iconify-icon>
             </div>
-            <div class="grid-view__card-content">
-              <span class="badge card-address">${
-                product.address.district.name
-              }</span>
-              <a href="#" class="grid-view__card-title card-title">${
-                product.name
-              }</a>
-              <p class="grid-view__card-date card-date">${dateFormatter(
-                product.published_at,
-              )}</p>
-              <a class="grid-view__card-number card-phoneNum" href="tel:${
-                product.seller.phone_number
-              }">${formatPhoneNumber(product.seller.phone_number)}</a>
-              <p class="grid-view__card-price card-price"> ${numbersWithSpace(
-                product.price,
-              )}<span> UZS </span></p>
-            </div>`
-            adsContainer.appendChild(grid_card)
+            <img class="grid-view__card-image card-image" src="${
+              product.photo
+              }" alt="Product photo" />
+          </div>
+         <div class="grid-view__card-content">
+            <span class="badge card-address">${product.address.district.name}</span>
+            <a href="#" class="grid-view__card-title card-title">${product.name}</a>
+            <p class="grid-view__card-date card-date">${dateFormatter(
+              product.published_at,
+            )}</p>
+            <a class="grid-view__card-number card-phoneNum" href="tel:${
+            product.seller.phone_number
+            }">${formatPhoneNumber(product.seller.phone_number)}</a>
+            <p class="grid-view__card-price card-price"> ${numbersWithSpace(
+              product.price,
+            )}<span> UZS </span></p>
+          </div>
+        </div>
+       `)
+      })
+    },
   })
 }
-
 
 // ------------------- Date formatter Func -----------------
 function dateFormatter(date) {
@@ -82,7 +84,6 @@ function dateFormatter(date) {
   return formattedDate
 }
 
-
 // Todo: Refactor Naming -> formatMoney maybe?
 // ------------------- Numbers with space Func -------------
 function numbersWithSpace(number) {
@@ -90,7 +91,6 @@ function numbersWithSpace(number) {
 
   return formattedNum
 }
-
 
 // Todo: Refactor this function
 // ------------------- Phone num Formatter Func ------------
@@ -119,7 +119,6 @@ function findProductByIconId(icon) {
   // return product found by icon id
 }
 
-
 // ------------------- IsLiked or Not Func -----------------
 function handleCardIconClick(event) {
   for (const icon of cardIcons) {
@@ -128,7 +127,7 @@ function handleCardIconClick(event) {
       if (product) {
         product.is_liked = !product.is_liked
 
-          // Todo: refactor style changing
+        // Todo: refactor style changing
         icon.style.color = product.is_liked ? 'red' : 'white'
       } else {
         console.log('Product not found with id:', product.id)
@@ -136,7 +135,6 @@ function handleCardIconClick(event) {
     }
   }
 }
-
 
 // Get the parent container where you want to append the items
 // const adsContainer = document.querySelector('.ads-wrapper')

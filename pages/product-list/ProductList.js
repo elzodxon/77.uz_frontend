@@ -1,11 +1,11 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 const switchers = document.querySelectorAll(
   '.product-list__view-icons .product-list__view-icon',
 )
 const view_wraps = document.querySelectorAll('.view-wrap')
 const list_view = document.querySelector('.list-view')
 const grid_view = document.querySelector('.grid-view')
-const listWrapper = document.getElementById('list-view__wrapper')
-const gridWrapper = document.getElementById('grid-view__wrapper')
 const cardIcons = document.getElementsByClassName('icon')
 let productList = []
 
@@ -42,12 +42,12 @@ switchers.forEach(function (switcher) {
 
     const view = switcher.getAttribute('data-view')
 
-      // Todo: remove unnecessary loop
+    // Todo: remove unnecessary loop
     view_wraps.forEach(function (view) {
       view.style.display = 'none'
     })
 
-      // Todo: render only one view
+    // Todo: render only one view
     if (view == 'list-view') {
       list_view.style.display = 'block'
     } else {
@@ -56,82 +56,92 @@ switchers.forEach(function (switcher) {
   })
 })
 
-
 // Todo: Refactor this function and rendering function. PERFORMANCE!!!!
 // ------------------- Get Product Func --------------------
 function productGetList(productList) {
-  productList.forEach((product) => {
-    const list_card = document.createElement('div')
-    const grid_card = document.createElement('div')
+  $('#grid').pagination({
+    dataSource: productList,
+    pageSize: 6,
 
-    list_card.classList.add('list-view__card')
-    grid_card.classList.add('grid-view__card')
-
-    // ----------------Card list style--------------------
-    list_card.innerHTML = `
-            <div class="list-view__card-symbols">
-           
-              <img class="list-view__card-image card-image" src="${
-                product.photo
-              }" alt="Product photo" />
-            </div>
-            <div class="list-view__card-content">
-              <div class="list-view__top-content">
-                <a href="#" class="list-view__card-title card-title">
-               ${product.name}
-                </a>
-                <span class="badge card-address"> ${
-                  product.address.district.name
-                }</span>
-              </div>
-              <div class="list-view__bottom-content">
-                <p class="list-view__card-price card-price">
-               ${product.price}<span> UZS </span>
-                </p>
-                <div>
-                  <p class="list-view__card-date card-date"> ${dateFormatter(
-                    product.published_at,
-                  )}</p>
-                  <a class="list-view__card-number card-phoneNum" href="tel:${
-                    product.seller.phone_number
-                  }">${product.seller.phone_number}</a>
-                </div>
-              </div>
-            </div>`
-    listWrapper.appendChild(list_card)
-
-    // ----------------Card grid style--------------------
-    grid_card.innerHTML = `
-            <div class="grid-view__card-symbols">
-              <div  class="grid-view__card-icon">
-              <iconify-icon id="${
-                product.id
-              }" class="icon" icon="tabler:heart-filled"></iconify-icon>
-              </div>
-              <img class="grid-view__card-image card-image" src="${
-                product.photo
-              }" alt="Product photo" />
-            </div>
-            <div class="grid-view__card-content">
-              <span class="badge card-address">${
-                product.address.district.name
-              }</span>
-              <a href="#" class="grid-view__card-title card-title">${
-                product.name
-              }</a>
-              <p class="grid-view__card-date card-date">${dateFormatter(
-                product.published_at,
-              )}</p>
-              <a class="grid-view__card-number card-phoneNum" href="tel:${
-                product.seller.phone_number
-              }">${formatPhoneNumber(product.seller.phone_number)}</a>
-              <p class="grid-view__card-price card-price"> ${numbersWithSpace(
-                product.price,
-              )}<span> UZS </span></p>
-            </div>`
-    gridWrapper.appendChild(grid_card)
-
+    callback: function (data, pagination) {
+      let wrapper = $('#grid .grid-view__row').empty()
+      $.each(data, function (i, product) {
+        $('#grid .grid-view__row').append(`
+        <div class="grid-view__card" >
+        <div class="grid-view__card-symbols">
+        <div  class="grid-view__card-icon">
+        <iconify-icon id="${
+          product.id
+        }" class="icon" icon="tabler:heart-filled"></iconify-icon>
+        </div>
+        <img class="grid-view__card-image card-image" src="${
+          product.photo
+        }" alt="Product photo" />
+      </div>
+      <div class="grid-view__card-content">
+        <span class="badge card-address">${product.address.district.name}</span>
+        <a href="#" class="grid-view__card-title card-title">${product.name}</a>
+        <p class="grid-view__card-date card-date">${dateFormatter(
+          product.published_at,
+        )}</p>
+        <a class="grid-view__card-number card-phoneNum" href="tel:${
+          product.seller.phone_number
+        }">${formatPhoneNumber(product.seller.phone_number)}</a>
+        <p class="grid-view__card-price card-price"> ${numbersWithSpace(
+          product.price,
+        )}<span> UZS </span></p>
+      </div>
+        </div>
+       `)
+      })
+    },
   })
+  $('#list').pagination({
+    dataSource: productList,
+    pageSize: 6,
+
+    callback: function (data, pagination) {
+      let wrapper = $('#list .list-view__wrapper').empty()
+      $.each(data, function (i, product) {
+        $('#list .list-view__wrapper').append(`
+        <div class="list-view__card" >
+        <div class="list-view__card-symbols">
+           
+        <img class="list-view__card-image card-image" src="${
+          product.photo
+        }" alt="Product photo" />
+      </div>
+      <div class="list-view__card-content">
+        <div class="list-view__top-content">
+          <a href="#" class="list-view__card-title card-title">
+         ${product.name}
+          </a>
+          <span class="badge card-address"> ${
+            product.address.district.name
+          }</span>
+        </div>
+        <div class="list-view__bottom-content">
+          <p class="list-view__card-price card-price">
+         ${product.price}<span> UZS </span>
+          </p>
+          <div>
+            <p class="list-view__card-date card-date"> ${dateFormatter(
+              product.published_at,
+            )}</p>
+            <a class="list-view__card-number card-phoneNum" href="tel:${
+              product.seller.phone_number
+            }">${product.seller.phone_number}</a>
+          </div>
+        </div>
+      </div>
+        </div>
+        
+       `)
+      })
+    },
+  })
+
+
 }
 
 // ------------------- Date formatter Func -----------------
@@ -151,7 +161,6 @@ function dateFormatter(date) {
   return formattedDate
 }
 
-
 // Todo: Refactor Naming -> formatMoney maybe?
 // ------------------- Numbers with space Func -------------
 function numbersWithSpace(number) {
@@ -159,7 +168,6 @@ function numbersWithSpace(number) {
 
   return formattedNum
 }
-
 
 // Todo: Refactor this function
 // ------------------- Phone num Formatter Func ------------
@@ -196,7 +204,7 @@ function handleCardIconClick(event) {
       if (product) {
         product.is_liked = !product.is_liked
 
-          // Todo: refactor style changing
+        // Todo: refactor style changing
         icon.style.color = product.is_liked ? 'red' : 'white'
       } else {
         console.log('Product not found with id:', product.id)
