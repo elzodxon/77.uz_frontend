@@ -1,31 +1,61 @@
-body {
-  font-family: Arial, sans-serif;
+.paginationjs {
+  display: flex !important;
+  justify-content: center ;
+  margin: 30px 0 0 0 !important;
 }
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-}
-
-button {
-  padding: 10px 14px;
+.paginationjs-page {
+  padding: 4px 14px;
   margin: 0 5px;
   cursor: pointer;
   text-align: center;
   border-radius: 8px;
-  background-color: transparent;
-  color: var(--greys-grey-0, #63676c);
-  border: 1px solid var(--greys-grey-3, #d5d8db);
-}
-
-button:hover {
-  background-color: #ddd;
+  /* background-color: transparent; */
+  color: var(--greys-grey);
+  border: 1px solid var(--greys-grey);
 }
 
 .active {
-  color: var(--primary-color); 
-  background-color: white; 
-  border: solid 1px white
+  background-color: white !important;
+  border: solid 1px white !important;
+  color: #388FF3 !important;
 }
+.active a {
+  color: #388FF3 !important;
+}
+
+.paginationjs .paginationjs-pages li > a {
+  min-width: unset !important;
+  height: unset !important;
+  background: transparent !important;
+}
+
+.paginationjs .paginationjs-pages li {
+border-right:1px solid var(--greys-grey-3, #d5d8db) !important;
+border-top:1px solid var(--greys-grey-3, #d5d8db) !important;
+border-bottom:1px solid var(--greys-grey-3, #d5d8db) !important;
+border-left: 1px solid var(--greys-grey-3, #d5d8db) !important;
+}
+
+
+.paginationjs-next {
+  padding: 4px 14px;
+  margin: 0 5px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px !important;
+  /* background-color: transparent; */
+  color: var(--greys-grey);
+  border: 1px solid var(--greys-grey);
+}
+
+.paginationjs-prev {
+  padding: 4px 14px;
+  margin: 0 5px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px !important;
+  /* background-color: transparent; */
+  color: var(--greys-grey);
+  border: 1px solid var(--greys-grey);
+}
+
