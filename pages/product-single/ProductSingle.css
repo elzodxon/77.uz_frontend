@@ -1,0 +1,153 @@
+.product-single {
+  background-color: #f0f3f7;
+  padding-top: 5px;
+}
+
+.arrow-left img {
+  width: 32px;
+  height: 32px;
+  display: none;
+}
+
+.product-single__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
+
+.price-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.product-desctiption {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.price {
+  font-size: 28px;
+}
+
+.price span {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.product-single__details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.product-single__info {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-single__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.badges-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.product-single__icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+.profile__info-img {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.profile__info-number {
+  font-size: 1rem;
+}
+
+.product-single__seller {
+  display: flex;
+  padding: 20px 24px;
+  flex-direction: column;
+  gap: 1rem;
+  background: #ffffff;
+  border-radius: 16px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.product-single__seller-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.product-single__seller-wrapper p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .arrow-left img {
+    display: block;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+
+  .product-single__bread-scrumb {
+    margin: 0 0 20px 0;
+  }
+
+  .product-single__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .product-desctiption {
+    font-size: 16px;
+  }
+
+  .price-info {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  .price span {
+    font-size: 16px;
+  }
+
+  .price-info__btn {
+    width: 100%;
+  }
+
+  .product-single__seller {
+    display: none;
+  }
+
+  .product-single__sidebar {
+    width: 100%;
+  }
+}

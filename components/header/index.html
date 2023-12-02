@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,9 +21,9 @@
     <header class="header">
       <div class="container">
         <nav class="navbar">
-          <ul class="navbar__list">
-            <li id="language-wrapper" class="navbar__item">
-              <!-- <a href="" class="navbar__item-link text-sm-subtitle"> </a> -->
+          <!-- Left navigation bar -->
+          <ul class="navbar-list">
+            <li id="language-switcher" class="navbar-list__item">
               <button class="language-button text-sm-subtitle">
                 <img
                   width="20"
@@ -31,7 +31,7 @@
                   src="https://77.uz/images/flag/ru.svg"
                   alt=""
                 />
-                <span>РУ</span>
+                <span>Русский</span>
                 <svg
                   width="24"
                   height="24"
@@ -48,19 +48,19 @@
                   />
                 </svg>
               </button>
-              <div class="language-content active">
-                <ul class="language-list">
-                  <li class="language-item active">
+              <div class="language-content">
+                <ul class="language-content__list">
+                  <li class="language-content__item active">
                     <img
                       width="20"
                       height="20"
                       src="https://77.uz/images/flag/ru.svg"
                       alt=""
                     />
-                    <span>РУ</span>
+                    <span>RU</span>
                   </li>
 
-                  <li class="language-item">
+                  <li class="language-content__item">
                     <img
                       width="20"
                       height="20"
@@ -72,8 +72,12 @@
                 </ul>
               </div>
             </li>
-            <li class="navbar__item call-wrapper">
-              <a id="call-link" href="" class="navbar__item-link call-link">
+            <li class="navbar-list__item phone-wrapper">
+              <a
+                id="phone-number"
+                href="tel:+998885005000"
+                class="navbar-list__link"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -89,26 +93,23 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <span class="call-number text-sm-subtitle">
+                <span class="phone-number text-sm-subtitle">
                   +998 88 500 50 00
                 </span>
               </a>
             </li>
           </ul>
-          <div class="navbar__logo">
-            <img
-              width="138"
-              height="72"
-              src="../../assets/img/logo.svg"
-              alt=""
-            />
-          </div>
-          <ul class="navbar__list">
-            <li class="navbar__item">
+          <!-- Header Logo -->
+          <a href="/" class="header-logo">
+            <img src="../../assets/img/logo.svg" alt="" />
+          </a>
+          <!-- Right navigation bar -->
+          <ul class="navbar-list">
+            <li class="navbar-list__item">
               <a
                 id="favorite"
                 href=""
-                class="navbar__item-link text-sm-subtitle"
+                class="navbar-list__link text-sm-subtitle"
               >
                 <svg
                   width="24"
@@ -125,29 +126,50 @@
                 <span class="favorite-title"> Избранные </span>
               </a>
             </li>
-            <li class="navbar__item divider"></li>
-            <li class="navbar__item">
+            <li class="navbar-list__item divider"></li>
+            <li class="navbar-list__item">
               <button
-                id="login-button"
                 href=""
-                class="navbar__item-link text-sm-subtitle"
+                class="navbar-list__link login-button text-sm-subtitle"
               >
-                <span class="login-title">Войти</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                >
-                  <path
-                    d="M12.2059 13.5V15.25C12.2059 15.7141 12.02 16.1592 11.689 16.4874C11.3581 16.8156 10.9092 17 10.4412 17H4.26471C3.79668 17 3.34782 16.8156 3.01687 16.4874C2.68593 16.1592 2.5 15.7141 2.5 15.25L2.5 4.75C2.5 4.28587 2.68593 3.84075 3.01687 3.51256C3.34782 3.18438 3.79668 3 4.26471 3L10.4412 3C10.9092 3 11.3581 3.18437 11.689 3.51256C12.02 3.84075 12.2059 4.28587 12.2059 4.75V6.5M17.5001 10.0001L6.07849 10.0001M6.07849 10.0001L8.72555 12.6251M6.07849 10.0001L8.72555 7.37508"
-                    stroke="#16191D"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <span class="login-title">
+                  <span class="login-text">Войти </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.2059 13.5V15.25C12.2059 15.7141 12.02 16.1592 11.689 16.4874C11.3581 16.8156 10.9092 17 10.4412 17H4.26471C3.79668 17 3.34782 16.8156 3.01687 16.4874C2.68593 16.1592 2.5 15.7141 2.5 15.25L2.5 4.75C2.5 4.28587 2.68593 3.84075 3.01687 3.51256C3.34782 3.18438 3.79668 3 4.26471 3L10.4412 3C10.9092 3 11.3581 3.18437 11.689 3.51256C12.02 3.84075 12.2059 4.28587 12.2059 4.75V6.5M17.5001 10.0001L6.07849 10.0001M6.07849 10.0001L8.72555 12.6251M6.07849 10.0001L8.72555 7.37508"
+                      stroke="#16191D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+
+                <span class="user-info">
+                  <img src="../../assets/img/user.svg" alt="" />
+                  <span class="user-name">Шохрух Шавкиев</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 6L12 10L8 14"
+                      stroke="#8E9297"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
               </button>
             </li>
           </ul>
@@ -155,9 +177,7 @@
       </div>
     </header>
 
-    <main>
-      
-    </main>
+    <main></main>
     <!-- ================== Javascript Links ================== -->
     <script src="./header.js"></script>
   </body>

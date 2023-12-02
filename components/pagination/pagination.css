@@ -1,33 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
 .pagination {
-    display: flex;
-    padding: 8px 0px;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
-.pagination a {
-display: flex;
-justify-content: center;
-align-items: center;
-    color: #63676C;
-    height: 32px;
-    width: 32px;
-    border-radius: 8px;
-    border: 1px solid #D5D8DB;
-    text-decoration: none;
+button {
+  padding: 10px 14px;
+  margin: 0 5px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--greys-grey-0, #63676c);
+  border: 1px solid var(--greys-grey-3, #d5d8db);
 }
 
-.pagination a.active {
-    border-radius: 8px;
-    border: 1px solid rgba(56, 143, 243, 0.10);
-    background: #FFF;
-    color: #388FF3;
+button:hover {
+  background-color: #ddd;
+}
 
+.active {
+  color: var(--primary-color); 
+  background-color: white; 
+  border: solid 1px white
 }

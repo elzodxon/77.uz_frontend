@@ -1,0 +1,15 @@
+.content-header {
+  padding: 24px 0 40px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-direction: column;
+}
+.content-header__title {
+}
+.content-header__subtitle {
+  color: var(--secondary-color);
+}
