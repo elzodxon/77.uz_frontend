@@ -118,3 +118,9 @@
 .next-btn {
   right: 10px;
 }
+
+@media only screen and (max-width: 767px) {
+  .slider__wrapper button {
+    display: none;
+  }
+}

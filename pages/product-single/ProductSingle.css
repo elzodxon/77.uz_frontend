@@ -15,6 +15,12 @@
   font-weight: bold;
 }
 
+.back-link {
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+
 @media only screen and (max-width: 767px) {
   .product-title {
     font-size: 16px;
@@ -38,5 +44,9 @@
 
   .profile-info__mobile {
     display: none !important;
+  }
+
+  .back-link {
+    display: block;
   }
 }
