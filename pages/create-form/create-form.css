@@ -10,7 +10,12 @@
   border-radius: 12px;
   background-color: white;
 }
-
+.create-form-container .prev-page__header {
+  padding: 0 16px;
+}
+.bread-crumb {
+  margin-top: 100px;
+}
 .form-title {
   font-weight: 700;
   font-family: Inter;
