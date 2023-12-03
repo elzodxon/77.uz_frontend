@@ -5,40 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Delete Product</title>
-    <link rel="stylesheet" href="../modal/modal.css" />
     <link rel="stylesheet" href="deleteProduct.css" />
-    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../components/buttons/buttons.css" />
   </head>
   <body>
-    <div class="product-delete center" id="exit-wrapper">
-      <button class="btn modal-btn btn-danger" id="delete">Delete</button>
-      <span class="overlay"></span>
-      <div class="modal">
-        <div class="modal-header">
-          <button class="close-btn" id="close">
+    <div class="flex-center" style="height: 100vh">
+      <button class="btn btn-danger" id="deleteProductBtn">
+        Удалить объявление
+      </button>
+
+      <div class="delete-product-modal" id="deleteProductModal">
+        <div class="delete-product-modal__content">
+          <div class="delete-product-modal__header">
             <img
-              class="close-img"
-              src="../../assets/img/modal-img/close-icon.svg"
-              alt="Close icon"
-              width="24"
-              height="24"
+              src="../../assets/img/close.svg"
+              class="delete-product-modal__close-btn"
+              id="closeDeleteProductModal"
+              alt="close"
             />
-          </button>
-        </div>
-        <div class="modal-body modal-before">
-          <h2 class="modal-title">Удалить объявление</h2>
-          <h3 class="modal-subtitle">
-            Вы точно хотите удалить объявление, все ваши данные о продукте будут
-            потеряны
-          </h3>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary">Отменить</button>
-          <button class="btn btn-danger">Выход</button>
+            <img
+              src="../../assets/img/Trash.svg"
+              alt="trash"
+              class="delete-product-modal__trash"
+            />
+          </div>
+          <div class="delete-product-modal__body column">
+            <h2 class="delete-product-modal__title">Удалить объявление</h2>
+
+            <p class="delete-product-modal__message">
+              Вы точно хотите удалить объявление, все ваши данные о продукте
+              будут потеряны
+            </p>
+          </div>
+          <div class="delete-product-modal__footer">
+            <button class="btn btn-secondary" id="cancelDeleteProduct">
+              Отменить
+            </button>
+            <button class="btn btn-danger" id="confirmDeleteProduct">
+              Удалить
+            </button>
+          </div>
         </div>
       </div>
     </div>
-    <script src="../modal/modal.js"></script>
+
+    <script src="deleteProduct.js"></script>
   </body>
 </html>
