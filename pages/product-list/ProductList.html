@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../../components/bread-crumb/bread-crumb.css" />
   <link rel="stylesheet" href="../../components/buttons/buttons.css" />
   <link rel="stylesheet" href="../../components/radio-button/index.css" />
+  <link rel="stylesheet" href="../../components/prev-page-header/index.css" />
   <link rel="stylesheet" href="../../components/select/select.css">
   <link rel="stylesheet" href="https://pagination.js.org/dist/2.1.4/pagination.css"/>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -381,7 +382,28 @@
         </div>
         <!-- Products -->
         <div class="product-list">
-          <h2 class="product-list__title">Laptops and tablets</h2>
+
+          <div class="prev-page__header">
+            <a href="/" class="prev-page__button">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4448 24L6.66699 16M6.66699 16L14.4448 8M6.66699 16H25.3337"
+                  stroke="black"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <h1 class="prev-page__title">Ноутбуки и планшеты</h1>
+          </div>
+
           <div class="product-list__wrapper">
             <p class="product-list__count">156 объявлений</p>
             <div id="list__switchers" class="product-list__switcher">
