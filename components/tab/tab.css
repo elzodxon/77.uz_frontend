@@ -27,21 +27,33 @@
     margin: 0;
     text-align: center;
     cursor: pointer;
-    color: var(--switches-label-color);
+    color: var(--Black, #16191D);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
 }
-
+.switch div {
+    color: #63676C;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+}
 .switch-wrapper {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 50%;
-    padding: 0.15rem;
+    padding: 4px;
     z-index: 3;
     transition: transform .5s cubic-bezier(.77, 0, .175, 1);
 }
 
 .switch {
-    border-radius: 12px;
+    border-radius: 8px;
+    background: var(--White, #FFF);
+    box-shadow: 0px 8px 22px 0px rgba(25, 10, 53, 0.09);
     background: var(--switch-bg-color);
     height: 100%;
 }
