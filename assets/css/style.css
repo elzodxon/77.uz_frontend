@@ -6,7 +6,9 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
-
+.main-wrapper {
+  margin-top: 100px;
+}
 body {
   display: flex;
   flex-direction: column;

@@ -29,6 +29,7 @@
 
 html,
 body {
+  overflow-y: scroll;
   margin: 0px;
   padding: 0px;
   font-size: 16px;
@@ -37,6 +38,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f0f3f7;
+}
+body.block  {
+  overflow-y: hidden;
 }
 
 img {
