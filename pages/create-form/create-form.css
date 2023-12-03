@@ -115,7 +115,9 @@
   transition: all 0.2s ease-in-out;
   text-decoration: underline;
 }
-
+.switches-container {
+  margin-top: 16px;
+}
 @media only screen and (max-width: 480px) {
   .main {
     margin-top: 100px;
