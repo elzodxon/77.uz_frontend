@@ -178,7 +178,7 @@ function handleCardIconClick(event) {
 function activateButton(el, activePaginationButton) {
     // if (!(el.childNodes.length > 1)) {
         activePaginationButton.classList.remove('active')
-        el..classList.add('active')
+        el.classList.add('active')
     // }
 }
 
