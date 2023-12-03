@@ -36,9 +36,9 @@ for (let i = 0; i < phoneNumberInput.length; i++) {
 }
 
 // // Attach the handleBackspace function to the keydown event
-// phoneNumberInput.addEventListener('keydown', function (event) {
-//   handleBackspace(event, phoneNumberInput);
-// });
+phoneNumberInput.addEventListener('keydown', function (event) {
+  handleBackspace(event, phoneNumberInput);
+});
 
 function formatPhoneNumber(input) {
   // Remove non-numeric characters
@@ -57,7 +57,7 @@ function formatPhoneNumber(input) {
       '-' +
       phoneNumber.substring(7, 9)
   }
-  
+
   // Set the formatted value back to the input
   input.value = phoneNumber
 }
