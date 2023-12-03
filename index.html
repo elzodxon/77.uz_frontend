@@ -7,7 +7,7 @@
 
     <!-- Site Meta content -->
     <meta name="theme-color" content="#fff" />
-    <meta name="description"  content="" />
+    <meta name="description" content="" />
     <meta property="og:title" content="" />
     <meta property="og:type" content="" />
     <meta property="og:url" content="" />
@@ -32,12 +32,19 @@
     <link rel="stylesheet" href="./components/modal/modal.css" />
     <link rel="stylesheet" href="./components/select/select.css" />
     <link rel="stylesheet" href="./components/pagination/pagination.css" />
+    <link rel="stylesheet" href="./components/category-list/tempCategory.css" />
     <link
       rel="stylesheet"
       href="./components/content-header/content-header.css"
     />
-    <link rel="stylesheet" href="../77.uz_frontend/components/buttons/buttons.css">
-    <link rel="stylesheet" href="https://pagination.js.org/dist/2.1.4/pagination.css"/>
+    <link
+      rel="stylesheet"
+      href="../77.uz_frontend/components/buttons/buttons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pagination.js.org/dist/2.1.4/pagination.css"
+    />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://pagination.js.org/dist/2.1.4/pagination.min.js"></script>
   </head>
@@ -51,8 +58,7 @@
         <nav class="navbar">
           <!-- Left navigation bar -->
           <ul class="navbar-list">
-
-            <i  style="color: red; font-size: 20px" class="icon-chevron"></i>
+            <i style="color: red; font-size: 20px" class="icon-chevron"></i>
             <li id="language-switcher" class="navbar-list__item">
               <button class="language-button text-sm-subtitle">
                 <img
@@ -261,14 +267,9 @@
               Вы можете найти все категории, которые вам нужны от покупателя
             </p>
           </div>
-         <div id="main" >
-          <div id="ads-wrapper" class="ads-wrapper__list ads-wrapper">
-         
+          <div id="main">
+            <div id="ads-wrapper" class="ads-wrapper__list ads-wrapper"></div>
           </div>
-         </div>
-          
-
-      
         </div>
       </div>
     </main>
@@ -449,58 +450,59 @@
               />
             </div>
             <!-- Select Wrapper -->
-<div class="form-group">
-      <div class="select">
-      <label class="select-label" for="">Адресс</label>
+            <div class="form-group">
+              <div class="select">
+                <label class="select-label" for="">Адресс</label>
 
-      <div class="select-menu" id="">
-        <div class="select-menu__btn">
-          <span class="select-menu__context">Выберите свой адрес</span>
+                <div class="select-menu" id="">
+                  <div class="select-menu__btn">
+                    <span class="select-menu__context"
+                      >Выберите свой адрес</span
+                    >
 
-          <span>
-            <img
-              class="select-menu__icon"
-              src="../../assets/img/icon-arrow-down.svg"
-              alt="chevron-up icon"
-              width="24"
-              height="24"
-            />
-          </span>
-        </div>
+                    <span>
+                      <img
+                        class="select-menu__icon"
+                        src="../../assets/img/icon-arrow-down.svg"
+                        alt="chevron-up icon"
+                        width="24"
+                        height="24"
+                      />
+                    </span>
+                  </div>
 
-        <ul class="options">
-          <li class="option">
-            <span class="option-text">Г. Ташкент</span>
-          </li>
+                  <ul class="options">
+                    <li class="option">
+                      <span class="option-text">Г. Ташкент</span>
+                    </li>
 
-          <li class="option">
-            <span class="option-text">Андижан</span>
-          </li>
-          <li class="option">
-            <span class="option-text">Бухара</span>
-          </li>
-          <li class="option">
-            <span class="option-text">Навои </span>
-          </li>
+                    <li class="option">
+                      <span class="option-text">Андижан</span>
+                    </li>
+                    <li class="option">
+                      <span class="option-text">Бухара</span>
+                    </li>
+                    <li class="option">
+                      <span class="option-text">Навои </span>
+                    </li>
 
-          <li class="option">
-            <span class="option-text">Самарканд</span>
-          </li>
-          <li class="option">
-            <span class="option-text">Джизак </span>
-          </li>
+                    <li class="option">
+                      <span class="option-text">Самарканд</span>
+                    </li>
+                    <li class="option">
+                      <span class="option-text">Джизак </span>
+                    </li>
 
-          <li class="option">
-            <span class="option-text">Джизак </span>
-          </li>
-          <li class="option">
-            <span class="option-text">Джизак </span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-</div>
+                    <li class="option">
+                      <span class="option-text">Джизак </span>
+                    </li>
+                    <li class="option">
+                      <span class="option-text">Джизак </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <!-- Phone number -->
             <div class="form-group">
               <label class="label modal-label" for="phone-number"
@@ -612,6 +614,5 @@
     <script src="components/inputs/inputs.js"></script>
     <script src="components/select/select.js"></script>
     <script src="/js/ads-wrapper.js"></script>
-
   </body>
 </html>
