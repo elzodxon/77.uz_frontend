@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../../components/slider/slider.css" />
     <link rel="stylesheet" href="../../components/badge/badge.css" />
     <link rel="stylesheet" href="../../components/buttons/buttons.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
     <link
       rel="stylesheet"
       href="../../components/product-info/productInfo.css"
@@ -237,17 +238,17 @@
                 <a href="/" class="bread-crumb__link active">Фены</a>
               </li>
             </ul>
-            <h2>
+            <h2 class="product-title">
               Стайлер для волос Dyson Airwrap Complete Long в цветe Vinca blue и
               Rose
             </h2>
-            <div class="row">
+            <div>
               <span class="badge">Вчера, 19:20</span>
               <span class="badge">г. Самарканд</span>
             </div>
-            <div class="flex-x-between">
+            <div class="flex-x-between flex">
               <h2 class="price">6 520 000 <span>UZS</span></h2>
-              <button class="btn">
+              <button class="btn btn-product__single">
                 <img src="../../assets/img/call.svg" alt="call" />+998 71 200 70
                 07
               </button>
@@ -279,7 +280,7 @@
               </p>
             </div>
           </div>
-          <div class="card-wrapper">
+          <div class="card-wrapper profile-info__mobile">
             <h2>Продавец</h2>
             <div class="flex-x-between">
               <div class="profile-info">
@@ -344,7 +345,45 @@
       </div>
     </main>
 
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer Logo -->
+        <a class="footer-logo" href="">
+          <img width="122" height="64" src="../../assets/img/logo.svg" alt="" />
+        </a>
+        <!-- Footer Info -->
+        <div class="footer-info">
+          <p class="footer-info__text subtitle text-center">
+            77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+            облегчает покупки и продажи, связывая продавцов с потенциальными
+            клиентами.
+          </p>
+          <ul class="footer-info__list" id="footerList"></ul>
+        </div>
+      </div>
+      <div class="development-company">
+        <div class="development-company-wrapper container">
+          <p class="development-company__text copyright">
+            <strong>© 77.uz</strong>
+            <span> 2023. Все права защищены</span>
+          </p>
+
+          <a
+            href="https://uic.group/"
+            target="_blank"
+            class="development-company__link"
+          >
+            <span>
+              <img src="../../assets/img/uic.group.svg" alt="" />
+            </span>
+            <img src="../../assets/img/uic.group.text.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
     <script src="../../components/header/header.js"></script>
     <script src="../../components/slider/slider.js"></script>
+    <script src="../../components/footer/footer.js"></script>
   </body>
 </html>
