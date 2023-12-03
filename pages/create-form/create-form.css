@@ -13,7 +13,7 @@
 .create-form-container .prev-page__header {
   padding: 0 16px;
 }
-.main {
+.bread-crumb {
   margin-top: 100px;
 }
 .form-title {
@@ -117,6 +117,9 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .main {
+    margin-top: 100px;
+  }
   .form-inner {
     flex-direction: column;
     gap: 0;
