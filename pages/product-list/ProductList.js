@@ -5,6 +5,10 @@ const grid_view = document.querySelector('.grid-view')
 const listWrapper = document.getElementById('list-view__wrapper')
 const gridWrapper = document.getElementById('grid-view__wrapper')
 const cardIcons = document.getElementsByClassName('icon')
+
+
+let paginationButtons = document.querySelectorAll(".pagination__button")
+
 let productList = []
 
 // ------------------- FETCH Products ----------------------
@@ -177,16 +181,17 @@ function handleCardIconClick(event) {
 // ------------------- Change Active Pagination Button -----------------
 function activateButton(el, activePaginationButton) {
     // if (!(el.childNodes.length > 1)) {
-        activePaginationButton.classList.remove('active')
-        el.classList.add('active')
+    activePaginationButton.classList.remove('active')
+    el.classList.add('active')
     // }
 }
 
-window.addEventListener('DOMNodeInserted',()=>{
-    const paginationButtons = document.querySelectorAll(".pagination__button")
+window.addEventListener('DOMNodeInserted', function(e) {
+    paginationButtons = document.querySelectorAll(".pagination__button")
     paginationButtons.forEach(el => {
         el.addEventListener('click', () => {
             const activePaginationButton = document.querySelector(".pagination__button.active")
+            console.log(activePaginationButton)
             if (!(el.childNodes.length > 1)) {
                 activateButton(el, activePaginationButton)
             } else if (el.classList.contains("next")) {
@@ -197,8 +202,8 @@ window.addEventListener('DOMNodeInserted',()=>{
             }
         })
     })
-
 })
+
 
 
 function classifyPages(cards, limit) {
@@ -219,11 +224,11 @@ function createPaginationButton(number) {
 
 function renderPagination(size) {
     const nextPaginationButton = document.querySelectorAll(".pagination")[0].lastElementChild
-    for (let i = 1; i<=size; i++) {
+    for (let i = 1; i <= size; i++) {
         const listItem = document.createElement('li')
 
         listItem.innerHTML = createPaginationButton(i)
-        if (i===1){
+        if (i === 1) {
             listItem.firstElementChild.classList.add('active')
         }
         nextPaginationButton.parentNode.insertBefore(listItem, nextPaginationButton)
