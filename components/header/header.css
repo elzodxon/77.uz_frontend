@@ -4,9 +4,8 @@
   border-bottom: 1px solid var(--gray-color);
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
-  z-index: 2000;
+  z-index: 80;
 }
-
 .navbar {
   padding: 20px 0;
   display: flex;
@@ -32,7 +31,7 @@
   left: 50%;
   top: 0;
   padding: 12px;
-  z-index: 999999999;
+  z-index: 80;
   transform: translate(-50%);
   padding: 14px 16px;
   background-color: red;
@@ -56,8 +55,8 @@
 }
 .user-info img {
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 .user-info svg {
   width: 20px;

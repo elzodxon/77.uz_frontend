@@ -4,31 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Single Page</title>
-    <!-- Favicon -->
+    <title>77.uz | Product Single</title>
     <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg" />
-    <!-- Icon links -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- Style Links -->
+
+    <link rel="stylesheet" href="./productSingle.css" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <link rel="stylesheet" href="../../assets/css/variables.css" />
-    <link rel="stylesheet" href="ProductSingle.css" />
     <link rel="stylesheet" href="../../components/header/header.css" />
-    <link rel="stylesheet" href="../../components/header/header.css" />
-    <link rel="stylesheet" href="../../components/footer/footer.css" />
     <link rel="stylesheet" href="../../components/slider/slider.css" />
-    <link rel="stylesheet" href="../../components/buttons/buttons.css" />
     <link rel="stylesheet" href="../../components/badge/badge.css" />
+    <link rel="stylesheet" href="../../components/buttons/buttons.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/product-info/productInfo.css"
+    />
     <link
       rel="stylesheet"
       href="../../components/address-info/addressInfo.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../components/bread-crumb/bread-crumb.css"
     />
     <link
       rel="stylesheet"
@@ -36,12 +31,13 @@
     />
     <link
       rel="stylesheet"
-      href="../../components/product-info/ProductInfo.css"
+      href="../../components/bread-crumb/bread-crumb.css"
     />
+
+    <!-- Icon links -->
     <link
       rel="stylesheet"
-      type="text/css"
-      href="../../assets/css/normalize.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <body>
@@ -102,7 +98,7 @@
             </li>
             <li class="navbar-list__item phone-wrapper">
               <a
-                id="telephone-number"
+                id="phone-number"
                 href="tel:+998885005000"
                 class="navbar-list__link"
               >
@@ -136,7 +132,7 @@
             <li class="navbar-list__item">
               <a
                 id="favorite"
-                href=""
+                href="/"
                 class="navbar-list__link text-sm-subtitle"
               >
                 <svg
@@ -157,8 +153,7 @@
             <li class="navbar-list__item divider"></li>
             <li class="navbar-list__item">
               <button
-                href=""
-                id="registration-btn"
+                href="/"
                 class="navbar-list__link login-button text-sm-subtitle"
               >
                 <span class="login-title">
@@ -205,175 +200,167 @@
         </nav>
       </div>
     </header>
-    <!-- Main Section -->
-    <main class="product-single">
-      <div class="container">
-        <div class="wrapper-crumb">
-          <a href="/" class="arrow-left">
-            <img src="../../assets/img/arrow-left.svg" alt="arrow-left" />
-          </a>
-          <ul class="bread-crumb py-8">
-            <li class="bread-crumb__item">
-              <a href="" class="bread-crumb__link">Главная</a>
-            </li>
-            <li class="bread-crumb__item">
-              <a href="" class="bread-crumb__link">Электроника</a>
-            </li>
-            <li class="bread-crumb__item">
-              <a href="" class="bread-crumb__link">Фены</a>
-            </li>
-            <li class="bread-crumb__item">
-              <a href="" class="bread-crumb__link active">457 147</a>
-            </li>
-          </ul>
-          <div class="row">
-            <div class="main">
-              <div class="product-single__details">
-                <div class="product-single__info">
-                  <div class="slider">
-                    <div class="slider__wrapper">
-                      <div class="slider__container" id="sliderContainer"></div>
-                      <button class="prev-btn" onclick="changeSlide(-1)">
-                        ❮
-                      </button>
-                      <button class="next-btn" onclick="changeSlide(1)">
-                        ❯
-                      </button>
-                    </div>
-                    <div class="navigation-card" id="navigationContainer"></div>
-                  </div>
-                  <ul class="bread-crumb">
-                    <li class="bread-crumb__item">
-                      <a href="" class="bread-crumb__link active"
-                        >Электроника</a
-                      >
-                    </li>
-                    <li class="bread-crumb__item item-active">
-                      <a href="" class="bread-crumb__link active">Фены</a>
-                    </li>
-                  </ul>
-                  <h2 class="product-desctiption">
-                    Стайлер для волос Dyson Airwrap Complete Long в цветe Vinca
-                    blue и Rose
-                  </h2>
-                  <div class="badges-container">
-                    <span class="badge">Вчера, 19:20</span>
-                    <span class="badge">г. Самарканд</span>
-                  </div>
-                  <div class="price-info">
-                    <h2 class="price">6 520 000 <span>UZS</span></h2>
-                    <button class="btn price-info__btn">
-                      <img
-                        src="../../assets/img/call.svg"
-                        alt="call"
-                        class="product-single__icon"
-                      />+998 71 200 70 07
-                    </button>
-                  </div>
-                </div>
-                <div class="product-single__info">
-                  <div class="product-info">
-                    <h2 class="product-info__title">Описание</h2>
-                    <br />
-                    <p class="product-info__description">
-                      Мультистайлер Dyson Airwrap Complete Long в цветe Vinca
-                      blue и Rose Бесплатная доставка по ТАШКЕНТУ!!! 100%
-                      оригинал С новыми цилиндрами для завивки и волнения в
-                      обоих направлениях, щетками для контроля и придания формы,
-                      а также многофункциональной сушилкой для разглаживания
-                      Coanda для сушки,разглаживания и сокрытия разлетающихся
-                      волос 3 В комплектацию входят 30-мм цилиндрические насадки
-                      Airwrap для завивки, 40-мм цилиндрические насадки Airwrap
-                      для завивки
-                      <br />
-                      <br />
-                      Круглая щетка для создания объема, Мягкая щетка для
-                      выпрямления, Жесткая щетка для выпрямление Особенности
-                      фена В комплекте Чехол для хранения Термостойкий коврик
-                      Щетка для очистки Для длинных до груди или более длинных
-                      волос. Пoдxoдит для разных типoв вoлoc.
-                      <br />
-                      <br />
-                      Сoздaние лoконoв и волн. Pазглаживaниe. Высушивaние вoлос.
-                      Без экстpeмальныx тeмперaтур. В последней версии 2022 Года
-                      появились новые насадки, такие как: - обновлённый цилиндр
-                      для завивки, предусматривающий поток воздуха в двух
-                      направлениях, то есть больше не нужно переставлять
-                      насадки. По вопросам пишите в телеграм на номер
-                    </p>
-                  </div>
-                </div>
-                <div class="product-single__seller">
-                  <h2>Продавец</h2>
-                  <div class="product-single__seller-wrapper">
-                    <div class="profile__info">
-                      <img
-                        class="profile__info-img"
-                        src="../../assets/img/ProfilePhoto.png"
-                        alt="img"
-                      />
-                      <div class="profile__info-details">
-                        <h2 class="profile__info-name">
-                          Малика Абдурахимова <br />
-                          <span>ID: 1326547</span>
-                        </h2>
-                      </div>
-                    </div>
-                    <p>+998 71 200 70 07</p>
-                  </div>
-                </div>
+
+    <main class="container">
+      <div class="wrapper column">
+        <a class="back-link" href="/"
+          ><img
+            class="arrow-left-icon"
+            src="../../assets/img/profile/arrow-left-icon.svg"
+            alt="arrow-left-icon"
+            width="34"
+            height="34"
+        /></a>
+        <ul class="bread-crumb">
+          <li class="bread-crumb__item">
+            <a href="/" class="bread-crumb__link">Главная</a>
+          </li>
+          <li class="bread-crumb__item">
+            <a href="/" class="bread-crumb__link">Электроника</a>
+          </li>
+          <li class="bread-crumb__item item-active">
+            <a href="/" class="bread-crumb__link">Фены</a>
+          </li>
+          <li class="bread-crumb__item">
+            <a href="/" class="bread-crumb__link active">457 147</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex py-8">
+        <div class="column main">
+          <div class="card-wrapper">
+            <div class="slider">
+              <div class="slider__wrapper">
+                <div class="slider__container" id="sliderContainer"></div>
+                <button class="prev-btn" onclick="changeSlide(-1)">❮</button>
+                <button class="next-btn" onclick="changeSlide(1)">❯</button>
               </div>
+              <div class="navigation-card" id="navigationContainer"></div>
             </div>
-            <div class="sidebar">
-              <div class="product-single__info">
-                <div class="profile__info">
-                  <img
-                    class="profile__info-img"
-                    src="../../assets/img/ProfilePhoto.png"
-                    alt="img"
-                  />
-                  <div class="profile__info-details">
-                    <h2 class="profile__info-name">
-                      Малика Абдурахимова <br />
-                      <span>ID: 1326547</span>
-                    </h2>
-                  </div>
-                </div>
-                <h2 class="profile__info-number">+998 71 200 70 07</h2>
-                <button class="btn btn-secondary">Все объявления</button>
-              </div>
-              <div class="product-single__info">
-                <div class="address__info">
-                  <div class="address__info-section">
-                    <h2 class="address__info-title">Местоположение</h2>
-                    <p class="address__info-devider"></p>
-                    <p class="address__info-text">
-                      <img src="../../assets/img/marker.svg" alt="Markerx" />
-                      г.Ташкент, ул.Олмачи 1-й проезд 13 дом
-                    </p>
-                  </div>
-                  <img
-                    class="address__info-map"
-                    src="../../assets/img/Map.png"
-                    alt="map"
-                  />
-                </div>
-              </div>
-              <button class="btn btn-light-primary">
-                Скачать в галерею
-                <img
-                  class="product-single__icon"
-                  src="../../assets/img/download.svg"
-                  alt="download"
-                />
+            <ul class="bread-crumb">
+              <li class="bread-crumb__item">
+                <a href="/" class="bread-crumb__link active">Электроника</a>
+              </li>
+              <li class="bread-crumb__item item-active">
+                <a href="/" class="bread-crumb__link active">Фены</a>
+              </li>
+            </ul>
+            <h2 class="product-title">
+              Стайлер для волос Dyson Airwrap Complete Long в цветe Vinca blue и
+              Rose
+            </h2>
+            <div>
+              <span class="badge">Вчера, 19:20</span>
+              <span class="badge">г. Самарканд</span>
+            </div>
+            <div class="flex-x-between flex">
+              <h2 class="price">6 520 000 <span>UZS</span></h2>
+              <button class="btn btn-product__single">
+                <img src="../../assets/img/call.svg" alt="call" />+998 71 200 70
+                07
               </button>
             </div>
           </div>
+
+          <div class="card-wrapper">
+            <div class="product-info column">
+              <h2 class="product-info__title">Описание</h2>
+              <p class="product-info__description">
+                Мультистайлер Dyson Airwrap Complete Long в цветe Vinca blue и
+                Rose Бесплатная доставка по ТАШКЕНТУ!!! 100% оригинал С новыми
+                цилиндрами для завивки и волнения в обоих направлениях, щетками
+                для контроля и придания формы, а также многофункциональной
+                сушилкой для разглаживания Coanda для сушки,разглаживания и
+                сокрытия разлетающихся волос 3 В комплектацию входят 30-мм
+                цилиндрические насадки Airwrap для завивки, 40-мм цилиндрические
+                насадки Airwrap для завивки <br /><br />
+                Круглая щетка для создания объема, Мягкая щетка для выпрямления,
+                Жесткая щетка для выпрямление Особенности фена В комплекте Чехол
+                для хранения Термостойкий коврик Щетка для очистки Для длинных
+                до груди или более длинных волос. <br /><br />
+                Пoдxoдит для разных типoв вoлoc. Сoздaние лoконoв и волн.
+                Pазглаживaниe. Высушивaние вoлос. Без экстpeмальныx тeмперaтур.
+                В последней версии 2022 Года появились новые насадки, такие как:
+                - обновлённый цилиндр для завивки, предусматривающий поток
+                воздуха в двух направлениях, то есть больше не нужно
+                переставлять насадки. По вопросам пишите в телеграм на номер
+              </p>
+            </div>
+          </div>
+          <div class="card-wrapper profile-info__mobile">
+            <h2>Продавец</h2>
+            <div class="flex-x-between">
+              <div class="profile-info">
+                <img
+                  class="profile-info__img"
+                  src="../../assets/img/ProfilePhoto.png"
+                  alt="img"
+                />
+                <div class="profile-info__details">
+                  <h2 class="profile-info__name">
+                    Малика Абдурахимова <br />
+                    <span>ID: 1326547</span>
+                  </h2>
+                </div>
+              </div>
+              <a href="tel:+998712007007" class="product-single__number"
+                >+998 71 200 70 07</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="sidebar column">
+          <div class="card-wrapper">
+            <div class="column">
+              <div class="profile-info">
+                <img
+                  class="profile-info__img"
+                  src="../../assets/img/ProfilePhoto.png"
+                  alt="img"
+                />
+                <div class="profile-info__details">
+                  <h2 class="profile-info__name">
+                    Малика Абдурахимова <br />
+                    <span>ID: 1326547</span>
+                  </h2>
+                </div>
+              </div>
+              <a href="tel:+998712007007" class="product-single__number"
+                >+998 71 200 70 07</a
+              >
+              <button class="btn btn-secondary">Все объявления</button>
+            </div>
+          </div>
+          <div class="card-wrapper">
+            <div class="address-info flex">
+              <div class="address-info__section">
+                <h2 class="address-info__title">Местоположение</h2>
+                <p class="address-info__devider"></p>
+                <p class="address-info__text">
+                  <img src="../../assets/img/marker.svg" alt="Markerx" />
+                  г.Ташкент, ул.Олмачи 1-й проезд 13 дом
+                </p>
+              </div>
+              <img
+                class="address-info__map"
+                src="../../assets/img/Map.png"
+                alt="map"
+              />
+            </div>
+          </div>
+          <button class="btn btn-light-primary">
+            Скачать в галерею
+            <img
+              src="../../assets/img/download.svg"
+              class="btn__icon"
+              alt="download"
+            />
+          </button>
         </div>
       </div>
     </main>
 
-    <!-- Footer Section -->
     <footer class="footer">
       <div class="container">
         <!-- Footer Logo -->
@@ -410,8 +397,9 @@
         </div>
       </div>
     </footer>
-    <!-- Script Links -->
+
     <script src="../../components/header/header.js"></script>
     <script src="../../components/slider/slider.js"></script>
+    <script src="../../components/footer/footer.js"></script>
   </body>
 </html>

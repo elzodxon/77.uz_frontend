@@ -70,11 +70,9 @@
   gap: 24px;
 }
 
-/* .sidebar{
-  max-width: 278px;
-  width: 100%;
-}  */
-
+.profile-wrapper {
+  padding-top: 20px;
+}
 .btn {
   position: relative;
   z-index: 1;
@@ -593,14 +591,19 @@
   .personal-details__footer {
     display: none;
   }
-}
 
-@media screen and (max-width:480px) {
+}
+@media screen and (max-width: 480px) {
+
   .back-link {
     display: inline-block;
   }
-}
 
+
+  .prev-page__header {
+    padding-top: 100px;
+  }
+}
 @media screen and (max-width: 426px) {
   .bread-crumb {
     display: none;

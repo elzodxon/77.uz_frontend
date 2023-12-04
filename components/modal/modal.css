@@ -165,14 +165,12 @@
 }
 
 .modal-footer .btn {
-  max-width: 161px;
   width: 100%;
   padding: 11px 0;
 }
 
 .modal-sub {
   display: block;
-  max-width: 326px;
   text-align: center;
   margin: 0 auto;
 }
@@ -191,7 +189,6 @@
 }
 
 .fourth .fourth-btn {
-  max-width: 338px;
   width: 100%;
   padding: 11px 28px 12px 28px;
   display: flex;
@@ -254,12 +251,10 @@
 }
 
 .fifth .btn {
-  max-width: 338px;
   width: 100%;
 }
 
 .seven .btn {
-  max-width: 338px;
   width: 100%;
 }
 
@@ -341,7 +336,6 @@
 
 @media only screen and (max-width: 410px) {
   .modal-footer .btn {
-    max-width: 130px;
     padding: 11px 0;
   }
 

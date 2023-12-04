@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ================== Google Fonts links ================== -->
+    <!-- ================== Favicon link ================== -->
+
+    <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg"/>
 
     <!-- ================== Css links ================== -->
 
@@ -16,6 +18,7 @@
     />
     <link rel="stylesheet" href="../../components/header/header.css" />
     <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/prev-page-header/index.css" />
     <link rel="stylesheet" href="./profile.css" />
     <link rel="stylesheet" href="../../assets/css/variables.css" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
@@ -37,7 +40,7 @@
                 <img
                   width="20"
                   height="20"
-                  src="https://77.uz/images/flag/ru.svg"
+                  src="../../assets/img/header/ru.svg"
                   alt=""
                 />
                 <span>Русский</span>
@@ -63,7 +66,7 @@
                     <img
                       width="20"
                       height="20"
-                      src="https://77.uz/images/flag/ru.svg"
+                      src="../../assets/img/header/ru.svg"
                       alt=""
                     />
                     <span>RU</span>
@@ -73,7 +76,7 @@
                     <img
                       width="20"
                       height="20"
-                      src="https://77.uz/images/flag/uz.svg"
+                      src="../../assets/img/header/uz.svg"
                       alt=""
                     />
                     <span>UZ</span>
@@ -83,7 +86,7 @@
             </li>
             <li class="navbar-list__item phone-wrapper">
               <a
-                id="phone-number"
+                id="telephone-number"
                 href="tel:+998885005000"
                 class="navbar-list__link"
               >
@@ -137,27 +140,31 @@
             </li>
             <li class="navbar-list__item divider"></li>
             <li class="navbar-list__item">
-              <button class="navbar-list__link login-button text-sm-subtitle">
-                <!-- <span class="login-title">
-    <span class="login-text">Войти </span>
-    <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    >
-    <path
-    d="M12.2059 13.5V15.25C12.2059 15.7141 12.02 16.1592 11.689 16.4874C11.3581 16.8156 10.9092 17 10.4412 17H4.26471C3.79668 17 3.34782 16.8156 3.01687 16.4874C2.68593 16.1592 2.5 15.7141 2.5 15.25L2.5 4.75C2.5 4.28587 2.68593 3.84075 3.01687 3.51256C3.34782 3.18438 3.79668 3 4.26471 3L10.4412 3C10.9092 3 11.3581 3.18437 11.689 3.51256C12.02 3.84075 12.2059 4.28587 12.2059 4.75V6.5M17.5001 10.0001L6.07849 10.0001M6.07849 10.0001L8.72555 12.6251M6.07849 10.0001L8.72555 7.37508"
-    stroke="#16191D"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    />
-  </svg>
-</span> -->
+              <button
+                href=""
+                id="registration-btn"
+                class="navbar-list__link login-button text-sm-subtitle"
+              >
+                <span class="login-title signed-in">
+                  <span class="login-text">Войти </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.2059 13.5V15.25C12.2059 15.7141 12.02 16.1592 11.689 16.4874C11.3581 16.8156 10.9092 17 10.4412 17H4.26471C3.79668 17 3.34782 16.8156 3.01687 16.4874C2.68593 16.1592 2.5 15.7141 2.5 15.25L2.5 4.75C2.5 4.28587 2.68593 3.84075 3.01687 3.51256C3.34782 3.18438 3.79668 3 4.26471 3L10.4412 3C10.9092 3 11.3581 3.18437 11.689 3.51256C12.02 3.84075 12.2059 4.28587 12.2059 4.75V6.5M17.5001 10.0001L6.07849 10.0001M6.07849 10.0001L8.72555 12.6251M6.07849 10.0001L8.72555 7.37508"
+                      stroke="#16191D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
 
-                <span class="user-info">
+                <span class="user-info signed-in">
                   <img src="../../assets/img/user.svg" alt="" />
                   <span class="user-name">Шохрух Шавкиев</span>
                   <svg
@@ -200,16 +207,25 @@
           </ul>
           <!------------------ Bread-Crumb-------------------- -->
 
-          <div>
-            <a class="back-link" href="/"
-              ><img
-                class="arrow-left-icon"
-                src="../../assets/img/profile/arrow-left-icon.svg"
-                alt="arrow-left-icon"
-                width="34"
-                height="34"
-            /></a>
-          </div>
+      <div class="prev-page__header">
+        <a href="/" class="prev-page__button">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.4448 24L6.66699 16M6.66699 16L14.4448 8M6.66699 16H25.3337"
+              stroke="black"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
 
           <div class="profile-wrapper">
             <!------------ Sidebar---------- -->

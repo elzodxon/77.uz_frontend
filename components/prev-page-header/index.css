@@ -29,12 +29,6 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .prev-page__header {
-    margin-top: 100px;
-  }
-  .prev-page__header {
-    padding: 0 16px;
-  }
   .prev-page__header svg {
     display: block;
   }

@@ -14,7 +14,9 @@ body {
 
 .hero {
 }
-
+.static-title {
+  padding: 0 16px;
+}
 .static {
   max-width: 822px;
   width: 100%;
@@ -43,9 +45,8 @@ body {
   font-weight: 400;
   line-height: 20px; /* 142.857% */
 }
-
-@media screen and (max-width: 480px) {
-  .static {
-    margin-top: 80px;
+@media screen and (max-width:480px) {
+  .bread-crumb {
+    display: flex !important; 
   }
 }
