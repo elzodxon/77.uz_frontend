@@ -20,7 +20,7 @@
   color: var(--placeholder-color);
 }
 
-.select-menu .select-menu__btn {
+.select-menu .select-btn {
   display: flex;
   background-color: var(--input-bg-color);
   padding: 10px 10px 10px 12px;
