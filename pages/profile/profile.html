@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ================== Google Fonts links ================== -->
+    <!-- ================== Favicon link ================== -->
+
+    <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg"/>
 
     <!-- ================== Css links ================== -->
 
@@ -16,6 +18,7 @@
     />
     <link rel="stylesheet" href="../../components/header/header.css" />
     <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/prev-page-header/index.css" />
     <link rel="stylesheet" href="./profile.css" />
     <link rel="stylesheet" href="../../assets/css/variables.css" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
@@ -204,16 +207,25 @@
           </ul>
           <!------------------ Bread-Crumb-------------------- -->
 
-          <div>
-            <a class="back-link" href="/"
-              ><img
-                class="arrow-left-icon"
-                src="../../assets/img/profile/arrow-left-icon.svg"
-                alt="arrow-left-icon"
-                width="34"
-                height="34"
-            /></a>
-          </div>
+      <div class="prev-page__header">
+        <a href="/" class="prev-page__button">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.4448 24L6.66699 16M6.66699 16L14.4448 8M6.66699 16H25.3337"
+              stroke="black"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
 
           <div class="profile-wrapper">
             <!------------ Sidebar---------- -->

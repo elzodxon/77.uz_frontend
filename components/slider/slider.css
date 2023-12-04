@@ -1,6 +1,7 @@
 @import '../../assets/css/variables.css';
 
 .slider {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -116,4 +117,10 @@
 
 .next-btn {
   right: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .slider__wrapper button {
+    display: none;
+  }
 }

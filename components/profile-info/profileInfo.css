@@ -1,20 +1,20 @@
 @import '../../assets/css/variables.css';
 
-.profile__info {
+.profile-info {
   display: flex;
   align-items: center;
   gap: 1rem;
   cursor: pointer;
 }
 
-.profile__info-box {
+.profile-info__box {
   border: 1px solid var(--gray-color);
   background: linear-gradient(to right, #f2efee, #fff);
   border-radius: 8px;
   padding: 8px;
 }
 
-.profile__info-img {
+.profile-info__img {
   border-radius: 6px;
 }
 
@@ -22,11 +22,11 @@
   border-radius: 50%;
 }
 
-.profile__info-name {
+.profile-info__name {
   font-size: 16px;
 }
 
-.profile__info-name span {
+.profile-info__name span {
   font-size: 12px;
   font-weight: 300;
   color: var(--placeholder-color);

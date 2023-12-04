@@ -80,17 +80,10 @@
     width: 338px;
 }
 
-/* Todo: .galellery ni boshidagi 5qatorni olib tashlab
-
-  display: grid;
-  grid-template-columns:repeat(3,1fr);
-  max-width: 100%;  
-  
-  shu kodni qo'shing */
-
 .gallery-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
     gap: 20px;
 }
 
@@ -99,6 +92,7 @@
     height: 100%;
     flex: 1;
 }
+
 #files {
     position: absolute;
     visibility: hidden;
@@ -119,7 +113,8 @@
 }
 
 .gallery__item-image {
-    width: 100%;
+    max-width: 100%;
+    max-height: 150px;
     object-fit: cover;
 }
 

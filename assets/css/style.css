@@ -6,17 +6,12 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
-
+.main-wrapper {
+  margin-top: 100px;
+}
 body {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  height: 100vh;
-  width: 100%;
-}
-
-body.block {
-  overflow-y: hidden;
 }
 
 .main-modal {
@@ -48,6 +43,8 @@ body.block {
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .flex-center {
@@ -66,6 +63,13 @@ body.block {
   justify-content: center;
 }
 
+.flex-x-between {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .py-8 {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -77,6 +81,12 @@ body.block {
   flex-wrap: wrap;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .sidebar {
   flex-basis: 25%;
   flex-shrink: 0;
@@ -85,6 +95,16 @@ body.block {
 .main {
   flex-basis: calc(75% - 24px);
   flex-shrink: 0;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 24px;
+  border-radius: 16px;
+  background: #ffffff;
 }
 
 @media screen and (max-width: 768px) {

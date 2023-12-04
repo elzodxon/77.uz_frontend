@@ -27,9 +27,10 @@
   text-shadow: none;
 }
 
+  margin: 0px;
 html,
 body {
-  margin: 0px;
+  overflow-y: scroll;
   padding: 0px;
   font-size: 16px;
   line-height: 20px;
@@ -37,6 +38,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f0f3f7;
+}
+body.block  {
+  overflow-y: hidden;
 }
 
 img {

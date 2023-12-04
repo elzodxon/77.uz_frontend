@@ -83,8 +83,8 @@ body.block {
   line-height: 130%;
   width: 100%;
 }
-.search__input:focus+  .search__label{
-   border: 1px solid #388ff3;
+.search__input:focus + .search__label {
+  border: 1px solid #388ff3;
 }
 .search__input:focus body {
   overflow-y: hidden;
@@ -154,12 +154,11 @@ body.block {
   max-height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
-
 }
 
 .m-search-suggestion .top-txt {
   display: block;
-  padding: 16px 16px 12px ;
+  padding: 16px 16px 12px;
   color: #8e9297;
   font-size: 14px;
   font-style: normal;
@@ -170,8 +169,6 @@ body.block {
 .m-search-suggestion__list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
   width: 100%;
   cursor: pointer;
   border-bottom: 1px solid #eaedf0;
@@ -188,30 +185,36 @@ body.block {
   list-style: none;
   position: relative;
   width: 100%;
-  text-align: left;
-  display: flex;
-  justify-content: start;
-  display: inline;
+  display: inline-block;
   margin: 0;
   padding: 16px 10px 15px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
+.search-icon {
+  display: inline-block;
+}
+.suggestion-link {
+  display: block;
+  width: 100%;
+  color: #16191d;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
 .right-icon {
+  display: inline-block;
   stroke: #b8bbbd;
   transform: translateX(0px);
   transition: all 0.3s ease;
   position: absolute;
   right: 0;
 }
-.suggestion-link{
-  color: #16191d;
-  font-weight: 500;
-  line-height: 130%;
-}
-.matching-letters{
-   background-color: #ffcc18;
-   border-radius: 5px;
+
+.matching-letters {
+  background-color: #ffcc18;
+  border-radius: 5px;
 }
 .m-search-suggestion__item:hover {
   background-color: #f0f3f7;
@@ -220,7 +223,7 @@ body.block {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.m-search-suggestion__item:hover .m-search-suggestion__item,
+.m-search-suggestion__item:hover .suggestion-link,
 .m-search-suggestion__item:hover .right-icon path {
   color: #388ff3;
 }
@@ -265,7 +268,6 @@ body.block {
   font-weight: 400;
   line-height: 140%;
   padding-bottom: 32px;
-
 }
 /* -------------TABLET--------------- */
 @media only screen and (max-width: 1000px) {
@@ -280,7 +282,6 @@ body.block {
     align-items: center;
     justify-content: center;
     position: sticky;
-
   }
 
   .search__label svg {

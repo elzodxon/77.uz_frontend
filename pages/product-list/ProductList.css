@@ -10,7 +10,7 @@ body {
 
 .main {
   flex-grow: 1;
-  padding-top: 124px;
+  padding-top: 32px;
 }
 
 .row {
@@ -19,7 +19,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-
+.bread-crumb {
+  margin-top: 100px;
+}
 .filter {
   flex-basis: 25%;
   background: white;
@@ -92,6 +94,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
+  padding-top: 20px;
 }
 
 .product-list__count {
@@ -360,5 +363,11 @@ body {
   }
   .product-list__title {
     font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    margin-top: 60px;
   }
 }

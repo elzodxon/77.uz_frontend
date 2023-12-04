@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../../components/header/header.css"/>
     <link rel="stylesheet" href="../../components/inputs/inputs.css"/>
     <link rel="stylesheet" href="../../components/buttons/buttons.css"/>
+    <link rel="stylesheet" href="../../components/tab/tab.css"/>
     <link rel="stylesheet" href="./create-form.css"/>
     <link rel="stylesheet" href="../../assets/css/variables.css"/>
     <link rel="stylesheet" href="../../assets/css/normalize.css"/>
@@ -238,7 +239,7 @@
         <form class="create-form-container">
             <!-- Create Form Header -->
             <div class="prev-page__header">
-                <button class="prev-page__button">
+                <a href="/" class="prev-page__button">
                     <svg
                             width="32"
                             height="32"
@@ -254,7 +255,7 @@
                                 stroke-linejoin="round"
                         />
                     </svg>
-                </button>
+                </a>
                 <h1 class="prev-page__title">Создать объявления</h1>
             </div>
             <!-- Create Form Body -->
@@ -308,6 +309,18 @@
                 <!-- Product Info -->
                 <div class="product-info create-form__content">
                     <p class="product-info__title form-title">Данные продукта</p>
+                    <div class="switches-container">
+                        <input type="radio" id="switchMonthly" name="switchPlan" value="Monthly" checked="checked" />
+                        <input type="radio" id="switchYearly" name="switchPlan" value="Yearly" />
+                        <label for="switchMonthly">Русский</label>
+                        <label for="switchYearly">English</label>
+                        <div class="switch-wrapper">
+                            <div class="switch">
+                                <div>Русский</div>
+                                <div>English</div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="product-info__form create-wrapper">
                         <div class="form-group">
                             <label class="label" for="product-name"
@@ -421,7 +434,7 @@
                                 >Перетащите свое изображение сюда или
                 <label for="files" class="choose-text">выберите
 
-                <input id="files" type="file"/>
+                <input id="files" type="file" accept="image/*" />
                 </label>
 
               </span>
