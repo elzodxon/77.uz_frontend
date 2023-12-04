@@ -44,7 +44,7 @@ body.block {
 .search__label {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: ; */
   border-radius: 8px;
   border: 1px solid #eaedf0;
   background: #fff;
@@ -65,6 +65,7 @@ body.block {
 .search__input {
   display: block;
   align-self: stretch;
+  text-align: left;
   border: none;
   background: #fff;
   max-width: calc(100%-63px);
@@ -137,7 +138,7 @@ body.block {
   transform: translate();
   display: none;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   border: 1px solid #8e9297;
   border-radius: 10px;
   padding: 0px 0px;
@@ -150,11 +151,15 @@ body.block {
 .m-search-suggestion.active {
   display: flex;
   z-index: 9;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
 }
 
 .m-search-suggestion .top-txt {
   display: block;
-  padding: 16px 12px;
+  padding: 16px 16px 12px ;
   color: #8e9297;
   font-size: 14px;
   font-style: normal;
@@ -180,14 +185,15 @@ body.block {
 }
 
 .m-search-suggestion__item {
+  list-style: none;
   position: relative;
   width: 100%;
   text-align: left;
+  display: flex;
+  justify-content: start;
+  display: inline;
   margin: 0;
   padding: 16px 10px 15px;
-  color: #16191d;
-  font-weight: 500;
-  line-height: 130%;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -197,6 +203,11 @@ body.block {
   transition: all 0.3s ease;
   position: absolute;
   right: 0;
+}
+.suggestion-link{
+  color: #16191d;
+  font-weight: 500;
+  line-height: 130%;
 }
 .matching-letters{
    background-color: #ffcc18;
