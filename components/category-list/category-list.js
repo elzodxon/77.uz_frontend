@@ -1,203 +1,123 @@
 //  MAIN SEARCH
 const searchInput = document.querySelector(".search__input");
 const blocker = document.querySelector(".blocker");
-const favoriteProductButton = document.querySelectorAll(
-   ".favorite__product-button"
-);
+const favoriteProductButton = document.querySelectorAll(".favorite__product-button");
 const favoriteProductPath = document.querySelectorAll(".favorite-path");
 const searchSuggestion = document.getElementById("m-search-suggestion");
 
+let cardsInOneRow;
+
 for (let i = 0; i < favoriteProductButton.length; i++) {
-   favoriteProductButton[i].addEventListener("click", () => {
-      favoriteProductPath[i].classList.toggle("active");
-   });
+    favoriteProductButton[i].addEventListener("click", () => {
+        favoriteProductPath[i].classList.toggle("active");
+    });
 }
 
 searchInput.addEventListener("focus", (e) => {
-   e.preventDefault();
-   blocker.classList.toggle("active");
-   searchSuggestion.classList.toggle("active");
-   document.body.classList.toggle("block");
+    e.preventDefault();
+    blocker.classList.toggle("active");
+    searchSuggestion.classList.toggle("active");
+    document.body.classList.toggle("block");
 });
 blocker.addEventListener("click", () => {
-   document.body.classList.remove("block");
-   blocker.classList.remove("active");
-   searchSuggestion.classList.remove("active");
+    document.body.classList.remove("block");
+    blocker.classList.remove("active");
+    searchSuggestion.classList.remove("active");
 });
 
 //CATEGORY
 const categoryCards = document.querySelectorAll(".category-card");
 categoryCards.forEach(function (card) {
-   card.addEventListener("click", function () {
-      // Remove "active" class from all category cards
-      categoryCards.forEach(function (c) {
-         c.classList.remove("active");
-      });
-      // Add "active" class to the clicked category card
-      card.classList.add("active");
-   });
+    card.addEventListener("click", function () {
+        // Remove "active" class from all category cards
+        categoryCards.forEach(function (c) {
+            c.classList.remove("active");
+        });
+        // Add "active" class to the clicked category card
+        card.classList.add("active");
+    });
 });
 //---------CATEGORY LIST----------///////////
 document.addEventListener("DOMContentLoaded", function () {
-   const categoryList = document.getElementById("category-list");
+    const categoryList = document.getElementById("category-list");
 
-   const jsonData = [
-      {
-         title: "Electronics",
-         addsAmount: "4147 объявлений",
-         subcategories: [
-            {
-               subcategoryTitle: "Smartphone",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Iphone" },
-                  { subcategoryInnerItem: "Samsung" },
-               ],
-            },
-            {
-               subcategoryTitle: "Speakers",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Best Speaker Ever" },
-                  { subcategoryInnerItem: "CST( Cant Stop Talking" },
-               ],
-            },
-            {
-               subcategoryTitle: "Accessory",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Earphone" },
-                  { subcategoryInnerItem: "Headphone" },
-               ],
-            },
-            // Add more subcategories as needed
-         ],
-      },
-      {
-         title: "Shoes",
-         addsAmount: "4147 объявлений",
-         subcategories: [
-            {
-               subcategoryTitle: "Men's shoes",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Sneakers" },
-                  { subcategoryInnerItem: "Boots" },
-               ],
-            },
-            {
-               subcategoryTitle: "Women's shoes",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Sneakers" },
-                  { subcategoryInnerItem: "Boots" },
-               ],
-            },
-            // Add more subcategories as needed
-         ],
-      },
-      {
-         title: "Smart Home",
-         addsAmount: "4147 объявлений",
-         subcategories: [
-            {
-               subcategoryTitle: "Kitchen",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Ajoyib" },
-                  { subcategoryInnerItem: "Havo " },
-               ],
-            },
-            {
-               subcategoryTitle: "Sitting Room",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Air-conditioner" },
-                  { subcategoryInnerItem: "TV" },
-                  { subcategoryInnerItem: "Wi-Fi" },
-               ],
-            },
-            // Add more subcategories as needed
-         ],
-      },
-      {
-         title: "Kids",
-         addsAmount: "4147 объявлений",
-         subcategories: [
-            {
-               subcategoryTitle: "Entertainment",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Ball" },
-                  { subcategoryInnerItem: "Hockey" },
-               ],
-            },
-            {
-               subcategoryTitle: "Education",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Books" },
-                  { subcategoryInnerItem: "Pen" },
-               ],
-            },
-            // Add more subcategories as needed
-         ],
-      },
-      {
-         title: "Electronics",
-         addsAmount: "4147 объявлений",
-         subcategories: [
-            {
-               subcategoryTitle: "Smartphone",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Iphone" },
-                  { subcategoryInnerItem: "Samsung" },
-               ],
-            },
-            {
-               subcategoryTitle: "Accessory",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Earphone" },
-                  { subcategoryInnerItem: "Headphone" },
-               ],
-            },
-            // Add more subcategories as needed
-         ],
-      },
-      {
-         title: "Education",
-         addsAmount: "4147 объявлений",
-         subcategories: [
-            {
-               subcategoryTitle: "Tools",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Kindle" },
-                  { subcategoryInnerItem: "Calculator" },
-               ],
-            },
-            {
-               subcategoryTitle: "Books",
-               subsubcategories: [
-                  { subcategoryInnerItem: "Make it happen" },
-                  { subcategoryInnerItem: "Sleepy" },
-               ],
-            },
-            // Add more subcategories as needed
-         ],
-      },
-      // Add more data as needed
-   ];
+    const jsonData = [{
+        title: "Electronics", addsAmount: "4147 объявлений", subcategories: [{
+            subcategoryTitle: "Smartphone",
+            subsubcategories: [{subcategoryInnerItem: "Iphone"}, {subcategoryInnerItem: "Samsung"},],
+        }, {
+            subcategoryTitle: "Speakers",
+            subsubcategories: [{subcategoryInnerItem: "Best Speaker Ever"}, {subcategoryInnerItem: "CST( Cant Stop Talking"},],
+        }, {
+            subcategoryTitle: "Accessory",
+            subsubcategories: [{subcategoryInnerItem: "Earphone"}, {subcategoryInnerItem: "Headphone"},],
+        }, // Add more subcategories as needed
+        ],
+    }, {
+        title: "Shoes", addsAmount: "4147 объявлений", subcategories: [{
+            subcategoryTitle: "Men's shoes",
+            subsubcategories: [{subcategoryInnerItem: "Sneakers"}, {subcategoryInnerItem: "Boots"},],
+        }, {
+            subcategoryTitle: "Women's shoes",
+            subsubcategories: [{subcategoryInnerItem: "Sneakers"}, {subcategoryInnerItem: "Boots"},],
+        }, // Add more subcategories as needed
+        ],
+    }, {
+        title: "Smart Home", addsAmount: "4147 объявлений", subcategories: [{
+            subcategoryTitle: "Kitchen",
+            subsubcategories: [{subcategoryInnerItem: "Ajoyib"}, {subcategoryInnerItem: "Havo "},],
+        }, {
+            subcategoryTitle: "Sitting Room",
+            subsubcategories: [{subcategoryInnerItem: "Air-conditioner"}, {subcategoryInnerItem: "TV"}, {subcategoryInnerItem: "Wi-Fi"},],
+        }, // Add more subcategories as needed
+        ],
+    }, {
+        title: "Kids", addsAmount: "4147 объявлений", subcategories: [{
+            subcategoryTitle: "Entertainment",
+            subsubcategories: [{subcategoryInnerItem: "Ball"}, {subcategoryInnerItem: "Hockey"},],
+        }, {
+            subcategoryTitle: "Education",
+            subsubcategories: [{subcategoryInnerItem: "Books"}, {subcategoryInnerItem: "Pen"},],
+        }, // Add more subcategories as needed
+        ],
+    }, {
+        title: "Electronics", addsAmount: "4147 объявлений", subcategories: [{
+            subcategoryTitle: "Smartphone",
+            subsubcategories: [{subcategoryInnerItem: "Iphone"}, {subcategoryInnerItem: "Samsung"},],
+        }, {
+            subcategoryTitle: "Accessory",
+            subsubcategories: [{subcategoryInnerItem: "Earphone"}, {subcategoryInnerItem: "Headphone"},],
+        }, // Add more subcategories as needed
+        ],
+    }, {
+        title: "Education", addsAmount: "4147 объявлений", subcategories: [{
+            subcategoryTitle: "Tools",
+            subsubcategories: [{subcategoryInnerItem: "Kindle"}, {subcategoryInnerItem: "Calculator"},],
+        }, {
+            subcategoryTitle: "Books",
+            subsubcategories: [{subcategoryInnerItem: "Make it happen"}, {subcategoryInnerItem: "Sleepy"},],
+        }, // Add more subcategories as needed
+        ],
+    }, // Add more data as needed
+    ];
 
-   function generateSubsubcategoryLinks(subsubcategories) {
-      return subsubcategories
-         .map((subsub) => {
-            const subsubTitle = Object.keys(subsub)[0];
-            const subsubLink = subsub[subsubTitle];
-            return `<li><a class="category-links__item" href="#">${subsubLink}</a></li>`;
-         })
-         .join("");
-   }
+    function generateSubsubcategoryLinks(subsubcategories) {
+        return subsubcategories
+            .map((subsub) => {
+                const subsubTitle = Object.keys(subsub)[0];
+                const subsubLink = subsub[subsubTitle];
+                return `<li><a class="category-links__item" href="#">${subsubLink}</a></li>`;
+            })
+            .join("");
+    }
 
-   function generateSubcategoryLinks(subcategories) {
-      return subcategories
-         .map((subcategory) => {
-            const subcategoryTitle = subcategory.subcategoryTitle;
-            const subsubcategoryLinks = generateSubsubcategoryLinks(
-               subcategory.subsubcategories
-            );
+    function generateSubcategoryLinks(subcategories) {
+        return subcategories
+            .map((subcategory) => {
+                const subcategoryTitle = subcategory.subcategoryTitle;
+                const subsubcategoryLinks = generateSubsubcategoryLinks(subcategory.subsubcategories);
 
-            return `
+                return `
                <li class="category-menu__item">
                    <span class="category-menu__title">
                        <span>${subcategoryTitle}</span>
@@ -216,15 +136,15 @@ document.addEventListener("DOMContentLoaded", function () {
                    </div>
                </li>
            `;
-         })
-         .join("");
-   }
+            })
+            .join("");
+    }
 
-   function generateCategoryCards(categories) {
-      return categories
-         .map((category) => {
-            const categoryCard = `
-               <li class="category-group" role="button">
+    function generateCategoryCards(categories) {
+        return categories
+            .map((category, index) => {
+                const categoryCard = `
+               <li class="category-group" role="button" itemid="${index + 1}">
                    <div class="category-card">
                        <div class="category-icon">
                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -248,63 +168,60 @@ document.addEventListener("DOMContentLoaded", function () {
                            </svg>
                        </div>
                    </div>
-                   <ul class="category-menu">${generateSubcategoryLinks(
-                      category.subcategories
-                   )}</ul>
+                   <ul class="category-menu">${generateSubcategoryLinks(category.subcategories)}</ul>
                </li>
            `;
-            return categoryCard;
-         })
-         .join("");
-   }
+                return categoryCard;
+            })
+            .join("");
+    }
 
-   const windowWidth = window.innerWidth;
-   console.log(`Window Width: ${windowWidth}px`);
 
-   categoryList.innerHTML = generateCategoryCards(jsonData);
+    categoryList.innerHTML = generateCategoryCards(jsonData);
 
-   const backButton = document.querySelectorAll(".dropdown-menu__back");
-   const categoryMenuItem = document.querySelectorAll(".category-menu__item");
-   const categoryMenuItem1 = document.querySelectorAll(".category-links");
+    const backButton = document.querySelectorAll(".dropdown-menu__back");
+    const categoryMenuItem = document.querySelectorAll(".category-menu__item");
+    const categoryMenuItem1 = document.querySelectorAll(".category-links");
 
-   const categoryGroups = document.querySelectorAll(".category-card");
-   const categoryDropdowns = document.querySelectorAll(".category-menu");
+    const categoryGroups = document.querySelectorAll(".category-card");
+    const categoryCards = document.querySelectorAll(".category-group");
+    const categoryDropdowns = document.querySelectorAll(".category-menu");
 
-   for (let i = 0; i < categoryGroups.length; i++) {
-      categoryGroups[i].addEventListener("click", function () {
-         categoryDropdowns[i].classList.toggle("active");
-      });
-   }
+    for (let i = 0; i < categoryGroups.length; i++) {
+        categoryGroups[i].addEventListener("click", function () {
+            categoryDropdowns[i].classList.toggle("active");
+        });
+    }
 
-   for (let i = 0; i < categoryMenuItem.length; i++) {
-      categoryMenuItem[i].addEventListener("click", function () {
-         categoryMenuItem1[i].classList.toggle("active");
-      });
-   }
-   for (let i = 0; i < backButton.length; i++) {
-      backButton[i].addEventListener("click", function (e) {
-         e.stopPropagation();
-         categoryMenuItem1[i].classList.remove("active");
-      });
-   }
+    markLastInRow(categoryCards)
 
-   ///////////------SEARCH SUGGESTION-------///////
+    for (let i = 0; i < categoryMenuItem.length; i++) {
+        categoryMenuItem[i].addEventListener("click", function () {
+            categoryMenuItem1[i].classList.toggle("active");
+        });
+    }
+    for (let i = 0; i < backButton.length; i++) {
+        backButton[i].addEventListener("click", function (e) {
+            e.stopPropagation();
+            categoryMenuItem1[i].classList.remove("active");
+        });
+    }
 
-   const searchInput = document.getElementById("searchNow");
-   const searchSuggestion = document.getElementById("m-search-suggestion");
-   const mSearchSuggestionTitle = document.querySelector(
-      ".m-search-suggestion-title"
-   );
 
-   // SEARCH
-   function generateSearchSuggestion(inputValue) {
-      const inputValueLowerCase = inputValue.toLowerCase();
 
-      const exactMatch = jsonData.find(
-         (category) => category.title.toLowerCase() === inputValueLowerCase
-      );
-      if (exactMatch) {
-         return `<p>Recommendation  </p>
+    ///////////------SEARCH SUGGESTION-------///////
+
+    const searchInput = document.getElementById("searchNow");
+    const searchSuggestion = document.getElementById("m-search-suggestion");
+    const mSearchSuggestionTitle = document.querySelector(".m-search-suggestion-title");
+
+    // SEARCH
+    function generateSearchSuggestion(inputValue) {
+        const inputValueLowerCase = inputValue.toLowerCase();
+
+        const exactMatch = jsonData.find((category) => category.title.toLowerCase() === inputValueLowerCase);
+        if (exactMatch) {
+            return `<p>Recommendation  </p>
          <div class="m-search-suggestion__card">
          <a class="m-search-suggestion__title" href="#">
          <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -317,29 +234,20 @@ document.addEventListener("DOMContentLoaded", function () {
 </svg>
          </div>
          `;
-      }
+        }
 
-      const partialMatches = jsonData.filter((category) => {
-         const categoryTitle = category.title.toLowerCase();
-         const subcategoryTitles = category.subcategories.map((subcategory) =>
-            subcategory.subcategoryTitle.toLowerCase()
-         );
-         const subsubcategoryTitles = category.subcategories.flatMap(
-            (subcategory) =>
-               subcategory.subsubcategories.map((item) =>
-                  Object.values(item)[0].toLowerCase()
-               )
-         );
-         return [categoryTitle, subcategoryTitles, subsubcategoryTitles].some(
-            (title) => title.includes(inputValueLowerCase)
-         );
-      });
+        const partialMatches = jsonData.filter((category) => {
+            const categoryTitle = category.title.toLowerCase();
+            const subcategoryTitles = category.subcategories.map((subcategory) => subcategory.subcategoryTitle.toLowerCase());
+            const subsubcategoryTitles = category.subcategories.flatMap((subcategory) => subcategory.subsubcategories.map((item) => Object.values(item)[0].toLowerCase()));
+            return [categoryTitle, subcategoryTitles, subsubcategoryTitles].some((title) => title.includes(inputValueLowerCase));
+        });
 
-      if (partialMatches.length > 0) {
-         return partialMatches
-            .map((category) => {
-               const categoryTitle = category.title;
-               return `
+        if (partialMatches.length > 0) {
+            return partialMatches
+                .map((category) => {
+                    const categoryTitle = category.title;
+                    return `
            <div class="m-search-suggestion__card">
            <a class="m-search-suggestion__title" href="">
            <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -352,11 +260,11 @@ document.addEventListener("DOMContentLoaded", function () {
 <path d="M8 6L12 10L8 14" stroke="CurrentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 </div>`;
-            })
-            .join("");
-      }
+                })
+                .join("");
+        }
 
-      return `
+        return `
       <div class="m-search-suggestion__card" style="background:#fff; cursor:default;">
                <div class="search-error">
                    <img src="/assets/img/category/search-error.svg" alt="" width="120" height="107">
@@ -364,61 +272,95 @@ document.addEventListener("DOMContentLoaded", function () {
                    <p>Упс! Мы не смогли найти ни одного  <br> подходящего результата по вашему запросу</p>
                </div>
            </div>`;
-   }
+    }
 
-   // SEARCH INPUT EVENT LISTENER
-   searchInput.addEventListener("input", function () {
-      const inputValue = searchInput.value.trim();
-      const searchSuggestions = generateSearchSuggestion(inputValue);
+    // SEARCH INPUT EVENT LISTENER
+    searchInput.addEventListener("input", function () {
+        const inputValue = searchInput.value.trim();
+        const searchSuggestions = generateSearchSuggestion(inputValue);
 
-      searchSuggestion.innerHTML = searchSuggestions;
-      searchSuggestion.classList.toggle(
-         "active",
-         inputValue.length > 0 && searchSuggestions.length > 0
-      );
-      updateSearchSuggestionTitle(inputValue);
-   });
+        searchSuggestion.innerHTML = searchSuggestions;
+        searchSuggestion.classList.toggle("active", inputValue.length > 0 && searchSuggestions.length > 0);
+        updateSearchSuggestionTitle(inputValue);
+    });
 
-   // UPDATE SEARCH SUGGESTION TITLE
-   function updateSearchSuggestionTitle(inputValue) {
-      const searchHistory =
-         JSON.parse(localStorage.getItem("searchHistory")) || [];
-      if (searchHistory.length === 0 && inputValue.length === 0) {
-         mSearchSuggestionTitle.textContent = "No History";
-      } else {
-         mSearchSuggestionTitle.textContent =
-            inputValue.length > 0 ? "Recommendation" : "История поиска";
-      }
-   }
-   //
-   // SAVE SEARCH HISTORY
-   function saveSearchHistory(searchTerm) {
-      const searchHistory =
-         JSON.parse(localStorage.getItem("searchHistory")) || [];
-      searchHistory.unshift(searchTerm);
-      localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
-   }
-   saveSearchHistory();
+    // UPDATE SEARCH SUGGESTION TITLE
+    function updateSearchSuggestionTitle(inputValue) {
+        const searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+        if (searchHistory.length === 0 && inputValue.length === 0) {
+            mSearchSuggestionTitle.textContent = "No History";
+        } else {
+            mSearchSuggestionTitle.textContent = inputValue.length > 0 ? "Recommendation" : "История поиска";
+        }
+    }
 
-   // HIGHLIGHT MATCHING LETTERS
-   function highlightMatchingLetters(title, inputValue) {
-      const lowerCaseTitle = title.toLowerCase();
-      const lowerCaseInput = inputValue.toLowerCase();
-      const matchStart = lowerCaseTitle.indexOf(lowerCaseInput);
+    //
+    // SAVE SEARCH HISTORY
+    function saveSearchHistory(searchTerm) {
+        const searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+        searchHistory.unshift(searchTerm);
+        localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+    }
 
-      if (matchStart === -1) {
-         return title;
-      }
+    saveSearchHistory();
 
-      const matchEnd = matchStart + lowerCaseInput.length;
-      const highlightedPart =
-         title.substring(0, matchStart) +
-         `<span style="background-color: yellow;">${title.substring(
-            matchStart,
-            matchEnd
-         )}</span>` +
-         title.substring(matchEnd);
+    // HIGHLIGHT MATCHING LETTERS
+    function highlightMatchingLetters(title, inputValue) {
+        const lowerCaseTitle = title.toLowerCase();
+        const lowerCaseInput = inputValue.toLowerCase();
+        const matchStart = lowerCaseTitle.indexOf(lowerCaseInput);
 
-      return highlightedPart;
-   }
+        if (matchStart === -1) {
+            return title;
+        }
+
+        const matchEnd = matchStart + lowerCaseInput.length;
+        const highlightedPart = title.substring(0, matchStart) + `<span style="background-color: yellow;">${title.substring(matchStart, matchEnd)}</span>` + title.substring(matchEnd);
+
+        return highlightedPart;
+    }
+
+
+    function calculateCardsInOneRow() {
+        // Get the container and card elements
+        const container = document.getElementById('category-list');
+
+        // Get the computed style for the grid container
+        const containerStyle = window.getComputedStyle(container);
+
+        // Extract the grid-template-columns value
+        const gridColumnValue = containerStyle.getPropertyValue('grid-template-columns');
+
+        // Split the value into an array of column widths
+        const columnWidths = gridColumnValue.split(' ');
+
+        // Calculate the number of cards in one row
+        cardsInOneRow = columnWidths.length;
+
+        console.log('Number of cards in one row:', cardsInOneRow);
+        return cardsInOneRow;
+    }
+
+    // Call the function on window load or whenever necessary
+    window.addEventListener('resize', calculateCardsInOneRow);
+    window.addEventListener('load', calculateCardsInOneRow);
+
+    function markLastInRow(cards) {
+        cards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                // Find the index of the last element in the same row
+                const cardsPerRow = calculateCardsInOneRow();
+                const lastInRow = index + (cardsPerRow - (index % cardsPerRow)) - 1;
+
+                // Remove the 'last-in-row' class from all cards
+                cards.forEach((card) => {
+                    card.classList.remove('last-in-row');
+                });
+
+                // Add the 'last-in-row' class to the last element in the row
+                cards[lastInRow].classList.add('last-in-row');
+            });
+        });
+    }
+
 });
