@@ -7,6 +7,7 @@ const pagesContainer = document.getElementById('pages')
 const prevButton = document.getElementById('prev')
 const nextButton = document.getElementById('next')
 const postListContainer = document.getElementById('post-list')
+let totalProducts = 0
 
 function displayPosts() {
   fetch(
@@ -14,7 +15,7 @@ function displayPosts() {
   )
     .then((response) => response.json())
     .then((posts) => {
-      console.log(posts)
+      totalProducts = posts.count
       postListContainer.innerHTML = ''
 
       posts.results.forEach((post) => {
@@ -32,11 +33,8 @@ function displayPosts() {
     .catch((error) => console.error(error))
 }
 
-function updatePagination() {
-  fetch('https://jsonplaceholder.typicode.com/posts')
-    .then((response) => response.json())
-    .then((data) => {
-      const totalPosts = data.length
+ function updatePagination() {
+    const totalPosts = totalProducts
       const totalPages = Math.ceil(totalPosts / postsPerPage)
 
       pagesContainer.innerHTML = ''
@@ -63,8 +61,6 @@ function updatePagination() {
 
       prevButton.disabled = currentPage === 1
       nextButton.disabled = currentPage === totalPages
-    })
-    .catch((error) => console.error(error))
 }
 
 prevButton.addEventListener('click', () => {
@@ -75,18 +71,14 @@ prevButton.addEventListener('click', () => {
 })
 
 nextButton.addEventListener('click', () => {
-  fetch('https://jsonplaceholder.typicode.com/posts')
-    .then((response) => response.json())
-    .then((data) => {
-      const totalPosts = data.length
+
+  const totalPosts = totalProducts
       const totalPages = Math.ceil(totalPosts / postsPerPage)
 
       if (currentPage < totalPages) {
         currentPage++
         displayPosts()
       }
-    })
-    .catch((error) => console.error(error))
 })
 
 displayPosts()
