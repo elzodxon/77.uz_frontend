@@ -266,6 +266,9 @@ document.addEventListener('DOMContentLoaded', function () {
   for (let i = 0; i < categoryGroups.length; i++) {
     categoryGroups[i].addEventListener('click', function () {
       for (let j = 0; j < categoryDropdowns.length; j++) {
+        if (i == j) {
+          continue
+        }
         categoryDropdowns[j].classList.remove('active')
       }
       categoryDropdowns[i].classList.toggle('active')
