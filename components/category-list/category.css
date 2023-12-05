@@ -278,15 +278,28 @@
   fill: #e93c47;
 }
 
-
-
-.new-row {
-  width: 100%;
-  height: 50px;
-  background-color: red;
-  clear: both;
+.active.category-icon svg path{
+  fill: #fff;
+  stroke: #fff;
+  background-color: #388FF3;
 }
 
+.active.category-icon{
+  background-color: #388FF3;
+}
+
+.category-revealer path{
+  stroke: #B8BBBD;
+}
+
+.active.category-card .category-revealer{
+  transform: rotate(90deg);
+  transition: all 0.3s ease;
+}
+
+.active.category-card .category-revealer path{
+  stroke: #388FF3;
+}
 
 @media screen and (max-width: 767px) {
   .ads-wrapper__list {

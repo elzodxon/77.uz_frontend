@@ -222,13 +222,13 @@ document.addEventListener('DOMContentLoaded', function () {
                <li class="category-group" role="button" itemid="${index + 1}">
                    <div class="category-card">
                        <div class="category-icon">
-                           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <svg width="32" height="32" viewBox="0 0 32 32" fill="" xmlns="http://www.w3.org/2000/svg">
                                <g clip-path="url(#clip0_606_9837)">
                                    <path d="M26.324 24.06L21.216 22.7827L20.9213 21.6027C24.4453 21.0094 26.2586 19.9534 26.3386 19.9067C26.5279 19.796 26.6453 19.5947 26.6613 19.376C26.676 19.1573 26.5786 18.9427 26.4066 18.8053C26.3827 18.7867 24 16.8187 24 10C24 4.24931 22.6547 1.33331 20 1.33331H19.6067C18.6493 0.408 17.9307 0 16 0C13.4947 0 8 2.51869 8 10C8 16.8187 5.61731 18.7867 5.6 18.8C5.42269 18.9333 5.32269 19.1453 5.33331 19.3667C5.34531 19.5894 5.46531 19.7894 5.656 19.904C5.736 19.952 7.532 21.0133 11.0773 21.6053L10.7826 22.7826L5.67469 24.06C2.33331 24.896 0 27.8853 0 31.3333C0 31.7013 0.298687 32 0.666687 32H31.3334C31.7014 32 32.0001 31.6987 32.0001 31.3307C32 27.8853 29.6667 24.896 26.324 24.06Z" fill="white"/>
                                </g>
                                <defs>
                                    <clipPath id="clip0_606_9837">
-                                       <rect width="32" height="32" fill="white"/>
+                                       <rect width="32" height="32" fill=""/>
                                    </clipPath>
                                </defs>
                            </svg>
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                <p class="adds-amount">${category.addsAmount}</p>
                            </div>
                            <svg class="category-revealer" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                               <path d="M8 6L12 10L8 14" stroke="#B8BBBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                               <path d="M8 6L12 10L8 14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                            </svg>
                        </div>
                    </div>
@@ -262,6 +262,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const categoryGroups = document.querySelectorAll('.category-card')
   const categoryCards = document.querySelectorAll('.category-group')
   const categoryDropdowns = document.querySelectorAll('.category-menu')
+  const categoryIcons = document.querySelectorAll('.category-icon')
+  console.log(categoryIcons)
 
   for (let i = 0; i < categoryGroups.length; i++) {
     categoryGroups[i].addEventListener('click', function () {
@@ -270,8 +272,11 @@ document.addEventListener('DOMContentLoaded', function () {
           continue
         }
         categoryDropdowns[j].classList.remove('active')
+        categoryGroups[j].classList.add('active')
       }
       categoryDropdowns[i].classList.toggle('active')
+      categoryGroups[i].classList.toggle('active')
+      categoryIcons[i].classList.toggle('active')
     })
   }
 
