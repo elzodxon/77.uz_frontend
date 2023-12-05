@@ -34,40 +34,6 @@
       <!-- Body Section -->
       <main>
          <!-- MAIN SEARCH -->
-         <section class="container ">
-            <div class="search-wrapper">
-               <form class="main-search" action="">
-                  <label class="search__label" for="searchNow">
-                     <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                           d="M16.927 17.0401L20.4001 20.4001M19.2801 11.4401C19.2801 15.77 15.77 19.2801 11.4401 19.2801C7.11019 19.2801 3.6001 15.77 3.6001 11.4401C3.6001 7.11019 7.11019 3.6001 11.4401 3.6001C15.77 3.6001 19.2801 7.11019 19.2801 11.4401Z"
-                           stroke="#D5D8DB"
-                           stroke-width="2"
-                           stroke-linecap="round" />
-                     </svg>
-                     <input
-                        class="input search__input"
-                        type="text"
-                        name="searchNow"
-                        id="searchNow"
-                        placeholder="Что вы ищите?" />
-                     <button class="btn search__btn" role="">Поиск</button>
-                  </label>
-               </form>
-               <div class="m-search-suggestion" id="m-search-suggestion">
-                  <p>История поиска</p>
-                  <div class="m-search-suggestion__card">
-                     <h3 class="m-search-suggestion__title"></h3>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <div class="container"></div>
          <section class="container">
             <!-- Category  -->
             <div class="category-body">
@@ -75,7 +41,9 @@
                <p class="category-description">
                   Вы можете найти все категории, которые вам нужны от покупателя
                </p>
-               <ul class="category-list" id="category-list"></ul>
+               <ul class="category-list" id="category-list">
+                  <!-- RENDERING JSON -->
+               </ul>
             </div>
          </section>
       </main>
