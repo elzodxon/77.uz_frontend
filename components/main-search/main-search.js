@@ -14,6 +14,7 @@ blocker.addEventListener('click', () => {
   blocker.classList.remove('active')
   searchSuggestion.classList.remove('active')
 })
+// JSONDATA OF CATEGORY
 const jsonData = [
   {
     id: 25,
@@ -334,19 +335,19 @@ const mSearchSuggestionList = document.querySelector(
 searchInput.addEventListener('input', handleSearchInput)
 
 function handleSearchInput() {
-  searchInput.classList.toggle('active')
-  const searchTerm = searchInput.value.trim().toLowerCase()
-  const suggestionList = document.querySelector('.m-search-suggestion__list')
+  searchInput.classList.toggle('active');
+  const searchTerm = searchInput.value.trim().toLowerCase();
+  const suggestionList = document.querySelector('.m-search-suggestion__list');
   // Update "top-txt" value
-  const topTxt = document.querySelector('.top-txt')
-  topTxt.textContent = 'Рекомендации'
+  const topTxt = document.querySelector('.top-txt');
+  topTxt.textContent = 'Рекомендации';
   // If search input is empty
   if (searchTerm === '') {
     suggestionList.innerHTML =
-      "<li class='m-search-suggestion__item' style='background-color: #fff;cursor:default'>No history</li>"
-    topTxt.textContent = 'История поиска'
-    return
-  }
+      "<li class='m-search-suggestion__item' style='background-color: #fff;cursor:default'>No history</li>";
+    topTxt.textContent = 'История поиска';
+    return;
+  };
   // Check if there are matches in jsonData
   const matches = getMatchingValues(searchTerm)
   displaySearchResults(matches)
@@ -357,13 +358,14 @@ function getMatchingValues(searchTerm) {
   // Check for matches in jsonData
   jsonData.forEach((category) => {
     if (category.name.toLowerCase().includes(searchTerm)) {
-      matches.push(category.name)
-    }
+      matches.push(category.name);
+    };
     if (category.childs) {
       category.childs.forEach((child) => {
         if (child.name.toLowerCase().includes(searchTerm)) {
-          matches.push(child.name)
-        }
+          matches.push(child.name);
+        };
+
         if (child.childs) {
           child.childs.forEach((subChild) => {
             if (subChild.name.toLowerCase().includes(searchTerm)) {
