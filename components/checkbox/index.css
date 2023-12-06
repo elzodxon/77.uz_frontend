@@ -47,7 +47,7 @@
 .checkbox .checkbox__body {
   color: #16191D;
   font-size: 14px;
-  font-family: Inter;
+  
   font-weight: 500;
   cursor: pointer;
   line-height: 130%; /* 18.2px */

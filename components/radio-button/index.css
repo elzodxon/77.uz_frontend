@@ -12,7 +12,6 @@
 .radio-group.radio-disabled .radio-label {
   color: #16191d;
   font-size: 14px;
-  font-family: Inter;
   font-weight: 500;
 }
 .radio-group.radio-disabled .default-radio:checked {
@@ -49,7 +48,6 @@
 }
 .radio-label {
   color: var(--black);
-  font-family: Inter;
   cursor: pointer;
   font-size: 14px;
   font-style: normal;
