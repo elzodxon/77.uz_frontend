@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  margin-top: 70px;
   background-image: url('../../assets/img/BG\ \(Pattern\).svg');
 }
 .footer-info {
