@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiple Modals Toggle Example</title>
+    <link rel="stylesheet" href="components//inputs/inputs.css">
     <link rel="stylesheet" href="./components/modal/modal.css">
 </head>
 <body>
@@ -27,10 +28,10 @@
             <!-- Password -->
             <div class="form-group password-modal">
                 <label class="label modal-label" for="password">Пароль </label>
-                <div class="password-input-wrapper">
+                <div class="password-input-group">
                 <input class="input input-password" type="password" name="password" id="password" placeholder="Введите пароль"/>
-                <div class="closed-eye"></div>
-                <a href="#" id="icon-close">Забыли пароль?</a>
+                <div class="open-eye"></div>
+                <a href="#" class="forgot-password" id="icon-close">Забыли пароль?</a>
                 </div>
             </div>
             <div class="modal-footer fifth">
@@ -42,7 +43,7 @@
         </div>
         </div>
     <script>
-        
+
             function openModal(modalId) {
         const modal = document.getElementById(modalId);
         const blocker = document.getElementById('blocker');
@@ -64,8 +65,7 @@
         }
     }
 
-    </script>   
+    </script>
 
 </body>
 </html>
-

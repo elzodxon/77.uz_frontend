@@ -21,7 +21,6 @@
             rel="stylesheet"
             href="../../components/bread-crumb/bread-crumb.css"
     />
-    <link rel="stylesheet" href="../../assets/css/style.css"/>
     <link rel="stylesheet" href="../../components/header/header.css"/>
     <link rel="stylesheet" href="../../components/inputs/inputs.css"/>
     <link rel="stylesheet" href="../../components/buttons/buttons.css"/>
@@ -32,6 +31,7 @@
     <link rel="stylesheet" href="../../components/select/select.css"/>
     <link rel="stylesheet" href="../../components/prev-page-header/index.css"/>
     <link rel="stylesheet" href="../../components/modal/modal.css"/>
+    <link rel="stylesheet" href="../../assets/css/style.css"/>
 
     <link
             rel="stylesheet"
@@ -276,30 +276,30 @@
                         </div>
 
                         <div class="form-inner">
-                            <div class="form-group">
-                                <label class="label" for="phone-number"
-                                >Телефон номер
-                                </label>
-                                <div class="p-input-group">
-                                    <span class="country-code">+998</span>
-                                    <input
-                                            class="input create-input input_tel"
-                                            type="tel"
-                                            name="phone-number"
-                                            id="phone-number"
-                                            inputmode="numeric"
-                                            placeholder="(__) ___-__-__"
-                                    />
-                                </div>
-                            </div>
+                                      <!-- Phone number -->
+          <div class="form-group">
+            <label class="label" for="phone-number">Телефон номер </label>
+            <div class="phone-input-group">
+              <span class="country-code">+998</span>
+              <input
+                class="input input_tel"
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                required
+                inputmode="numeric"
+                placeholder="(__) ___-__-__"
+              />
+            </div>
+          </div>
 
                             <div class="form-group">
-                                <label class="label" for="fullName">Адресс</label>
+                                <label class="label" for="address">Адресс</label>
                                 <input
                                         class="input create-input input_text"
                                         type="text"
                                         name="name"
-                                        id="fullName"
+                                        id="address"
                                         placeholder="8897+PMP, Almachi Street, Тоshkent, Узбекистан"
                                 />
                             </div>
@@ -335,14 +335,14 @@
                             />
                         </div>
                         <div class="form-group">
-                            <label class="label" for="product-name"
-                            >Название продукта
+                            <label class="label" for="textarea"
+                            >Описание
                             </label>
                             <textarea
                                     class="textarea create-input textarea__product-name"
                                     type="text"
-                                    name="product-name"
-                                    id="product-name"
+                                    name="textarea"
+                                    id="textarea"
                                     placeholder="Введите описание"
                             ></textarea>
                         </div>
@@ -355,9 +355,9 @@
                         <!-- Select Wrapper -->
                         <div class="form-group">
                             <div class="select">
-                                <label class="select-label" for="">Адресс</label>
+                                <label class="select-label" for="select-address">Адресс</label>
 
-                                <div class="select-menu" id="">
+                                <div class="select-menu" id="select-address">
                                     <div class="select-menu__btn">
                                         <span class="select-menu__context">Выберите свой адрес</span>
 
@@ -406,12 +406,12 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="label" for="product-name">Цена </label>
+                            <label class="label" for="price">Цена </label>
                             <input
                                     class="input create-input input__product-name"
                                     type="number"
-                                    name="product-name"
-                                    id="product-name"
+                                    name="price"
+                                    id="price"
                                     placeholder="Введите название продукта"
                             />
                         </div>
@@ -451,7 +451,7 @@
                     <span>BOX</span>
 
                     Даю свое согласие
-                    <a class="terms-link" href="">правилами пользования</a> и
+                    <a href="../static-page/index.html" class="terms-link" href="">правилами пользования</a> и
                     обработки моих данных
                 </p>
                 <div class="agreement-terms__buttons">
@@ -541,7 +541,7 @@
                 <!-- Password -->
                 <div class="form-group password-modal">
                     <label class="label modal-label" for="password">Пароль </label>
-                    <div class="password-input-wrapper">
+                    <div class="password-input-group">
                         <input
                                 class="input input-password"
                                 type="password"
@@ -549,8 +549,8 @@
                                 id="password"
                                 placeholder="Введите пароль"
                         />
-                        <div class="closed-eye"></div>
-                        <a href="#" id="icon-close">Забыли пароль?</a>
+                        <div class="open-eye"></div>
+                        <a href="#" class="forgot-password" id="icon-close">Забыли пароль?</a>
                     </div>
                 </div>
                 <div class="modal-footer fifth">
@@ -687,7 +687,7 @@
                     <label class="label modal-label" for="phone-number"
                     >Телефон номер
                     </label>
-                    <div class="p-input-group">
+                    <div class="phone-input-group">
                         <span class="country-code">+998</span>
                         <input
                                 class="input input_tel"
@@ -785,7 +785,7 @@
 
 <!-- ================== Javascript Links ================== -->
 <script src="../../components/image-uploader/image-uploader.js"></script>
-<script src="../../components/inputs/inputs.js"></script>
+<script src="/components/inputs/inputs.js"></script>
 <script src="../../components/header/header.js"></script>
 <script src="../../components/footer/footer.js"></script>
 <script src="../../js/modal.js"></script>

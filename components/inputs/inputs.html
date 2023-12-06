@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ================== Google Fonts links ================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ================== Css links ================== -->
+
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="./inputs.css" />
+
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- ================== Google Fonts links ================== -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+        <!-- ================== Css links ================== -->
+
+        <link rel="stylesheet" href="../../assets/css/normalize.css" />
+        <link rel="stylesheet" href="../../assets/css/variables.css" />
+        <link rel="stylesheet" href="/components/inputs/inputs.css" />
+
+        <!-- ================== Website Title ================== -->
+        <title>Inputs Component</title>
+      </head>
+
+      <body>
+        <form action="" class="form">
+          <!-- Name -->
+          <div class="form-group">
+            <label class="label" for="fullName">Ф.И.О. </label>
+            <input
+              class="input input_text"
+              type="text"
+              name="name"
+              id="fullName"
+              placeholder="Введите вашу Ф.И.О."
+            />
+          </div>
+          <!-- Product name -->
+          <div class="form-group">
+            <label class="label" for="product-name">Название продукта </label>
+            <input
+              class="input input__product-name"
+              type="text"
+              name="product-name"
+              id="product-name"
+              placeholder="Введите название продукта"
+            />
+          </div>
+          <!-- Log-in -->
+          <div class="form-group">
+            <label class="label" for="log-in">Логин </label>
+            <input
+              class="input input__login"
+              type="text"
+              name="log-in"
+              id="log-in"
+              placeholder="Введите логин"
+            />
+          </div>
+          <!-- Password -->
+          <div class="form-group">
+            <label class="label" for="password">Пароль </label>
+            <div class="password-input-group">
+              <input
+                class="input input-password"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Введите пароль"
+              />
+              <div class="open-eye"></div>
+              <a href="#" class="forgot-password">Забыли пароль?</a>
+            </div>
+          </div>
+          <!-- Phone number -->
+          <div class="form-group">
+            <label class="label" for="phone-number">Телефон номер </label>
+            <div class="phone-input-group">
+              <span class="country-code">+998</span>
+              <input
+                class="input input_tel"
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                required
+                inputmode="numeric"
+                placeholder="(__) ___-__-__"
+              />
+            </div>
+          </div>
+        </form>
+        <!-- ================== Javascript Links
+    ================== -->
+        <script src="inputs.js"></script>
+      </body>
+    </html>
+  </head>
+</html>

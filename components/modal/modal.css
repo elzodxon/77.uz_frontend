@@ -1,4 +1,3 @@
-@import '../inputs/inputs.css';
 @import '../buttons/buttons.css';
 
 .modal {
@@ -123,7 +122,6 @@
 #icon-close {
   color: var(--Main-blue, #388ff3);
   text-align: right;
-  font-family: Inter;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
