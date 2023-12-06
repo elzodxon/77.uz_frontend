@@ -1,5 +1,5 @@
 @import './components/buttons/buttons.css';
-@import './components/bread-crumb/bread-crumb.css';
+@import './components/breadCrumb/breadCrumb.css';
 @import './components/footer/footer.css';
 
 body {
