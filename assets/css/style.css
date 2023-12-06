@@ -27,14 +27,6 @@ body {
   flex: 1;
 }
 
-.country-code {
-  font-size: 14px;
-}
-
-.category-section {
-  padding-bottom: 36px;
-  background-color: white;
-}
 
 /* Utility classes */
 .wrapper {

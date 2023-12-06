@@ -37,8 +37,10 @@
     <main>
       <!-- MAIN SEARCH -->
       <section class="container">
+
         <div class="search-wrapper">
-          <form class="main-search" action="">
+          <!-- SEARCH FORM -->
+          <form class="main-search-form" >
             <label class="search__label" for="searchNow">
               <svg
                 width="24"
@@ -64,13 +66,14 @@
               <button class="btn main-search-btn" role="">Поиск</button>
             </label>
           </form>
-          <div class="m-search-suggestion" id="m-search-suggestion">
-            <p class="top-txt">История поиска</p>
-            <ul class="m-search-suggestion__list"></ul>
+          <div class="search-suggestion" id="search-suggestion">
+            <p class="top-txt"></p>
+            <ul class="search-suggestion__list"></ul>
           </div>
         </div>
       </section>
     </main>
+    <script src="/assets/data/category.js"></script>
     <script src="main-search.js"></script>
   </body>
 </html>

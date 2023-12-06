@@ -27,10 +27,10 @@
   text-shadow: none;
 }
 
+  margin: 0px;
 html,
 body {
   overflow-y: scroll;
-  margin: 0px;
   padding: 0px;
   font-size: 16px;
   line-height: 20px;

@@ -46,6 +46,7 @@
       rel="stylesheet"
       href="../../components/bread-crumb/bread-crumb.css"
     />
+    <link rel="stylesheet" href="/components/inputs/inputs.css">
     <link rel="stylesheet" href="./static-page.css" />
   </head>
 
@@ -91,7 +92,7 @@
             <!-- Password -->
             <div class="form-group password-modal">
               <label class="label modal-label" for="password">Пароль </label>
-              <div class="password-input-wrapper">
+              <div class="password-input-group">
                 <input
                   class="input input-password"
                   type="password"
@@ -100,7 +101,7 @@
                   placeholder="Введите пароль"
                 />
                 <div class="closed-eye"></div>
-                <a href="#" id="icon-close">Забыли пароль?</a>
+                <a href="#" class="forgot-password" id="icon-close">Забыли пароль?</a>
               </div>
             </div>
             <div class="modal-footer fifth">
@@ -232,24 +233,22 @@
               </div>
             </div>
 
-            <!-- Phone number -->
-            <div class="form-group">
-              <label class="label modal-label" for="phone-number"
-                >Телефон номер
-              </label>
-              <div class="p-input-group">
-                <span class="country-code">+998</span>
-                <input
-                  class="input input_tel"
-                  type="tel"
-                  name="phone-number"
-                  id="phone-number"
-                  required
-                  inputmode="numeric"
-                  placeholder="  (__) ___-__-__"
-                />
-              </div>
+                     <!-- Phone number -->
+          <div class="form-group">
+            <label class="label" for="phone-number">Телефон номер </label>
+            <div class="phone-input-group">
+              <span class="country-code">+998</span>
+              <input
+                class="input input_tel"
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                required
+                inputmode="numeric"
+                placeholder="(__) ___-__-__"
+              />
             </div>
+          </div>
           </form>
           <div class="modal-footer seven">
             <button id="continue-registration" class="btn third-btn">
@@ -693,6 +692,7 @@
     </footer>
 
     <!-- Custom Js Included -->
+    <script src="/components/inputs/inputs.js"></script>
     <script src="../../components/header/header.js"></script>
     <script src="../../components/bread-crumb/bread-crumb.js"></script>
     <script src="../../components/footer/footer.js"></script>
