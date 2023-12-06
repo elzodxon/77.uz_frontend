@@ -22,9 +22,6 @@
   <link rel="stylesheet" href="../../components/radio-button/index.css" />
   <link rel="stylesheet" href="../../components/prev-page-header/index.css" />
   <link rel="stylesheet" href="../../components/select/select.css">
-  <link rel="stylesheet" href="https://pagination.js.org/dist/2.1.4/pagination.css"/>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://pagination.js.org/dist/2.1.4/pagination.min.js"></script>
   <!-- ================== Website Title ================== -->
   <title>77.uz | Product List</title>
 </head>
@@ -417,17 +414,21 @@
               </div>
             </div>
           </div>
-          <!-- Product grid view -->
-          <div id="grid" class="view-wrap grid-view" style="display: block">
-            <div id="grid-view__wrapper" class="grid-view__row">
-            
+            <!-- Product grid view -->
+            <div class="view-wrap grid-view" style="display: block">
+              <div id="grid-view__wrapper" class="grid-view__row"></div>
             </div>
-          </div>
-          <!-- Product list view -->
-          <div  class="view-wrap list-view" style="display: none">
-            <div id="list"  class="list-view__row">
-              <div id="list-view__wrapper" class="list-view__wrapper"></div>
+            <!-- Product list view -->
+            <div class="view-wrap list-view" style="display: none">
+              <div class="list-view__row">
+                <div id="list-view__wrapper" class="list-view__wrapper"></div>
+              </div>
             </div>
+
+            <div class="pagination">
+              <button  id="prev" class="pagination__button" >'<'</button>
+              <div id="pages" class="pagination-pages__wrapper" ></div>
+              <button id="next" class="pagination__button" >></button>
           </div>
         
         </div>
@@ -544,7 +545,7 @@
   <script src="../../components/header/header.js"></script>
   <script src="../../components/checkbox/checkbox.js"></script>
   <script src="../../components/select/select.js"></script>
-  <script src="./ProductList.js"></script>
+  <script type="module" src="./ProductList.js"></script>
 </body>
 
 </html>

@@ -1,28 +1,28 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
+import { listViewStyle, gridViewStyle } from '../../utils/cardstyle.js'
+import { fetchData } from '../../service/productList.service.js'
 const switchers = document.querySelectorAll(
   '.product-list__view-icons .product-list__view-icon',
 )
-const view_wraps = document.querySelectorAll('.view-wrap')
-const list_view = document.querySelector('.list-view')
-const grid_view = document.querySelector('.grid-view')
+const viewWraps = document.querySelectorAll('.view-wrap')
+const listView = document.querySelector('.list-view')
+const gridView = document.querySelector('.grid-view')
+const listWrapper = document.getElementById('list-view__wrapper')
+const gridWrapper = document.getElementById('grid-view__wrapper')
 const cardIcons = document.getElementsByClassName('icon')
+const pagesContainer = document.getElementById('pages')
+const prevButton = document.getElementById('prev')
+const nextButton = document.getElementById('next')
+const postListContainer = document.getElementById('post-list')
+let totalProducts = 0
 let productList = []
+const perpage = 5
+let currentPage = 1
+const pagesToShow = 3 // Number of pages to show at a time
+let listStyle = false
+let gridStyle = false
 
 // ------------------- FETCH Products ----------------------
 document.addEventListener('DOMContentLoaded', function () {
-  // Fetch the JSON file
-  fetch('./ProductList.json')
-    .then((response) => response.json())
-    .then((data) => {
-      // Once the data is loaded, call a function to render it
-      productList = data.productList
-      productGetList(productList)
-
-      return productList
-    })
-    .catch((error) => console.error('Error fetching data:', error))
-
   document.addEventListener('click', function (event) {
     if (event.target.classList.contains('icon')) {
       handleCardIconClick(event)
@@ -37,163 +37,101 @@ switchers.forEach(function (switcher) {
     switchers.forEach(function (switcher) {
       switcher.classList.remove('active')
     })
-
     switcher.classList.add('active')
-
     const view = switcher.getAttribute('data-view')
 
     // Todo: remove unnecessary loop
-    view_wraps.forEach(function (view) {
+    viewWraps.forEach(function (view) {
       view.style.display = 'none'
     })
 
     // Todo: render only one view
     if (view == 'list-view') {
-      list_view.style.display = 'block'
+      listView.style.display = 'block'
+      listStyle = true
     } else {
-      grid_view.style.display = 'block'
+      gridView.style.display = 'block'
+      gridStyle = true
     }
   })
 })
 
-// Todo: Refactor this function and rendering function. PERFORMANCE!!!!
 // ------------------- Get Product Func --------------------
-function productGetList(productList) {
-  $('#grid').pagination({
-    dataSource: productList,
-    pageSize: 6,
-
-    callback: function (data, pagination) {
-      let wrapper = $('#grid .grid-view__row').empty()
-      $.each(data, function (i, product) {
-        $('#grid .grid-view__row').append(`
-        <div class="grid-view__card" >
-        <div class="grid-view__card-symbols">
-        <div  class="grid-view__card-icon">
-        <iconify-icon id="${
-          product.id
-        }" class="icon" icon="tabler:heart-filled"></iconify-icon>
-        </div>
-        <img class="grid-view__card-image card-image" src="${
-          product.photo
-        }" alt="Product photo" />
-      </div>
-      <div class="grid-view__card-content">
-        <span class="badge card-address">${product.address.district.name}</span>
-        <a href="#" class="grid-view__card-title card-title">${product.name}</a>
-        <p class="grid-view__card-date card-date">${dateFormatter(
-          product.published_at,
-        )}</p>
-        <a class="grid-view__card-number card-phoneNum" href="tel:${
-          product.seller.phone_number
-        }">${formatPhoneNumber(product.seller.phone_number)}</a>
-        <p class="grid-view__card-price card-price"> ${numbersWithSpace(
-          product.price,
-        )}<span> UZS </span></p>
-      </div>
-        </div>
-       `)
-      })
-    },
+function getProductList() {
+  fetchData(perpage, currentPage).then((data) => {
+    console.log(data)
+    totalProducts = data.count
+    productList = data.results
   })
-  $('#list').pagination({
-    dataSource: productList,
-    pageSize: 6,
-
-    callback: function (data, pagination) {
-      let wrapper = $('#list .list-view__wrapper').empty()
-      $.each(data, function (i, product) {
-        $('#list .list-view__wrapper').append(`
-        <div class="list-view__card" >
-        <div class="list-view__card-symbols">
-           
-        <img class="list-view__card-image card-image" src="${
-          product.photo
-        }" alt="Product photo" />
-      </div>
-      <div class="list-view__card-content">
-        <div class="list-view__top-content">
-          <a href="#" class="list-view__card-title card-title">
-         ${product.name}
-          </a>
-          <span class="badge card-address"> ${
-            product.address.district.name
-          }</span>
-        </div>
-        <div class="list-view__bottom-content">
-          <p class="list-view__card-price card-price">
-         ${product.price}<span> UZS </span>
-          </p>
-          <div>
-            <p class="list-view__card-date card-date"> ${dateFormatter(
-              product.published_at,
-            )}</p>
-            <a class="list-view__card-number card-phoneNum" href="tel:${
-              product.seller.phone_number
-            }">${product.seller.phone_number}</a>
-          </div>
-        </div>
-      </div>
-        </div>
-        
-       `)
-      })
-    },
+  productList.forEach((product) => {
+    console.log(product)
+    
+    if (listView) {
+      debugger
+      const listCard = listViewStyle(product)
+      listWrapper.appendChild(listCard)
+    }
+    if (gridView) {
+      const gridCard = gridViewStyle(product)
+      gridWrapper.appendChild(gridCard)
+    }
   })
-
-
+  updatePagination()
 }
 
-// ------------------- Date formatter Func -----------------
-function dateFormatter(date) {
-  const dateObject = new Date(date)
+function updatePagination() {
+  const totalPosts = totalProducts
+  const totalPages = Math.ceil(totalPosts / perpage)
 
-  // Extract the individual components of the date
-  const day = dateObject.getDate()
-  const month = dateObject.getMonth() + 1 // Months are zero-based, so add 1
-  const year = dateObject.getFullYear()
+  pagesContainer.innerHTML = ''
 
-  // Format the date components as 'DD-MM-YYYY'
-  const formattedDate = `${day < 10 ? '0' : ''}${day}-${
-    month < 10 ? '0' : ''
-  }${month}-${year}`
+  // Calculate the range of pages to show
+  const startPage = Math.max(currentPage - Math.floor(pagesToShow / 2), 1)
+  const endPage = Math.min(startPage + pagesToShow - 1, totalPages)
 
-  return formattedDate
+  // Create buttons for the range of pages
+  for (let i = startPage; i <= endPage; i++) {
+    const pageButton = document.createElement('button')
+    pageButton.classList.add('pagination__button')
+    pageButton.textContent = i
+    pageButton.addEventListener('click', () => {
+      currentPage = i
+
+      getProductList()
+    })
+    if (i === currentPage) {
+      pageButton.classList.add('active')
+    }
+    pagesContainer.appendChild(pageButton)
+  }
+
+  prevButton.disabled = currentPage === 1
+  nextButton.disabled = currentPage === totalPages
 }
 
-// Todo: Refactor Naming -> formatMoney maybe?
-// ------------------- Numbers with space Func -------------
-function numbersWithSpace(number) {
-  const formattedNum = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+prevButton.addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage--
+    getProductList()
+  }
+})
 
-  return formattedNum
-}
+nextButton.addEventListener('click', () => {
+  const totalPosts = totalProducts
+  const totalPages = Math.ceil(totalPosts / perpage)
 
-// Todo: Refactor this function
-// ------------------- Phone num Formatter Func ------------
-function formatPhoneNumber(phoneNumber) {
-  // Remove non-digit characters from the phone number
-  const cleanedNumber = phoneNumber.replace(/\D/g, '')
-
-  // Apply the desired formatting
-  const formattedNumber = `+${cleanedNumber.slice(0, 3)}-${cleanedNumber.slice(
-    3,
-    5,
-  )}-${cleanedNumber.slice(5, 8)}-${cleanedNumber.slice(
-    8,
-    10,
-  )}-${cleanedNumber.slice(10)}`
-
-  return formattedNumber
-}
+  if (currentPage < totalPages) {
+    currentPage++
+    getProductList()
+  }
+})
+getProductList()
 
 // ------------------- Find Product By Icon ID -------------
 function findProductByIconId(icon) {
   const foundProduct = productList.find((product) => product.id == icon.id)
 
   return foundProduct
-
-  // return product found by icon id
 }
 
 // ------------------- IsLiked or Not Func -----------------
