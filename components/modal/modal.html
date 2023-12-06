@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../buttons/buttons.css" />
+    <link rel="stylesheet" href="./modal.css" />
+
+    <title>Modal Component</title>
+  </head>
+  <body>
+    <div class="flex-center" style="height: 100vh">
+      <button class="btn" id="modal">Open Modal</button>
+
+      <div class="modal">
+        <div class="modal-header">
+          <button class="close-btn">
+            <img
+              class="close-img"
+              src="../../assets/img/modal-img/close-icon.svg"
+              alt="Close icon"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <div class="modal-body">
+          <img
+            class="modal-body__img"
+            src="../../assets/img/Trash.svg"
+            alt="trash"
+          />
+          <h2 class="modal-body__title">Удалить объявление</h2>
+          <p class="modal-body__subtitle">
+            Вы точно хотите удалить объявление, все ваши данные о продукте будут
+            потеряны
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary">Отменить</button>
+          <button class="btn btn-danger">Удалить</button>
+        </div>
+      </div>
+
+      <div class="overlay"></div>
+    </div>
+
+    <script src="./modal.js"></script>
+  </body>
+</html>
