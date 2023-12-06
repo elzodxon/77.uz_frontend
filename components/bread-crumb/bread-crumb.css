@@ -4,15 +4,20 @@
   justify-content: flex-start;
   gap: 16px;
 }
-.bread-crumb__circle {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #d5d8db;
-}
+
 .bread-crumb__item {
   position: relative;
 }
+
+.bread-crumb__link {
+  color: var(--black-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+  line-height: 130%; /* 18.2px */
+}
+
 .bread-crumb__item:not(:first-child)::before {
   content: '';
   position: absolute;
@@ -25,18 +30,11 @@
   transform: translate(50%, -50%);
   background-color: #b8bbbd;
 }
+
 .bread-crumb__item.item-active::before {
   background-color: var(--primary-color);
 }
 
-.bread-crumb__link {
-  color: var(--black-color);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  transition: 0.2s ease-in-out;
-  line-height: 130%; /* 18.2px */
-}
 .bread-crumb__link.active {
   color: #b8bbbd;
   pointer-events: none;
