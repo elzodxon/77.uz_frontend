@@ -12,6 +12,7 @@
 body {
   display: flex;
   flex-direction: column;
+  background: #f0f3f7;
 }
 
 .main-modal {
@@ -26,7 +27,6 @@ body {
   width: 100%;
   flex: 1;
 }
-
 
 /* Utility classes */
 .wrapper {
