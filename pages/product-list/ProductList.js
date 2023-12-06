@@ -30,12 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })
 
-fetchData(perpage, currentPage).then((data) => {
-  totalProducts = data.count
-  productList = data.results
-  getProductList(data.results)
-})
-
 // Todo: Refactor this function
 // ------------------- Style switcher ----------------------
 switchers.forEach(function (switcher) {
@@ -63,11 +57,17 @@ switchers.forEach(function (switcher) {
 })
 
 // ------------------- Get Product Func --------------------
-function getProductList(productList) {
+function getProductList() {
+  fetchData(perpage, currentPage).then((data) => {
+    console.log(data)
+    totalProducts = data.count
+    productList = data.results
+  })
   productList.forEach((product) => {
     console.log(product)
+    
     if (listView) {
-      // debugger
+      debugger
       const listCard = listViewStyle(product)
       listWrapper.appendChild(listCard)
     }
@@ -75,64 +75,62 @@ function getProductList(productList) {
       const gridCard = gridViewStyle(product)
       gridWrapper.appendChild(gridCard)
     }
-
   })
-  updatePagination(productList)
-
+  updatePagination()
 }
 
-function updatePagination(productList) {
+function updatePagination() {
   const totalPosts = totalProducts
-    const totalPages = Math.ceil(totalPosts / perpage)
+  const totalPages = Math.ceil(totalPosts / perpage)
 
-    pagesContainer.innerHTML = ''
+  pagesContainer.innerHTML = ''
 
-    // Calculate the range of pages to show
-    const startPage = Math.max(currentPage - Math.floor(pagesToShow / 2), 1)
-    const endPage = Math.min(startPage + pagesToShow - 1, totalPages)
+  // Calculate the range of pages to show
+  const startPage = Math.max(currentPage - Math.floor(pagesToShow / 2), 1)
+  const endPage = Math.min(startPage + pagesToShow - 1, totalPages)
 
-    // Create buttons for the range of pages
-    for (let i = startPage; i <= endPage; i++) {
-      const pageButton = document.createElement('button')
-      pageButton.classList.add('pagination__button')
-      pageButton.textContent = i
-      pageButton.addEventListener('click', () => {
-        currentPage = i
+  // Create buttons for the range of pages
+  for (let i = startPage; i <= endPage; i++) {
+    const pageButton = document.createElement('button')
+    pageButton.classList.add('pagination__button')
+    pageButton.textContent = i
+    pageButton.addEventListener('click', () => {
+      currentPage = i
 
-        getProductList(productList)
-      })
-      if (i === currentPage) {
-        pageButton.classList.add('active')
-      }
-      pagesContainer.appendChild(pageButton)
+      getProductList()
+    })
+    if (i === currentPage) {
+      pageButton.classList.add('active')
     }
+    pagesContainer.appendChild(pageButton)
+  }
 
-    prevButton.disabled = currentPage === 1
-    nextButton.disabled = currentPage === totalPages
+  prevButton.disabled = currentPage === 1
+  nextButton.disabled = currentPage === totalPages
 }
 
 prevButton.addEventListener('click', () => {
-if (currentPage > 1) {
-  currentPage--
-  // getProductList()
-}
+  if (currentPage > 1) {
+    currentPage--
+    getProductList()
+  }
 })
 
 nextButton.addEventListener('click', () => {
+  const totalPosts = totalProducts
+  const totalPages = Math.ceil(totalPosts / perpage)
 
-const totalPosts = totalProducts
-    const totalPages = Math.ceil(totalPosts / perpage)
-
-    if (currentPage < totalPages) {
-      currentPage++
-      // getProductList()
-    }
+  if (currentPage < totalPages) {
+    currentPage++
+    getProductList()
+  }
 })
+getProductList()
 
 // ------------------- Find Product By Icon ID -------------
 function findProductByIconId(icon) {
   const foundProduct = productList.find((product) => product.id == icon.id)
-  
+
   return foundProduct
 }
 
