@@ -15,12 +15,16 @@
   font-weight: bold;
 }
 
-
 .back-link {
   display: none;
   width: 32px;
   height: 32px;
 }
+
+.btn-product__call a {
+  color: #fff;
+}
+
 @media only screen and (max-width: 480px) {
   .bread-crumb {
     display: flex !important;
@@ -39,7 +43,7 @@
     font-size: 16px;
   }
 
-  .btn-product__single {
+  .btn-product__call {
     width: 100%;
   }
 
