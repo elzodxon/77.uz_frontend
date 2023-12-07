@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>77.uz | Product Single</title>
+    <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg" />
+
+    <link rel="stylesheet" href="./productSingle.css" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/slider/slider.css" />
+    <link rel="stylesheet" href="../../components/badge/badge.css" />
+    <link rel="stylesheet" href="../../components/buttons/buttons.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/languageSwitcher/languageSwitcher.css">
+    <link
+      rel="stylesheet"
+      href="../../components/productInfo/productInfo.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/addressInfo/addressInfo.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/profileInfo/profileInfo.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/breadCrumb/breadCrumb.css"
+    />
+
+    <!-- Icon links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <!-- Left navigation bar -->
+          <ul class="navbar-list">
+            <li id="language-switcher" class="navbar-list__item">
+              <button class="language-button text-sm-subtitle">
+                <img
+                  width="20"
+                  height="20"
+                  src="https://77.uz/images/flag/ru.svg"
+                  alt=""
+                />
+                <span>Русский</span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.8 9.5999L12 14.3999L7.19999 9.5999"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="language-content">
+                <ul class="language-content__list">
+                  <li class="language-content__item active">
+                    <img
+                      width="20"
+                      height="20"
+                      src="https://77.uz/images/flag/ru.svg"
+                      alt=""
+                    />
+                    <span>RU</span>
+                  </li>
+
+                  <li class="language-content__item">
+                    <img
+                      width="20"
+                      height="20"
+                      src="https://77.uz/images/flag/uz.svg"
+                      alt=""
+                    />
+                    <span>UZ</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="navbar-list__item phone-wrapper">
+              <a
+                id="phone-number"
+                href="tel:+998885005000"
+                class="navbar-list__link"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M17.2197 15.6425C17.2197 15.6425 16.2541 16.5909 16.0175 16.8689C15.6321 17.2802 15.1779 17.4745 14.5825 17.4745C14.5253 17.4745 14.4642 17.4745 14.407 17.4706C13.2735 17.3983 12.2202 16.9565 11.4302 16.5794C9.27009 15.5359 7.37333 14.0543 5.79715 12.1767C4.49576 10.6113 3.62561 9.16405 3.04933 7.61014C2.69441 6.66179 2.56465 5.92292 2.6219 5.22594C2.66006 4.78034 2.8318 4.4109 3.14856 4.09479L4.44996 2.79605C4.63696 2.62085 4.83542 2.52563 5.03005 2.52563C5.27049 2.52563 5.46513 2.67036 5.58725 2.79224C5.59107 2.79605 5.59488 2.79986 5.5987 2.80366C5.8315 3.02076 6.05285 3.24546 6.28565 3.48541C6.40396 3.60728 6.52609 3.72916 6.64821 3.85484L7.6901 4.89459C8.09464 5.29831 8.09464 5.67155 7.6901 6.07527C7.57942 6.18572 7.47256 6.29617 7.36188 6.40281C7.0413 6.73035 7.29314 6.47903 6.96111 6.7761C6.95348 6.78372 6.94584 6.78753 6.94203 6.79514C6.61382 7.12268 6.67488 7.44261 6.74357 7.6597C6.74739 7.67113 6.75121 7.68255 6.75502 7.69398C7.02599 8.34906 7.40763 8.96605 7.98772 9.70112L7.99154 9.70493C9.04487 10.9999 10.1554 12.0091 11.3805 12.7823C11.537 12.8813 11.6973 12.9613 11.8499 13.0375C11.9873 13.106 12.1171 13.1708 12.2278 13.2393C12.243 13.2469 12.2583 13.2584 12.2736 13.266C12.4033 13.3307 12.5254 13.3612 12.6514 13.3612C12.9681 13.3612 13.1666 13.1632 13.2315 13.0984L13.9795 12.3519C14.1093 12.2224 14.3154 12.0662 14.5558 12.0662C14.7924 12.0662 14.9871 12.2148 15.1054 12.3442C15.1092 12.3481 15.1092 12.3481 15.113 12.3519L17.2159 14.4504C17.609 14.8389 17.2197 15.6425 17.2197 15.6425Z"
+                    stroke="#B8BBBD"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="phone-number text-sm-subtitle">
+                  +998 88 500 50 00
+                </span>
+              </a>
+            </li>
+          </ul>
+          <!-- Header Logo -->
+          <a href="/" class="header-logo">
+            <img src="../../assets/img/logo.svg" alt="" />
+          </a>
+          <!-- Right navigation bar -->
+          <ul class="navbar-list">
+            <li class="navbar-list__item">
+              <a
+                id="favorite"
+                href="/"
+                class="navbar-list__link text-sm-subtitle"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.2036 14.2826C20.596 13.8939 20.5991 13.2608 20.2105 12.8684C19.8218 12.476 19.1887 12.4729 18.7963 12.8616L20.2036 14.2826ZM12 21.0001L11.2963 21.7106C11.686 22.0966 12.3139 22.0966 12.7036 21.7106L12 21.0001ZM5.20364 12.8616C4.81124 12.4729 4.17808 12.476 3.78945 12.8684C3.40081 13.2608 3.40386 13.8939 3.79627 14.2826L5.20364 12.8616ZM3.80255 14.2888C4.19837 14.6739 4.83147 14.6653 5.21664 14.2695C5.6018 13.8737 5.59317 13.2406 5.19735 12.8554L3.80255 14.2888ZM12 7.00607L11.1974 7.60259C11.3854 7.85565 11.6819 8.00519 11.9972 8.00607C12.3125 8.00694 12.6097 7.85906 12.7992 7.60705L12 7.00607ZM18.7992 12.8646C18.4052 13.2517 18.3995 13.8848 18.7865 14.2788C19.1735 14.6728 19.8067 14.6785 20.2007 14.2915L18.7992 12.8646ZM18.7963 12.8616L11.2963 20.2896L12.7036 21.7106L20.2036 14.2826L18.7963 12.8616ZM12.7036 20.2896L5.20364 12.8616L3.79627 14.2826L11.2963 21.7106L12.7036 20.2896ZM5.19735 12.8554C4.11839 11.8055 3.72034 10.2386 4.16734 8.80102L2.25753 8.20719C1.58703 10.3636 2.18411 12.7139 3.80255 14.2888L5.19735 12.8554ZM4.16734 8.80102C4.61434 7.36341 5.83068 6.29855 7.31476 6.04555L6.97867 4.07399C4.75254 4.45349 2.92803 6.05078 2.25753 8.20719L4.16734 8.80102ZM7.31476 6.04555C8.79885 5.79255 10.2993 6.39428 11.1974 7.60259L12.8026 6.40955C11.4555 4.59709 9.2048 3.6945 6.97867 4.07399L7.31476 6.04555ZM12.7992 7.60705C13.701 6.40768 15.1983 5.81394 16.677 6.0693L17.0173 4.09847C14.7993 3.71543 12.5534 4.60604 11.2007 6.40509L12.7992 7.60705ZM16.677 6.0693C18.1557 6.32466 19.3671 7.38616 19.8144 8.81853L21.7235 8.22231C21.0525 6.07377 19.2354 4.48152 17.0173 4.09847L16.677 6.0693ZM19.8144 8.81853C20.2618 10.2509 19.8698 11.8131 18.7992 12.8646L20.2007 14.2915C21.8065 12.7142 22.3945 10.3709 21.7235 8.22231L19.8144 8.81853Z"
+                    fill="#388FF3"
+                  />
+                </svg>
+                <span class="favorite-title"> Избранные </span>
+              </a>
+            </li>
+            <li class="navbar-list__item divider"></li>
+            <li class="navbar-list__item">
+              <button
+                href="/"
+                class="navbar-list__link login-button text-sm-subtitle"
+              >
+                <span class="login-title">
+                  <span class="login-text">Войти </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.2059 13.5V15.25C12.2059 15.7141 12.02 16.1592 11.689 16.4874C11.3581 16.8156 10.9092 17 10.4412 17H4.26471C3.79668 17 3.34782 16.8156 3.01687 16.4874C2.68593 16.1592 2.5 15.7141 2.5 15.25L2.5 4.75C2.5 4.28587 2.68593 3.84075 3.01687 3.51256C3.34782 3.18438 3.79668 3 4.26471 3L10.4412 3C10.9092 3 11.3581 3.18437 11.689 3.51256C12.02 3.84075 12.2059 4.28587 12.2059 4.75V6.5M17.5001 10.0001L6.07849 10.0001M6.07849 10.0001L8.72555 12.6251M6.07849 10.0001L8.72555 7.37508"
+                      stroke="#16191D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+
+                <span class="user-info">
+                  <img src="../../assets/img/user.svg" alt="" />
+                  <span class="user-name">Шохрух Шавкиев</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 6L12 10L8 14"
+                      stroke="#8E9297"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="wrapper column">
+        <a class="back-link" href="/"
+          ><img
+            class="arrow-left-icon"
+            src="../../assets/img/profile/arrow-left-icon.svg"
+            alt="arrow-left-icon"
+            width="34"
+            height="34"
+        /></a>
+        <ul class="bread-crumb">
+          <li class="bread-crumb__item">
+            <a href="/" class="bread-crumb__link">Главная</a>
+          </li>
+          <li class="bread-crumb__item">
+            <a href="/" class="bread-crumb__link">Электроника</a>
+          </li>
+          <li class="bread-crumb__item item-active">
+            <a href="/" class="bread-crumb__link">Фены</a>
+          </li>
+          <li class="bread-crumb__item">
+            <a href="/" class="bread-crumb__link active">457 147</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex py-8">
+        <div class="column main">
+          <div class="card-wrapper">
+            <div class="slider">
+              <div class="slider__wrapper">
+                <div class="slider__container" id="sliderContainer"></div>
+                <button class="prev-btn" onclick="changeSlide(-1)">❮</button>
+                <button class="next-btn" onclick="changeSlide(1)">❯</button>
+              </div>
+              <div class="navigation-card" id="navigationContainer"></div>
+            </div>
+            <ul class="bread-crumb">
+              <li class="bread-crumb__item">
+                <a href="/" class="bread-crumb__link active">Электроника</a>
+              </li>
+              <li class="bread-crumb__item item-active">
+                <a href="/" class="bread-crumb__link active">Фены</a>
+              </li>
+            </ul>
+            <h2 class="product-title">
+              Стайлер для волос Dyson Airwrap Complete Long в цветe Vinca blue и
+              Rose
+            </h2>
+            <div>
+              <span class="badge">Вчера, 19:20</span>
+              <span class="badge">г. Самарканд</span>
+            </div>
+            <div class="flex-x-between flex">
+              <h2 class="price">6 520 000 <span>UZS</span></h2>
+              <button class="btn btn-product__call">
+                <img src="../../assets/img/call.svg" alt="call" />
+                <a href="tel:+998712007007">+998 71 200 70 07</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="product-info column">
+              <h2 class="product-info__title">Описание</h2>
+              <p class="product-info__description">
+                Мультистайлер Dyson Airwrap Complete Long в цветe Vinca blue и
+                Rose Бесплатная доставка по ТАШКЕНТУ!!! 100% оригинал С новыми
+                цилиндрами для завивки и волнения в обоих направлениях, щетками
+                для контроля и придания формы, а также многофункциональной
+                сушилкой для разглаживания Coanda для сушки,разглаживания и
+                сокрытия разлетающихся волос 3 В комплектацию входят 30-мм
+                цилиндрические насадки Airwrap для завивки, 40-мм цилиндрические
+                насадки Airwrap для завивки <br /><br />
+                Круглая щетка для создания объема, Мягкая щетка для выпрямления,
+                Жесткая щетка для выпрямление Особенности фена В комплекте Чехол
+                для хранения Термостойкий коврик Щетка для очистки Для длинных
+                до груди или более длинных волос. <br /><br />
+                Пoдxoдит для разных типoв вoлoc. Сoздaние лoконoв и волн.
+                Pазглаживaниe. Высушивaние вoлос. Без экстpeмальныx тeмперaтур.
+                В последней версии 2022 Года появились новые насадки, такие как:
+                - обновлённый цилиндр для завивки, предусматривающий поток
+                воздуха в двух направлениях, то есть больше не нужно
+                переставлять насадки. По вопросам пишите в телеграм на номер
+              </p>
+            </div>
+          </div>
+          <div class="card-wrapper profile-info__mobile">
+            <h2>Продавец</h2>
+            <div class="flex-x-between">
+              <div class="profile-info">
+                <img
+                  class="profile-info__img"
+                  src="../../assets/img/ProfilePhoto.png"
+                  alt="img"
+                />
+                <div class="profile-info__details">
+                  <h2 class="profile-info__name">
+                    Малика Абдурахимова <br />
+                    <span>ID: 1326547</span>
+                  </h2>
+                </div>
+              </div>
+              <a href="tel:+998712007007" class="product-single__number"
+                >+998 71 200 70 07</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="sidebar column">
+          <div class="card-wrapper">
+            <div class="column">
+              <div class="profile-info">
+                <img
+                  class="profile-info__img"
+                  src="../../assets/img/ProfilePhoto.png"
+                  alt="img"
+                />
+                <div class="profile-info__details">
+                  <h2 class="profile-info__name">
+                    Малика Абдурахимова <br />
+                    <span>ID: 1326547</span>
+                  </h2>
+                </div>
+              </div>
+              <a href="tel:+998712007007" class="product-single__number"
+                >+998 71 200 70 07</a
+              >
+              <button class="btn btn-secondary">Все объявления</button>
+            </div>
+          </div>
+          <div class="card-wrapper">
+            <div class="address-info flex">
+              <div class="address-info__section">
+                <h2 class="address-info__title">Местоположение</h2>
+                <p class="address-info__devider"></p>
+                <p class="address-info__text">
+                  <img src="../../assets/img/marker.svg" alt="Markerx" />
+                  г.Ташкент, ул.Олмачи 1-й проезд 13 дом
+                </p>
+              </div>
+              <img
+                class="address-info__map"
+                src="../../assets/img/Map.png"
+                alt="map"
+              />
+            </div>
+          </div>
+          <button class="btn btn-light-primary">
+            Скачать в галерею
+            <img
+              src="../../assets/img/download.svg"
+              class="btn__icon"
+              alt="download"
+            />
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer Logo -->
+        <a class="footer-logo" href="">
+          <img width="122" height="64" src="../../assets/img/logo.svg" alt="" />
+        </a>
+        <!-- Footer Info -->
+        <div class="footer-info">
+          <p class="footer-info__text subtitle text-center">
+            77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+            облегчает покупки и продажи, связывая продавцов с потенциальными
+            клиентами.
+          </p>
+          <ul class="footer-info__list" id="footerList"></ul>
+        </div>
+      </div>
+      <div class="development-company">
+        <div class="development-company-wrapper container">
+          <p class="development-company__text copyright">
+            <strong>© 77.uz</strong>
+            <span> 2023. Все права защищены</span>
+          </p>
+
+          <a
+            href="https://uic.group/"
+            target="_blank"
+            class="development-company__link"
+          >
+            <span>
+              <img src="../../assets/img/uic.group.svg" alt="" />
+            </span>
+            <img src="../../assets/img/uic.group.text.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../components/header/header.js"></script>
+    <script src="../../components/languageSwitcher/languageSwitcher.js"></script>
+    <script src="../../components/slider/slider.js"></script>
+    <script src="../../components/footer/footer.js"></script>
+  </body>
+</html>
