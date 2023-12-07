@@ -50,12 +50,14 @@ dropbox.addEventListener('drop', (e) => {
   e.preventDefault()
   const droppedFiles = e.dataTransfer.files
   if (droppedFiles.length > 0) {
-    const file = {
-      id: Math.random() * 1000,
-      file: droppedFiles[0],
+    console.log(droppedFiles)
+    for (let i = 0; i < droppedFiles.length; i++) {
+      const file = {
+        id: Math.random() * 1000,
+        file: droppedFiles[i],
+      }
+      files.push(file)
     }
-    files.push(file)
-    fileInput.value = ''
     renderImages()
   }
   dropbox.classList.remove('active')
@@ -69,13 +71,18 @@ dropboxFloat.addEventListener('click', () => {
 })
 
 fileInput.addEventListener('change', (e) => {
-  const file = {
-    id: Math.random() * 1000,
-    file: e.target.files[0],
+  const droppedFiles = e.target.files
+  if (droppedFiles.length > 0) {
+    console.log(droppedFiles)
+    for (let i = 0; i < droppedFiles.length; i++) {
+      const file = {
+        id: Math.random() * 1000,
+        file: droppedFiles[i],
+      }
+      files.push(file)
+    }
+    renderImages()
   }
-  files.push(file)
-
-  renderImages()
 })
 
 // make images Draggable <START>
@@ -154,7 +161,6 @@ window.addEventListener('DOMNodeInserted', () => {
       if (index !== -1) {
         files.splice(index, 1)
       }
-
     })
   })
 })
