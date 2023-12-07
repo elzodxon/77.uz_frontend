@@ -1,10 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const fileInput = document.querySelector('#files')
   const gallery = document.querySelector('#gallery-wrapper')
   const dropbox = document.getElementById('dropbox')
   let files = []
   let cardId = 1
-
 
   // Create gallery card
   const createGalleryCard = (id, image) => {
@@ -50,21 +49,23 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 
   // Handle drop event on dropbox
-  // dropbox.addEventListener('drop', (e) => {
-  //   e.preventDefault()
-  //   const droppedFiles = e.dataTransfer.files
-  //   if (droppedFiles.length > 0) {
-  //     for (let i = 0; i < droppedFiles.length; i++) {
-  //       const file = {
-  //         id: Math.random() * 1000,
-  //         file: droppedFiles[i],
-  //       }
-  //       files.push(file)
-  //     }
-  //     renderImages(files)
-  //   }
-  //   dropbox.classList.remove('active')
-  // })
+  dropbox.addEventListener('drop', (e) => {
+    e.preventDefault()
+    const droppedFiles = e.dataTransfer.files
+    if (droppedFiles.length > 0) {
+      for (let i = 0; i < droppedFiles.length; i++) {
+        const currentCardId = cardId // Capture the current cardId before the loop
+        const file = {
+          id: currentCardId,
+          file: droppedFiles[i],
+        }
+        files.push(file)
+        cardId += 1 // Increment cardId after processing the files
+      }
+      renderImages(files)
+    }
+    dropbox.classList.remove('active')
+  })
 
   dropbox.addEventListener('click', hideDropbox)
 
@@ -77,13 +78,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const droppedFiles = e.target.files
     if (droppedFiles.length > 0) {
       for (let i = 0; i < droppedFiles.length; i++) {
-        const currentCardId = cardId  // Capture the current cardId before the loop
+        const currentCardId = cardId // Capture the current cardId before the loop
         const file = {
           id: currentCardId,
           file: droppedFiles[i],
         }
         files.push(file)
-        cardId += 1  // Increment cardId after processing the files
+        cardId += 1 // Increment cardId after processing the files
       }
       renderImages(files)
     }
@@ -93,10 +94,10 @@ document.addEventListener('DOMContentLoaded', function() {
   let dragSrcEl
 
   function dragStart(e) {
-    window.removeEventListener('dragenter', activateDropbox)
-    dragSrcEl = this
     e.dataTransfer.effectAllowed = 'move'
+    dragSrcEl = this
     e.dataTransfer.setData('text/html', this.innerHTML)
+    window.removeEventListener('dragenter', activateDropbox)
 
     return false
   }
@@ -120,9 +121,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function dragEnd() {
     const listItems = document.querySelectorAll('.gallery__item')
-      ;[].forEach.call(listItems, function(item) {
-        item.draggable = 'true'
-      })
+    ;[].forEach.call(listItems, function (item) {
+      item.draggable = 'true'
+    })
 
     return false
   }
@@ -163,6 +164,5 @@ document.addEventListener('DOMContentLoaded', function() {
     removeButtons.forEach((button) => {
       button.addEventListener('click', (e) => removeCard(e))
     })
-
   })
 })
