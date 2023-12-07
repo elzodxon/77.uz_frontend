@@ -1,35 +1,33 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ================== Google Fonts links ================== -->
 
-  <!-- ================== Google Fonts links ================== -->
+    <!-- ================== Css links ================== -->
 
-  <!-- ================== Css links ================== -->
+    <link rel="stylesheet" href="./pagination.css" />
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
 
-  <link rel="stylesheet" href="./pagination.css" />
-  <link rel="stylesheet" href="../../assets/css/variables.css" />
-  <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <!-- ================== Website Title ================== -->
+    <title>Pagination Component</title>
+  </head>
 
-  <!-- ================== Website Title ================== -->
-  <title>Pagination Component</title>
-</head>
+  <body>
+    <div id="post-list"></div>
 
-<body>
-  <div id="post-list"></div>
+    <div class="pagination">
+      <button id="prev" class="pagination__button">'<'</button>
+      <div id="pages" class="pagination-pages__wrapper"></div>
+      <button id="next" class="pagination__button">></button>
+    </div>
 
-  <div class="pagination">
-      <button  id="prev" class="pagination__button" >'<'</button>
-      <div id="pages" class="pagination-pages__wrapper" ></div>
-      <button id="next" class="pagination__button" >></button>
-  </div>
-
-<!-- ================== Javascript Links ================== -->
-  <!-- <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script> -->
-  <script src="./pagination.js"></script>
-</body>
-
+    <!-- ================== Javascript Links ================== -->
+    <!-- <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script> -->
+    <script src="./pagination.js"></script>
+  </body>
 </html>

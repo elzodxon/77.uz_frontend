@@ -116,9 +116,9 @@ function dragDrop(e) {
 
 function dragEnd() {
   const listItems = document.querySelectorAll('.gallery__item')
-    ;[].forEach.call(listItems, function(item) {
-      item.draggable = 'true'
-    })
+  ;[].forEach.call(listItems, function (item) {
+    item.draggable = 'true'
+  })
 
   return false
 }

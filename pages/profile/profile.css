@@ -591,10 +591,8 @@
   .personal-details__footer {
     display: none;
   }
-
 }
 @media screen and (max-width: 480px) {
-
   .prev-page__header {
     padding-top: 100px;
   }

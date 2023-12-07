@@ -65,7 +65,7 @@ function getProductList() {
   })
   productList.forEach((product) => {
     console.log(product)
-    
+
     if (listView) {
       debugger
       const listCard = listViewStyle(product)

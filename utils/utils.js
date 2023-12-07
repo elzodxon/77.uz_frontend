@@ -1,4 +1,3 @@
-
 // ------------------- Date formatter Func -----------------
 export function dateFormatter(date) {
   const dateObject = new Date(date)
@@ -14,7 +13,6 @@ export function dateFormatter(date) {
 
   return formattedDate
 }
-
 
 // ------------------- Numbers with space Func -------------
 export function moneyFormatter(number) {

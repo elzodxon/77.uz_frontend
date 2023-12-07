@@ -1,16 +1,15 @@
 import {
-    dateFormatter,
-    moneyFormatter,
-    phoneNumberFormatter,
-  } from '../utils/utils.js'
+  dateFormatter,
+  moneyFormatter,
+  phoneNumberFormatter,
+} from '../utils/utils.js'
 
-
- export function listViewStyle(product) { 
+export function listViewStyle(product) {
   console.log(product)
-    const listCard = document.createElement('div')
-    listCard.classList.add('list-view__card')
-    // ----------------Card list style--------------------
-    listCard.innerHTML = `
+  const listCard = document.createElement('div')
+  listCard.classList.add('list-view__card')
+  // ----------------Card list style--------------------
+  listCard.innerHTML = `
         <div class="list-view__card-symbols">
             <img class="list-view__card-image card-image" src="${
               product.photo
@@ -21,13 +20,13 @@ import {
             <a href="#" class="list-view__card-title card-title">
             ${product.name}
         </a>
-        <span class="badge card-address"> ${product.address.district.name}</span>
+        <span class="badge card-address"> ${
+          product.address.district.name
+        }</span>
         </div>
         <div class="list-view__bottom-content">
         <p class="list-view__card-price card-price">
-        ${moneyFormatter(
-          product.price,
-        )}<span> UZS </span>
+        ${moneyFormatter(product.price)}<span> UZS </span>
         </p>
         <div>
         <p class="list-view__card-date card-date"> ${dateFormatter(
@@ -39,18 +38,18 @@ import {
         </div>
         </div>
         </div>`
-    return listCard
-  }
-  
- export function gridViewStyle(product) {
+  return listCard
+}
+
+export function gridViewStyle(product) {
   console.log(product)
 
-    const grid_card = document.createElement('div')
-  
-    grid_card.classList.add('grid-view__card')
-  
-    // ----------------Card grid style--------------------
-    grid_card.innerHTML = `
+  const grid_card = document.createElement('div')
+
+  grid_card.classList.add('grid-view__card')
+
+  // ----------------Card grid style--------------------
+  grid_card.innerHTML = `
          <div class="grid-view__card-symbols">
            <div  class="grid-view__card-icon">
            <iconify-icon id="${
@@ -78,6 +77,6 @@ import {
              product.price,
            )}<span> UZS </span></p>
          </div>`
-  
-         return grid_card
-  }
+
+  return grid_card
+}

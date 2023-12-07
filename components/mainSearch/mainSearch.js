@@ -1,8 +1,8 @@
 //  MAIN SEARCH
-const blocker = document.querySelector('.blocker');
-const searchInput = document.getElementById('searchNow');
-const searchSuggestion = document.getElementById('search-suggestion');
-const searchSuggestionList = document.querySelector('.search-suggestion__list');
+const blocker = document.querySelector('.blocker')
+const searchInput = document.getElementById('searchNow')
+const searchSuggestion = document.getElementById('search-suggestion')
+const searchSuggestionList = document.querySelector('.search-suggestion__list')
 
 // WHEN SEARCHINPUT IS FOCUSED ,  ADD BLOCKER TO BODY
 searchInput.addEventListener('focus', (e) => {
@@ -24,23 +24,23 @@ blocker.addEventListener('click', () => {
 searchInput.addEventListener('input', handleSearchInput)
 /* Handle search inputs  */
 function handleSearchInput() {
-  searchInput.classList.toggle('active');
+  searchInput.classList.toggle('active')
   // call searchTerm when searchInput is inputted
-  const searchTerm = searchInput.value.trim().toLowerCase();
+  const searchTerm = searchInput.value.trim().toLowerCase()
   // Update "top-txt" value
-  const topTxt = document.querySelector('.top-txt');
-  topTxt.textContent = 'Рекомендации';
+  const topTxt = document.querySelector('.top-txt')
+  topTxt.textContent = 'Рекомендации'
 
   // If search input is empty, show 'no history'
   if (searchTerm === '') {
     searchSuggestionList.innerHTML =
-      "<li class='search-suggestion__item' style='background-color: #fff;cursor:default'>No history</li>";
-    topTxt.textContent = 'История поиска';
+      "<li class='search-suggestion__item' style='background-color: #fff;cursor:default'>No history</li>"
+    topTxt.textContent = 'История поиска'
     return
   }
   // Check if there are matches in jsonData
-  const matches = getMatchingValues(searchTerm);
-  displaySearchResults(matches);
+  const matches = getMatchingValues(searchTerm)
+  displaySearchResults(matches)
 }
 
 function getMatchingValues(searchTerm) {

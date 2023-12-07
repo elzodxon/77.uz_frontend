@@ -15,13 +15,12 @@ body {
 .pagination__button {
   text-align: center;
   padding: 10px 14px;
-  margin: 0px 4px ;
+  margin: 0px 4px;
   border-radius: 8px;
   background-color: transparent;
   color: var(--greys-grey-0, #63676c);
   border: 1px solid var(--greys-grey-3, #d5d8db);
   cursor: pointer;
-
 }
 
 button:hover {

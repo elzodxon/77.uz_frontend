@@ -33,34 +33,34 @@ function displayPosts() {
     .catch((error) => console.error(error))
 }
 
- function updatePagination() {
-    const totalPosts = totalProducts
-      const totalPages = Math.ceil(totalPosts / postsPerPage)
+function updatePagination() {
+  const totalPosts = totalProducts
+  const totalPages = Math.ceil(totalPosts / postsPerPage)
 
-      pagesContainer.innerHTML = ''
+  pagesContainer.innerHTML = ''
 
-      // Calculate the range of pages to show
-      const startPage = Math.max(currentPage - Math.floor(pagesToShow / 2), 1)
-      const endPage = Math.min(startPage + pagesToShow - 1, totalPages)
+  // Calculate the range of pages to show
+  const startPage = Math.max(currentPage - Math.floor(pagesToShow / 2), 1)
+  const endPage = Math.min(startPage + pagesToShow - 1, totalPages)
 
-      // Create buttons for the range of pages
-      for (let i = startPage; i <= endPage; i++) {
-        const pageButton = document.createElement('button')
-        pageButton.classList.add('pagination__button')
-        pageButton.textContent = i
-        pageButton.addEventListener('click', () => {
-          currentPage = i
+  // Create buttons for the range of pages
+  for (let i = startPage; i <= endPage; i++) {
+    const pageButton = document.createElement('button')
+    pageButton.classList.add('pagination__button')
+    pageButton.textContent = i
+    pageButton.addEventListener('click', () => {
+      currentPage = i
 
-          displayPosts()
-        })
-        if (i === currentPage) {
-          pageButton.classList.add('active')
-        }
-        pagesContainer.appendChild(pageButton)
-      }
+      displayPosts()
+    })
+    if (i === currentPage) {
+      pageButton.classList.add('active')
+    }
+    pagesContainer.appendChild(pageButton)
+  }
 
-      prevButton.disabled = currentPage === 1
-      nextButton.disabled = currentPage === totalPages
+  prevButton.disabled = currentPage === 1
+  nextButton.disabled = currentPage === totalPages
 }
 
 prevButton.addEventListener('click', () => {
@@ -71,14 +71,13 @@ prevButton.addEventListener('click', () => {
 })
 
 nextButton.addEventListener('click', () => {
-
   const totalPosts = totalProducts
-      const totalPages = Math.ceil(totalPosts / postsPerPage)
+  const totalPages = Math.ceil(totalPosts / postsPerPage)
 
-      if (currentPage < totalPages) {
-        currentPage++
-        displayPosts()
-      }
+  if (currentPage < totalPages) {
+    currentPage++
+    displayPosts()
+  }
 })
 
 displayPosts()
