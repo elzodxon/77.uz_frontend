@@ -8,13 +8,14 @@
     <!-- ================== Google Fonts links ================== -->
 
     <!-- ================== Css links ================== -->
-
+    <link rel="stylesheet" href="../../components/languageSwitcher/languageSwitcher.css">
     <link rel="stylesheet" href="../../components/header/header.css" />
     <link rel="stylesheet" href="../../components/buttons/buttons.css" />
     <link rel="stylesheet" href="../../components/modal/modal.css" />
     <link rel="stylesheet" href="../../components/select/select.css" />
     <link rel="stylesheet" href="../../assets/css/variables.css" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="/components/inputs/inputs.css">
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <link rel="stylesheet" href="./404.css" />
 
@@ -248,7 +249,7 @@
             <!-- Password -->
             <div class="form-group password-modal">
               <label class="label modal-label" for="password">Пароль </label>
-              <div class="password-input-wrapper">
+              <div class="password-input-group">
                 <input
                   class="input input-password"
                   type="password"
@@ -256,8 +257,8 @@
                   id="password"
                   placeholder="Введите пароль"
                 />
-                <div class="closed-eye"></div>
-                <a href="#" id="icon-close">Забыли пароль?</a>
+                <div class="open-eye"></div>
+                <a href="#" class="forgot-password" id="icon-close">Забыли пароль?</a>
               </div>
             </div>
             <div class="modal-footer fifth">
@@ -389,24 +390,22 @@
               </div>
             </div>
 
-            <!-- Phone number -->
-            <div class="form-group">
-              <label class="label modal-label" for="phone-number"
-                >Телефон номер
-              </label>
-              <div class="p-input-group">
-                <span class="country-code">+998</span>
-                <input
-                  class="input input_tel"
-                  type="tel"
-                  name="phone-number"
-                  id="phone-number"
-                  required
-                  inputmode="numeric"
-                  placeholder="  (__) ___-__-__"
-                />
-              </div>
+                      <!-- Phone number -->
+          <div class="form-group">
+            <label class="label" for="phone-number">Телефон номер </label>
+            <div class="phone-input-group">
+              <span class="country-code">+998</span>
+              <input
+                class="input input_tel"
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                required
+                inputmode="numeric"
+                placeholder="(__) ___-__-__"
+              />
             </div>
+          </div>
           </form>
           <div class="modal-footer seven">
             <button id="continue-registration" class="btn third-btn">
@@ -495,5 +494,6 @@
     <script src="../../js/modal.js"></script>
     <script src="../../components/select/select.js"></script>
     <script src="../../components/inputs/inputs.js"></script>
+    <script src="../../components/languageSwitcher/languageSwitcher.js"></script>
   </body>
 </html>

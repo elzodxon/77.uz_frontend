@@ -22,7 +22,6 @@ body {
 }
 .not-found-wrapper__title {
   color: var(--black-color);
-  font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;

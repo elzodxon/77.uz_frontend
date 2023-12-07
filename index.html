@@ -24,23 +24,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Main Stylesheet Included -->
     <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./components/header/header.css" />
     <link rel="stylesheet" href="./assets/css/variables.css" />
     <link rel="stylesheet" href="./components/footer/footer.css" />
-    <link rel="stylesheet" href="./pages/product-list/ProductList.css" />
+    <link rel="stylesheet" href="./pages/ProductList/ProductList.css" />
     <link rel="stylesheet" href="./components/modal/modal.css" />
+    <link rel="stylesheet" href="/components/inputs/inputs.css">
     <link rel="stylesheet" href="./components/select/select.css" />
     <link rel="stylesheet" href="./components/pagination/pagination.css" />
-    <link rel="stylesheet" href="./components/category-list/tempCategory.css" />
+    <link rel="stylesheet" href="./components/categoryList/category.css" />
+    <link rel="stylesheet" href="./components/languageSwitcher/languageSwitcher.css" />
     <link
-      rel="stylesheet"
-      href="./components/content-header/content-header.css"
+    rel="stylesheet"
+    href="./components/contentHeader/contentHeader.css"
     />
     <link
-      rel="stylesheet"
-      href="../77.uz_frontend/components/buttons/buttons.css"
+    rel="stylesheet"
+    href="../77.uz_frontend/components/buttons/buttons.css"
     />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://pagination.js.org/dist/2.1.4/pagination.css"
@@ -215,48 +217,8 @@
     </header>
 
     <!-- Body Section -->
-    <main class="main-wrapper category">
-      <div class="category-section">
-        <div class="container">
-          <!-- Category Search -->
-          <form class="search" action="">
-            <label class="search__label" for="searchNow">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16.927 17.0401L20.4001 20.4001M19.2801 11.4401C19.2801 15.77 15.77 19.2801 11.4401 19.2801C7.11019 19.2801 3.6001 15.77 3.6001 11.4401C3.6001 7.11019 7.11019 3.6001 11.4401 3.6001C15.77 3.6001 19.2801 7.11019 19.2801 11.4401Z"
-                  stroke="#D5D8DB"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-              </svg>
-              <input
-                class="search__input"
-                type="text"
-                name="searchNow"
-                id="searchNow"
-                placeholder="Что вы ищите?"
-              />
-              <button class="search__btn" role="search">Поиск</button>
-            </label>
-          </form>
-          <!-- Category Section -->
-          <div class="categoty-wrapper">
-            <div class="content-header">
-              <h2 class="content-header__title title">Категории</h2>
-              <p class="content-header__subtitle subtitle">
-                Вы можете найти все категории, которые вам нужны от покупателя
-              </p>
-            </div>
-            <ul class="category-list" id="categoryList"></ul>
-          </div>
-        </div>
-      </div>
+    <main class="main ">
+
       <div class="container">
         <!-- Ads Section -->
 
@@ -267,9 +229,14 @@
               Вы можете найти все категории, которые вам нужны от покупателя
             </p>
           </div>
-          <div id="main">
-            <div id="ads-wrapper" class="ads-wrapper__list ads-wrapper"></div>
+         <div id="main" >
+          <div id="ads-wrapper" class="ads-wrapper__list ads-wrapper">
+
           </div>
+         </div>
+
+
+
         </div>
       </div>
     </main>
@@ -350,7 +317,7 @@
             <!-- Password -->
             <div class="form-group password-modal">
               <label class="label modal-label" for="password">Пароль </label>
-              <div class="password-input-wrapper">
+              <div class="password-input-group">
                 <input
                   class="input input-password"
                   type="password"
@@ -358,8 +325,8 @@
                   id="password"
                   placeholder="Введите пароль"
                 />
-                <div class="closed-eye"></div>
-                <a href="#" id="icon-close">Забыли пароль?</a>
+                <div class="open-eye"></div>
+                <a href="#" class="forgot-password" id="icon-close">Забыли пароль?</a>
               </div>
             </div>
             <div class="modal-footer fifth">
@@ -503,24 +470,22 @@
                 </div>
               </div>
             </div>
-            <!-- Phone number -->
-            <div class="form-group">
-              <label class="label modal-label" for="phone-number"
-                >Телефон номер
-              </label>
-              <div class="p-input-group">
-                <span class="country-code">+998</span>
-                <input
-                  class="input input_tel"
-                  type="tel"
-                  name="phone-number"
-                  id="phone-number"
-                  required
-                  inputmode="numeric"
-                  placeholder="  (__) ___-__-__"
-                />
-              </div>
+                       <!-- Phone number -->
+          <div class="form-group">
+            <label class="label" for="phone-number">Телефон номер </label>
+            <div class="phone-input-group">
+              <span class="country-code">+998</span>
+              <input
+                class="input input_tel"
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                required
+                inputmode="numeric"
+                placeholder="(__) ___-__-__"
+              />
             </div>
+          </div>
           </form>
           <div class="modal-footer seven">
             <button id="continue-registration" class="btn third-btn">
@@ -608,11 +573,11 @@
     <!-- Custom Js Included -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="js/modal.js"></script>
-    <script src="js/custom.js"></script>
     <script src="components/footer/footer.js"></script>
     <script src="components/header/header.js"></script>
-    <script src="components/inputs/inputs.js"></script>
     <script src="components/select/select.js"></script>
+    <script src="components/inputs/inputs.js"></script>
     <script src="/js/ads-wrapper.js"></script>
+    <script src="js/custom.js"></script>
   </body>
 </html>
