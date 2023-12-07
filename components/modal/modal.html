@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ================== Google Fonts links ================== -->
+  
+  <!-- ================== Css links ================== -->
+  
+  <link rel="stylesheet" href="./modal.css" />
+  <link rel="stylesheet" href="../../assets/css/variables.css" />
+  <link rel="stylesheet" href="../../assets/css/normalize.css" />
+  
+  <!-- ================== Website Title ================== -->
+  <title>Modal Component</title>
+</head>
+<body>
+    <button class="btn modal-btn modalToggleBtn" modal-id="modal1">Open Modal 1</button>
+
+    <div class="modal" id="modal1">
+      <div class="modal-header">
+        <button class="close-btn">
+          <img class="close-img" src="../../assets/img/modal-img/close-icon.svg" alt="Close icon"
+          width="24" height="24">
+        </button>
+      </div>
+      <div class="modal-body modal-first ">
+        <h2 class="modal-title">Удалить объявление</h2>
+        <h3 class="modal-subtitle">Вы точно хотите удалить объявление, все ваши данные о продукте будут потеряны</h3>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary">Отменить</button>
+        <button class="btn btn-danger ">Удалить</button>
+      </div>
+    </div>
+  
+
+     <!-- Overlay -->
+     <div class="overlay"></div>
+    
+    <!-- ================== Javascript Links ================== -->
+    <script src="./modal.js"></script>
+  </body>
+  </html>
+  

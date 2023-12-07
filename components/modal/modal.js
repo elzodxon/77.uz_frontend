@@ -1,163 +1,106 @@
-const center = document.querySelector(".center"),
-    overlay = document.querySelector(".overlay"),
-    showBtn = document.querySelector(".btn"),
-    closeBtn = document.querySelector(".close-btn"),
-    modal = document.querySelector(".modal");
-
-    showBtn.addEventListener("click", () => center.classList.add("active"));
-
-    overlay.addEventListener("click", () =>
-        center.classList.remove("active")
-    );
-
-    closeBtn.addEventListener("click", () =>
-    center.classList.remove("active")
-);
-
-document.addEventListener('keydown', function(e){
-    if (e.key === "Escape"){
-        if(center.classList.contains("active"));
-        center.classList.remove("active");
-    }})
-    
-    // -------------------------------SEcond MODAL JS--------------------------------------------------------------------------------------//
-
-const exit = document.querySelector("#exit-wrapper"),
-    overlaySecond = document.querySelector(".overlay"),
-    deleteBtn = document.querySelector("#delete"),
-    closeBtnSecond = document.querySelector("#close");
-
-    deleteBtn.addEventListener("click", () => exit.classList.add("active"));
-
-    overlaySecond.addEventListener("click", () =>
-        exit.classList.remove("active")
-    );
-
-    closeBtnSecond.addEventListener("click", () =>
-    exit.classList.remove("active")
-);
+const modalToggleButtons = document.querySelectorAll('.modalToggleBtn');
+const closeModalButtons = document.querySelectorAll('.close-btn');
+const modals = document.querySelectorAll('.modal');
+const overlay = document.querySelectorAll('.overlay');
+const modalNextButtons = document.querySelectorAll('.nextModalBtn');
 
 
-document.addEventListener('keydown', function(e){
-if (e.key === "Escape"){
-    if(exit.classList.contains("active"));
-    exit.classList.remove("active");
-}})
+//openModal function to open modals
+const openModal = (modalId) => {
+    const modal = document.getElementById(modalId);
+    modal.classList.add('active');
+    overlay.classList.add('active');
+};
+
+//closeModal function to close modals
+const closeModal = (modalId) => {
+    const modal =  document.getElementById(modalId);
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+}
+
+//Function to remove active modals based on input content
+const removeActiveModals = () => {
+    modals.forEach((modal) => {
+        const modalInput = modal.querySelector('.input');
+        const nextButton = modal.querySelector('.nextModalBtn');
+
+        if(modalInput){
+            if(modalInput.value.length === 0) {
+                modalInput.classList.add('error');
+                nextButton.classList.add('active');
+            } else {
+                modal.classList.remove('active');
+                nextButton.classList.remove('active');
+                modalInput.classList.remove('error');
+            }
+        } else {
+            modal.classList.remove('active');
+        }
+    });
+};
+
+// Function to handle opening the next modal
+const nextModal = (modalId) => {
+    removeActiveModals();
+    const modal = document.getElementById(modalId);
+    setTimeout(() => {
+      modal.classList.add('active');
+    }, 200);
+  };
 
 
-// -------------------------------------------------THIRD BTN JS-----------------------------------------------------------//
-
-const acceptance = document.querySelector("#acceptance"),
-    overlayThird = document.querySelector(".overlay"),
-    acceptBtn = document.querySelector("#accept"),
-    closeBtnThird = document.querySelector("#close-icon");
-
-    acceptBtn.addEventListener("click", () => acceptance.classList.add("active"));
-
-    overlayThird.addEventListener("click", () =>
-        acceptance.classList.remove("active")
-    );
-
-    closeBtnThird.addEventListener("click", () =>
-    acceptance.classList.remove("active")
-);
+  // Add input event listeners to dynamically update Next button
+modals.forEach((modal) => {
+    const modalInput = modal.querySelector('.input');
+    if (modalInput) {
+      modalInput.addEventListener('input', () => {
+        const nextButton = modal.querySelector('.nextModalBtn');
+        if (modalInput.value.length > 0) {
+          nextButton.classList.remove('active');
+        } else {
+          nextButton.classList.add('active');
+        }
+      });
+    }
+  });
 
 
-document.addEventListener('keydown', function(e){
-if (e.key === "Escape"){
-    if(acceptance.classList.contains("active"));
-    acceptance.classList.remove("active");
-}})
+  // Event listeners for Next, Open, Close, Overlay click, and Escape key
+modalNextButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      const modalId = button.getAttribute('modal-id');
+      nextModal(modalId);
+    });
+  });
+  
 
-// -------------------------------------------------FOURTH BTN JS-----------------------------------------------------------//
+  modalToggleButtons.forEach((button) => {
+    button.addEventListener('click', (e) =>{
+        const modalId = button.getAttribute('modal-id');
+        openModal(modalId);
+    });
+  });
 
-const forgetPassword = document.querySelector("#forget-password"),
-    overlayFourth = document.querySelector(".overlay"),
-    forgetBtn = document.querySelector("#icon-close"),
-    closeBtnFourth = document.querySelector("#btn-close");
+  closeModalButtons.forEach((button) => {
+    button.addEventListener('click', () =>{
+        const modalId = button.parentElement.id;
+        closeModal(modalId);
+    });
+  });
 
-    forgetBtn.addEventListener("click", () => forgetPassword.classList.add("active"));
+  overlay.addEventListener('click', () =>{
+    modals.forEach((modal) =>{
+        modal.classList.remove('active');
+    });
+    overlay.classList.remove('active');
+  });
 
-    overlayFourth.addEventListener("click", () =>
-        forgetPassword.classList.remove("active")
-    );
-
-    closeBtnFourth.addEventListener("click", () =>
-    forgetPassword.classList.remove("active")
-);
-
-
-document.addEventListener('keydown', function(e){
-if (e.key === "Escape"){
-    if(forgetPassword.classList.contains("active"));
-    forgetPassword.classList.remove("active");
-}})
-
-// -------------------------------------------------Fifth BTN JS-----------------------------------------------------------//
-
-const noInfo = document.querySelector("#noinfo"),
-    overlayFifth = document.querySelector(".overlay"),
-    noInfobtn = document.querySelector("#noinfo-btn");
-
-    noInfobtn.addEventListener("click", () => noInfo.classList.add("active"));
-
-    overlayFifth.addEventListener("click", () =>
-        noInfo.classList.remove("active")
-    );
-
-
-document.addEventListener('keydown', function(e){
-if (e.key === "Escape"){
-    if(noInfo.classList.contains("active"));
-    noInfo.classList.remove("active");
-}})
-
-
-// -------------------------------------------------Sixth BTN JS-----------------------------------------------------------//
-
-const registration = document.querySelector("#registration"),
-    overlaySix = document.querySelector(".overlay"),
-    registrationBtn = document.querySelector("#registration-btn"),
-    registrationCloseBtn = document.querySelector("#registration-close-btn");
-
-    registrationBtn.addEventListener("click", () => registration.classList.add("active"));
-
-    overlaySix.addEventListener("click", () =>
-        forgetPassword.classList.remove("active")
-    );
-
-    registrationCloseBtn.addEventListener("click", () =>
-    registration.classList.remove("active")
-);
-
-
-document.addEventListener('keydown', function(e){
-if (e.key === "Escape"){
-    if(registration.classList.contains("active"));
-    registration.classList.remove("active");
-}})
-
-// -------------------------------------------------Seventh BTN JS-----------------------------------------------------------//
-
-const application = document.querySelector("#application"),
-    overlaySeven = document.querySelector(".overlay"),
-    applicationBtn = document.querySelector("#application-btn"),
-    applicationCloseBtn = document.querySelector("#application-close-btn");
-
-    applicationBtn.addEventListener("click", () => application.classList.add("active"));
-
-    overlaySeven.addEventListener("click", () =>
-        application.classList.remove("active")
-    );
-
-    registrationCloseBtn.addEventListener("click", () =>
-    application.classList.remove("active")
-);
-
-
-document.addEventListener('keydown', function(e){
-if (e.key === "Escape"){
-    if(application.classList.contains("active"));
-    application.classList.remove("active");
-}})
- 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        modals.forEach((modal) => {
+          modal.classList.remove('active');
+        });
+        overlay.classList.remove('active');
+      }
+  });
