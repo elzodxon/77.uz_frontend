@@ -1,6 +1,5 @@
 const createInputs = document.querySelectorAll('.create-input')
 const createSubmutButton = document.querySelector('.create-submit-button')
-console.log(createSubmutButton)
 
 createSubmutButton.addEventListener('click', (e) => {
   e.preventDefault()
