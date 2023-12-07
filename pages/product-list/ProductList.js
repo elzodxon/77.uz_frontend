@@ -1,5 +1,6 @@
 import { listViewStyle, gridViewStyle } from '../../utils/cardstyle.js'
-import { fetchData } from '../../service/productList.service.js'
+
+// import { fetchData } from '../../service/productList.service.js'
 const switchers = document.querySelectorAll(
   '.product-list__view-icons .product-list__view-icon',
 )
@@ -12,14 +13,9 @@ const cardIcons = document.getElementsByClassName('icon')
 const pagesContainer = document.getElementById('pages')
 const prevButton = document.getElementById('prev')
 const nextButton = document.getElementById('next')
-const postListContainer = document.getElementById('post-list')
-let totalProducts = 0
-let productList = []
-const perpage = 5
+let dataSet = []
+const perPage = 6
 let currentPage = 1
-const pagesToShow = 3 // Number of pages to show at a time
-let listStyle = false
-let gridStyle = false
 
 // ------------------- FETCH Products ----------------------
 document.addEventListener('DOMContentLoaded', function () {
@@ -29,6 +25,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 })
+
+fetch('./ProductList.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.productList)
+    dataSet = data.productList; // Update the global dataSet variable with fetched data
+    displayPageNav(perPage); // Update pagination buttons
+    getProductList(currentPage, perPage); // Display initial page
+  })
+  .catch(error => console.error('Error fetching data:', error));
 
 // Todo: Refactor this function
 // ------------------- Style switcher ----------------------
@@ -48,88 +54,98 @@ switchers.forEach(function (switcher) {
     // Todo: render only one view
     if (view == 'list-view') {
       listView.style.display = 'block'
-      listStyle = true
+      // listStyle = true
     } else {
       gridView.style.display = 'block'
-      gridStyle = true
+      // gridStyle = true
     }
   })
 })
 
 // ------------------- Get Product Func --------------------
-function getProductList() {
-  fetchData(perpage, currentPage).then((data) => {
-    console.log(data)
-    totalProducts = data.count
-    productList = data.results
-  })
-  productList.forEach((product) => {
-    console.log(product)
-    
-    if (listView) {
-      debugger
+async function getProductList(page = 1, perPage = 2) {
+  let index, offSet
+
+  if (page == 1 || page <= 0) {
+    index = 0
+    offSet = perPage
+  } else if (page > dataSet.length) {
+    index = page - 1
+    offSet = dataSet.length
+  } else {
+    index = page * perPage - perPage
+    offSet = index + perPage
+  }
+
+  const slicedItems = dataSet.slice(index, offSet)
+
+  listWrapper.innerHTML = '';
+  gridWrapper.innerHTML = '';
+
+  slicedItems.map((product) => {
+       
+      console.log(product)
+
       const listCard = listViewStyle(product)
       listWrapper.appendChild(listCard)
-    }
-    if (gridView) {
+
       const gridCard = gridViewStyle(product)
       gridWrapper.appendChild(gridCard)
-    }
+   
   })
-  updatePagination()
+  const pageButtons = document.querySelectorAll('.pagination__button');
+  pageButtons.forEach((button) => {
+    button.classList.remove('active');
+    if (parseInt(button.textContent) === currentPage) {
+      button.classList.add('active');
+    }
+  });
 }
 
-function updatePagination() {
-  const totalPosts = totalProducts
-  const totalPages = Math.ceil(totalPosts / perpage)
+function displayPageNav(perPage) {
+  const totalItems = dataSet.length
+  perPage = perPage ? perPage : 1
+  const pages = Math.ceil(totalItems / perPage)
 
-  pagesContainer.innerHTML = ''
-
-  // Calculate the range of pages to show
-  const startPage = Math.max(currentPage - Math.floor(pagesToShow / 2), 1)
-  const endPage = Math.min(startPage + pagesToShow - 1, totalPages)
-
-  // Create buttons for the range of pages
-  for (let i = startPage; i <= endPage; i++) {
+  for (let i = 1; i <= pages; i++) {
     const pageButton = document.createElement('button')
     pageButton.classList.add('pagination__button')
     pageButton.textContent = i
+    pageButton.setAttribute('id', i)
     pageButton.addEventListener('click', () => {
       currentPage = i
-
-      getProductList()
+      getProductList(i, perPage)
     })
-    if (i === currentPage) {
+    if (i === 1) {
       pageButton.classList.add('active')
     }
     pagesContainer.appendChild(pageButton)
   }
-
-  prevButton.disabled = currentPage === 1
-  nextButton.disabled = currentPage === totalPages
 }
+
 
 prevButton.addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage--
-    getProductList()
+    getProductList(currentPage, perPage)
   }
 })
 
 nextButton.addEventListener('click', () => {
-  const totalPosts = totalProducts
-  const totalPages = Math.ceil(totalPosts / perpage)
+  const totalItems = dataSet.length
+  const totalPages = Math.ceil(totalItems / perPage)
 
   if (currentPage < totalPages) {
     currentPage++
-    getProductList()
+    getProductList(currentPage, perPage)
   }
 })
-getProductList()
 
+displayPageNav(perPage)
+getProductList(1, perPage)
 // ------------------- Find Product By Icon ID -------------
 function findProductByIconId(icon) {
-  const foundProduct = productList.find((product) => product.id == icon.id)
+  const foundProduct = dataSet.find((product) => product.id == icon.id)
 
   return foundProduct
 }

@@ -6,7 +6,6 @@ import {
 
 
  export function listViewStyle(product) { 
-  console.log(product)
     const listCard = document.createElement('div')
     listCard.classList.add('list-view__card')
     // ----------------Card list style--------------------
@@ -43,7 +42,6 @@ import {
   }
   
  export function gridViewStyle(product) {
-  console.log(product)
 
     const grid_card = document.createElement('div')
   
