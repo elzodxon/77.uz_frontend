@@ -80,12 +80,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  gap: 20px;
+  gap: 16px;
 }
 
 .gallery__item {
   display: block;
   max-width: 30%;
+  height: fit-content;
+  border: 2px dashed transparent;
+  border-radius: 12px;
+  padding: 2px;
 }
 
 .gallery__item-image {
@@ -190,6 +194,10 @@
 
 .hidden {
   display: none;
+}
+
+.dragover {
+  border-color: var(--primary-color, #388ff3);
 }
 
 @media screen and (max-width: 576px) {

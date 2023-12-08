@@ -35,10 +35,12 @@ categoryCards.forEach(function (card) {
     categoryCards.forEach(function (c) {
       c.classList.remove('active')
     })
+
     // Add "active" class to the clicked category card
     card.classList.add('active')
   })
 })
+
 //---------CATEGORY LIST----------///////////
 document.addEventListener('DOMContentLoaded', function () {
   const categoryList = document.getElementById('category-list')
@@ -179,7 +181,8 @@ document.addEventListener('DOMContentLoaded', function () {
       .map((subsub) => {
         const subsubTitle = Object.keys(subsub)[0]
         const subsubLink = subsub[subsubTitle]
-        return `<li><a class="category-links__item" href="#">${subsubLink}</a></li>`
+        
+return `<li><a class="category-links__item" href="#">${subsubLink}</a></li>`
       })
       .join('')
   }
@@ -248,7 +251,8 @@ document.addEventListener('DOMContentLoaded', function () {
                    )}</ul>
                </li>
            `
-        return categoryCard
+        
+return categoryCard
       })
       .join('')
   }
@@ -294,6 +298,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 })
+
 ///////////------SEARCH SUGGESTION-------///////
 
 // const searchInput = document.getElementById('searchNow')
@@ -335,7 +340,8 @@ function generateSearchSuggestion(inputValue) {
         Object.values(item)[0].toLowerCase(),
       ),
     )
-    return [categoryTitle, subcategoryTitles, subsubcategoryTitles].some(
+    
+return [categoryTitle, subcategoryTitles, subsubcategoryTitles].some(
       (title) => title.includes(inputValueLowerCase),
     )
   })
@@ -344,7 +350,8 @@ function generateSearchSuggestion(inputValue) {
     return partialMatches
       .map((category) => {
         const categoryTitle = category.title
-        return `
+        
+return `
            <div class="m-search-suggestion__card">
            <a class="m-search-suggestion__title" href="">
            <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -446,7 +453,8 @@ function calculateCardsInOneRow() {
   cardsInOneRow = columnWidths.length
 
   console.log('Number of cards in one row:', cardsInOneRow)
-  return cardsInOneRow
+  
+return cardsInOneRow
 }
 
 // Call the function on window load or whenever necessary
