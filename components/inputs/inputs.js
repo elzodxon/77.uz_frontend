@@ -2,14 +2,14 @@
 
 // Password
 document.addEventListener('DOMContentLoaded', function () {
-  const eyeIcon = document.querySelector('.closed-eye')
+  const eyeIcon = document.querySelector('.open-eye')
   const passwordInput = document.getElementById('password')
 
   eyeIcon.addEventListener('click', function () {
-    eyeIcon.classList.toggle('opened-eye')
-    if (eyeIcon.classList.contains('opened-eye')) {
+    eyeIcon.classList.toggle('closed-eye')
+    if (eyeIcon.classList.contains('closed-eye')) {
       passwordInput.type = 'text'
-      eyeIcon.removeClass('closed-eye').addClass('closed-eye.opened-eye')
+      eyeIcon.removeClass('open-eye').addClass('opened-eye.closed-eye')
     } else {
       passwordInput.type = 'password'
     }
@@ -35,11 +35,6 @@ for (let i = 0; i < phoneNumberInput.length; i++) {
   })
 }
 
-// // Attach the handleBackspace function to the keydown event
-// phoneNumberInput.addEventListener('keydown', function (event) {
-//   handleBackspace(event, phoneNumberInput);
-// });
-
 function formatPhoneNumber(input) {
   // Remove non-numeric characters
   let phoneNumber = input.value.replace(/\D/g, '')
@@ -57,7 +52,7 @@ function formatPhoneNumber(input) {
       '-' +
       phoneNumber.substring(7, 9)
   }
-  
+
   // Set the formatted value back to the input
   input.value = phoneNumber
 }

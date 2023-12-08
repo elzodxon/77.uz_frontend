@@ -1,7 +1,6 @@
 // -------------------------------------------------Sixth BTN JS-----------------------------------------------------------//
 const blocker = document.querySelector('.blocker')
 
-
 const registration = document.querySelector('#registration'),
   registrationBtn = document.querySelector('#registration-btn'),
   registrationCloseBtn = document.querySelector('#registration-close-btn'),

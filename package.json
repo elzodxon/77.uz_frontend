@@ -47,5 +47,9 @@
       "prettier --write",
       "eslint --fix"
     ]
+  },
+  "type": "module",
+  "dependencies": {
+    "g": "^2.0.1"
   }
 }

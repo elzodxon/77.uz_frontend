@@ -41,20 +41,24 @@ function productGetList(productList) {
             <div  class="grid-view__card-icon">
               <iconify-icon id="${
                 product.id
-                  }" class="icon" icon="tabler:heart-filled"></iconify-icon>
+              }" class="icon" icon="tabler:heart-filled"></iconify-icon>
             </div>
             <img class="grid-view__card-image card-image" src="${
               product.photo
-              }" alt="Product photo" />
+            }" alt="Product photo" />
           </div>
          <div class="grid-view__card-content">
-            <span class="badge card-address">${product.address.district.name}</span>
-            <a href="#" class="grid-view__card-title card-title">${product.name}</a>
+            <span class="badge card-address">${
+              product.address.district.name
+            }</span>
+            <a href="#" class="grid-view__card-title card-title">${
+              product.name
+            }</a>
             <p class="grid-view__card-date card-date">${dateFormatter(
               product.published_at,
             )}</p>
             <a class="grid-view__card-number card-phoneNum" href="tel:${
-            product.seller.phone_number
+              product.seller.phone_number
             }">${formatPhoneNumber(product.seller.phone_number)}</a>
             <p class="grid-view__card-price card-price"> ${numbersWithSpace(
               product.price,
