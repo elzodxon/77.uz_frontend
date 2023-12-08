@@ -105,6 +105,14 @@ document.addEventListener('DOMContentLoaded', function () {
   function dragOver(e) {
     e.preventDefault()
     e.dataTransfer.dropEffect = 'move'
+    this.classList.add('dragover')
+
+    return false
+  }
+
+  function dragLeave(e) {
+    e.preventDefault()
+    this.classList.remove('dragover')
 
     return false
   }
@@ -114,6 +122,8 @@ document.addEventListener('DOMContentLoaded', function () {
       dragSrcEl.innerHTML = this.innerHTML
       this.innerHTML = e.dataTransfer.getData('text/html')
     }
+
+    this.classList.remove('dragover')
     window.addEventListener('dragenter', activateDropbox)
 
     return false
@@ -131,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function addEventsDragAndDrop(el) {
     el.addEventListener('dragstart', dragStart, false)
     el.addEventListener('dragover', dragOver, false)
+    el.addEventListener('dragleave', dragLeave, false)
     el.addEventListener('drop', dragDrop, false)
     el.addEventListener('dragend', dragEnd, false)
   }

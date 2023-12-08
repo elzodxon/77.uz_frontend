@@ -22,11 +22,14 @@ blocker.addEventListener('click', () => {
 
 // Attach event listener to the search input
 searchInput.addEventListener('input', handleSearchInput)
+
 /* Handle search inputs  */
 function handleSearchInput() {
   searchInput.classList.toggle('active')
+
   // call searchTerm when searchInput is inputted
   const searchTerm = searchInput.value.trim().toLowerCase()
+
   // Update "top-txt" value
   const topTxt = document.querySelector('.top-txt')
   topTxt.textContent = 'Рекомендации'
@@ -36,8 +39,10 @@ function handleSearchInput() {
     searchSuggestionList.innerHTML =
       "<li class='search-suggestion__item' style='background-color: #fff;cursor:default'>No history</li>"
     topTxt.textContent = 'История поиска'
-    return
+    
+return
   }
+
   // Check if there are matches in jsonData
   const matches = getMatchingValues(searchTerm)
   displaySearchResults(matches)
@@ -45,6 +50,7 @@ function handleSearchInput() {
 
 function getMatchingValues(searchTerm) {
   const matches = []
+
   // Check for matches in jsonData
   jsonData.forEach((category) => {
     if (category.name.toLowerCase().includes(searchTerm)) {
@@ -65,7 +71,8 @@ function getMatchingValues(searchTerm) {
       })
     }
   })
-  return matches
+  
+return matches
 }
 
 function displaySearchResults(matches) {
@@ -108,7 +115,8 @@ function displaySearchResults(matches) {
 function highlightMatch(value) {
   const searchTerm = searchInput.value.trim()
   const regex = new RegExp(searchTerm, 'gi')
-  return value.replace(
+  
+return value.replace(
     regex,
     (match) => `<span class="matching-letters" >${match}</span>`,
   )
