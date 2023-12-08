@@ -162,7 +162,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const galleryItem = e.target.closest('.gallery__item')
     galleryItem.remove()
     const id = e.target.dataset.id
-    const index = files.findIndex((element) => element.id.toString() == id)
+    const index = files.findIndex(
+      (element) => element.id.toString() === id.toString(),
+    )
     if (index !== -1) {
       files.splice(index, 1)
     }
