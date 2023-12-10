@@ -87,7 +87,7 @@
   display: block;
   max-width: 30%;
   height: fit-content;
-  border: 2px dashed transparent;
+  border: 3px dashed transparent;
   border-radius: 12px;
   padding: 2px;
 }
@@ -198,6 +198,16 @@
 
 .dragover {
   border-color: var(--primary-color, #388ff3);
+  transition: all .2s ease-in-out;
+}
+
+
+.remove-image svg path{
+  stroke: #fff;
+}
+
+.remove-image:hover svg path{
+  stroke: #f85656;
 }
 
 @media screen and (max-width: 576px) {
