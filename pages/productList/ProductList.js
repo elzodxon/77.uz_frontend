@@ -95,9 +95,9 @@ async function getProductList(page = 1, perPage = 2) {
   })
   const pageButtons = document.querySelectorAll('.pagination__button')
   pageButtons.forEach((button) => {
-    button.classList.remove('active')
+    button.classList.remove('activeClass')
     if (parseInt(button.textContent) === currentPage) {
-      button.classList.add('active')
+      button.classList.add('activeClass')
     }
   })
 }
@@ -117,7 +117,7 @@ function displayPageNav(perPage) {
       getProductList(i, perPage)
     })
     if (i === 1) {
-      pageButton.classList.add('active')
+      pageButton.classList.add('activeClass')
     }
     pagesContainer.appendChild(pageButton)
   }

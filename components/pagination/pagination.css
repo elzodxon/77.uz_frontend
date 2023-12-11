@@ -73,7 +73,7 @@ tr > td {
     background: #d5d8db !important;
 }
 
-.active {
+.activeClass {
   background: white !important;
   color: #388ff3 !important;
   border: solid 1px #fff !important;
