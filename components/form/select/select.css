@@ -43,6 +43,7 @@
 }
 
 .select-menu .options {
+  padding: 0;
   max-height: 312px;
   overflow-y: auto;
   margin-top: 8px;
@@ -79,7 +80,7 @@
   content: '';
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/img/select/checkmark.png);
+  background-image: url(../../../assets/img/select/checkmark.png);
   background-repeat: no-repeat;
   top: 15px;
   right: 15px;
