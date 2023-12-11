@@ -143,5 +143,6 @@ currencyOptions.forEach(function (option) {
   document.addEventListener("click", function () {
       currencyList.style.display = "none";
       currencyIcon.classList.remove("rotated");
+      currentCurrency.style.display="block";
   });
 });
