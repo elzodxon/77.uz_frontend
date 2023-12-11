@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
           subcategoryTitle: 'Speakers',
           subsubcategories: [
             { subcategoryInnerItem: 'Best Speaker Ever' },
-            { subcategoryInnerItem: 'CST( Cant Stop Talking' },
+            { subcategoryInnerItem: 'CST( Cant Stop Talking)' },
           ],
         },
         {

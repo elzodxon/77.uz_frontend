@@ -4,14 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ================== Font Awesome links================== -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
     <!-- ================== Google Fonts links ================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,9 +14,9 @@
     />
     <!-- ================== Css links ================== -->
 
-    <!-- <link rel="stylesheet" href="../../assets/css/normalize.css" /> -->
-    <!-- <link rel="stylesheet" href="../../assets/css/variables.css" /> -->
-    <link rel="stylesheet" href="./inputs.css" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="inputs.css" />
 
     <!doctype html>
     <html lang="en">
@@ -43,27 +35,27 @@
 
         <link rel="stylesheet" href="../../assets/css/normalize.css" />
         <link rel="stylesheet" href="../../assets/css/variables.css" />
-        <link rel="stylesheet" href="/components/inputs/inputs.css" />
+        <link rel="stylesheet" href="/components/form/inputs/inputs.css" />
 
         <!-- ================== Website Title ================== -->
         <title>Inputs Component</title>
       </head>
 
       <body>
-        <form action="" class="log-in-form">
+        <form action="" class="form">
           <!-- Name -->
-          <div class="input-card">
-            <label class="label" for="name">Ф.И.О. </label>
+          <div class="form-group">
+            <label class="label" for="fullName">Ф.И.О. </label>
             <input
               class="input input_text"
               type="text"
               name="name"
-              id="name"
+              id="fullName"
               placeholder="Введите вашу Ф.И.О."
             />
           </div>
           <!-- Product name -->
-          <div class="input-card">
+          <div class="form-group">
             <label class="label" for="product-name">Название продукта </label>
             <input
               class="input input__product-name"
@@ -74,7 +66,7 @@
             />
           </div>
           <!-- Log-in -->
-          <div class="input-card">
+          <div class="form-group">
             <label class="label" for="log-in">Логин </label>
             <input
               class="input input__login"
@@ -85,36 +77,77 @@
             />
           </div>
           <!-- Password -->
-          <div class="input-card">
+          <div class="form-group">
             <label class="label" for="password">Пароль </label>
-            <input
-              class="input input-password"
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Введите пароль"
-              onclick="togglePassword()"
-            />
-            <div class="closed-eye"></div>
-            <a href="#" class="forgot-password">Забыли пароль?</a>
+            <div class="password-input-group">
+              <input
+                class="input input-password"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Введите пароль"
+              />
+              <div class="open-eye"></div>
+              <a href="#" class="forgot-password">Забыли пароль?</a>
+            </div>
           </div>
           <!-- Phone number -->
-          <div class="input-card">
+          <div class="form-group">
             <label class="label" for="phone-number">Телефон номер </label>
-
-            <input
-              class="input input_tel"
-              type="tel"
-              name="phone-number"
-              id="phone-number"
-              required
-              inputmode="numeric"
-            />
+            <div class="phone-input-group">
+              <span class="country-code">+998</span>
+              <input
+                class="input input_tel"
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                required
+                inputmode="numeric"
+                placeholder="(__) ___-__-__"
+              />
+            </div>
+          </div>
+          <!-- Price -->
+          <div class="form-group">
+            <label class="label" for="price">Цена</label>
+            <div class="price-input-group">
+              <input
+                class="input input_price"
+                type="text"
+                name="price"
+                id="price"
+                required
+                inputmode="numeric"
+                placeholder="Введите сумму  в UZB"
+              />
+              <div class="currency-card">
+                <span class="current-currency">UZB</span>
+                <ul class="currency-list">
+                  <li class="currency__option">UZS</li>
+                  <li class="currency__option">USD</li>
+                  <li class="currency__option">RB</li>
+                </ul>
+                <svg
+                class="currency-icon"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                   d="M8 6L12 10L8 14"
+                   stroke="CurrentColor"
+                   stroke-width="1.5"
+                   stroke-linecap="round"
+                   stroke-linejoin="round" />
+             </svg>
+              </div>
+            </div>
           </div>
         </form>
         <!-- ================== Javascript Links
-      ================== -->
-        <script src="./inputs.js"></script>
+    ================== -->
+        <script src="inputs.js"></script>
       </body>
     </html>
   </head>

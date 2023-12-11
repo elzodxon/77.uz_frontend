@@ -4,12 +4,12 @@ import {
   phoneNumberFormatter,
 } from '../utils/utils.js'
 
-export function listViewStyle(product) {
-  console.log(product)
-  const listCard = document.createElement('div')
-  listCard.classList.add('list-view__card')
-  // ----------------Card list style--------------------
-  listCard.innerHTML = `
+
+ export function listViewStyle(product) { 
+    const listCard = document.createElement('div')
+    listCard.classList.add('list-view__card')
+    // ----------------Card list style--------------------
+    listCard.innerHTML = `
         <div class="list-view__card-symbols">
             <img class="list-view__card-image card-image" src="${
               product.photo
@@ -38,11 +38,10 @@ export function listViewStyle(product) {
         </div>
         </div>
         </div>`
-  return listCard
-}
-
-export function gridViewStyle(product) {
-  console.log(product)
+    return listCard
+  }
+  
+ export function gridViewStyle(product) {
 
   const grid_card = document.createElement('div')
 

@@ -3,6 +3,7 @@ const blocker = document.querySelector('.blocker')
 const searchInput = document.getElementById('searchNow')
 const searchSuggestion = document.getElementById('search-suggestion')
 const searchSuggestionList = document.querySelector('.search-suggestion__list')
+const searchWrapper = document.querySelector('.search-wrapper')
 
 // WHEN SEARCHINPUT IS FOCUSED ,  ADD BLOCKER TO BODY
 searchInput.addEventListener('focus', (e) => {
@@ -10,12 +11,14 @@ searchInput.addEventListener('focus', (e) => {
   blocker.classList.toggle('active')
   searchSuggestion.classList.toggle('active')
   document.body.classList.toggle('block')
+  searchWrapper.classList.toggle('active')
 })
 
 blocker.addEventListener('click', () => {
   document.body.classList.remove('block')
   blocker.classList.remove('active')
   searchSuggestion.classList.remove('active')
+  searchWrapper.classList.toggle('active')
 })
 
 /////////------SEARCH SUGGESTION-------///////
@@ -37,9 +40,9 @@ function handleSearchInput() {
   // If search input is empty, show 'no history'
   if (searchTerm === '') {
     searchSuggestionList.innerHTML =
-      "<li class='search-suggestion__item' style='background-color: #fff;cursor:default'>No history</li>"
+      "<li class='search-suggestion__item' style='background-color: #fff;cursor:default;color:var(--black-color);'>No history</li>"
     topTxt.textContent = 'История поиска'
-    
+
 return
   }
 
@@ -71,7 +74,7 @@ function getMatchingValues(searchTerm) {
       })
     }
   })
-  
+
 return matches
 }
 
@@ -81,7 +84,7 @@ function displaySearchResults(matches) {
       .map(
         (match) => `
           <li class="search-suggestion__item">
-        <a class="suggestion-link" href="/pages/product-list/ProductList.html">
+        <a class="suggestion-link" href="/pages/productList/ProductList.html">
         <span>
         <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M14.1057 14.2L17 17M16.0667 9.53333C16.0667 13.1416 13.1416 16.0667 9.53333 16.0667C5.92507 16.0667 3 13.1416 3 9.53333C3 5.92507 5.92507 3 9.53333 3C13.1416 3 16.0667 5.92507 16.0667 9.53333Z" stroke="#388FF3" stroke-width="1.5" stroke-linecap="round"/>
@@ -115,7 +118,7 @@ function displaySearchResults(matches) {
 function highlightMatch(value) {
   const searchTerm = searchInput.value.trim()
   const regex = new RegExp(searchTerm, 'gi')
-  
+
 return value.replace(
     regex,
     (match) => `<span class="matching-letters" >${match}</span>`,

@@ -1,18 +1,6 @@
-@import url(/components/inputs/inputs.css);
+@import url(/components/form/inputs/inputs.css);
 @import url(/assets/css/variables.css);
-* {
-  outline: inherit;
-  box-sizing: border-box;
-}
-html,
-body {
-  background-color: #fff;
-  height: 100%;
-  width: 100%;
-  max-width: 1400px;
-  box-sizing: inherit;
-  font-family: 'Inter', sans-serif;
-}
+
 body.block {
   overflow-y: hidden;
 }
@@ -28,8 +16,12 @@ body.block {
   display: flex;
   flex-direction: column;
   max-width: 580px;
+  height: 30px;
   width: 100%;
   margin: 0 auto;
+}
+.search-wrapper.active {
+  z-index: 190;
 }
 .main-search-form {
   margin: 0 auto;
@@ -120,7 +112,7 @@ body.block {
   top: 0;
   right: 0;
   background-color: var(--black-color);
-  z-index: 8;
+  z-index: 100;
   opacity: 0;
   transition: all 0.5s ease;
   width: 100vw;
@@ -134,7 +126,7 @@ body.block {
 .search-suggestion {
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 50px;
   transform: translate();
   display: none;
   flex-direction: column;
@@ -170,7 +162,7 @@ body.block {
   display: flex;
   flex-direction: column;
   width: 100%;
-  cursor: pointer;
+  /* cursor: pointer; */
   border-bottom: 1px solid var(--gray-color);
   transition: all 0.3s ease;
   border-radius: 10px;
@@ -206,10 +198,14 @@ body.block {
 .right-icon {
   display: inline-block;
   stroke: #b8bbbd;
+  width: 24px;
+  height: 24px;
   transform: translateX(0px);
   transition: all 0.3s ease;
   position: absolute;
   right: 0;
+
+  cursor: pointer;
 }
 
 .matching-letters {

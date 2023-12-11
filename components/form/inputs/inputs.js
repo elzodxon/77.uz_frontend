@@ -86,3 +86,63 @@ function handleBackspace(event, input) {
     event.preventDefault()
   }
 }
+
+
+//-------- PRICE--------//
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  let currencyCard = document.querySelector(".currency-card");
+  let currencyList = document.querySelector(".currency-list");
+  let currencyIcon = document.querySelector(".currency-icon");
+  let currentCurrency = document.querySelector(".current-currency");
+  let price= document.getElementById('price');
+  let currencyOptions=document.querySelectorAll('.currency__option')
+
+
+// only Numbers can be inputted
+  price.addEventListener('input',(e)=>{
+const priceValue=e.target.value.replace(/\D/g, '');
+//  after every the last 3 digits , there should be an empty space
+const PriceFormat=priceValue.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+// remove non-numeric values
+e.target.value=PriceFormat.trim();
+})
+
+  // Function to toggle the currency list visibility
+  function toggleCurrencyList() {
+    if (currencyList.style.display === "none"){
+      currencyList.style.display="flex";
+    }else{
+      currencyList.style.display="none"
+    }
+// rotate the icon when the categoryCard is clicked
+      currencyIcon.classList.toggle("rotated");
+      currentCurrency.style.display='none'
+  }
+
+  // Event listener for clicking on the currency card
+  currencyCard.addEventListener("click", function (event) {
+      event.stopPropagation();
+      toggleCurrencyList();
+  });
+
+  // Event listener for clicking on a currency option
+currencyOptions.forEach(function (option) {
+      option.addEventListener("click", function (event) {
+          event.stopPropagation();
+          currentCurrency.textContent = option.textContent;
+          toggleCurrencyList();
+          currentCurrency.style.display="block";
+          price.placeholder = `Введите сумму в ${option.innerText}`;
+      });
+  });
+
+  // Event listener for clicking outside the currency card
+  document.addEventListener("click", function () {
+      currencyList.style.display = "none";
+      currencyIcon.classList.remove("rotated");
+      currentCurrency.style.display="block";
+  });
+});

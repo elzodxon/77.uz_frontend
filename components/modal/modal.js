@@ -22,4 +22,11 @@ function handleKeyDown(event, modalId) {
   }
 }
 
-overlay.addEventListener('click', closeModal)
+overlay.addEventListener('click', (event) => {
+  const modalContainers = document.querySelectorAll('.modal')
+  modalContainers.forEach((modalContainer) => {
+    if (!modalContainer.contains(event.target)) {
+      closeModal(modalContainer.id)
+    }
+  })
+})
