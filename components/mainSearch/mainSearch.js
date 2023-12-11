@@ -3,6 +3,7 @@ const blocker = document.querySelector('.blocker')
 const searchInput = document.getElementById('searchNow')
 const searchSuggestion = document.getElementById('search-suggestion')
 const searchSuggestionList = document.querySelector('.search-suggestion__list')
+const searchWrapper = document.querySelector('.search-wrapper')
 
 // WHEN SEARCHINPUT IS FOCUSED ,  ADD BLOCKER TO BODY
 searchInput.addEventListener('focus', (e) => {
@@ -10,12 +11,14 @@ searchInput.addEventListener('focus', (e) => {
   blocker.classList.toggle('active')
   searchSuggestion.classList.toggle('active')
   document.body.classList.toggle('block')
+  searchWrapper.classList.toggle('active')
 })
 
 blocker.addEventListener('click', () => {
   document.body.classList.remove('block')
   blocker.classList.remove('active')
   searchSuggestion.classList.remove('active')
+  searchWrapper.classList.toggle('active')
 })
 
 /////////------SEARCH SUGGESTION-------///////
