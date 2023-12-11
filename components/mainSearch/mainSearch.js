@@ -40,7 +40,7 @@ function handleSearchInput() {
   // If search input is empty, show 'no history'
   if (searchTerm === '') {
     searchSuggestionList.innerHTML =
-      "<li class='search-suggestion__item' style='background-color: #fff;cursor:default'>No history</li>"
+      "<li class='search-suggestion__item' style='background-color: #fff;cursor:default;color:var(--black-color);'>No history</li>"
     topTxt.textContent = 'История поиска'
 
 return

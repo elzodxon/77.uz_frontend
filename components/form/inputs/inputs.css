@@ -159,11 +159,14 @@ align-items: flex-start;
 }
 .currency-list{
   display: none;
-  align-items: self-start;
   flex-direction: column;
+  align-items: flex-start;
+  padding-left: 0;
+  margin: 0 auto;
 }
 .currency__option{
   padding: 6px 8px;
+  list-style: none;
 }
 .currency__option:hover{
   background-color: #388ff35e;
