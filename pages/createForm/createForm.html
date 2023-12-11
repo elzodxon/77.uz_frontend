@@ -316,27 +316,15 @@
             <div class="product-info create-form__content">
               <p class="product-info__title form-title">Данные продукта</p>
               <div class="switches-container">
-                <input
-                  type="radio"
-                  id="switchMonthly"
-                  name="switchPlan"
-                  value="Monthly"
-                  checked="checked"
-                />
-                <input
-                  type="radio"
-                  id="switchYearly"
-                  name="switchPlan"
-                  value="Yearly"
-                />
-                <label for="switchMonthly">Русский</label>
-                <label for="switchYearly">English</label>
-                <div class="switch-wrapper">
-                  <div class="switch">
-                    <div>Русский</div>
-                    <div>English</div>
-                  </div>
-                </div>
+                <span class="language-switcher__active"></span>
+                <label class="language-switcher russian">
+                  <input class="language-switcher__input" type="radio" language-id="russian" name="language" value="russian" checked>
+                  <span class="language-switcher__label">Russian</span>
+                </label>
+                <label class="language-switcher english">
+                  <input class="language-switcher__input" type="radio" language-id="english" name="language" value="english">
+                  <span class="language-switcher__label">English</span>
+                </label>
               </div>
               <div class="product-info__form create-wrapper">
                 <div class="form-group">
@@ -547,6 +535,7 @@
     <script src="../../components/header/header.js"></script>
     <script src="../../components/footer/footer.js"></script>
     <script src="../../components/form/select/select.js"></script>
+    <script src="../../components/tab/tab.js"></script>
     <script src="./createForm.js"></script>
     <script></script>
   </body>
