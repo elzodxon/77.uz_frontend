@@ -1,17 +1,6 @@
 @import url(/components/form/inputs/inputs.css);
 @import url(/assets/css/variables.css);
-* {
-  outline: inherit;
-  box-sizing: border-box;
-}
-html,
-body {
-  background-color: #fff;
-  height: 100%;
-  width: 100%;
-  box-sizing: inherit;
-  font-family: 'Inter', sans-serif;
-}
+
 body.block {
   overflow-y: hidden;
 }
@@ -27,6 +16,7 @@ body.block {
   display: flex;
   flex-direction: column;
   max-width: 580px;
+  height: 30px;
   width: 100%;
   margin: 0 auto;
 }

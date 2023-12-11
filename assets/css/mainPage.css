@@ -1,0 +1,14 @@
+.main-content {
+  flex: 1;
+}
+.hero-section {
+  margin-top: 160px;
+  background-color: white;
+}
+
+.main-search-form {
+  transform: translate(0,-50%);
+}
+.category-list {
+  padding: 40px 0 36px;
+}
