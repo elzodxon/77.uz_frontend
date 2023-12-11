@@ -105,8 +105,12 @@
   color: #388ff3;
 }
 
-.active,
+.active {
+  background: transparent !important;
+  border: none !important;
+}
 .product-list__view-icon:hover {
+
   color: #388ff3;
   cursor: pointer;
 }

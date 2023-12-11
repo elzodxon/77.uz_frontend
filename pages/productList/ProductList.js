@@ -156,10 +156,11 @@ function handleCardIconClick(event) {
         product.is_liked = !product.is_liked
         if (product.is_liked) {
           likedProducts.push(product)
-        }else {
+        } else {
           likedProducts.pop(product)
         }
-        console.log(likedProducts)
+        const favoritesProduct = JSON.stringify(likedProducts)
+        localStorage.setItem("favoritesProduct", favoritesProduct);
         icon.style.color = product.is_liked ? 'red' : 'white'
       } else {
         console.log('Product not found with id:', product.id)

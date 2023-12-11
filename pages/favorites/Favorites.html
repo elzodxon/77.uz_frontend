@@ -12,11 +12,16 @@
 
     <link rel="stylesheet" href="../../components/header/header.css" />
     <link rel="stylesheet" href="../../components/footer/footer.css" />
-    <!-- <link rel="stylesheet" href="./layout.css" /> -->
     <link rel="stylesheet" href="../../assets/css/variables.css" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../components/pagination/pagination.css" />
+    <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg" />
+    <link rel="stylesheet" href="../../components/breadCrumb/breadCrumb.css" />
     <link rel="stylesheet" href="../../pages/productList/ProductList.css" />
-
+    <link rel="stylesheet" href="../../components/buttons/buttons.css" />
+    <link rel="stylesheet" href="../../components/languageSwitcher/languageSwitcher.css">
+    <link rel="stylesheet" href="../../components/prevPageHeader/prevPageHeader.css" />
+    <link rel="stylesheet" href="./Favorites.css" />
     <!-- ================== Website Title ================== -->
     <title>Header Component</title>
 </head>
@@ -26,11 +31,11 @@
         <div class="container">
             <nav class="navbar">
                 <!-- Left navigation bar -->
-                <ul class="navbar__list">
-                    <li id="language-switcher" class="navbar__item">
+                <ul class="navbar-list">
+                    <li id="language-switcher" class="navbar-list__item">
                         <button class="language-button text-sm-subtitle">
-                            <img width="20" height="20" src="https://77.uz/images/flag/ru.svg" alt="" />
-                            <span>РУ</span>
+                            <img width="20" height="20" src="../../assets/img/header/ru.svg" alt="" />
+                            <span>Русский</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.8 9.5999L12 14.3999L7.19999 9.5999" stroke="black" stroke-width="2"
@@ -40,19 +45,19 @@
                         <div class="language-content">
                             <ul class="language-content__list">
                                 <li class="language-content__item active">
-                                    <img width="20" height="20" src="https://77.uz/images/flag/ru.svg" alt="" />
-                                    <span>РУ</span>
+                                    <img width="20" height="20" src="../../assets/img/header/ru.svg" alt="" />
+                                    <span>RU</span>
                                 </li>
 
                                 <li class="language-content__item">
-                                    <img width="20" height="20" src="https://77.uz/images/flag/uz.svg" alt="" />
+                                    <img width="20" height="20" src="../../assets/img/header/uz.svg" alt="" />
                                     <span>UZ</span>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li class="navbar__item phone-wrapper">
-                        <a id="phone-number" href="tel:+998885005000" class="navbar__item-link">
+                    <li class="navbar-list__item phone-wrapper">
+                        <a id="telephone-number" href="tel:+998885005000" class="navbar-list__link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                                 fill="none">
                                 <path
@@ -71,9 +76,9 @@
                     <img src="../../assets/img/logo.svg" alt="" />
                 </a>
                 <!-- Right navigation bar -->
-                <ul class="navbar__list">
-                    <li class="navbar__item">
-                        <a id="favorite" href="" class="navbar__item-link text-sm-subtitle">
+                <ul class="navbar-list">
+                    <li class="navbar-list__item">
+                        <a id="favorite" href="" class="navbar-list__link text-sm-subtitle">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -83,9 +88,9 @@
                             <span class="favorite-title"> Избранные </span>
                         </a>
                     </li>
-                    <li class="navbar__item divider"></li>
-                    <li class="navbar__item">
-                        <button href="" class="navbar__item-link login-button text-sm-subtitle">
+                    <li class="navbar-list__item divider"></li>
+                    <li class="navbar-list__item">
+                        <button href="" id="registration-btn" class="navbar-list__link login-button text-sm-subtitle">
                             <span class="login-title">
                                 <span class="login-text">Войти </span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
@@ -115,6 +120,35 @@
 
     <main class="main">
         <div class="container">
+            <ul class="bread-crumb">
+                <li class="bread-crumb__item">
+                    <a href="" class="bread-crumb__link">Главная</a>
+                </li>
+                <li class="bread-crumb__item">
+                    <a href="" class="bread-crumb__link">Электроника</a>
+                </li>
+                <li class="bread-crumb__item item-active">
+                    <a href="" class="bread-crumb__link">Фены</a>
+                </li>
+                <li class="bread-crumb__item">
+                    <a href="" class="bread-crumb__link active">457 147</a>
+                </li>
+            </ul>
+            <!-- Product grid view -->
+            <div class="view-wrap grid-view" style="display: block">
+                <div id="grid-view__wrapper" class="grid-view__row">
+
+                </div>
+            </div>
+
+
+            <div id="pagination">
+                <button id="prev"> <iconify-icon icon="ooui:next-rtl"></iconify-icon>
+                </button>
+                <div id="pages"> </div>
+                <button id="next"> <iconify-icon icon="ooui:next-ltr"></iconify-icon>
+                </button>
+            </div>
         </div>
     </main>
 
@@ -227,8 +261,13 @@
         </div>
     </footer>
 
+
     <!-- ================== Javascript Links ================== -->
-    <script src="./Favorites.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="../../components/header/header.js"></script>
+    <script src="../../components/checkbox/checkbox.js"></script>
+    <script src="../../components/languageSwitcher/languageSwitcher.js"></script>
+    <script type="module" src="./Favorites.js"></script>
 </body>
 
 </html>
