@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
     <link rel="stylesheet" href="../../assets/css/variables.css" />
-    <link rel="stylesheet" href="./inputs.css" />
+    <link rel="stylesheet" href="inputs.css" />
 
     <!doctype html>
     <html lang="en">
@@ -105,6 +105,30 @@
                 inputmode="numeric"
                 placeholder="(__) ___-__-__"
               />
+            </div>
+          </div>
+          <!-- Price -->
+          <div class="form-group">
+            <label class="label" for="price">Цена</label>
+            <div class="price-input-group">
+              <input
+                class="input input_price"
+                type="text"
+                name="price"
+                id="price"
+                required
+                inputmode="numeric"
+                placeholder="Введите сумму  в UZB"
+              />
+              <div class="currency-card">
+                <span class="current-currency">UZB</span>
+                <ul class="currency-list">
+                  <li class="currency__option">UZS</li>
+                  <li class="currency__option">USD</li>
+                  <li class="currency__option">RB</li>
+                </ul>
+                <img class="currency-icon" src="/assets/img/category/right-icon.svg" alt="left-icon">
+              </div>
             </div>
           </div>
         </form>

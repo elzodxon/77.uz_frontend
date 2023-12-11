@@ -50,5 +50,8 @@
       "eslint --fix"
     ]
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "g": "^2.0.1"
+  }
 }

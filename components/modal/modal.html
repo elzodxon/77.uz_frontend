@@ -9,17 +9,67 @@
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <link rel="stylesheet" href="../buttons/buttons.css" />
+    <link rel="stylesheet" href="../inputs/inputs.css" />
     <link rel="stylesheet" href="./modal.css" />
 
     <title>Modal Component</title>
   </head>
   <body>
     <div class="flex-center" style="height: 100vh">
-      <button class="btn" id="modal">Open Modal</button>
+      <div class="modal-btn-wrapper">
+        <button
+          class="btn"
+          id="delete-modal"
+          onclick="openModal('delete-layer')"
+        >
+          Open Modal
+        </button>
+        <button
+          class="btn"
+          id="cancelling-modal"
+          onclick="openModal('cancelling-layer')"
+        >
+          Open Modal
+        </button>
+        <button class="btn" id="exit-modal" onclick="openModal('exit-layer')">
+          Open Modal
+        </button>
+        <button
+          class="btn"
+          id="sending-modal"
+          onclick="openModal('sending-layer')"
+        >
+          Open Modal
+        </button>
+        <button
+          class="btn"
+          id="password-modal"
+          onclick="openModal('password-layer')"
+        >
+          Open Modal
+        </button>
+        <button
+          class="btn"
+          id="noinfo-modal"
+          onclick="openModal('noinfo-layer')"
+        >
+          Open Modal
+        </button>
+        <button class="btn" id="login-modal" onclick="openModal('login-layer')">
+          Open Modal
+        </button>
+        <button
+          class="btn"
+          id="application-modal"
+          onclick="openModal('application-layer')"
+        >
+          Open Modal
+        </button>
+      </div>
 
-      <div class="modal">
+      <div class="modal" id="delete-layer">
         <div class="modal-header">
-          <button class="close-btn">
+          <button class="close-btn" onclick="closeModal('delete-layer')">
             <img
               class="close-img"
               src="../../assets/img/modal-img/close-icon.svg"
@@ -32,8 +82,10 @@
         <div class="modal-body">
           <img
             class="modal-body__img"
-            src="../../assets/img/Trash.svg"
+            src="../../assets/img/modal-img/trash.svg"
             alt="trash"
+            width="120"
+            height="108"
           />
           <h2 class="modal-body__title">Удалить объявление</h2>
           <p class="modal-body__subtitle">
@@ -42,8 +94,291 @@
           </p>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-secondary">Отменить</button>
+          <button
+            onclick="closeModal('delete-layer')"
+            class="btn btn-secondary"
+          >
+            Отменить
+          </button>
           <button class="btn btn-danger">Удалить</button>
+        </div>
+      </div>
+
+      <div class="modal" id="cancelling-layer">
+        <div class="modal-header">
+          <button class="close-btn" onclick="closeModal('cancelling-layer')">
+            <img
+              class="close-img"
+              src="../../assets/img/modal-img/close-icon.svg"
+              alt="Close icon"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <div class="modal-body">
+          <img
+            class="modal-body__img second"
+            src="../../assets/img/modal-img/wishlist.svg"
+            alt="Wishlist"
+            width="120"
+            height="113"
+          />
+          <h2 class="modal-body__title">Отменить создания объявления</h2>
+          <p class="modal-body__subtitle">
+            Вы точно хотите отменить создание объявления, все ваши изменения не
+            будут сохранены
+          </p>
+        </div>
+        <div class="modal-footer second-wrapper">
+          <button
+            onclick="closeModal('cancelling-layer')"
+            class="btn btn-secondary"
+          >
+            Вернется
+          </button>
+          <button class="btn">Отменить</button>
+        </div>
+      </div>
+
+      <div class="modal" id="exit-layer">
+        <div class="modal-header">
+          <button class="close-btn" onclick="closeModal('exit-layer')">
+            <img
+              class="close-img"
+              src="../../assets/img/modal-img/close-icon.svg"
+              alt="Close icon"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <div class="modal-body">
+          <img
+            class="modal-body__img"
+            src="../../assets/img/modal-img/trash-solid.svg"
+            alt="Wishlist"
+            width="120"
+            height="106"
+          />
+          <h2 class="modal-body__title">Выход</h2>
+          <p class="modal-body__subtitle">Вы точно хотите выйти из платформы</p>
+        </div>
+        <div class="modal-footer third">
+          <button onclick="closeModal('exit-layer')" class="btn btn-secondary">
+            Отменить
+          </button>
+          <button class="btn btn-light-danger">Выход</button>
+        </div>
+      </div>
+
+      <div class="modal" id="sending-layer">
+        <div class="modal-header">
+          <button class="close-btn" onclick="closeModal('sending-layer')">
+            <img
+              class="close-img"
+              src="../../assets/img/modal-img/close-icon.svg"
+              alt="Close icon"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <div class="modal-body">
+          <img
+            class="modal-body__img second"
+            src="../../assets/img/modal-img/wishlist-solid.svg"
+            alt="Wishlist"
+            width="120"
+            height="113"
+          />
+          <h2 class="modal-body__title">Ваша заявка принята!</h2>
+          <p class="modal-body__subtitle fourth">
+            Наши сотрудники свяжутся с вами в ближайшее время
+          </p>
+        </div>
+        <div class="modal-footer fourth-wrapper">
+          <button onclick="closeModal('sending-layer')" class="btn">
+            Спасибо
+          </button>
+        </div>
+      </div>
+
+      <div class="modal" id="password-layer">
+        <div class="modal-header">
+          <button class="close-btn" onclick="closeModal('password-layer')">
+            <img
+              class="close-img"
+              src="../../assets/img/modal-img/close-icon.svg"
+              alt="Close icon"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <div class="modal-body">
+          <img
+            class="modal-body__img"
+            src="../../assets/img/modal-img/info.svg"
+            alt="Info icon"
+            width="64"
+            height="64"
+          />
+          <p class="modal-body__subtitle">
+            Забыли пароль? Для восстановления пароля обратитесь администратору
+          </p>
+        </div>
+        <div class="modal-footer fifth">
+          <button onclick="closeModal('password-layer')" class="btn">
+            +998 97 450 45 00
+          </button>
+        </div>
+      </div>
+
+      <div class="modal noinfo" id="noinfo-layer">
+        <div class="modal-body">
+          <img
+            class="modal-body__img"
+            src="../../assets/img/modal-img/search-icon.svg"
+            alt="Info icon"
+            width="120"
+            height="107"
+          />
+          <h2 class="modal-body__title sixth">Ничего не найдено</h2>
+          <p class="modal-body__subtitle sixth-top">
+            Упс! Мы не смогли найти ни одного подходящего результата по вашему
+            запросу
+          </p>
+        </div>
+      </div>
+
+      <div class="modal" id="login-layer">
+        <div class="modal-header modal-header__wrapper">
+          <h2 class="modal-body__title modal-header__title">
+            Добро пожаловать!
+          </h2>
+          <button class="close-btn" onclick="closeModal('login-layer')">
+            <img
+              class="close-img"
+              src="../../assets/img/modal-img/close-icon.svg"
+              alt="Close icon"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <p class="modal-body__subtitle modal__subtitle">
+          Войти в систему чтобы торговать в системе
+        </p>
+        <div class="modal-body">
+          <form class="modal-form">
+            <!-- Log-in -->
+            <div class="form-group">
+              <label class="label modal-label" for="log-in">Логин </label>
+              <input
+                class="input input__login"
+                type="text"
+                name="log-in"
+                id="log-in"
+                placeholder="Введите логин"
+              />
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+              <label class="label modal-label" for="password">Пароль </label>
+              <div class="password-input-group">
+                <input
+                  class="input input-password"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Введите пароль"
+                />
+                <div class="open-eye"></div>
+                <a href="#" class="forgot-password">Забыли пароль?</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer seven">
+          <button onclick="closeModal('login-layer')" class="btn">Войти</button>
+          <p class="seven-text">Хотите стать продавцом?</p>
+          <button class="btn btn-outline">Подать заявку</button>
+        </div>
+      </div>
+
+      <div class="modal" id="application-layer">
+        <div class="modal-header modal-header__wrapper">
+          <h2 class="modal-body__title modal-header__title">Подать заявку</h2>
+          <button class="close-btn" onclick="closeModal('application-layer')">
+            <img
+              class="close-img"
+              src="../../assets/img/modal-img/close-icon.svg"
+              alt="Close icon"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <p class="modal-body__subtitle modal__subtitle2">
+          Войти в систему чтобы торговать в системе
+        </p>
+        <div class="modal-body">
+          <form class="modal-form1">
+            <!-- Log-in -->
+            <div class="form-group">
+              <label class="label modal-label" for="fullName">Ф.И.О. </label>
+              <input
+                class="input input_text"
+                type="text"
+                name="name"
+                id="fullName"
+                placeholder="Введите вашу Ф.И.О."
+              />
+            </div>
+            <!-- Product name -->
+            <div class="form-group">
+              <label class="label modal-label" for="product-name"
+                >Название продукта
+              </label>
+              <input
+                class="input input__product-name"
+                type="text"
+                name="product-name"
+                id="product-name"
+                placeholder="Введите название продукта"
+              />
+            </div>
+
+            <!-- Phone number -->
+            <div class="form-group">
+              <label class="label modal-label" for="phone-number"
+                >Телефон номер
+              </label>
+              <div class="phone-input-group">
+                <span class="country-code">+998</span>
+                <input
+                  class="input input_tel"
+                  type="tel"
+                  name="phone-number"
+                  id="phone-number"
+                  required
+                  inputmode="numeric"
+                  placeholder="() ___--__"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer seven">
+          <button class="btn">Продолжить</button>
+          <p class="seven-text eight">Если вы продавец, войдите на платформу</p>
+          <button
+            onclick="closeModal('application-layer')"
+            class="btn btn-outline"
+          >
+            Войти
+          </button>
         </div>
       </div>
 

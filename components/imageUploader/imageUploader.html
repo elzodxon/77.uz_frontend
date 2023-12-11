@@ -1,57 +1,62 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ================== Google Fonts links ================== -->
 
-  <!-- ================== Google Fonts links ================== -->
+    <!-- ================== Css links ================== -->
 
-  <!-- ================== Css links ================== -->
+    <link rel="stylesheet" href="./imageUploader.css" />
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
 
-  <link rel="stylesheet" href="./imageUploader.css" />
-  <link rel="stylesheet" href="../../assets/css/variables.css" />
-  <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <!-- ================== Website Title ================== -->
+    <title>Document</title>
+  </head>
 
-  <!-- ================== Website Title ================== -->
-  <title>Document</title>
-</head>
-
-<body>
-  <!-- Dark Drag modal window  -->
-  <div id="dropbox" class="dropbox">
-    <div id="dropbox__container" class="dropbox__container">
-      <div class="dropbox__float">
-        <img class="dropbox__float-image" draggable="false" src="../../assets/img/drop-image.svg" alt="dropbox image" />
-        <p class="dropbox__float-title">Перетащите изображение</p>
+  <body>
+    <!-- Dark Drag modal window  -->
+    <div id="dropbox" class="dropbox">
+      <div id="dropbox__container" class="dropbox__container">
+        <div class="dropbox__float">
+          <img
+            class="dropbox__float-image"
+            draggable="false"
+            src="../../assets/img/drop-image.svg"
+            alt="dropbox image"
+          />
+          <p class="dropbox__float-title">Перетащите изображение</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Sortable List  -->
-  <div class="container">
-    <div class="wrapper">
-      <div class="gallery" id="gallery">
-        <div id="gallery-wrapper" class="gallery-box"></div>
+    <!-- Sortable List  -->
+    <div class="container">
+      <div class="wrapper">
+        <div class="gallery" id="gallery">
+          <div id="gallery-wrapper" class="gallery-box"></div>
 
-        <div class="drop-image__item">
-          <div class="gallery__item-empty" draggable="false">
-            <img src="../../assets/img/image-add.svg" alt="add image" />
-            <h3>Перетащите изображение сюда</h3>
-            <span>Перетащите свое изображение сюда или
-              <label for="files" class="choose-text">выберите
+          <div class="drop-image__item">
+            <div class="gallery__item-empty" draggable="false">
+              <img src="../../assets/img/image-add.svg" alt="add image" />
+              <h3>Перетащите изображение сюда</h3>
+              <span
+                >Перетащите свое изображение сюда или
+                <label for="files" class="choose-text"
+                  >выберите
 
-                <input id="files" type="file" accept="image/*" />
-              </label>
-            </span>
+                  <input multiple id="files" type="file" accept="image/*" />
+                </label>
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- ================== Javascript Links ================== -->
-  <script src="imageUploader.js" defer></script>
-</body>
-
+    <!-- ================== Javascript Links ================== -->
+    <script src="imageUploader.js" defer></script>
+  </body>
 </html>

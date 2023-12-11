@@ -9,7 +9,6 @@ body {
   background-color: #fff;
   height: 100%;
   width: 100%;
-  /* max-width: 1400px; */
   box-sizing: inherit;
   font-family: 'Inter', sans-serif;
 }
@@ -210,6 +209,7 @@ body.block {
   transition: all 0.3s ease;
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 
 .matching-letters {
