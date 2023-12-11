@@ -16,6 +16,7 @@ const nextButton = document.getElementById('next')
 let dataSet = []
 const perPage = 6
 let currentPage = 1
+let likedProducts = []
 
 // ------------------- FETCH Products ----------------------
 document.addEventListener('DOMContentLoaded', function () {
@@ -27,14 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 fetch('./ProductList.json')
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     console.log(data.productList)
-    dataSet = data.productList; // Update the global dataSet variable with fetched data
-    displayPageNav(perPage); // Update pagination buttons
-    getProductList(currentPage, perPage); // Display initial page
+    dataSet = data.productList // Update the global dataSet variable with fetched data
+    displayPageNav(perPage) // Update pagination buttons
+    getProductList(currentPage, perPage) // Display initial page
   })
-  .catch(error => console.error('Error fetching data:', error));
+  .catch((error) => console.error('Error fetching data:', error))
 
 // Todo: Refactor this function
 // ------------------- Style switcher ----------------------
@@ -79,27 +80,26 @@ async function getProductList(page = 1, perPage = 2) {
 
   const slicedItems = dataSet.slice(index, offSet)
 
-  listWrapper.innerHTML = '';
-  gridWrapper.innerHTML = '';
+  listWrapper.innerHTML = ''
+  gridWrapper.innerHTML = ''
 
   slicedItems.map((product) => {
-       
-      console.log(product)
+    console.log(product)
 
-      const listCard = listViewStyle(product)
-      listWrapper.appendChild(listCard)
+    const listCard = listViewStyle(product)
+    listWrapper.appendChild(listCard)
 
-      const gridCard = gridViewStyle(product)
-      gridWrapper.appendChild(gridCard)
-   
+    const gridCard = gridViewStyle(product)
+
+    gridWrapper.appendChild(gridCard)
   })
-  const pageButtons = document.querySelectorAll('.pagination__button');
+  const pageButtons = document.querySelectorAll('.pagination__button')
   pageButtons.forEach((button) => {
-    button.classList.remove('active');
+    button.classList.remove('active')
     if (parseInt(button.textContent) === currentPage) {
-      button.classList.add('active');
+      button.classList.add('active')
     }
-  });
+  })
 }
 
 function displayPageNav(perPage) {
@@ -123,7 +123,6 @@ function displayPageNav(perPage) {
   }
 }
 
-
 prevButton.addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage--
@@ -145,9 +144,7 @@ displayPageNav(perPage)
 getProductList(1, perPage)
 // ------------------- Find Product By Icon ID -------------
 function findProductByIconId(icon) {
-  const foundProduct = dataSet.find((product) => product.id == icon.id)
-
-  return foundProduct
+  return dataSet.find((product) => product.id == icon.id)
 }
 
 // ------------------- IsLiked or Not Func -----------------
@@ -157,8 +154,12 @@ function handleCardIconClick(event) {
       const product = findProductByIconId(icon)
       if (product) {
         product.is_liked = !product.is_liked
-
-        // Todo: refactor style changing
+        if (product.is_liked) {
+          likedProducts.push(product)
+        }else {
+          likedProducts.pop(product)
+        }
+        console.log(likedProducts)
         icon.style.color = product.is_liked ? 'red' : 'white'
       } else {
         console.log('Product not found with id:', product.id)
