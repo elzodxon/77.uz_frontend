@@ -66,7 +66,6 @@
 .user-info .user-name {
   white-space: nowrap;
   color: var(--Black, #16191d);
-  font-family: Inter;
   font-size: 12px;
   font-style: normal;
   transition: 0.2s ease-in-out;
@@ -106,76 +105,6 @@
 }
 #favorite:hover {
   color: var(--primary-color);
-}
-#language-switcher img {
-  width: 24px;
-  height: 24px;
-}
-.language-content {
-  position: absolute;
-  opacity: 0;
-  left: 0;
-  transform: translateY(20px);
-  pointer-events: none;
-  background-color: white;
-  transition: 0.15s ease-in-out;
-  border-radius: 6px;
-  box-shadow: 0 2px 28px #17181a33;
-}
-.language-content.active {
-  pointer-events: all;
-  opacity: 1;
-  transform: translateY(10px);
-}
-
-.language-content__list {
-  display: flex;
-  width: 100%;
-  min-width: 100%;
-  flex-direction: column;
-}
-.language-content__item {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-}
-.language-content__item img {
-  width: 24px;
-  height: 24px;
-}
-.language-content__item:hover {
-  color: var(--primary-color);
-}
-.language-content__item.active {
-  color: var(--primary-color);
-}
-
-.language-content__item:nth-child(1) {
-  border-bottom: 1px solid var(--gray-color);
-}
-
-.language-button {
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-  outline: none;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  transition: 0.2s ease-in-out;
-}
-.language-button:hover {
-  color: var(--primary-color);
-}
-.language-button:hover svg path {
-  stroke: var(--primary-color);
-  transition: 0.2s ease-in-out;
-}
-
-.language-button img {
-  flex: 1;
 }
 
 #telephone-number {

@@ -1,61 +1,33 @@
-.paginationjs {
-  display: flex !important;
-  justify-content: center ;
-  margin: 30px 0 0 0 !important;
+body {
+  font-family: Arial, sans-serif;
 }
-.paginationjs-page {
-  padding: 4px 14px;
-  margin: 0 5px;
-  cursor: pointer;
+
+.pagination {
+  display: flex;
+  font-family: Roboto, Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.pagination-pages__wrapper {
+}
+.pagination__button {
   text-align: center;
+  padding: 10px 14px;
+  margin: 0px 4px;
   border-radius: 8px;
-  /* background-color: transparent; */
-  color: var(--greys-grey);
-  border: 1px solid var(--greys-grey);
+  background-color: transparent;
+  color: var(--greys-grey-0, #63676c);
+  border: 1px solid var(--greys-grey-3, #d5d8db);
+  cursor: pointer;
 }
 
+button:hover {
+  background-color: #ddd;
+}
 .active {
-  background-color: white !important;
-  border: solid 1px white !important;
-  color: #388FF3 !important;
+  color: #388ff3;
+  background-color: white;
+  border: white;
 }
-.active a {
-  color: #388FF3 !important;
-}
-
-.paginationjs .paginationjs-pages li > a {
-  min-width: unset !important;
-  height: unset !important;
-  background: transparent !important;
-}
-
-.paginationjs .paginationjs-pages li {
-border-right:1px solid var(--greys-grey-3, #d5d8db) !important;
-border-top:1px solid var(--greys-grey-3, #d5d8db) !important;
-border-bottom:1px solid var(--greys-grey-3, #d5d8db) !important;
-border-left: 1px solid var(--greys-grey-3, #d5d8db) !important;
-}
-
-
-.paginationjs-next {
-  padding: 4px 14px;
-  margin: 0 5px;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 8px !important;
-  /* background-color: transparent; */
-  color: var(--greys-grey);
-  border: 1px solid var(--greys-grey);
-}
-
-.paginationjs-prev {
-  padding: 4px 14px;
-  margin: 0 5px;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 8px !important;
-  /* background-color: transparent; */
-  color: var(--greys-grey);
-  border: 1px solid var(--greys-grey);
-}
-

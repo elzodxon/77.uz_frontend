@@ -27,19 +27,23 @@
     <link rel="stylesheet" href="./components/header/header.css" />
     <link rel="stylesheet" href="./assets/css/variables.css" />
     <link rel="stylesheet" href="./components/footer/footer.css" />
-    <link rel="stylesheet" href="./pages/product-list/ProductList.css" />
+    <link rel="stylesheet" href="./pages/ProductList/ProductList.css" />
     <link rel="stylesheet" href="./components/modal/modal.css" />
-    <link rel="stylesheet" href="/components/inputs/inputs.css">
+    <link rel="stylesheet" href="/components/inputs/inputs.css" />
     <link rel="stylesheet" href="./components/select/select.css" />
     <link rel="stylesheet" href="./components/pagination/pagination.css" />
-    <link rel="stylesheet" href="./components/category-list/category.css" />
+    <link rel="stylesheet" href="./components/categoryList/category.css" />
     <link
-    rel="stylesheet"
-    href="./components/content-header/content-header.css"
+      rel="stylesheet"
+      href="./components/languageSwitcher/languageSwitcher.css"
     />
     <link
-    rel="stylesheet"
-    href="../77.uz_frontend/components/buttons/buttons.css"
+      rel="stylesheet"
+      href="./components/contentHeader/contentHeader.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../77.uz_frontend/components/buttons/buttons.css"
     />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <link
@@ -216,8 +220,7 @@
     </header>
 
     <!-- Body Section -->
-    <main class="main ">
-
+    <main class="main">
       <div class="container">
         <!-- Ads Section -->
 
@@ -228,14 +231,9 @@
               Вы можете найти все категории, которые вам нужны от покупателя
             </p>
           </div>
-         <div id="main" >
-          <div id="ads-wrapper" class="ads-wrapper__list ads-wrapper">
-
+          <div id="main">
+            <div id="ads-wrapper" class="ads-wrapper__list ads-wrapper"></div>
           </div>
-         </div>
-
-
-
         </div>
       </div>
     </main>
@@ -325,7 +323,9 @@
                   placeholder="Введите пароль"
                 />
                 <div class="open-eye"></div>
-                <a href="#" class="forgot-password" id="icon-close">Забыли пароль?</a>
+                <a href="#" class="forgot-password" id="icon-close"
+                  >Забыли пароль?</a
+                >
               </div>
             </div>
             <div class="modal-footer fifth">
@@ -469,22 +469,22 @@
                 </div>
               </div>
             </div>
-                       <!-- Phone number -->
-          <div class="form-group">
-            <label class="label" for="phone-number">Телефон номер </label>
-            <div class="phone-input-group">
-              <span class="country-code">+998</span>
-              <input
-                class="input input_tel"
-                type="tel"
-                name="phone-number"
-                id="phone-number"
-                required
-                inputmode="numeric"
-                placeholder="(__) ___-__-__"
-              />
+            <!-- Phone number -->
+            <div class="form-group">
+              <label class="label" for="phone-number">Телефон номер </label>
+              <div class="phone-input-group">
+                <span class="country-code">+998</span>
+                <input
+                  class="input input_tel"
+                  type="tel"
+                  name="phone-number"
+                  id="phone-number"
+                  required
+                  inputmode="numeric"
+                  placeholder="(__) ___-__-__"
+                />
+              </div>
             </div>
-          </div>
           </form>
           <div class="modal-footer seven">
             <button id="continue-registration" class="btn third-btn">
