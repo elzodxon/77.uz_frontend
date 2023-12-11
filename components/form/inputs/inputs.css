@@ -147,7 +147,7 @@ cursor: pointer;
 display: flex;
 align-items: flex-start;
 }
-.current-currency:hover{
+.current-currency{
   color: #388ff3;
 }
 .currency-icon {
@@ -172,6 +172,9 @@ align-items: flex-start;
   list-style: none;
   width: 100%;
   text-align: center;
+}
+.currency__option:first-child{
+  padding-top: 0;
 }
 .currency__option:hover{
   color: #388ff3;
