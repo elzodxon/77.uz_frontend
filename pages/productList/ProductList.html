@@ -19,9 +19,9 @@
   <link rel="stylesheet" href="../../components/checkbox/index.css" />
   <link rel="stylesheet" href="../../components/breadCrumb/breadCrumb.css" />
   <link rel="stylesheet" href="../../components/buttons/buttons.css" />
-  <link rel="stylesheet" href="../../components/languageSwitcher/index.css">
-  <link rel="stylesheet" href="../../components/radio-button/index.css" />
-  <link rel="stylesheet" href="../../components/prevPageHeader/index.css" />
+  <link rel="stylesheet" href="../../components/languageSwitcher/languageSwitcher.css">
+  <link rel="stylesheet" href="../../components/radio/radio.css" />
+  <link rel="stylesheet" href="../../components/prevPageHeader/prevPageHeader.css" />
   <link rel="stylesheet" href="../../components/select/select.css">
   <!-- ================== Website Title ================== -->
   <title>77.uz | Product List</title>
@@ -326,6 +326,7 @@
               <h3 class="filter-sub__title">
                 Сортировать
               </h3>
+              
               <div class="radio-group">
                 <input class="default-radio" type="radio" name="radio-name" id="radio-1" value="radio-value" />
                 <label class="radio-label" for="radio-1">Дешёвые сперва</label>
@@ -426,10 +427,12 @@
               </div>
             </div>
 
-            <div class="pagination">
-              <button  id="prev" class="pagination__button" >'<'</button>
-              <div id="pages" class="pagination-pages__wrapper" ></div>
-              <button id="next" class="pagination__button" >></button>
+            <div id="pagination">
+              <button id="prev"> <iconify-icon icon="ooui:next-rtl"></iconify-icon>
+              </button>
+              <div id="pages"> </div>
+              <button id="next"> <iconify-icon icon="ooui:next-ltr"></iconify-icon>
+              </button>
           </div>
         
         </div>

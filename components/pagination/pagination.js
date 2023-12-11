@@ -1,84 +1,140 @@
-const postsPerPage = 5
-let currentPage = 1
-const pagesToShow = 3 // Number of pages to show at a time
-
-// const paginationContainer = document.querySelector('.pagination')
 const pagesContainer = document.getElementById('pages')
 const prevButton = document.getElementById('prev')
 const nextButton = document.getElementById('next')
-const postListContainer = document.getElementById('post-list')
-let totalProducts = 0
 
-function displayPosts() {
-  fetch(
-    `https://admin.77.uz/api/v1/store/list/ads/?page_size=${postsPerPage}&page=${currentPage}`,
-  )
-    .then((response) => response.json())
-    .then((posts) => {
-      totalProducts = posts.count
-      postListContainer.innerHTML = ''
+const dataSet = [
+  {
+    id: 1,
+  },
+  {
+    id: 2,
+  },
+  {
+    id: 3,
+  },
+  {
+    id: 4,
+  },
+  {
+    id: 5,
+  },
+  {
+    id: 6,
+  },
+  {
+    id: 7,
+  },
+  {
+    id: 8,
+  },
+  {
+    id: 9,
+  },
+  {
+    id: 10,
+  },
+  {
+    id: 11,
+  },
+  {
+    id: 12,
+  },
+  {
+    id: 13,
+  },
+  {
+    id: 14,
+  },
+  {
+    id: 15,
+  },
+  {
+    id: 16,
+  },
+  {
+    id: 17,
+  },
+  {
+    id: 18,
+  },
+  {
+    id: 19,
+  },
+  {
+    id: 20,
+  },
+]
 
-      posts.results.forEach((post) => {
-        const postItem = document.createElement('div')
-        postItem.classList.add('post-item')
-        postItem.innerHTML = `
-                    <h3>${post.name}</h3>
-                    <p>${post.price}</p>
-                `
-        postListContainer.appendChild(postItem)
-      })
+let currentPage = 1
+let perPage = 2
 
-      updatePagination()
+function displayPageNav(perPage) {
+  const totalItems = dataSet.length
+  perPage = perPage ? perPage : 1
+  const pages = Math.ceil(totalItems / perPage)
+
+  for (let i = 1; i <= pages; i++) {
+    const pageButton = document.createElement('button')
+    pageButton.classList.add('pagination__button')
+    pageButton.textContent = i
+    pageButton.setAttribute('id', i)
+    pageButton.addEventListener('click', () => {
+      currentPage = i
+      displayItems(i, perPage)
     })
-    .catch((error) => console.error(error))
+    if (i === 1) {
+      pageButton.classList.add('active')
+    }
+    pagesContainer.appendChild(pageButton)
+  }
 }
 
- function updatePagination() {
-    const totalPosts = totalProducts
-      const totalPages = Math.ceil(totalPosts / postsPerPage)
+function displayItems(page = 1, perPage = 2) {
+  let index, offSet
 
-      pagesContainer.innerHTML = ''
+  if (page == 1 || page <= 0) {
+    index = 0
+    offSet = perPage
+  } else if (page > dataSet.length) {
+    index = page - 1
+    offSet = dataSet.length
+  } else {
+    index = page * perPage - perPage
+    offSet = index + perPage
+  }
 
-      // Calculate the range of pages to show
-      const startPage = Math.max(currentPage - Math.floor(pagesToShow / 2), 1)
-      const endPage = Math.min(startPage + pagesToShow - 1, totalPages)
+  const slicedItems = dataSet.slice(index, offSet)
 
-      // Create buttons for the range of pages
-      for (let i = startPage; i <= endPage; i++) {
-        const pageButton = document.createElement('button')
-        pageButton.classList.add('pagination__button')
-        pageButton.textContent = i
-        pageButton.addEventListener('click', () => {
-          currentPage = i
+  const html = slicedItems.map(
+    (item) =>
+      `<tr>
+        <td>${item.id}</td>
+      </tr>`,
+  )
 
-          displayPosts()
-        })
-        if (i === currentPage) {
-          pageButton.classList.add('active')
-        }
-        pagesContainer.appendChild(pageButton)
-      }
-
-      prevButton.disabled = currentPage === 1
-      nextButton.disabled = currentPage === totalPages
+  document.querySelector('#container tbody').innerHTML = html.join('')
+  const activePageButton = document.querySelector('.active')
+  activePageButton.classList.remove('active')
+  const clickedPageButton = document.getElementById(page)
+  clickedPageButton.classList.add('active')
 }
 
 prevButton.addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage--
-    displayPosts()
+    displayItems(currentPage, perPage)
   }
 })
 
 nextButton.addEventListener('click', () => {
+  const totalItems = dataSet.length
+  const totalPages = Math.ceil(totalItems / perPage)
 
-  const totalPosts = totalProducts
-      const totalPages = Math.ceil(totalPosts / postsPerPage)
-
-      if (currentPage < totalPages) {
-        currentPage++
-        displayPosts()
-      }
+  if (currentPage < totalPages) {
+    currentPage++
+    displayItems(currentPage, perPage)
+  }
 })
 
-displayPosts()
+displayPageNav(perPage)
+displayItems(1, perPage)

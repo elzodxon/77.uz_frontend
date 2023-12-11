@@ -19,16 +19,26 @@
 </head>
 
 <body>
-  <div id="post-list"></div>
-
-  <div class="pagination">
-      <button  id="prev" class="pagination__button" >'<'</button>
-      <div id="pages" class="pagination-pages__wrapper" ></div>
-      <button id="next" class="pagination__button" >></button>
-  </div>
-
+  <div id="container">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div id="pagination">
+        <button id="prev"> <iconify-icon icon="ooui:next-rtl"></iconify-icon>
+        </button>
+        <div id="pages"> </div>
+        <button id="next"> <iconify-icon icon="ooui:next-ltr"></iconify-icon>
+        </button>
+    </div>
+  
 <!-- ================== Javascript Links ================== -->
-  <!-- <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script> -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <script src="./pagination.js"></script>
 </body>
 
