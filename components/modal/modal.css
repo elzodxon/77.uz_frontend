@@ -232,3 +232,34 @@
 .eight::after {
   right: -35px;
 }
+
+@media only screen and (max-width: 565px) {
+  .modal {
+    padding: 10px;
+  }
+
+  .close-btn {
+    font-size: 0.8rem;
+  }
+
+  .modal-body__img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .modal-body__title {
+    margin: 20px 0 5px;
+    line-height: 100%;
+  }
+
+  .modal-body__subtitle {
+    width: 320px;
+    font-size: 12px;
+    line-height: 100%;
+    margin-bottom: 20px;
+  }
+
+  .modal-footer {
+    gap: 8px;
+  }
+}
