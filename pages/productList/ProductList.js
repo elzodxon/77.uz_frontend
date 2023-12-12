@@ -153,18 +153,23 @@ function handleCardIconClick(event) {
     if (icon.id === event.target.id) {
       const product = findProductByIconId(icon)
       if (product) {
+        console.log(product)
         product.is_liked = !product.is_liked
         if (product.is_liked) {
           likedProducts.push(product)
         } else {
-          likedProducts.pop(product)
+          const removeFavorite = likedProducts.findIndex(
+            (favorite) => favorite.id === product.id,
+          )
+          likedProducts.splice(removeFavorite)
         }
         const favoritesProduct = JSON.stringify(likedProducts)
-        localStorage.setItem("favoritesProduct", favoritesProduct);
+        localStorage.setItem('favoritesProduct', favoritesProduct)
         icon.style.color = product.is_liked ? 'red' : 'white'
       } else {
         console.log('Product not found with id:', product.id)
       }
     }
   }
+
 }
