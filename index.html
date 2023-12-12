@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="./components/header/header.css" />
     <link rel="stylesheet" href="./assets/css/variables.css" />
     <link rel="stylesheet" href="./components/footer/footer.css" />
-    <link rel="stylesheet" href="./pages/ProductList/ProductList.css" />
+    <link rel="stylesheet" href="./pages/productList/ProductList.css" />
     <link rel="stylesheet" href="/components/form/inputs/inputs.css" />
     <link rel="stylesheet" href="./components/form/select/select.css" />
     <link rel="stylesheet" href="./components/pagination/pagination.css" />
@@ -150,9 +150,10 @@
             <li class="navbar-list__item">
               <a
                 id="favorite"
-                href=""
+                href="./pages/favorites/Favorites.html"
                 class="navbar-list__link text-sm-subtitle"
               >
+              <div class="favorite-item__parent" >
                 <svg
                   width="24"
                   height="24"
@@ -165,6 +166,8 @@
                     fill="#388FF3"
                   />
                 </svg>
+                <span id="favorite-product__number" class="favorite-product__number"> </span>  
+              </div>
                 <span class="favorite-title"> Избранные </span>
               </a>
             </li>
@@ -336,6 +339,7 @@
 
 
     <!-- Custom Js Included -->
+    <script src="./components/header/header.js" ></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="components/footer/footer.js"></script>
     <script src="components/languageSwitcher/languageSwitcher.js"></script>

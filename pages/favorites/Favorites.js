@@ -1,6 +1,6 @@
 import { gridViewStyle } from '../../utils/cardstyle.js'
 
-const gridWrapper = document.getElementById('grid-view__wrapper')
+const gridWrapper = document.getElementById('favorites-wrapper')
 // const cardIcons = document.getElementsByClassName('icon')
 const pagesContainer = document.getElementById('pages')
 const prevButton = document.getElementById('prev')
