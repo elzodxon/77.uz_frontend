@@ -74,7 +74,7 @@
   z-index: 15;
 }
 
-.selected-option::after {
+.selected-options::after {
   position: absolute;
   z-index: 2;
   content: '';
