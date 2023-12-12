@@ -20,11 +20,6 @@
   gap: 24px;
 }
 
-.profile-wrapper {
-  padding-top: 20px;
-}
-
-/* Personal component */
 .personal-wrapper {
   padding: 16px;
   border-radius: 12px;
@@ -97,49 +92,8 @@
   color: var(--primary-color);
 }
 
-/* Personal Component ends */
-
-
-.btn {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  padding: 10px 24px;
-  background-color: var(--primary-color);
-  border: var(--primary-color) solid 1px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
-  filter: brightness(95%);
-}
-
-.btn:active {
-  filter: brightness(100%);
-  transform: scale(0.9);
-}
-
-.btn-secondary {
-  background-color: var(--gray-color);
-  border: var(--gray-color) solid 1px;
-  color: #000;
-}
-
-.btn-secondary:hover {
-  background-color: var(--gray-color);
-  color: #000;
-}
-
 .sign-out-btn {
+  width: 100%;
   position: relative;
   z-index: 15;
 }
@@ -582,11 +536,19 @@
     display: none;
   }
 }
+
+
 @media screen and (max-width: 480px) {
   .prev-page__header {
     padding-top: 100px;
   }
+
+  .profile-wrapper{
+    padding-top: 32px;
+  }
 }
+
+
 @media screen and (max-width: 426px) {
   .bread-crumb {
     display: none;
