@@ -35,7 +35,9 @@
   border-radius: 50% !important;
   z-index: 600000 !important;
 }
-
+.navbar-list__item {
+  overflow: visible;
+}
 .navbar-list__item.divider {
   width: 1px;
   height: 32px;
