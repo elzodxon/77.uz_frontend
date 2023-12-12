@@ -78,11 +78,6 @@
   color: #fff;
 }
 
-@media only screen and (max-width: 480px) {
-  .bread-crumb {
-    display: flex !important;
-  }
-}
 @media only screen and (max-width: 767px) {
   .product-title {
     font-size: 16px;
@@ -114,5 +109,11 @@
 
   .back-link {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .bread-crumb {
+    display: flex !important;
   }
 }
