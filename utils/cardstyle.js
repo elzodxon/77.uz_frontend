@@ -9,7 +9,7 @@ import {
     const listCard = document.createElement('div')
     listCard.classList.add('list-view__card')
     // ----------------Card list style--------------------
-    listCard.innerHTML = `
+    listCard.innerHTML = `<a href="../../pages/productSingle/ProductSingle.html" >
         <div class="list-view__card-symbols">
             <img class="list-view__card-image card-image" src="${
               product.photo
@@ -37,7 +37,7 @@ import {
         }">${phoneNumberFormatter(product.seller.phone_number)}</a>
         </div>
         </div>
-        </div>`
+        </div></a>`
     return listCard
   }
   
@@ -48,7 +48,7 @@ import {
   grid_card.classList.add('grid-view__card')
 
   // ----------------Card grid style--------------------
-  grid_card.innerHTML = `
+  grid_card.innerHTML = `<a href="../../pages/productSingle/ProductSingle.html" >
          <div class="grid-view__card-symbols">
            <div  class="grid-view__card-icon">
            <iconify-icon id="${
@@ -75,7 +75,7 @@ import {
            <p class="grid-view__card-price card-price"> ${moneyFormatter(
              product.price,
            )}<span> UZS </span></p>
-         </div>`
+         </div></a>`
 
   return grid_card
 }
