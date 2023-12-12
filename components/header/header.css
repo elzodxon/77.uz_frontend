@@ -23,11 +23,11 @@
 }
 .favorite-product__number {
   position: absolute !important;
-  top: 0px !important;
-  right: -7px !important;
+  top: -2px !important;
+  right: -6px !important;
   color: #fff !important;
-  height: 15px;
-  width: 15px;
+  height: 17px;
+  width: 16px;
   text-align: center;
   padding-bottom: 4px;
   font-size: 9px !important;
