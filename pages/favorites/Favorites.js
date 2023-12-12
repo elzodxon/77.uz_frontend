@@ -1,7 +1,7 @@
 import { gridViewStyle } from '../../utils/cardstyle.js'
 
-const gridWrapper = document.getElementById('grid-view__wrapper')
-// const cardIcons = document.getElementsByClassName('icon')
+const gridWrapper = document.getElementById('favorites-wrapper')
+const cardIcons = document.getElementsByClassName('icon')
 const pagesContainer = document.getElementById('pages')
 const prevButton = document.getElementById('prev')
 const nextButton = document.getElementById('next')
@@ -10,6 +10,14 @@ const favoritesProducts = JSON.parse(localStorage.getItem('favoritesProduct'))
 let dataSet = favoritesProducts
 const perPage = 6
 let currentPage = 1
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('icon')) {
+      handleCardIconClick(event)
+    }
+  })
+})
 
 // ------------------- Get Product Func --------------------
 async function getProductList(page = 1, perPage = 2) {
@@ -31,7 +39,6 @@ async function getProductList(page = 1, perPage = 2) {
   gridWrapper.innerHTML = ''
 
   slicedItems.map((product) => {
- 
     const gridCard = gridViewStyle(product)
 
     gridWrapper.appendChild(gridCard)
@@ -90,4 +97,28 @@ function findProductByIconId(icon) {
   return dataSet.find((product) => product.id == icon.id)
 }
 
- 
+// ------------------- IsLiked or Not Func -----------------
+function handleCardIconClick(event) {
+  for (const icon of cardIcons) {
+    if (icon.id === event.target.id) {
+      const product = findProductByIconId(icon)
+      if (product) {
+        product.is_liked = !product.is_liked
+        if (!product.is_liked) {
+          const removeFavorite = likedProducts.findIndex(
+            (favorite) => favorite.id === product.id,
+          )
+          likedProducts.splice(removeFavorite)
+          location.reload();
+        }
+        const favoritesProduct = JSON.stringify(likedProducts)
+        localStorage.setItem('favoritesProduct', favoritesProduct)
+      } else {
+        console.log('Product not found with id:', product.id)
+      }
+    }
+  }
+}
+for (const icon of cardIcons) {
+  icon.style.color = 'red'
+}

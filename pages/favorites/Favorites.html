@@ -78,13 +78,22 @@
                 <!-- Right navigation bar -->
                 <ul class="navbar-list">
                     <li class="navbar-list__item">
-                        <a id="favorite" href="" class="navbar-list__link text-sm-subtitle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
+                        <a id="favorite" href="./Favorites.html" class="navbar-list__link text-sm-subtitle">
+                            <div class="favorite-item__parent" >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
                                     d="M20.2036 14.2826C20.596 13.8939 20.5991 13.2608 20.2105 12.8684C19.8218 12.476 19.1887 12.4729 18.7963 12.8616L20.2036 14.2826ZM12 21.0001L11.2963 21.7106C11.686 22.0966 12.3139 22.0966 12.7036 21.7106L12 21.0001ZM5.20364 12.8616C4.81124 12.4729 4.17808 12.476 3.78945 12.8684C3.40081 13.2608 3.40386 13.8939 3.79627 14.2826L5.20364 12.8616ZM3.80255 14.2888C4.19837 14.6739 4.83147 14.6653 5.21664 14.2695C5.6018 13.8737 5.59317 13.2406 5.19735 12.8554L3.80255 14.2888ZM12 7.00607L11.1974 7.60259C11.3854 7.85565 11.6819 8.00519 11.9972 8.00607C12.3125 8.00694 12.6097 7.85906 12.7992 7.60705L12 7.00607ZM18.7992 12.8646C18.4052 13.2517 18.3995 13.8848 18.7865 14.2788C19.1735 14.6728 19.8067 14.6785 20.2007 14.2915L18.7992 12.8646ZM18.7963 12.8616L11.2963 20.2896L12.7036 21.7106L20.2036 14.2826L18.7963 12.8616ZM12.7036 20.2896L5.20364 12.8616L3.79627 14.2826L11.2963 21.7106L12.7036 20.2896ZM5.19735 12.8554C4.11839 11.8055 3.72034 10.2386 4.16734 8.80102L2.25753 8.20719C1.58703 10.3636 2.18411 12.7139 3.80255 14.2888L5.19735 12.8554ZM4.16734 8.80102C4.61434 7.36341 5.83068 6.29855 7.31476 6.04555L6.97867 4.07399C4.75254 4.45349 2.92803 6.05078 2.25753 8.20719L4.16734 8.80102ZM7.31476 6.04555C8.79885 5.79255 10.2993 6.39428 11.1974 7.60259L12.8026 6.40955C11.4555 4.59709 9.2048 3.6945 6.97867 4.07399L7.31476 6.04555ZM12.7992 7.60705C13.701 6.40768 15.1983 5.81394 16.677 6.0693L17.0173 4.09847C14.7993 3.71543 12.5534 4.60604 11.2007 6.40509L12.7992 7.60705ZM16.677 6.0693C18.1557 6.32466 19.3671 7.38616 19.8144 8.81853L21.7235 8.22231C21.0525 6.07377 19.2354 4.48152 17.0173 4.09847L16.677 6.0693ZM19.8144 8.81853C20.2618 10.2509 19.8698 11.8131 18.7992 12.8646L20.2007 14.2915C21.8065 12.7142 22.3945 10.3709 21.7235 8.22231L19.8144 8.81853Z"
-                                    fill="#388FF3" />
-                            </svg>
+                                    fill="#388FF3"
+                                  />
+                                </svg>
+                                <span id="favorite-product__number" class="favorite-product__number"> </span>  
+                              </div>
                             <span class="favorite-title"> Избранные </span>
                         </a>
                     </li>
@@ -117,9 +126,9 @@
             </nav>
         </div>
     </header>
-
+  
     <main class="main">
-        <div class="container">
+        <div class="container"> 
             <ul class="bread-crumb">
                 <li class="bread-crumb__item">
                     <a href="" class="bread-crumb__link">Главная</a>
@@ -134,12 +143,10 @@
                     <a href="" class="bread-crumb__link active">457 147</a>
                 </li>
             </ul>
+            <h2 class="favorites"  >Избранные</h2>
             <!-- Product grid view -->
-            <div class="view-wrap grid-view" style="display: block">
-                <div id="grid-view__wrapper" class="grid-view__row">
+            <div id="favorites-wrapper" class="favorites__list "></div>
 
-                </div>
-            </div>
 
 
             <div id="pagination">
@@ -167,77 +174,20 @@
                 </p>
                 <ul class="footer-info__list">
                     <li class="footer-info__item">
-                        <a href="" class="footer-info__link">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_19_1588)">
-                                    <path
-                                        d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
-                                        fill="#388FF3" />
-                                    <path d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z" fill="#388FF3" />
-                                    <path
-                                        d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
-                                        fill="#388FF3" fill-opacity="0.64" />
-                                    <path
-                                        d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
-                                        fill="#388FF3" fill-opacity="0.48" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_19_1588">
-                                        <rect width="16" height="16" rx="8" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
+                        <a href="../productList/ProductList.html" class="footer-info__link">
+                            <img src="../../assets/img/footer/symbol.svg" alt="" />
                             Доска объявлений
                         </a>
                     </li>
                     <li class="footer-info__item">
-                        <a href="" class="footer-info__link">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_19_1588)">
-                                    <path
-                                        d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
-                                        fill="#388FF3" />
-                                    <path d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z" fill="#388FF3" />
-                                    <path
-                                        d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
-                                        fill="#388FF3" fill-opacity="0.64" />
-                                    <path
-                                        d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
-                                        fill="#388FF3" fill-opacity="0.48" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_19_1588">
-                                        <rect width="16" height="16" rx="8" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
+                        <a href="../static/static.html" class="footer-info__link">
+                            <img src="../../assets/img/footer/symbol.svg" alt="" />
                             Условия пользования
                         </a>
                     </li>
                     <li class="footer-info__item">
                         <a href="" class="footer-info__link">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_19_1588)">
-                                    <path
-                                        d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
-                                        fill="#388FF3" />
-                                    <path d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z" fill="#388FF3" />
-                                    <path
-                                        d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
-                                        fill="#388FF3" fill-opacity="0.64" />
-                                    <path
-                                        d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
-                                        fill="#388FF3" fill-opacity="0.48" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_19_1588">
-                                        <rect width="16" height="16" rx="8" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
+                            <img src="../../assets/img/footer/symbol.svg" alt="" />
                             +998 88 500 50 00
                         </a>
                     </li>
