@@ -18,6 +18,24 @@
   align-items: center;
   gap: 16px;
 }
+.favorite-item__parent {
+  position: relative;
+}
+.favorite-product__number {
+  position: absolute !important;
+  top: 0px !important;
+  right: -7px !important;
+  color: #fff !important;
+  height: 15px;
+  width: 15px;
+  text-align: center;
+  padding-bottom: 4px;
+  font-size: 9px !important;
+  background-color: red !important;
+  border-radius: 50% !important;
+  z-index: 600000 !important;
+}
+
 .navbar-list__item.divider {
   width: 1px;
   height: 32px;

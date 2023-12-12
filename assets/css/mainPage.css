@@ -12,3 +12,19 @@
 .category-list {
   padding: 0 0 36px;
 }
+
+.ads-wrapper__list {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+  .category-links__menu,
+  .ads-wrapper__list {
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
