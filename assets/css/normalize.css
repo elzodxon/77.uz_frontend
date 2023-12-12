@@ -50,6 +50,21 @@ img {
   max-width: 100%;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+}
+
+main {
+  flex: 1;
+}
+
 ul,
 ol {
   margin: 0px;
