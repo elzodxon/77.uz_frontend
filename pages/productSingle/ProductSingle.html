@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>77.uz | Product Single</title>
     <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg" />
-
+    <link rel="stylesheet" href="../../assets/css/icon.css" />
     <link rel="stylesheet" href="ProductSingle.css" />
     <link rel="stylesheet" href="../../assets/css/fonts.css" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
@@ -234,8 +234,12 @@
             <div class="slider">
               <div class="slider__wrapper">
                 <div class="slider__container" id="sliderContainer"></div>
-                <button class="prev-btn" onclick="changeSlide(-1)">❮</button>
-                <button class="next-btn" onclick="changeSlide(1)">❯</button>
+                <button class="prev-btn" onclick="changeSlide(-1)">
+                  <i class="icon-cheveron-left"></i>
+                </button>
+                <button class="next-btn" onclick="changeSlide(1)">
+                  <i class="icon-cheveron-right"></i>
+                </button>
               </div>
               <div class="navigation-card" id="navigationContainer"></div>
             </div>
