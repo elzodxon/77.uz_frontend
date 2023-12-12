@@ -142,16 +142,19 @@ color: var(--black-color);
 font-size: 14px;
 font-weight: 600;
 line-height: 20px;
-padding: 6px 8px;
+padding: 6px;
 cursor: pointer;
 display: flex;
 align-items: flex-start;
 }
-
-.currency-icon{
+.current-currency{
+  color: #388ff3;
+}
+.currency-icon {
   cursor: pointer;
   transform: rotate(90deg);
   transition: all 0.3s ease;
+  stroke:#B8BBBD;
 }
 .currency-icon.rotated {
   transform: rotate(0deg);
@@ -165,12 +168,17 @@ align-items: flex-start;
   margin: 0 auto;
 }
 .currency__option{
-  padding: 6px 8px;
+  padding-top: 0;
   list-style: none;
+  width: 100%;
+  text-align: center;
+}
+.currency__option:first-child{
+  padding-top: 0;
 }
 .currency__option:hover{
-  background-color: #388ff35e;
-  border-radius: 5px;
+  color: #388ff3;
+  border-radius: 4px;
 }
 .error {
   border: 1px solid #e93c47;
