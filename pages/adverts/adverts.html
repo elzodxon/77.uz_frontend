@@ -31,19 +31,197 @@
 
 <body>
   <!------------------- Header ------------------------->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <!-- Left navigation bar -->
+          <ul class="navbar-list">
+            <li id="language-switcher" class="navbar-list__item">
+              <button class="language-button text-sm-subtitle">
+                <img
+                  width="20"
+                  height="20"
+                  src="/assets/img/header/ru.svg"
+                  alt=""
+                />
+                <span>Русский</span>
+                <i class="icon-cheveron-down"></i>
+              </button>
+              <div class="language-content">
+                <ul class="language-content__list">
+                  <li class="language-content__item active">
+                    <img
+                      width="20"
+                      height="20"
+                      src="/assets/img/header/ru.svg"
+                      alt=""
+                    />
+                    <span>RU</span>
+                  </li>
 
-  <header class="header">
+                  <li class="language-content__item">
+                    <img
+                      width="20"
+                      height="20"
+                      src="./assets/img/header/uz.svg"
+                      alt=""
+                    />
+                    <span>UZ</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="navbar-list__item phone-wrapper">
+              <a
+                id="telephone-number"
+                href="tel:+998885005000"
+                class="navbar-list__link"
+              >
+                <i class="icon-phone"></i>
+                <span class="phone-number text-sm-subtitle">
+                  +998 88 500 50 00
+                </span>
+              </a>
+            </li>
+          </ul>
+          <!-- Header Logo -->
+          <a href="/" class="header-logo">
+            <img src="/assets/img/logo.svg" alt="" />
+          </a>
+          <!-- Right navigation bar -->
+          <ul class="navbar-list">
+            <li class="navbar-list__item">
+              <a
+                id="favorite"
+                href="../favorites/Favorites.html"
+                class="navbar-list__link text-sm-subtitle"
+              >
+                <div class="favorite-item__parent">
+                  <i class="icon-heart"></i>
+                  <span
+                    id="favorite-product__number"
+                    class="favorite-product__number"
+                  >
+                  </span>
+                </div>
+                <span class="favorite-title"> Избранные </span>
+              </a>
+            </li>
+            <li class="navbar-list__item divider"></li>
+            <li class="navbar-list__item">
+              <button
+                href=""
+                id="registration-btn"
+                class="navbar-list__link login-button text-sm-subtitle"
+              >
+                <span class="login-title signed-in">
+                  <span class="login-text">Войти </span>
+                  <i class="icon-log-in"></i>
+                </span>
+
+                <span class="user-info signed-in">
+                  <img src="../../assets/img/user.svg" alt="" />
+                  <span class="user-name">Шохрух Шавкиев</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 6L12 10L8 14"
+                      stroke="#8E9297"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+<!------------------- Header ------------------------->
+
+<main>
+  <div class="profile">
     <div class="container">
-      <nav class="navbar">
-        <!-- Left navigation bar -->
-        <ul class="navbar-list">
-          <li id="language-switcher" class="navbar-list__item">
-            <button class="language-button text-sm-subtitle">
-              <img width="20" height="20" src="/assets/img/header/ru.svg" alt="" />
-              <span>Русский</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.8 9.5999L12 14.3999L7.19999 9.5999" stroke="black" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
+      <!------------------ Bread-Crumb-------------------- -->
+      
+      <ul class="bread-crumb">
+        <li class="bread-crumb__item">
+          <a href="" class="bread-crumb__link">Главная</a>
+        </li>
+        <li class="bread-crumb__item">
+          <a href="" class="bread-crumb__link active">Профиль</a>
+        </li>
+      </ul>
+      <!------------------ Bread-Crumb-------------------- -->
+      
+      <div class="prev-page__header">
+        <a href="/" class="prev-page__button">
+          <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          >
+          <path
+          d="M14.4448 24L6.66699 16M6.66699 16L14.4448 8M6.66699 16H25.3337"
+          stroke="black"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
+    
+    <div class="profile-wrapper">
+      <!------------ Sidebar---------- -->
+      
+      <div class="sidebar">
+        <div class="personal">
+          <div class="personal-wrapper">
+            <div class="personal__info">
+              <img
+              class="personal__img"
+              src="../../assets/img/profile_img.png"
+              alt="personal photo"
+              width="54"
+              height="54"
+              />
+              
+              <p class="personal__name">
+                Шохрух <br />
+                Шавкиев
+              </p>
+            </div>
+            
+            <div class="personal__buttons">
+              <a href="./adverts.html">
+                <button
+                id="button1"
+                class="personal__innerButton btn-active"
+                >
+                <svg
+                class="personal-info-list__item-icon"
+                width="24"
+                height="24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                d="M19.467 2.4c1.178 0 2.133.942 2.133 2.104v3.592c0 1.162-.955 2.104-2.133 2.104h-3.2c-1.179 0-2.134-.942-2.134-2.104V4.504c0-1.162.955-2.104 2.134-2.104h3.2ZM4.533 2.4C3.355 2.4 2.4 3.342 2.4 4.504v3.592c0 1.162.955 2.104 2.133 2.104h3.2c1.178 0 2.134-.942 2.134-2.104V4.504c0-1.162-.956-2.104-2.134-2.104h-3.2ZM19.467 13.8c1.178 0 2.133.942 2.133 2.104v3.592c0 1.162-.955 2.104-2.133 2.104h-3.2c-1.179 0-2.134-.942-2.134-2.104v-3.592c0-1.162.955-2.104 2.134-2.104h3.2ZM4.533 13.8c-1.178 0-2.133.942-2.133 2.104v3.592c0 1.162.955 2.104 2.133 2.104h3.2c1.178 0 2.134-.942 2.134-2.104v-3.592c0-1.162-.956-2.104-2.134-2.104h-3.2Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"
+                />
               </svg>
             </button>
             <div class="language-content">
