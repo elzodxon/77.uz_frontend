@@ -108,6 +108,10 @@
     display: none !important;
   }
 
+  .sidebar-column {
+    width: 100%;
+  }
+
   .back-link {
     display: block;
   }
