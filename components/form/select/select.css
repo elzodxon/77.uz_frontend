@@ -20,7 +20,7 @@
   color: var(--placeholder-color);
 }
 
-.select-menu .select-menu__btn {
+.select-menu .select-btn {
   display: flex;
   background-color: var(--input-bg-color);
   padding: 10px 10px 10px 12px;
@@ -38,11 +38,12 @@
 
 /* Change transform as you want */
 
-.select-menu.active .select-menu__btn .select-menu__icon {
+.select-menu.active .select-btn .select-menu__icon {
   transform: rotate(-90deg);
 }
 
 .select-menu .options {
+  padding: 0;
   max-height: 312px;
   overflow-y: auto;
   margin-top: 8px;
@@ -50,10 +51,10 @@
   background: #fff;
   box-shadow: 0px 2px 28px 0px rgba(23, 24, 26, 0.2);
   display: none;
-  position: absolute;
+  position: relative;
   width: 100%;
   left: 0;
-  z-index: 1200;
+  z-index: 10
 }
 
 .select-menu.active .options {
@@ -70,7 +71,7 @@
   background: #fff;
 
   position: relative;
-  z-index: 1;
+  z-index: 15;
 }
 
 .selected-option::after {
@@ -79,7 +80,7 @@
   content: '';
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/img/select/checkmark.png);
+  background-image: url(../../../assets/img/select/checkmark.png);
   background-repeat: no-repeat;
   top: 15px;
   right: 15px;
