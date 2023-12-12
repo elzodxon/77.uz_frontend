@@ -15,7 +15,6 @@
 
 .title {
   color: var(--black-color);
-  font-family: Inter;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -23,16 +22,13 @@
 }
 
 .subtitle {
-  font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 .text-sm-subtitle {
-  overflow: hidden;
   text-overflow: ellipsis;
-  font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

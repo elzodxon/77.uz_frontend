@@ -45,7 +45,7 @@
                 <img
                   width="20"
                   height="20"
-                  src="https://77.uz/images/flag/ru.svg"
+                  src="/assets/img/header/ru.svg"
                   alt=""
                 />
                 <span>Русский</span>
@@ -71,7 +71,7 @@
                     <img
                       width="20"
                       height="20"
-                      src="https://77.uz/images/flag/ru.svg"
+                      src="/assets/img/header/ru.svg"
                       alt=""
                     />
                     <span>RU</span>
@@ -81,7 +81,7 @@
                     <img
                       width="20"
                       height="20"
-                      src="https://77.uz/images/flag/uz.svg"
+                      src="/assets/img/header/uz.svg"
                       alt=""
                     />
                     <span>UZ</span>
@@ -91,7 +91,7 @@
             </li>
             <li class="navbar-list__item phone-wrapper">
               <a
-                id="phone-number"
+                id="telephone-number"
                 href="tel:+998885005000"
                 class="navbar-list__link"
               >
@@ -128,6 +128,7 @@
                 href="../favorites/Favorites.html"
                 class="navbar-list__link text-sm-subtitle"
               >
+              <div class="favorite-item__parent" >
                 <svg
                   width="24"
                   height="24"
@@ -140,13 +141,16 @@
                     fill="#388FF3"
                   />
                 </svg>
+                <span id="favorite-product__number" class="favorite-product__number">0</span>  
+              </div>
                 <span class="favorite-title"> Избранные </span>
               </a>
             </li>
             <li class="navbar-list__item divider"></li>
             <li class="navbar-list__item">
               <button
-                href="/"
+                href=""
+                id="registration-btn"
                 class="navbar-list__link login-button text-sm-subtitle"
               >
                 <span class="login-title">
