@@ -171,7 +171,7 @@ body.block {
 .category-menu__item {
   display: flex;
   width: 30%;
-  margin-top: 10px;
+  padding: 5px;
   text-align: left;
 }
 
@@ -192,13 +192,13 @@ body.block {
   transition: 0.2s ease;
 }
 
-.category-menu__title:hover {
-  color: var(--primary-color);
-  margin-right: 0;
+.category-menu__title i {
+  color: #B8BBBD;;
 }
 
-.category-menu__title:hover svg path {
-  stroke: #388ff3;
+.category-menu__title:hover, .category-menu__title:hover i {
+  color: var(--primary-color);
+  margin-right: 0;
 }
 
 
