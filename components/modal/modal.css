@@ -232,7 +232,13 @@
 .eight::after {
   right: -35px;
 }
-
+.icon-x {
+  transition: 0.2s ease-in-out;
+  font-size: 24px;
+}
+.icon-x:hover {
+  color: var(--danger-color);
+}
 @media only screen and (max-width: 565px) {
   .modal {
     padding: 10px;
