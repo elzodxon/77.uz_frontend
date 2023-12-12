@@ -148,6 +148,9 @@
   align-items: center;
   gap: 4px;
 }
+#telephone-number:hover {
+  color: var(--primary-color);
+}
 .telephone-number {
   font-weight: 500;
   color: var(--black-color);
