@@ -123,4 +123,8 @@
   .slider__wrapper button {
     display: none;
   }
+
+  .navigation-wrapper {
+    width: 90px;
+  }
 }
