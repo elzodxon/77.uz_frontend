@@ -1,17 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const toggleSwitch = document.getElementById('languageToggle')
-  const ruText = document.querySelector('.language-switcher__text--ru')
-  const engText = document.querySelector('.language-switcher__text--eng')
+const switcherButton = document.querySelectorAll('.language-switcher__input');
+const languageSwitcher = document.querySelectorAll('.language-switcher');
+const overlay = document.querySelector('.language-switcher__active');
 
-  toggleSwitch.addEventListener('change', function () {
-    if (toggleSwitch.checked) {
-      // English is selected
-      ruText.style.color = '#fff'
-      engText.style.color = '#000'
-    } else {
-      // Russian is selected
-      ruText.style.color = '#000'
-      engText.style.color = '#fff'
+
+for (let i = 0; i < languageSwitcher.length; i++) {
+  languageSwitcher[i].addEventListener('click', function () {
+    if(switcherButton[i].value === "russian") {
+      overlay.classList.add(`russian`)
+      overlay.classList.remove('english')
     }
-  })
-})
+    else if (switcherButton[i].value === "english") {
+      overlay.classList.add(`english`)
+      overlay.classList.remove('russian')
+    }
+  });
+}
