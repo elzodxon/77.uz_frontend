@@ -9,7 +9,7 @@
   gap: 24px;
   grid-template-columns: repeat(4, 1fr);
 }
-..grid-view__card-icon {
+.grid-view__card-icon {
   color: red !important;
 }
 

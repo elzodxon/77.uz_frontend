@@ -230,13 +230,6 @@
 }
 
 /*----------- Personal Details  --------- */
-
-.wrapper {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .personal-details__title {
   font-size: 32px;
   font-weight: 700;
@@ -332,6 +325,12 @@
 
 .info-link:hover{
  filter: brightness(95%);
+}
+
+.personal-details__footer{
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .personal-details__extraInfo {
