@@ -373,6 +373,11 @@
   font-weight: 600;
   line-height: 130%; /* 20.8px */
   background-color: var(--gray-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.info-link:hover{
+ filter: brightness(95%);
 }
 
 .personal-details__extraInfo {
