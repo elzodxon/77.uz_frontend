@@ -110,6 +110,7 @@ const PriceFormat=priceValue.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
 e.target.value=PriceFormat.trim();
 })
 
+
   // Function to toggle the currency list visibility
   function toggleCurrencyList() {
     if (currencyList.style.display === "none"){
@@ -119,7 +120,7 @@ e.target.value=PriceFormat.trim();
     }
 // rotate the icon when the categoryCard is clicked
       currencyIcon.classList.toggle("rotated");
-      currentCurrency.style.display='none'
+      // currentCurrency.style.display='none'
   }
 
   // Event listener for clicking on the currency card
@@ -131,11 +132,22 @@ e.target.value=PriceFormat.trim();
   // Event listener for clicking on a currency option
 currencyOptions.forEach(function (option) {
       option.addEventListener("click", function (event) {
+
+        currencyOptions.forEach((otherOption)=>{
+          if(otherOption!=option){
+            otherOption.classList.remove('selected');
+          }
+        });
+
           event.stopPropagation();
+          //Add currency__option's value into current-option
           currentCurrency.textContent = option.textContent;
+          option.classList.add('selected');
           toggleCurrencyList();
           currentCurrency.style.display="block";
           price.placeholder = `Введите сумму в ${option.innerText}`;
+
+
       });
   });
 

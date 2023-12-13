@@ -69,7 +69,6 @@
   border-bottom: 1px solid var(--gray-color);
   align-items: center;
   background: #fff;
-
   position: relative;
   z-index: 15;
 }

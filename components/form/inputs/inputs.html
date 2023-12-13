@@ -1,23 +1,3 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ================== Google Fonts links ================== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- ================== Css links ================== -->
-
-    <link rel="stylesheet" href="../../assets/css/normalize.css" />
-    <link rel="stylesheet" href="../../assets/css/variables.css" />
-    <link rel="stylesheet" href="inputs.css" />
-
     <!doctype html>
     <html lang="en">
       <head>
@@ -32,7 +12,7 @@
           rel="stylesheet"
         />
         <!-- ================== Css links ================== -->
-
+        <link rel="stylesheet" href="/assets/css/style.css">
         <link rel="stylesheet" href="../../assets/css/normalize.css" />
         <link rel="stylesheet" href="../../assets/css/variables.css" />
         <link rel="stylesheet" href="/components/form/inputs/inputs.css" />
@@ -42,7 +22,7 @@
       </head>
 
       <body>
-        <form action="" class="form">
+        <form class="form">
           <!-- Name -->
           <div class="form-group">
             <label class="label" for="fullName">Ф.И.О. </label>
@@ -118,37 +98,23 @@
                 id="price"
                 required
                 inputmode="numeric"
-                placeholder="Введите сумму  в UZB"
+                placeholder="Введите сумму  в UZS"
               />
-              <div class="currency-card">
-                <span class="current-currency">UZB</span>
+              <div class="currency-wrapper">
+                <div class="currency-card">
+                  <span class="current-currency">UZS</span>
+                  <i class="currency-icon icon-cheveron-down"></i>
+                </div>
                 <ul class="currency-list">
                   <li class="currency__option">UZS</li>
                   <li class="currency__option">USD</li>
-                  <li class="currency__option">RB</li>
+                  <li class="currency__option">RUB</li>
                 </ul>
-                <svg
-                class="currency-icon"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                   d="M8 6L12 10L8 14"
-                   stroke="CurrentColor"
-                   stroke-width="1.5"
-                   stroke-linecap="round"
-                   stroke-linejoin="round" />
-             </svg>
               </div>
             </div>
           </div>
         </form>
-        <!-- ================== Javascript Links
-    ================== -->
+        <!-- =========Javascript Links======== -->
         <script src="inputs.js"></script>
       </body>
     </html>
-  </head>
-</html>
