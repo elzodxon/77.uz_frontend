@@ -1,1 +1,1 @@
-import { gridViewStyle } from '../../utils/cardstyle.js';
+import { gridViewStyle } from '../../utils/cardstyle.js'

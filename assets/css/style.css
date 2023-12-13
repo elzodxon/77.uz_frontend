@@ -1,7 +1,8 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icons/icomoon.eot?gg8ddp');
-  src:  url('../fonts//icomoon.eot?gg8ddp#iefix') format('embedded-opentype'),
+  src: url('../fonts/icons/icomoon.eot?gg8ddp');
+  src:
+    url('../fonts//icomoon.eot?gg8ddp#iefix') format('embedded-opentype'),
     url('../fonts/icons/icomoon.ttf?gg8ddp') format('truetype'),
     url('../fonts/icons/icomoon.woff?gg8ddp') format('woff'),
     url('../fonts/icons/icomoon.svg?gg8ddp#icomoon') format('svg');
@@ -9,7 +10,6 @@
   font-style: normal;
   font-display: block;
 }
-
 
 * {
   margin: 0;
@@ -95,7 +95,6 @@ body {
   background: #ffffff;
 }
 
-
 /*-------------------- Icons--------------- */
 
 i {
@@ -114,66 +113,65 @@ i {
 }
 
 .icon-equals-outline:before {
-  content: "\e912";
+  content: '\e912';
 }
 .icon-add:before {
-  content: "\e90e";
+  content: '\e90e';
 }
 .icon-filter_list:before {
-  content: "\e905";
+  content: '\e905';
 }
 .icon-chevrons-down:before {
-  content: "\e913";
+  content: '\e913';
 }
 .icon-x:before {
-  content: "\e90f";
+  content: '\e90f';
 }
 .icon-search:before {
-  content: "\e910";
+  content: '\e910';
 }
 .icon-log-in:before {
-  content: "\e906";
+  content: '\e906';
 }
 .icon-phone-call:before {
-  content: "\e907";
+  content: '\e907';
 }
 .icon-phone:before {
-  content: "\e908";
+  content: '\e908';
 }
 .icon-grid:before {
-  content: "\e909";
+  content: '\e909';
 }
 .icon-eye-off:before {
-  content: "\e90a";
+  content: '\e90a';
 }
 .icon-heart:before {
-  content: "\e904";
+  content: '\e904';
 }
 .icon-photo:before {
-  content: "\e911";
+  content: '\e911';
 }
 .icon-location:before {
-  content: "\e90c";
+  content: '\e90c';
 }
 .icon-user-circle:before {
-  content: "\e90d";
+  content: '\e90d';
 }
 .icon-cloud-download:before {
-  content: "\e90b";
+  content: '\e90b';
 }
 .icon-cheveron-up:before {
-  content: "\e900";
+  content: '\e900';
 }
 .icon-cheveron-right:before {
-  content: "\e901";
+  content: '\e901';
 }
 .icon-cheveron-left:before {
-  content: "\e902";
+  content: '\e902';
 }
 .icon-cheveron-down:before {
-  content: "\e903";
+  content: '\e903';
 }
-
 
 @media screen and (max-width: 768px) {
   .row {

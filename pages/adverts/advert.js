@@ -28,7 +28,6 @@ fetch('../../pages/productList/ProductList.json')
   })
   .catch((error) => console.error('Error fetching data:', error))
 
-
 // ------------------- Get Product Func --------------------
 async function getProductList(page = 1, perPage = 2) {
   let index, offSet
@@ -119,7 +118,7 @@ function handleCardIconClick(event) {
             (favorite) => favorite.id === product.id,
           )
           likedProducts.splice(removeFavorite)
-          location.reload();
+          location.reload()
         }
         const favoritesProduct = JSON.stringify(likedProducts)
         localStorage.setItem('favoritesProduct', favoritesProduct)

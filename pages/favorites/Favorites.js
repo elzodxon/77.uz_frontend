@@ -109,7 +109,7 @@ function handleCardIconClick(event) {
             (favorite) => favorite.id === product.id,
           )
           likedProducts.splice(removeFavorite)
-          location.reload();
+          location.reload()
         }
         const favoritesProduct = JSON.stringify(likedProducts)
         localStorage.setItem('favoritesProduct', favoritesProduct)

@@ -39,38 +39,35 @@ tr > td {
   cursor: pointer;
   padding: 10px;
   margin: 0 4px;
-
 }
 
 #prev {
-    border-radius: 8px;
-    background: transparent;
-    border: solid #d5d8db 1px;
-    color: #63676c;
-    padding: 10px;
-    cursor: pointer;
-
+  border-radius: 8px;
+  background: transparent;
+  border: solid #d5d8db 1px;
+  color: #63676c;
+  padding: 10px;
+  cursor: pointer;
 }
 
 #next {
-    border-radius: 8px;
-    background: transparent;
-    border: solid #d5d8db 1px;
-    color: #63676c;
-    padding: 10px;
-    cursor: pointer;
-
+  border-radius: 8px;
+  background: transparent;
+  border: solid #d5d8db 1px;
+  color: #63676c;
+  padding: 10px;
+  cursor: pointer;
 }
 .pagination__button:hover {
-    background: #d5d8db !important;
+  background: #d5d8db !important;
 }
 
 #prev:hover {
-    background: #d5d8db !important;
+  background: #d5d8db !important;
 }
 
 #next:hover {
-    background: #d5d8db !important;
+  background: #d5d8db !important;
 }
 
 .activeClass {

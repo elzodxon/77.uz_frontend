@@ -133,5 +133,4 @@ function handleCardIconClick(event) {
       }
     }
   }
-
 }

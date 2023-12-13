@@ -38,7 +38,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f0f3f7;
-
 }
 body.block {
   overflow-y: hidden;
@@ -58,7 +57,8 @@ body {
   min-height: 100vh;
 }
 
-header, footer {
+header,
+footer {
 }
 
 main {

@@ -4,12 +4,11 @@ import {
   phoneNumberFormatter,
 } from '../utils/utils.js'
 
-
- export function listViewStyle(product) { 
-    const listCard = document.createElement('div')
-    listCard.classList.add('list-view__card')
-    // ----------------Card list style--------------------
-    listCard.innerHTML = `
+export function listViewStyle(product) {
+  const listCard = document.createElement('div')
+  listCard.classList.add('list-view__card')
+  // ----------------Card list style--------------------
+  listCard.innerHTML = `
     <a href="../../pages/productSingle/ProductSingle.html" >
         <div class="list-view__card-symbols">
             <img class="list-view__card-image card-image" src="${
@@ -22,8 +21,8 @@ import {
                     ${product.name}
                   </a>
                 <span class="badge card-address"> ${
-                    product.address.district.name
-                  }</span>
+                  product.address.district.name
+                }</span>
             </div>
            <div class="list-view__bottom-content">
               <p class="list-view__card-price card-price">
@@ -31,18 +30,17 @@ import {
               </p>
            <div>
            <p class="list-view__card-date card-date"> ${dateFormatter(
-              product.published_at,
-            )}</p>
+             product.published_at,
+           )}</p>
             <a class="list-view__card-number card-phoneNum" href="tel:${
               product.seller.phone_number
             }">${phoneNumberFormatter(product.seller.phone_number)}</a>
         </div>
     </a>`
-    return listCard
-  }
-  
- export function gridViewStyle(product) {
+  return listCard
+}
 
+export function gridViewStyle(product) {
   const grid_card = document.createElement('div')
 
   grid_card.classList.add('grid-view__card')

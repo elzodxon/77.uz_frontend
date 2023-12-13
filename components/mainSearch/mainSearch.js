@@ -43,7 +43,7 @@ function handleSearchInput() {
       "<li class='search-suggestion__item' style='background-color: #fff;cursor:default;color:var(--black-color);'>No history</li>"
     topTxt.textContent = 'История поиска'
 
-return
+    return
   }
 
   // Check if there are matches in jsonData
@@ -75,7 +75,7 @@ function getMatchingValues(searchTerm) {
     }
   })
 
-return matches
+  return matches
 }
 
 function displaySearchResults(matches) {
@@ -115,7 +115,7 @@ function highlightMatch(value) {
   const searchTerm = searchInput.value.trim()
   const regex = new RegExp(searchTerm, 'gi')
 
-return value.replace(
+  return value.replace(
     regex,
     (match) => `<span class="matching-letters" >${match}</span>`,
   )

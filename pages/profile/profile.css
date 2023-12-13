@@ -1,4 +1,3 @@
-
 .hidden {
   display: none;
 }
@@ -11,8 +10,6 @@
   margin: 0 0 32px 0;
   padding-top: 112px;
 }
-
-
 
 .profile-wrapper {
   display: flex;
@@ -323,11 +320,11 @@
   transition: all 0.3s ease-in-out;
 }
 
-.info-link:hover{
- filter: brightness(95%);
+.info-link:hover {
+  filter: brightness(95%);
 }
 
-.personal-details__footer{
+.personal-details__footer {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -350,8 +347,6 @@
 }
 
 /*----------- Personal Details  --------- */
-
-
 
 @media screen and (max-width: 768px) {
   .row {
@@ -536,24 +531,20 @@
   }
 }
 
-
 @media screen and (max-width: 480px) {
   .prev-page__header {
     padding-top: 100px;
   }
 
-  .profile-wrapper{
+  .profile-wrapper {
     padding-top: 32px;
   }
 }
-
 
 @media screen and (max-width: 426px) {
   .bread-crumb {
     display: none;
   }
-
-  
 
   .profile-wrapper {
     flex-direction: column;
