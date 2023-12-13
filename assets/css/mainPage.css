@@ -6,9 +6,9 @@
   background-color: white;
 }
 
-.main-search-form {
+ .main-search-form {
   transform: translate(0,-50%);
-}
+} 
 .category-list {
   padding: 0 0 36px;
 }

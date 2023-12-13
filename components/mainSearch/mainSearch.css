@@ -32,6 +32,9 @@ body.block {
   position: sticky;
   z-index: 9;
   padding: 20px 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .search__label {
   display: flex;
@@ -127,7 +130,6 @@ body.block {
   position: absolute;
   left: 0;
   top: 50px;
-  transform: translate();
   display: none;
   flex-direction: column;
   /* justify-content: center; */
@@ -183,8 +185,12 @@ body.block {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.search-icon {
+.icon-search.default{
+  color: #b8bbbd;
+}
+.icon-search {
   display: inline-block;
+  color: #388ff3;
 }
 .suggestion-link {
   display: block;
@@ -204,7 +210,6 @@ body.block {
   transition: all 0.3s ease;
   position: absolute;
   right: 0;
-
   cursor: pointer;
 }
 
