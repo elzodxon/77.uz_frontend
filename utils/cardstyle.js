@@ -9,7 +9,8 @@ import {
     const listCard = document.createElement('div')
     listCard.classList.add('list-view__card')
     // ----------------Card list style--------------------
-    listCard.innerHTML = `<a href="../../pages/productSingle/ProductSingle.html" >
+    listCard.innerHTML = `
+    <a href="../../pages/productSingle/ProductSingle.html" >
         <div class="list-view__card-symbols">
             <img class="list-view__card-image card-image" src="${
               product.photo
@@ -17,27 +18,26 @@ import {
         </div>
         <div class="list-view__card-content">
             <div class="list-view__top-content">
-            <a href="#" class="list-view__card-title card-title">
-            ${product.name}
-        </a>
-        <span class="badge card-address"> ${
-          product.address.district.name
-        }</span>
+                  <a href="../../pages/productSingle/ProductSingle.html" class="list-view__card-title card-title">
+                    ${product.name}
+                  </a>
+                <span class="badge card-address"> ${
+                    product.address.district.name
+                  }</span>
+            </div>
+           <div class="list-view__bottom-content">
+              <p class="list-view__card-price card-price">
+                ${moneyFormatter(product.price)}<span> UZS </span>
+              </p>
+           <div>
+           <p class="list-view__card-date card-date"> ${dateFormatter(
+              product.published_at,
+            )}</p>
+            <a class="list-view__card-number card-phoneNum" href="tel:${
+              product.seller.phone_number
+            }">${phoneNumberFormatter(product.seller.phone_number)}</a>
         </div>
-        <div class="list-view__bottom-content">
-        <p class="list-view__card-price card-price">
-        ${moneyFormatter(product.price)}<span> UZS </span>
-        </p>
-        <div>
-        <p class="list-view__card-date card-date"> ${dateFormatter(
-          product.published_at,
-        )}</p>
-        <a class="list-view__card-number card-phoneNum" href="tel:${
-          product.seller.phone_number
-        }">${phoneNumberFormatter(product.seller.phone_number)}</a>
-        </div>
-        </div>
-        </div></a>`
+    </a>`
     return listCard
   }
   
@@ -48,7 +48,8 @@ import {
   grid_card.classList.add('grid-view__card')
 
   // ----------------Card grid style--------------------
-  grid_card.innerHTML = `<a href="../../pages/productSingle/ProductSingle.html" >
+  grid_card.innerHTML = `
+  <a href="../../pages/productSingle/ProductSingle.html" >
          <div class="grid-view__card-symbols">
            <div  class="grid-view__card-icon">
            <iconify-icon id="${
@@ -63,7 +64,7 @@ import {
            <span class="badge card-address">${
              product.address.district.name
            }</span>
-           <a href="#" class="grid-view__card-title card-title">${
+           <a href="../../pages/productSingle/ProductSingle.html" class="grid-view__card-title card-title">${
              product.name
            }</a>
            <p class="grid-view__card-date card-date">${dateFormatter(
@@ -75,7 +76,8 @@ import {
            <p class="grid-view__card-price card-price"> ${moneyFormatter(
              product.price,
            )}<span> UZS </span></p>
-         </div></a>`
+         </div>
+        </a>`
 
   return grid_card
 }
