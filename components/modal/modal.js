@@ -30,3 +30,45 @@ overlay.addEventListener('click', (event) => {
     }
   })
 })
+
+function validateForm(modalId) {
+  const modal = document.getElementById(modalId)
+  const inputs = modal.querySelectorAll('.input[required]')
+
+  let isValid = true
+
+  inputs.forEach((input) => {
+    if (input.value.trim() === '') {
+      isValid = false
+      markInputAsError(input)
+    } else {
+      removeErrorFromInput(input)
+    }
+  })
+
+  return isValid
+}
+
+function markInputAsError(input) {
+  input.classList.add('error')
+}
+
+function removeErrorFromInput(input) {
+  input.classList.remove('error')
+}
+
+function handleSubmit(modalId) {
+  const isValid = validateForm(modalId)
+
+  if (isValid) {
+    closeModal(modalId)
+  }
+}
+
+const modalButtons = document.querySelectorAll('.modal .btn')
+modalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modalId = button.closest('.modal').id
+    handleSubmit(modalId)
+  })
+})
