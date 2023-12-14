@@ -100,8 +100,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // only Numbers can be inputted
   price.addEventListener('input', (e) => {
     const priceValue = e.target.value.replace(/\D/g, '')
+
     //  after every the last 3 digits , there should be an empty space
     const PriceFormat = priceValue.replace(/(\d)(?=(\d{3})+$)/g, '$1 ')
+
     // remove non-numeric values
     e.target.value = PriceFormat.trim()
   })
@@ -113,8 +115,10 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       currencyList.style.display = 'none'
     }
+
     // rotate the icon when the categoryCard is clicked
     currencyIcon.classList.toggle('rotated')
+
     // currentCurrency.style.display='none'
   }
 
@@ -134,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
       })
 
       event.stopPropagation()
+
       //Add currency__option's value into current-option
       currentCurrency.textContent = option.textContent
       option.classList.add('selected')

@@ -1,35 +1,38 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ================== Google Fonts links ================== -->
 
-  <!-- ================== Google Fonts links ================== -->
+    <!-- ================== Css links ================== -->
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../components/pagination/pagination.css" />
+    <link rel="stylesheet" href="./ProductList.css" />
+    <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg" />
+    <link rel="stylesheet" href="../../components/form/checkbox/index.css" />
+    <link rel="stylesheet" href="../../components/breadCrumb/breadCrumb.css" />
+    <link rel="stylesheet" href="../../components/buttons/buttons.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/languageSwitcher/languageSwitcher.css"
+    />
+    <link rel="stylesheet" href="../../components/form/radio/radio.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/prevPageHeader/prevPageHeader.css"
+    />
+    <link rel="stylesheet" href="../../components/form/select/select.css" />
+    <!-- ================== Website Title ================== -->
+    <title>77.uz | Product List</title>
+  </head>
 
-
-
-  <!-- ================== Css links ================== -->
-  <link rel="stylesheet" href="../../components/header/header.css" />
-  <link rel="stylesheet" href="../../components/footer/footer.css" />
-  <link rel="stylesheet" href="../../assets/css/variables.css" />
-  <link rel="stylesheet" href="../../assets/css/normalize.css" />
-  <link rel="stylesheet" href="../../components/pagination/pagination.css" />
-  <link rel="stylesheet" href="./ProductList.css" />
-  <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg" />
-  <link rel="stylesheet" href="../../components/form/checkbox/index.css" />
-  <link rel="stylesheet" href="../../components/breadCrumb/breadCrumb.css" />
-  <link rel="stylesheet" href="../../components/buttons/buttons.css" />
-  <link rel="stylesheet" href="../../components/languageSwitcher/languageSwitcher.css">
-  <link rel="stylesheet" href="../../components/form/radio/radio.css" />
-  <link rel="stylesheet" href="../../components/prevPageHeader/prevPageHeader.css" />
-  <link rel="stylesheet" href="../../components/form/select/select.css">
-  <!-- ================== Website Title ================== -->
-  <title>77.uz | Product List</title>
-</head>
-
-<body>
+  <body>
     <header class="header">
       <div class="container">
         <nav class="navbar">
@@ -144,326 +147,434 @@
       </div>
     </header>
 
-  <div class="container">
-    <ul class="bread-crumb">
-      <li class="bread-crumb__item">
-        <a href="" class="bread-crumb__link">Главная</a>
-      </li>
-      <li class="bread-crumb__item">
-        <a href="" class="bread-crumb__link">Электроника</a>
-      </li>
-      <li class="bread-crumb__item item-active">
-        <a href="" class="bread-crumb__link">Фены</a>
-      </li>
-      <li class="bread-crumb__item">
-        <a href="" class="bread-crumb__link active">457 147</a>
-      </li>
-    </ul>
-  </div>
-
-  <main class="main">
     <div class="container">
-      <div class="row">
-        <!-- Filter -->
-        <div class="filter">
-          <h2 class="filter__title">Фильтр</h2>
-          <div class="filter-tools__wrapper">
-            <div>
-              <h3 class="filter-sub__title">Регион</h3>
-
-              <div class="select-wrapper">
-                <div class="select-menu" id="">
-                  <div class="select-btn">
-                    <span class="sBtn-text">Выберите свой адрес</span>
-                    <span class="select-btn__arrow-icon"> </span>
-                  </div>
-
-                  <ul class="options">
-                    <li class="option">
-                      <span class="option-text">Г. Ташкент</span>
-                    </li>
-
-                    <li class="option">
-                      <span class="option-text">Андижан</span>
-                    </li>
-                    <li class="option">
-                      <span class="option-text">Бухара</span>
-                    </li>
-                    <li class="option">
-                      <span class="option-text">Навои </span>
-                    </li>
-
-                    <li class="option">
-                      <span class="option-text">Самарканд</span>
-                    </li>
-                    <li class="option">
-                      <span class="option-text">Джизак </span>
-                    </li>
-
-                    <li class="option">
-                      <span class="option-text">Джизак </span>
-                    </li>
-                    <li class="option">
-                      <span class="option-text">Джизак </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 class="filter-sub__title">Район/город</h3>
-
-              <div class="select-wrapper">
-                <div class="select-menu" id="">
-                  <div class="select-btn">
-                    <span class="sBtn-text">Выберите свой адрес</span>
-                    <span class="select-btn__arrow-icon"> </span>
-                  </div>
-
-                  <ul class="options">
-                    <li class="option">
-                      <span class="option-text">Г. Ташкент</span>
-                    </li>
-
-                    <li class="option">
-                      <span class="option-text">Андижан</span>
-                    </li>
-                    <li class="option">
-                      <span class="option-text">Бухара</span>
-                    </li>
-                    <li class="option">
-                      <span class="option-text">Навои </span>
-                    </li>
-
-                    <li class="option">
-                      <span class="option-text">Самарканд</span>
-                    </li>
-                    <li class="option">
-                      <span class="option-text">Джизак </span>
-                    </li>
-
-                    <li class="option">
-                      <span class="option-text">Джизак </span>
-                    </li>
-                    <li class="option">
-                      <span class="option-text">Джизак </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 class="filter-sub__title">Сортировать</h3>
-              <div class="radio-group">
-                <input class="default-radio" type="radio" name="radio-name" id="radio-1" value="radio-value" />
-                <label class="radio-label" for="radio-1">Дешёвые сперва</label>
-              </div>
-              <div class="radio-group">
-                <input class="default-radio" type="radio" name="radio-name" id="radio-2" value="radio-value" />
-                <label class="radio-label" for="radio-2">Дорогие сперва</label>
-              </div>
-              <div class="radio-group">
-                <input class="default-radio" type="radio" name="radio-name" id="radio-3" value="radio-value" />
-                <label class="radio-label" for="radio-3">Новые сперва</label>
-              </div>
-            </div>
-            <div>
-              <h3 class="filter-sub__title">Подкатегории</h3>
-              <div class="checkbox-group checkbox-disabled">
-                <label class="checkbox">
-                  <input class="default-checkbox checkbox-disabled" type="checkbox" id="option-all"
-                    onchange="checkAll(this)" />
-                  <div class="checkbox__checkmark"></div>
-                  <p class="checkbox__body">Все разделы</p>
-                </label>
-                <div class="">
-                  <label class="checkbox checkbox-child">
-                    <input class="default-checkbox checkbox-disabled" type="checkbox" />
-                    <div class="checkbox__checkmark"></div>
-                    <p class="checkbox__body">Парфюмерия</p>
-                  </label>
-                  <label class="checkbox checkbox-child">
-                    <input class="default-checkbox checkbox-disabled" type="checkbox" />
-                    <div class="checkbox__checkmark"></div>
-                    <p class="checkbox__body">Лицо</p>
-                  </label>
-                  <label class="checkbox checkbox-child">
-                    <input class="default-checkbox checkbox-disabled" type="checkbox" />
-                    <div class="checkbox__checkmark"></div>
-                    <p class="checkbox__body">Тело и ванна</p>
-                  </label>
-                  <label class="checkbox checkbox-child">
-                    <input class="default-checkbox checkbox-disabled" type="checkbox" />
-                    <div class="checkbox__checkmark"></div>
-                    <p class="checkbox__body">Макияж</p>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <button class="btn filter-btn">Применить фильтр</button>
-          </div>
-        </div>
-        <!-- Products -->
-        <div class="product-list">
-          <div class="prev-page__header">
-            <a href="/" class="prev-page__button">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.4448 24L6.66699 16M6.66699 16L14.4448 8M6.66699 16H25.3337" stroke="black"
-                  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </a>
-            <h1 class="prev-page__title">Ноутбуки и планшеты</h1>
-          </div>
-
-          <div class="product-list__wrapper">
-            <p class="product-list__count">156 объявлений</p>
-            <div id="list__switchers" class="product-list__switcher">
-              <!--  Todo: chop icon             -->
-              <iconify-icon class="filter_icon" icon="bi:filter"></iconify-icon>
-              <div class="product-list__view-icons">
-                <iconify-icon data-view="grid-view" class="product-list__view-icon active"
-                  icon="bi:grid"></iconify-icon>
-                <iconify-icon data-view="list-view" class="product-list__view-icon"
-                  icon="bi:view-stacked"></iconify-icon>
-              </div>
-            </div>
-          </div>
-          <!-- Product grid view -->
-          <div class="view-wrap grid-view" style="display: block">
-            <div id="grid-view__wrapper" class="grid-view__row"></div>
-          </div>
-          <!-- Product list view -->
-          <div class="view-wrap list-view" style="display: none">
-            <div class="list-view__row">
-              <div id="list-view__wrapper" class="list-view__wrapper"></div>
-            </div>
-          </div>
-        
-
-          <div id="pagination">
-            <button id="prev"> <iconify-icon icon="ooui:next-rtl"></iconify-icon>
-            </button>
-            <div id="pages"> </div>
-            <button id="next"> <iconify-icon icon="ooui:next-ltr"></iconify-icon>
-            </button>
-          </div>
-        </div>
-      </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <!-- Footer Logo -->
-      <a class="footer-logo" href="">
-        <img width="122" height="64" src="../../assets/img/logo.svg" alt="" />
-      </a>
-      <!-- Footer Info -->
-      <div class="footer-info">
-        <p class="footer-info__text subtitle text-center">
-          77.uz marketplace - это виртуальная платформа в Узбекистане, которая
-          облегчает покупки и продажи, связывая продавцов с потенциальными
-          клиентами.
-        </p>
-        <ul class="footer-info__list">
-          <li class="footer-info__item">
-            <a href="" class="footer-info__link">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_19_1588)">
-                  <path
-                    d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
-                    fill="#388FF3" />
-                  <path d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z" fill="#388FF3" />
-                  <path
-                    d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
-                    fill="#388FF3" fill-opacity="0.64" />
-                  <path d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
-                    fill="#388FF3" fill-opacity="0.48" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_19_1588">
-                    <rect width="16" height="16" rx="8" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              Доска объявлений
-            </a>
-          </li>
-          <li class="footer-info__item">
-            <a href="" class="footer-info__link">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_19_1588)">
-                  <path
-                    d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
-                    fill="#388FF3" />
-                  <path d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z" fill="#388FF3" />
-                  <path
-                    d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
-                    fill="#388FF3" fill-opacity="0.64" />
-                  <path d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
-                    fill="#388FF3" fill-opacity="0.48" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_19_1588">
-                    <rect width="16" height="16" rx="8" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              Условия пользования
-            </a>
-          </li>
-          <li class="footer-info__item">
-            <a href="" class="footer-info__link">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_19_1588)">
-                  <path
-                    d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
-                    fill="#388FF3" />
-                  <path d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z" fill="#388FF3" />
-                  <path
-                    d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
-                    fill="#388FF3" fill-opacity="0.64" />
-                  <path d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
-                    fill="#388FF3" fill-opacity="0.48" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_19_1588">
-                    <rect width="16" height="16" rx="8" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              +998 88 500 50 00
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="bread-crumb">
+        <li class="bread-crumb__item">
+          <a href="" class="bread-crumb__link">Главная</a>
+        </li>
+        <li class="bread-crumb__item">
+          <a href="" class="bread-crumb__link">Электроника</a>
+        </li>
+        <li class="bread-crumb__item item-active">
+          <a href="" class="bread-crumb__link">Фены</a>
+        </li>
+        <li class="bread-crumb__item">
+          <a href="" class="bread-crumb__link active">457 147</a>
+        </li>
+      </ul>
     </div>
-    <div class="development-company">
-      <div class="development-company-wrapper container">
-        <p class="development-company__text copyright">
-          <strong>© 77.uz</strong>
-          <span> 2023. Все права защищены</span>
-        </p>
 
-        <a href="https://uic.group/" target="_blank" class="development-company__link">
-          <span>
-            <img src="../../assets/img/uic.group.svg" alt="" />
-          </span>
-          <img src="../../assets/img/uic.group.text.svg" alt="" />
+    <main class="main">
+      <div class="container">
+        <div class="row">
+          <!-- Filter -->
+          <div class="filter">
+            <h2 class="filter__title">Фильтр</h2>
+            <div class="filter-tools__wrapper">
+              <div>
+                <h3 class="filter-sub__title">Регион</h3>
+
+                <div class="select-wrapper">
+                  <div class="select-menu" id="">
+                    <div class="select-btn">
+                      <span class="sBtn-text">Выберите свой адрес</span>
+                      <span class="select-btn__arrow-icon"> </span>
+                    </div>
+
+                    <ul class="options">
+                      <li class="option">
+                        <span class="option-text">Г. Ташкент</span>
+                      </li>
+
+                      <li class="option">
+                        <span class="option-text">Андижан</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">Бухара</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">Навои </span>
+                      </li>
+
+                      <li class="option">
+                        <span class="option-text">Самарканд</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">Джизак </span>
+                      </li>
+
+                      <li class="option">
+                        <span class="option-text">Джизак </span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">Джизак </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="filter-sub__title">Район/город</h3>
+
+                <div class="select-wrapper">
+                  <div class="select-menu" id="">
+                    <div class="select-btn">
+                      <span class="sBtn-text">Выберите свой адрес</span>
+                      <span class="select-btn__arrow-icon"> </span>
+                    </div>
+
+                    <ul class="options">
+                      <li class="option">
+                        <span class="option-text">Г. Ташкент</span>
+                      </li>
+
+                      <li class="option">
+                        <span class="option-text">Андижан</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">Бухара</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">Навои </span>
+                      </li>
+
+                      <li class="option">
+                        <span class="option-text">Самарканд</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">Джизак </span>
+                      </li>
+
+                      <li class="option">
+                        <span class="option-text">Джизак </span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">Джизак </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="filter-sub__title">Сортировать</h3>
+                <div class="radio-group">
+                  <input
+                    class="default-radio"
+                    type="radio"
+                    name="radio-name"
+                    id="radio-1"
+                    value="radio-value"
+                  />
+                  <label class="radio-label" for="radio-1"
+                    >Дешёвые сперва</label
+                  >
+                </div>
+                <div class="radio-group">
+                  <input
+                    class="default-radio"
+                    type="radio"
+                    name="radio-name"
+                    id="radio-2"
+                    value="radio-value"
+                  />
+                  <label class="radio-label" for="radio-2"
+                    >Дорогие сперва</label
+                  >
+                </div>
+                <div class="radio-group">
+                  <input
+                    class="default-radio"
+                    type="radio"
+                    name="radio-name"
+                    id="radio-3"
+                    value="radio-value"
+                  />
+                  <label class="radio-label" for="radio-3">Новые сперва</label>
+                </div>
+              </div>
+              <div>
+                <h3 class="filter-sub__title">Подкатегории</h3>
+                <div class="checkbox-group checkbox-disabled">
+                  <label class="checkbox">
+                    <input
+                      class="default-checkbox checkbox-disabled"
+                      type="checkbox"
+                      id="option-all"
+                      onchange="checkAll(this)"
+                    />
+                    <div class="checkbox__checkmark"></div>
+                    <p class="checkbox__body">Все разделы</p>
+                  </label>
+                  <div class="">
+                    <label class="checkbox checkbox-child">
+                      <input
+                        class="default-checkbox checkbox-disabled"
+                        type="checkbox"
+                      />
+                      <div class="checkbox__checkmark"></div>
+                      <p class="checkbox__body">Парфюмерия</p>
+                    </label>
+                    <label class="checkbox checkbox-child">
+                      <input
+                        class="default-checkbox checkbox-disabled"
+                        type="checkbox"
+                      />
+                      <div class="checkbox__checkmark"></div>
+                      <p class="checkbox__body">Лицо</p>
+                    </label>
+                    <label class="checkbox checkbox-child">
+                      <input
+                        class="default-checkbox checkbox-disabled"
+                        type="checkbox"
+                      />
+                      <div class="checkbox__checkmark"></div>
+                      <p class="checkbox__body">Тело и ванна</p>
+                    </label>
+                    <label class="checkbox checkbox-child">
+                      <input
+                        class="default-checkbox checkbox-disabled"
+                        type="checkbox"
+                      />
+                      <div class="checkbox__checkmark"></div>
+                      <p class="checkbox__body">Макияж</p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button class="btn filter-btn">Применить фильтр</button>
+            </div>
+          </div>
+          <!-- Products -->
+          <div class="product-list">
+            <div class="prev-page__header">
+              <a href="/" class="prev-page__button">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.4448 24L6.66699 16M6.66699 16L14.4448 8M6.66699 16H25.3337"
+                    stroke="black"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <h1 class="prev-page__title">Ноутбуки и планшеты</h1>
+            </div>
+
+            <div class="product-list__wrapper">
+              <p class="product-list__count">156 объявлений</p>
+              <div id="list__switchers" class="product-list__switcher">
+                <!--  Todo: chop icon             -->
+                <iconify-icon
+                  class="filter_icon"
+                  icon="bi:filter"
+                ></iconify-icon>
+                <div class="product-list__view-icons">
+                  <iconify-icon
+                    data-view="grid-view"
+                    class="product-list__view-icon active"
+                    icon="bi:grid"
+                  ></iconify-icon>
+                  <iconify-icon
+                    data-view="list-view"
+                    class="product-list__view-icon"
+                    icon="bi:view-stacked"
+                  ></iconify-icon>
+                </div>
+              </div>
+            </div>
+            <!-- Product grid view -->
+            <div class="view-wrap grid-view" style="display: block">
+              <div id="grid-view__wrapper" class="grid-view__row"></div>
+            </div>
+            <!-- Product list view -->
+            <div class="view-wrap list-view" style="display: none">
+              <div class="list-view__row">
+                <div id="list-view__wrapper" class="list-view__wrapper"></div>
+              </div>
+            </div>
+
+            <div id="pagination">
+              <button id="prev">
+                <iconify-icon icon="ooui:next-rtl"></iconify-icon>
+              </button>
+              <div id="pages"></div>
+              <button id="next">
+                <iconify-icon icon="ooui:next-ltr"></iconify-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer Logo -->
+        <a class="footer-logo" href="">
+          <img width="122" height="64" src="../../assets/img/logo.svg" alt="" />
         </a>
+        <!-- Footer Info -->
+        <div class="footer-info">
+          <p class="footer-info__text subtitle text-center">
+            77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+            облегчает покупки и продажи, связывая продавцов с потенциальными
+            клиентами.
+          </p>
+          <ul class="footer-info__list">
+            <li class="footer-info__item">
+              <a href="" class="footer-info__link">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_19_1588)">
+                    <path
+                      d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
+                      fill="#388FF3"
+                    />
+                    <path
+                      d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z"
+                      fill="#388FF3"
+                    />
+                    <path
+                      d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
+                      fill="#388FF3"
+                      fill-opacity="0.64"
+                    />
+                    <path
+                      d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
+                      fill="#388FF3"
+                      fill-opacity="0.48"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_19_1588">
+                      <rect width="16" height="16" rx="8" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                Доска объявлений
+              </a>
+            </li>
+            <li class="footer-info__item">
+              <a href="" class="footer-info__link">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_19_1588)">
+                    <path
+                      d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
+                      fill="#388FF3"
+                    />
+                    <path
+                      d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z"
+                      fill="#388FF3"
+                    />
+                    <path
+                      d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
+                      fill="#388FF3"
+                      fill-opacity="0.64"
+                    />
+                    <path
+                      d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
+                      fill="#388FF3"
+                      fill-opacity="0.48"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_19_1588">
+                      <rect width="16" height="16" rx="8" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                Условия пользования
+              </a>
+            </li>
+            <li class="footer-info__item">
+              <a href="" class="footer-info__link">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_19_1588)">
+                    <path
+                      d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
+                      fill="#388FF3"
+                    />
+                    <path
+                      d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z"
+                      fill="#388FF3"
+                    />
+                    <path
+                      d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
+                      fill="#388FF3"
+                      fill-opacity="0.64"
+                    />
+                    <path
+                      d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
+                      fill="#388FF3"
+                      fill-opacity="0.48"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_19_1588">
+                      <rect width="16" height="16" rx="8" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                +998 88 500 50 00
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </footer>
+      <div class="development-company">
+        <div class="development-company-wrapper container">
+          <p class="development-company__text copyright">
+            <strong>© 77.uz</strong>
+            <span> 2023. Все права защищены</span>
+          </p>
 
-  <!-- ================== Javascript Links ================== -->
+          <a
+            href="https://uic.group/"
+            target="_blank"
+            class="development-company__link"
+          >
+            <span>
+              <img src="../../assets/img/uic.group.svg" alt="" />
+            </span>
+            <img src="../../assets/img/uic.group.text.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
 
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <script src="../../components/header/header.js"></script>
-  <script src="../../components/form/checkbox/checkbox.js"></script>
-  <script src="../../components/languageSwitcher/languageSwitcher.js"></script>
-  <script src="../../components/form/select/select.js"></script>
-  <script type="module" src="./ProductList.js"></script>
-</body>
+    <!-- ================== Javascript Links ================== -->
 
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="../../components/header/header.js"></script>
+    <script src="../../components/form/checkbox/checkbox.js"></script>
+    <script src="../../components/languageSwitcher/languageSwitcher.js"></script>
+    <script src="../../components/form/select/select.js"></script>
+    <script type="module" src="./ProductList.js"></script>
+  </body>
 </html>

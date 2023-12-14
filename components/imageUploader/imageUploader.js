@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.removeEventListener('dragenter', activateDropbox)
     e.dataTransfer.effectAllowed = 'move'
     dragSrcEl = this
+
     // dragSrcEl.classList.add('dragover')
     e.dataTransfer.setData('text/html', this.innerHTML)
 

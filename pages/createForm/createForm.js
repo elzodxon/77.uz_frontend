@@ -7,6 +7,7 @@ createSubmutButton.addEventListener('click', (e) => {
     if (input.value.length === 0) {
       input.classList.add('error')
     }
-    return
+    
+return
   })
 })
