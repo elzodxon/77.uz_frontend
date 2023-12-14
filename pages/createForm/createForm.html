@@ -416,6 +416,39 @@
               </p>
               <div class="product-detail__form create-wrapper">
                 <div id="gallery-wrapper" class="gallery-box"></div>
+                <div class="modal" id="delete-layer">
+                  <div class="modal-header">
+                    <button
+                      class="close-btn"
+                      onclick="closeModal('delete-layer')"
+                    >
+                      <i class="icon-x"></i>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img
+                      class="modal-body__img"
+                      src="../../assets/img/modal-img/trash.svg"
+                      alt="trash"
+                      width="120"
+                      height="108"
+                    />
+                    <h2 class="modal-body__title">Удалить объявление</h2>
+                    <p class="modal-body__subtitle">
+                      Вы точно хотите удалить объявление, все ваши данные о
+                      продукте будут потеряны
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      onclick="closeModal('delete-layer')"
+                      class="btn btn-secondary"
+                    >
+                      Отменить
+                    </button>
+                    <button class="btn btn-danger">Удалить</button>
+                  </div>
+                </div>
 
                 <div class="drop-image__item">
                   <div class="gallery__item-empty" draggable="false">
@@ -520,8 +553,10 @@
       </div>
     </footer>
 
+    <div class="overlay"></div>
     <!-- ================== Javascript Links ================== -->
-    <script src="../../components/imageUploader/imageUploader.js"></script>
+    <script src="../../components/imageUploader/imageUploader.js" defer></script>
+    <script src="../../components/modal/modal.js"></script>
     <script src="../../components/languageSwitcher/languageSwitcher.js"></script>
     <script src="/components/form/inputs/inputs.js"></script>
     <script src="../../components/header/header.js"></script>
