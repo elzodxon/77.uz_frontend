@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const reader = new FileReader()
       reader.onload = () => {
         const card = document.createElement('div')
+        card.setAttribute('id', `${element.id}`)
         card.classList.add('gallery__item')
         card.innerHTML = createGalleryCard(element.id, reader.result)
         gallery.append(card)
@@ -169,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function removeCard(e) {
     const galleryItem = e.target.closest('.gallery__item')
     galleryItem.remove()
-    const id = e.target.dataset.id
+    const id = galleryItem.id
     const index = files.findIndex(
       (element) => element.id.toString() === id.toString(),
     )
