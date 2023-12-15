@@ -10,6 +10,8 @@
     <!-- ================== Css links ================== -->
 
     <link rel="stylesheet" href="./imageUploader.css" />
+    <link rel="stylesheet" href="../modal/modal.css" />
+    <link rel="stylesheet" href="../buttons/buttons.css" />
     <link rel="stylesheet" href="../../assets/css/variables.css" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
 
@@ -39,6 +41,36 @@
         <div class="gallery" id="gallery">
           <div id="gallery-wrapper" class="gallery-box"></div>
 
+          <div class="modal" id="delete-layer">
+            <div class="modal-header">
+              <button class="close-btn" onclick="closeModal('delete-layer')">
+                <i class="icon-x"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img
+                class="modal-body__img"
+                src="../../assets/img/modal-img/trash.svg"
+                alt="trash"
+                width="120"
+                height="108"
+              />
+              <h2 class="modal-body__title">Удалить объявление</h2>
+              <p class="modal-body__subtitle">
+                Вы точно хотите удалить объявление, все ваши данные о продукте
+                будут потеряны
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                onclick="closeModal('delete-layer')"
+                class="btn btn-secondary"
+              >
+                Отменить
+              </button>
+              <button class="btn btn-danger">Удалить</button>
+            </div>
+          </div>
           <div class="drop-image__item">
             <div class="gallery__item-empty" draggable="false">
               <img src="../../assets/img/image-add.svg" alt="add image" />
@@ -56,7 +88,9 @@
         </div>
       </div>
     </div>
+    <div class="overlay"></div>
     <!-- ================== Javascript Links ================== -->
     <script src="imageUploader.js" defer></script>
+    <script src="../modal/modal.js"></script>
   </body>
 </html>

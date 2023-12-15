@@ -9,7 +9,6 @@ const searchWrapper = document.querySelector('.search-wrapper')
 searchInput.addEventListener('focus', (e) => {
   e.preventDefault()
   blocker.classList.toggle('active')
-  searchSuggestion.classList.toggle('active')
   document.body.classList.toggle('block')
   searchWrapper.classList.toggle('active')
 })
@@ -29,7 +28,9 @@ searchInput.addEventListener('input', handleSearchInput)
 /* Handle search inputs  */
 function handleSearchInput() {
   searchInput.classList.toggle('active')
-
+  if(searchInput.value.trim() !== "") {
+    searchSuggestion.classList.add("active")
+  }
   // call searchTerm when searchInput is inputted
   const searchTerm = searchInput.value.trim().toLowerCase()
 

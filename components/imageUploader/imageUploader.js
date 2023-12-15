@@ -8,24 +8,51 @@ document.addEventListener('DOMContentLoaded', function () {
   // Create gallery card
   const createGalleryCard = (id, image) => {
     return `
-          <div class="gallery__item-image" draggable="true">
-            <div class="actions" draggable="false">
-              <button  class="actions__button" draggable="false">
-                <img class="move-image actions__button-image" draggable="false" src="../../assets/img/ImageUploader/change-button.svg" alt="change button image" />
-              </button>
-              <button class="remove-image actions__button" draggable="false" data-id="${id}">
-                
-
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" draggable="false" xmlns="http://www.w3.org/2000/svg">
-<g id="trash-01">
-<path id="Icon" d="M1.59961 3.59995H14.3996M5.59961 1.19995H10.3996M6.39961 11.6V6.79995M9.59961 11.6V6.79995M10.7996 14.8H5.19961C4.31595 14.8 3.59961 14.0836 3.59961 13.2L3.23433 4.43326C3.21539 3.97876 3.57874 3.59995 4.03364 3.59995H11.9656C12.4205 3.59995 12.7838 3.97876 12.7649 4.43326L12.3996 13.2C12.3996 14.0836 11.6833 14.8 10.7996 14.8Z" stroke="" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-</svg>
-
-              </button>
-            </div>
-            <img class="gallery__item-photo" draggable="false" src="${image}" alt="image you added"/>
-          </div>
+<div class="gallery__item-image" draggable="true">
+  <div class="actions" draggable="false">
+    <button class="actions__button" draggable="false">
+      <img
+        class="move-image actions__button-image"
+        draggable="false"
+        src="../../assets/img/ImageUploader/change-button.svg"
+        alt="change button image"
+      />
+    </button>
+    <button
+      class="remove-image actions__button"
+      draggable="false"
+      data-id="${id}"
+      id="delete-modal"
+      onclick="event.preventDefault(); openModal('delete-layer')"
+    >
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        draggable="false"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="trash-01">
+          <path
+            id="Icon"
+            d="M1.59961 3.59995H14.3996M5.59961 1.19995H10.3996M6.39961 11.6V6.79995M9.59961 11.6V6.79995M10.7996 14.8H5.19961C4.31595 14.8 3.59961 14.0836 3.59961 13.2L3.23433 4.43326C3.21539 3.97876 3.57874 3.59995 4.03364 3.59995H11.9656C12.4205 3.59995 12.7838 3.97876 12.7649 4.43326L12.3996 13.2C12.3996 14.0836 11.6833 14.8 10.7996 14.8Z"
+            stroke=""
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+      </svg>
+    </button>
+  </div>
+  <img
+    class="gallery__item-photo"
+    draggable="false"
+    src="${image}"
+    alt="image you added"
+  />
+</div>
           `
   }
 
@@ -36,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const reader = new FileReader()
       reader.onload = () => {
         const card = document.createElement('div')
+        card.setAttribute('id', `${element.id}`)
         card.classList.add('gallery__item')
         card.innerHTML = createGalleryCard(element.id, reader.result)
         gallery.append(card)
@@ -104,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.removeEventListener('dragenter', activateDropbox)
     e.dataTransfer.effectAllowed = 'move'
     dragSrcEl = this
-
+    dragSrcEl.opacity = 0.5
     // dragSrcEl.classList.add('dragover')
     e.dataTransfer.setData('text/html', this.innerHTML)
 
@@ -167,10 +195,9 @@ document.addEventListener('DOMContentLoaded', function () {
     dropbox.classList.add('active')
   }
 
-  function removeCard(e) {
-    const galleryItem = e.target.closest('.gallery__item')
+  function removeCard(galleryItem) {
     galleryItem.remove()
-    const id = e.target.dataset.id
+    const id = galleryItem.id
     const index = files.findIndex(
       (element) => element.id.toString() === id.toString(),
     )
@@ -182,9 +209,17 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('dragenter', activateDropbox)
 
   window.addEventListener('DOMNodeInserted', () => {
-    const removeButtons = document.querySelectorAll('.remove-image')
-    removeButtons.forEach((button) => {
-      button.addEventListener('click', (e) => removeCard(e))
+    const trashButtons = document.querySelectorAll('.remove-image')
+    trashButtons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+    
+        const galleryItem = e.target.closest('.gallery__item')
+        const btnDanger = document.querySelector('.btn.btn-danger')
+        btnDanger.addEventListener('click', (event) => {
+          event.preventDefault()
+          removeCard(galleryItem)
+        })
+      })
     })
   })
 })
