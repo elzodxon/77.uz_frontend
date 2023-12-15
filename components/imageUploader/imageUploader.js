@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
       draggable="false"
       data-id="${id}"
       id="delete-modal"
-      onclick="openModal('delete-layer')"
+      onclick="event.preventDefault(); openModal('delete-layer')"
     >
       <svg
         width="16"
@@ -212,9 +212,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const trashButtons = document.querySelectorAll('.remove-image')
     trashButtons.forEach((button) => {
       button.addEventListener('click', (e) => {
+    
         const galleryItem = e.target.closest('.gallery__item')
         const btnDanger = document.querySelector('.btn.btn-danger')
-        btnDanger.addEventListener('click', () => {
+        btnDanger.addEventListener('click', (event) => {
+          event.preventDefault()
           removeCard(galleryItem)
         })
       })

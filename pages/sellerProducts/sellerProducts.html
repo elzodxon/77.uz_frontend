@@ -11,23 +11,25 @@
 
     <!-- ================== Css links ================== -->
 
-    <link rel="stylesheet" href="../../components/breadCrumb/breadCrumb.css" />
     <link rel="stylesheet" href="../../components/header/header.css" />
     <link rel="stylesheet" href="../../components/footer/footer.css" />
-    <link
-      rel="stylesheet"
-      href="../../components/prevPageHeader/prevPageHeader.css"
-    />
-
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../components/pagination/pagination.css" />
+    <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg" />
+    <link rel="stylesheet" href="../../components/breadCrumb/breadCrumb.css" />
+    <link rel="stylesheet" href="../../pages/productList/ProductList.css" />
     <link rel="stylesheet" href="../../components/buttons/buttons.css" />
     <link
       rel="stylesheet"
       href="../../components/languageSwitcher/languageSwitcher.css"
     />
+    <link
+      rel="stylesheet"
+      href="../../components/prevPageHeader/prevPageHeader.css"
+    />
     <link rel="stylesheet" href="../profile/profile.css" />
-    <link rel="stylesheet" href="./adverts.css" />
-    <link rel="stylesheet" href="../../assets/css/variables.css" />
-    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+
 
     <!-- ================== Website Title ================== -->
     <title>My Ads</title>
@@ -57,7 +59,7 @@
                     <img
                       width="20"
                       height="20"
-                      src="/assets/img/header/ru.svg"
+                      src="../../assets/img/header/ru.svg"
                       alt=""
                     />
                     <span>RU</span>
@@ -67,7 +69,7 @@
                     <img
                       width="20"
                       height="20"
-                      src="/assets/img/header/uz.svg"
+                      src="../../assets/img/header/uz.svg"
                       alt=""
                     />
                     <span>UZ</span>
@@ -151,7 +153,7 @@
 
     <!------------------- Header ------------------------->
 
-    <main>
+    <main class="main">
       <div class="profile">
         <div class="container">
           <!------------------ Bread-Crumb-------------------- -->
@@ -270,169 +272,17 @@
                   <button class="btn ads-btn">Создать объявление</button>
                 </div>
 
-                <div class="profile__ads">
-                  <div class="card">
-                    <div class="card__image">
-                      <div class="card__icon">
-                        <iconify-icon icon="tdesign:heart"></iconify-icon>
-                      </div>
-                      <img
-                        class="card__img"
-                        src="../../assets/img/profile/ads-dyson.png"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-wrapper">
-                      <span class="city">г. Ташкент</span>
-                      <h3 class="product_name">
-                        Стайлер для волос Dyson airwrap complete long
-                      </h3>
-                      <p class="date">Вчера, 19:20</p>
-                      <a class="phone__number" href="tel:+998712007007"
-                        >+998 71 200 70 07</a
-                      >
-                      <p class="product__cost">
-                        2 599 000
-                        <span> UZS </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card__image">
-                      <div class="card__icon">
-                        <!-- <iconify-icon icon="tdesign:heart"></iconify-icon> -->
-                      </div>
-
-                      <img
-                        class="card__img"
-                        src="../../assets/img/profile/ads-watch-desktop.png"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-wrapper">
-                      <span class="city">г. Ташкент</span>
-                      <h3 class="product_name">
-                        Apple Watch Series 8 - USA Non active
-                      </h3>
-                      <p class="date">Вчера, 19:20</p>
-                      <a class="phone__number" href="tel:+998712007007"
-                        >+998 71 200 70 07</a
-                      >
-                      <p class="product__cost">
-                        2 599 000
-                        <span> UZS </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card__image">
-                      <div class="card__icon">
-                        <iconify-icon icon="tdesign:heart"></iconify-icon>
-                      </div>
-                      <img
-                        class="card__img"
-                        src="../../assets/img/profile/ads-car.png"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-wrapper">
-                      <span class="city">г. Ташкент</span>
-                      <h3 class="product_name">
-                        Chevrolet Onix 1.2 Turbo в наличии
-                      </h3>
-                      <p class="date">Вчера, 19:20</p>
-                      <a class="phone__number" href="tel:+998712007007"
-                        >+998 71 200 70 07</a
-                      >
-                      <p class="product__cost">
-                        2 599 000
-                        <span> UZS </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card__image">
-                      <div class="card__icon">
-                        <iconify-icon icon="tdesign:heart"></iconify-icon>
-                      </div>
-                      <img
-                        class="card__img"
-                        src="../../assets/img/profile/ads-sneaker-desktop.png"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-wrapper">
-                      <span class="city">г. Ташкент</span>
-                      <h3 class="product_name">
-                        Оригинальные кроссовки Nike Air Max 97
-                      </h3>
-                      <p class="date">Вчера, 19:20</p>
-                      <a class="phone__number" href="tel:+998712007007"
-                        >+998 71 200 70 07</a
-                      >
-                      <p class="product__cost">
-                        2 599 000
-                        <span> UZS </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card__image">
-                      <div class="card__icon">
-                        <iconify-icon icon="tdesign:heart"></iconify-icon>
-                      </div>
-                      <img
-                        class="card__img"
-                        src="../../assets/img/profile/ads-car.png"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-wrapper">
-                      <span class="city">г. Ташкент</span>
-                      <h3 class="product_name">
-                        Лучший кроссовер Geely Monjaro Limited Edition
-                      </h3>
-                      <p class="date">Вчера, 19:20</p>
-                      <a class="phone__number" href="tel:+998712007007"
-                        >+998 71 200 70 07</a
-                      >
-                      <p class="product__cost">
-                        2 599 000
-                        <span> UZS </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card__image">
-                      <div class="card__icon">
-                        <iconify-icon icon="tdesign:heart"></iconify-icon>
-                      </div>
-                      <img
-                        class="card__img"
-                        src="../../assets/img/profile/ads-cap.png"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-wrapper">
-                      <span class="city">г. Ташкент</span>
-                      <h3 class="product_name">
-                        Лучший кроссовер Geely Monjaro Limited Edition
-                      </h3>
-                      <p class="date">Вчера, 19:20</p>
-                      <a class="phone__number" href="tel:+998712007007"
-                        >+998 71 200 70 07</a
-                      >
-                      <p class="product__cost">
-                        2 599 000
-                        <span> UZS </span>
-                      </p>
-                    </div>
-                  </div>
+                <div id="profile__ads" class="profile__ads">
+               
+                </div>
+                <div id="pagination">
+                  <button id="prev">
+                    <iconify-icon icon="ooui:next-rtl"></iconify-icon>
+                  </button>
+                  <div id="pages"></div>
+                  <button id="next">
+                    <iconify-icon icon="ooui:next-ltr"></iconify-icon>
+                  </button>
                 </div>
               </div>
             </div>
@@ -503,10 +353,12 @@
     <!--------------------- Footer ------------------>
 
     <!-- ================== Javascript Links ================== -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
-    <script src="advert.js"></script>
     <script src="../../components/footer/footer.js"></script>
     <script src="../../components/header/header.js"></script>
     <script src="../../components/languageSwitcher/languageSwitcher.js"></script>
+    <script type="module" src="./sellerProducts.js"></script>
+
   </body>
 </html>

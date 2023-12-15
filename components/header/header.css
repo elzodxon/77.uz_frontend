@@ -26,13 +26,13 @@
 }
 .favorite-product__number {
   position: absolute !important;
-  top: -2px !important;
-  right: -6px !important;
+  top: -3px !important;
+  right: -5px !important;
   color: #fff !important;
-  height: 12px;
-  width: 12px;
+  height: 14px;
+  width: 14px;
   text-align: center;
-  font-size: 9px !important;
+  font-size: 10px !important;
   background-color: red !important;
   border-radius: 50% !important;
   z-index: 600000 !important;

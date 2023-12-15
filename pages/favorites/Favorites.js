@@ -99,6 +99,7 @@ function findProductByIconId(icon) {
 
 // ------------------- IsLiked or Not Func -----------------
 function handleCardIconClick(event) {
+  event.preventDefault()
   for (const icon of cardIcons) {
     if (icon.id === event.target.id) {
       const product = findProductByIconId(icon)
