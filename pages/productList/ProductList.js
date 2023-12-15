@@ -52,16 +52,21 @@ switchers.forEach(function (switcher) {
       view.style.display = 'none'
     })
 
-    // Todo: render only one view
     if (view == 'list-view') {
-      listView.style.display = 'block'
-      // listStyle = true
+      listDisplay()
     } else {
-      gridView.style.display = 'block'
-      // gridStyle = true
+      gridDisplay()
     }
   })
 })
+
+function listDisplay() {
+  return (listView.style.display = 'block')
+}
+
+function gridDisplay() {
+  return (gridView.style.display = 'block')
+}
 
 // ------------------- Get Product Func --------------------
 async function getProductList(page = 1, perPage = 2) {
