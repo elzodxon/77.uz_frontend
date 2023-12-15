@@ -40,6 +40,10 @@
   line-height: 132%;
 }
 
+.profile-info__name {
+  color: #000000;
+}
+
 .address-info__title {
   color: #16191d;
   font-size: 20px;
