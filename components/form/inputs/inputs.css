@@ -39,8 +39,8 @@ body {
   align-self: stretch;
   border: 1px solid transparent;
   border-radius: 8px;
-  background: #f0f3f7;
-  color: #16191d;
+  background: var(--input-bg-color);
+  color: var(--black-color);
   font-weight: 400;
   padding: 12px;
   flex-direction: column;
@@ -50,7 +50,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .input:focus {
-  border-color: #388ff3;
+  border-color: var(--primary-color);
   background: #fff;
 }
 .input::placeholder {
@@ -94,7 +94,7 @@ body {
   top: 8px;
   left: 5px;
   transform: translateY(270%);
-  color: #388ff3;
+  color: var(--primary-color);
   text-align: right;
   font-size: 12px;
   font-weight: 400;
@@ -110,12 +110,13 @@ body {
 }
 .input_tel {
   padding-left: 45px;
+  font-size: 14px;
 }
 .phone-input-group .country-code {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(30%, 55%);
+  transform: translate(30%,57%);
   z-index: 1;
   font-size: 14px;
 }
@@ -139,8 +140,6 @@ body {
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
-  padding: 6px;
-  cursor: pointer;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -149,12 +148,15 @@ body {
 }
 .currency-card {
   display: flex;
+  align-items: center;
+  padding: 6px;
+  cursor: pointer;
 }
 .currency-card:hover {
   opacity: 0.8;
 }
 .current-currency {
-  color: #388ff3;
+  color: var(--black-color);
 }
 .currency-icon {
   transform: rotate(0deg);
@@ -162,7 +164,7 @@ body {
   font-size: 20px;
 }
 .currency-icon.rotated {
-  transform: rotate(-90deg);
+  transform: rotate(-180deg);
   transition: all 0.3s ease;
 }
 .currency-list {
@@ -178,8 +180,12 @@ body {
   border-radius: 6px;
   transition: all 0.5s ease;
 }
+.currency-list.active {
+  display: flex;
+}
 .currency__option {
   list-style: none;
+  cursor: pointer;
   width: 100%;
   text-align: center;
   transition: color 0.3s ease;
@@ -187,7 +193,7 @@ body {
   padding: 3px;
 }
 .currency__option:hover {
-  color: #388ff3;
+  color: var(--primary-color);
   background-color: #b8bbbd;
 }
 .currency__option:first-child:hover {
@@ -198,15 +204,11 @@ body {
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
 }
-.currency__option.selected::after {
-  content: '';
-  background: url(../../../assets/img/select/tick-icon.svg) no-repeat center;
-  z-index: 2;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 1px;
-  right: 0px;
+.currency__option.selected {
+  color: var(--primary-color);
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: none;
 }
 .error {
   border: 1px solid #e93c47;

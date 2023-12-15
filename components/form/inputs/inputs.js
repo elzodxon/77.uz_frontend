@@ -108,11 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to toggle the currency list visibility
   function toggleCurrencyList() {
-    if (currencyList.style.display === 'none') {
-      currencyList.style.display = 'flex'
-    } else {
-      currencyList.style.display = 'none'
-    }
+    currencyList.classList.toggle("active")
     // rotate the icon when the categoryCard is clicked
     currencyIcon.classList.toggle('rotated')
     // currentCurrency.style.display='none'
@@ -145,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Event listener for clicking outside the currency card
   document.addEventListener('click', function () {
-    currencyList.style.display = 'none'
+    currencyList.classList.remove('active')
     currencyIcon.classList.remove('rotated')
     currentCurrency.style.display = 'block'
   })
