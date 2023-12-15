@@ -5,8 +5,10 @@ import {
 } from '../utils/utils.js'
 
 export function listViewStyle(product) {
-  const listCard = document.createElement('div')
+  const listCard = document.createElement('a')
   listCard.classList.add('list-view__card')
+  listCard.href = '../../pages/productSingle/ProductSingle.html'
+
   // ----------------Card list style--------------------
   listCard.innerHTML = `
         <div class="list-view__card-symbols">
@@ -40,10 +42,10 @@ export function listViewStyle(product) {
 }
 
 export function gridViewStyle(product) {
-  const grid_card = document.createElement('div')
-
+  const grid_card = document.createElement('a')
+  
   grid_card.classList.add('grid-view__card')
-
+  grid_card.href = '../../pages/productSingle/ProductSingle.html'
   // ----------------Card grid style--------------------
   grid_card.innerHTML = `
   
