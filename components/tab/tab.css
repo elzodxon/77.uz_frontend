@@ -15,7 +15,7 @@
   padding: 4px;
   margin-top: 100px;
 }
-input[type="radio"] {
+input[type='radio'] {
   display: none;
 }
 .language-switcher {
@@ -30,7 +30,7 @@ input[type="radio"] {
   top: 0;
   height: calc(100% - 8px);
   border-radius: 8px;
-  z-index: 1; 
+  z-index: 1;
   transform: translate(0%, 12%);
   width: calc(50% - 4px);
   transition: 0.2s ease-in-out;
@@ -43,7 +43,7 @@ input[type="radio"] {
 }
 .language-switcher__label {
   padding: 6px 0;
-  color: var(--Black, #63676C);
+  color: var(--Black, #63676c);
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
@@ -54,13 +54,13 @@ input[type="radio"] {
   width: 50%;
   z-index: 2;
 }
-.language-switcher__input:checked ~ .language-switcher__label{
+.language-switcher__input:checked ~ .language-switcher__label {
   font-weight: bold;
-  color: #16191D;
+  color: #16191d;
 }
-.language-switcher.russian.active ~ .language-switcher__active{
+.language-switcher.russian.active ~ .language-switcher__active {
   transform: translate(0%, 8%);
 }
-.language-switcher.english.active ~ .language-switcher__active{
+.language-switcher.english.active ~ .language-switcher__active {
   transform: translate(105%, 8%);
 }

@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ================== Google Fonts links ================== -->
+    <!-- ================== Favicon link ================== -->
+
+    <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg" />
 
     <!-- ================== Css links ================== -->
 
@@ -26,12 +28,15 @@
       rel="stylesheet"
       href="../../components/prevPageHeader/prevPageHeader.css"
     />
-    <link rel="stylesheet" href="./Favorites.css" />
+    <link rel="stylesheet" href="../profile/profile.css" />
+
+
     <!-- ================== Website Title ================== -->
-    <title>Header Component</title>
+    <title>My Ads</title>
   </head>
 
   <body>
+    <!------------------- Header ------------------------->
     <header class="header">
       <div class="container">
         <nav class="navbar">
@@ -54,7 +59,7 @@
                     <img
                       width="20"
                       height="20"
-                      src="/assets/img/header/ru.svg"
+                      src="../../assets/img/header/ru.svg"
                       alt=""
                     />
                     <span>RU</span>
@@ -115,12 +120,12 @@
                 id="registration-btn"
                 class="navbar-list__link login-button text-sm-subtitle"
               >
-                <span class="login-title">
+                <span class="login-title signed-in">
                   <span class="login-text">Войти </span>
                   <i class="icon-log-in"></i>
                 </span>
 
-                <span class="user-info">
+                <span class="user-info signed-in">
                   <img src="../../assets/img/user.svg" alt="" />
                   <span class="user-name">Шохрух Шавкиев</span>
                   <svg
@@ -146,38 +151,147 @@
       </div>
     </header>
 
-    <main class="main">
-      <div class="container">
-        <ul class="bread-crumb">
-          <li class="bread-crumb__item">
-            <a href="" class="bread-crumb__link">Главная</a>
-          </li>
-          <li class="bread-crumb__item">
-            <a href="" class="bread-crumb__link">Электроника</a>
-          </li>
-          <li class="bread-crumb__item item-active">
-            <a href="" class="bread-crumb__link">Фены</a>
-          </li>
-          <li class="bread-crumb__item">
-            <a href="" class="bread-crumb__link active">457 147</a>
-          </li>
-        </ul>
-        <h2 class="favorites">Избранные</h2>
-        <!-- Product grid view -->
-        <div id="favorites-wrapper" class="favorites__list"></div>
+    <!------------------- Header ------------------------->
 
-        <div id="pagination">
-          <button id="prev">
-            <iconify-icon icon="ooui:next-rtl"></iconify-icon>
-          </button>
-          <div id="pages"></div>
-          <button id="next">
-            <iconify-icon icon="ooui:next-ltr"></iconify-icon>
-          </button>
+    <main class="main">
+      <div class="profile">
+        <div class="container">
+          <!------------------ Bread-Crumb-------------------- -->
+
+          <ul class="bread-crumb">
+            <li class="bread-crumb__item">
+              <a href="" class="bread-crumb__link">Главная</a>
+            </li>
+            <li class="bread-crumb__item">
+              <a href="" class="bread-crumb__link active">Профиль</a>
+            </li>
+          </ul>
+          <!------------------ Bread-Crumb-------------------- -->
+
+          <div class="prev-page__header">
+            <a href="/" class="prev-page__button">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4448 24L6.66699 16M6.66699 16L14.4448 8M6.66699 16H25.3337"
+                  stroke="black"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="profile-wrapper">
+            <!------------ Sidebar---------- -->
+
+            <div class="sidebar">
+              <div class="personal">
+                <div class="personal-wrapper">
+                  <div class="personal__info">
+                    <img
+                      class="personal__img"
+                      src="../../assets/img/profile_img.png"
+                      alt="personal photo"
+                      width="54"
+                      height="54"
+                    />
+
+                    <p class="personal__name">
+                      Шохрух <br />
+                      Шавкиев
+                    </p>
+                  </div>
+
+                  <div class="personal__buttons">
+                    <a href="../sellerProducts/sellerProducts.html">
+                      <button
+                        id="button1"
+                        class="personal__innerButton btn-active"
+                      >
+                        <svg
+                          class="personal-info-list__item-icon"
+                          width="24"
+                          height="24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.467 2.4c1.178 0 2.133.942 2.133 2.104v3.592c0 1.162-.955 2.104-2.133 2.104h-3.2c-1.179 0-2.134-.942-2.134-2.104V4.504c0-1.162.955-2.104 2.134-2.104h3.2ZM4.533 2.4C3.355 2.4 2.4 3.342 2.4 4.504v3.592c0 1.162.955 2.104 2.133 2.104h3.2c1.178 0 2.134-.942 2.134-2.104V4.504c0-1.162-.956-2.104-2.134-2.104h-3.2ZM19.467 13.8c1.178 0 2.133.942 2.133 2.104v3.592c0 1.162-.955 2.104-2.133 2.104h-3.2c-1.179 0-2.134-.942-2.134-2.104v-3.592c0-1.162.955-2.104 2.134-2.104h3.2ZM4.533 13.8c-1.178 0-2.133.942-2.133 2.104v3.592c0 1.162.955 2.104 2.133 2.104h3.2c1.178 0 2.134-.942 2.134-2.104v-3.592c0-1.162-.956-2.104-2.134-2.104h-3.2Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Мои объявления
+                      </button>
+                    </a>
+
+                    <a href="../profile/profile.html">
+                      <button id="button2" class="personal__innerButton">
+                        <svg
+                          class="personal-info-list__item-icon"
+                          width="24"
+                          height="24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.4 19.2c.461-.517 2.62-2.893 3.254-2.893h6.692c.918 0 2.79 1.97 3.254 2.664m3-6.971a9.6 9.6 0 1 1-19.2 0 9.6 9.6 0 0 1 19.2 0Zm-6.161-2.272C15.439 7.896 13.893 6.4 12 6.4c-1.892 0-3.438 1.496-3.438 3.328 0 1.831 1.546 3.328 3.438 3.328 1.893 0 3.439-1.497 3.439-3.328Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          />
+                        </svg>
+
+                        Персональные данные
+                      </button>
+                    </a>
+                  </div>
+
+                  <button class="btn btn-secondary sign-out-btn">
+                    <span class="sign-out-btn__icon"></span>
+                    Выход
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-------------- Sidebar---------- -->
+
+            <div class="profile-content main" id="content-container">
+              <div class="my-ads" id="content1">
+                <div class="profile-content__summary">
+                  <h1 class="profile-content__title">Мои объявления</h1>
+
+                  <button class="btn ads-btn">Создать объявление</button>
+                </div>
+
+                <div id="profile__ads" class="profile__ads">
+               
+                </div>
+                <div id="pagination">
+                  <button id="prev">
+                    <iconify-icon icon="ooui:next-rtl"></iconify-icon>
+                  </button>
+                  <div id="pages"></div>
+                  <button id="next">
+                    <iconify-icon icon="ooui:next-ltr"></iconify-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
+    <!--------------------- Footer ------------------>
     <footer class="footer">
       <div class="container">
         <!-- Footer Logo -->
@@ -191,7 +305,7 @@
             облегчает покупки и продажи, связывая продавцов с потенциальными
             клиентами.
           </p>
-          <ul class="footer-info__list">
+          <ul class="footer-info__list" id="footerList">
             <li class="footer-info__item">
               <a
                 href="../productList/ProductList.html"
@@ -236,12 +350,15 @@
         </div>
       </div>
     </footer>
+    <!--------------------- Footer ------------------>
 
     <!-- ================== Javascript Links ================== -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <script src="../../components/footer/footer.js"></script>
     <script src="../../components/header/header.js"></script>
-    <script src="../../components/form/checkbox/checkbox.js"></script>
     <script src="../../components/languageSwitcher/languageSwitcher.js"></script>
-    <script type="module" src="./Favorites.js"></script>
+    <script type="module" src="./sellerProducts.js"></script>
+
   </body>
 </html>

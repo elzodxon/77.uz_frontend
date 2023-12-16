@@ -272,11 +272,24 @@
               <div class="switches-container">
                 <span class="language-switcher__active"></span>
                 <label class="language-switcher russian">
-                  <input class="language-switcher__input" type="radio" language-id="russian" name="language" value="russian" checked>
+                  <input
+                    class="language-switcher__input"
+                    type="radio"
+                    language-id="russian"
+                    name="language"
+                    value="russian"
+                    checked
+                  />
                   <span class="language-switcher__label">Russian</span>
                 </label>
                 <label class="language-switcher english">
-                  <input class="language-switcher__input" type="radio" language-id="english" name="language" value="english">
+                  <input
+                    class="language-switcher__input"
+                    type="radio"
+                    language-id="english"
+                    name="language"
+                    value="english"
+                  />
                   <span class="language-switcher__label">English</span>
                 </label>
               </div>
@@ -385,7 +398,11 @@
                         <li class="currency__option">USD</li>
                         <li class="currency__option">RB</li>
                       </ul>
-                      <img class="currency-icon" src="/assets/img/category/right-icon.svg" alt="left-icon">
+                      <img
+                        class="currency-icon"
+                        src="/assets/img/category/right-icon.svg"
+                        alt="left-icon"
+                      />
                     </div>
                   </div>
                 </div>
@@ -399,6 +416,39 @@
               </p>
               <div class="product-detail__form create-wrapper">
                 <div id="gallery-wrapper" class="gallery-box"></div>
+                <div class="modal" id="delete-layer">
+                  <div class="modal-header">
+                    <button
+                      class="close-btn"
+                      onclick="closeModal('delete-layer')"
+                    >
+                      <i class="icon-x"></i>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img
+                      class="modal-body__img"
+                      src="../../assets/img/modal-img/trash.svg"
+                      alt="trash"
+                      width="120"
+                      height="108"
+                    />
+                    <h2 class="modal-body__title">Удалить объявление</h2>
+                    <p class="modal-body__subtitle">
+                      Вы точно хотите удалить объявление, все ваши данные о
+                      продукте будут потеряны
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      onclick="closeModal('delete-layer')"
+                      class="btn btn-secondary"
+                    >
+                      Отменить
+                    </button>
+                    <button class="btn btn-danger">Удалить</button>
+                  </div>
+                </div>
 
                 <div class="drop-image__item">
                   <div class="gallery__item-empty" draggable="false">
@@ -459,7 +509,10 @@
           </p>
           <ul class="footer-info__list" id="footerList">
             <li class="footer-info__item">
-              <a href="../productList/ProductList.html" class="footer-info__link">
+              <a
+                href="../productList/ProductList.html"
+                class="footer-info__link"
+              >
                 <img src="../../assets/img/footer/symbol.svg" alt="" />
                 Доска объявлений
               </a>
@@ -500,9 +553,10 @@
       </div>
     </footer>
 
-
+    <div class="overlay"></div>
     <!-- ================== Javascript Links ================== -->
-    <script src="../../components/imageUploader/imageUploader.js"></script>
+    <script src="../../components/imageUploader/imageUploader.js" defer></script>
+    <script src="../../components/modal/modal.js"></script>
     <script src="../../components/languageSwitcher/languageSwitcher.js"></script>
     <script src="/components/form/inputs/inputs.js"></script>
     <script src="../../components/header/header.js"></script>

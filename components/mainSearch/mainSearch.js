@@ -9,7 +9,6 @@ const searchWrapper = document.querySelector('.search-wrapper')
 searchInput.addEventListener('focus', (e) => {
   e.preventDefault()
   blocker.classList.toggle('active')
-  searchSuggestion.classList.toggle('active')
   document.body.classList.toggle('block')
   searchWrapper.classList.toggle('active')
 })
@@ -29,7 +28,9 @@ searchInput.addEventListener('input', handleSearchInput)
 /* Handle search inputs  */
 function handleSearchInput() {
   searchInput.classList.toggle('active')
-
+  if(searchInput.value.trim() !== "") {
+    searchSuggestion.classList.add("active")
+  }
   // call searchTerm when searchInput is inputted
   const searchTerm = searchInput.value.trim().toLowerCase()
 
@@ -43,7 +44,7 @@ function handleSearchInput() {
       "<li class='search-suggestion__item' style='background-color: #fff;cursor:default;color:var(--black-color);'>No history</li>"
     topTxt.textContent = 'История поиска'
 
-return
+    return
   }
 
   // Check if there are matches in jsonData
@@ -75,7 +76,7 @@ function getMatchingValues(searchTerm) {
     }
   })
 
-return matches
+  return matches
 }
 
 function displaySearchResults(matches) {
@@ -115,7 +116,7 @@ function highlightMatch(value) {
   const searchTerm = searchInput.value.trim()
   const regex = new RegExp(searchTerm, 'gi')
 
-return value.replace(
+  return value.replace(
     regex,
     (match) => `<span class="matching-letters" >${match}</span>`,
   )

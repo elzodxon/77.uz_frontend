@@ -79,7 +79,6 @@ body.block {
   stroke: #388ff3;
 }
 
-
 .category-group .category-card {
   display: flex;
   padding: 22px 10px 22px 44px;
@@ -146,8 +145,8 @@ body.block {
   line-height: 130%;
 }
 .category-revealer {
-  transition: all .3s ease;
-  stroke: #B8BBBD;
+  transition: all 0.3s ease;
+  stroke: #b8bbbd;
 }
 .category-menu {
   position: absolute;
@@ -175,8 +174,6 @@ body.block {
   text-align: left;
 }
 
-
-
 .category-menu__title {
   color: var(--black-color, #16191d);
   font-family: Inter, Arial, sans-serif;
@@ -193,14 +190,14 @@ body.block {
 }
 
 .category-menu__title i {
-  color: #B8BBBD;;
+  color: #b8bbbd;
 }
 
-.category-menu__title:hover, .category-menu__title:hover i {
+.category-menu__title:hover,
+.category-menu__title:hover i {
   color: var(--primary-color);
   margin-right: 0;
 }
-
 
 .category-links {
   display: none;
@@ -245,97 +242,81 @@ body.block {
   display: inline-block;
 }
 
+.right-icon {
+  width: 5px;
+  height: 5px;
+  display: inline;
+  z-index: 100;
+}
+
+.dropdown-menu__back-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.dropdown-menu__back {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--black-color, #16191d);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 26px */
+  transition: 0.2s ease-in-out;
+}
+
+.dropdown-menu__back:hover {
+  cursor: pointer;
+}
+
+.dropdown-menu__back:hover {
+  stroke: var(--primary-color);
+  color: #388ff3;
+}
+
 @media only screen and (max-width: 1000px) {
-   /* MAIN SEARCH */
-   .main-search {
-      margin: 0 auto;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: sticky;
-      z-index: 505;
-      /* padding: 20px; */
-   }
-   .search__label {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-radius: 8px;
-      border: 1px solid #eaedf0;
-      background: #fff;
-      padding: 8px;
-      cursor: pointer;
-      max-width: 450px;
-   }
-   .search__label svg {
-      display: block;
-      align-self: center;
-      max-width: 10%;
-      width: 24px;
-      height: 24px;
-      padding: 10px inherit;
-   }
-   .search__input {
-      display: block;
-      align-self: stretch;
-      border: none;
-      border-radius: 8px;
-      background: #fff;
-      max-width: 280;
-      width: 100%;
-      color: #16191d;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 130%;
-   }
-   .input::placeholder {
-      color: #b8bbbd;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 130%;
-   }
-   .search__input:focus body {
-      overflow-y: hidden;
-   }
-   .search__input:focus .blocker.active {
-      display: block;
-   }
-   .btn {
-      display: block;
-      padding: 11px 28px;
-      flex-shrink: 0;
-      border: none;
-      border-radius: 6px;
-      background: #16191d;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 130%;
-      cursor: pointer;
-   }
-   .category-wrapper {
-      margin-top: 20px;
-      padding: 32px 16px 32px 32px;
-   }
-   .category-card {
-      row-gap: 12px;
-   }
-   .category {
-      margin-top: 32px;
-   }
-   .category .category__name {
-      max-width: 99%;
-      width: 100%;
-      padding-right: 10px;
-      margin: 0px;
-      color: #16191d;
-      text-overflow: ellipsis;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: normal;
-   }
+  .btn {
+    display: block;
+    padding: 11px 28px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 6px;
+    background: #16191d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 130%;
+    cursor: pointer;
+  }
+  .category-wrapper {
+    margin-top: 20px;
+  }
+
+  .category-group {
+    min-width: 45%;
+  }
+
+  .category-card {
+    row-gap: 12px;
+  }
+  .category {
+    margin-top: 32px;
+  }
+  .category .category__name {
+    max-width: 99%;
+    width: 100%;
+    padding-right: 10px;
+    margin: 0;
+    color: #16191d;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+  }
 }
 
 @media only screen and (max-width: 450px) {

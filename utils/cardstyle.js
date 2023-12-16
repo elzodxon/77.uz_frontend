@@ -4,13 +4,13 @@ import {
   phoneNumberFormatter,
 } from '../utils/utils.js'
 
+export function listViewStyle(product) {
+  const listCard = document.createElement('a')
+  listCard.classList.add('list-view__card')
+  listCard.href = '../../pages/productSingle/ProductSingle.html'
 
- export function listViewStyle(product) { 
-    const listCard = document.createElement('div')
-    listCard.classList.add('list-view__card')
-    // ----------------Card list style--------------------
-    listCard.innerHTML = `
-    <a href="../../pages/productSingle/ProductSingle.html" >
+  // ----------------Card list style--------------------
+  listCard.innerHTML = `
         <div class="list-view__card-symbols">
             <img class="list-view__card-image card-image" src="${
               product.photo
@@ -22,8 +22,8 @@ import {
                     ${product.name}
                   </a>
                 <span class="badge card-address"> ${
-                    product.address.district.name
-                  }</span>
+                  product.address.district.name
+                }</span>
             </div>
            <div class="list-view__bottom-content">
               <p class="list-view__card-price card-price">
@@ -31,25 +31,24 @@ import {
               </p>
            <div>
            <p class="list-view__card-date card-date"> ${dateFormatter(
-              product.published_at,
-            )}</p>
+             product.published_at,
+           )}</p>
             <a class="list-view__card-number card-phoneNum" href="tel:${
               product.seller.phone_number
             }">${phoneNumberFormatter(product.seller.phone_number)}</a>
         </div>
-    </a>`
-    return listCard
-  }
+    `
+  return listCard
+}
+
+export function gridViewStyle(product) {
+  const grid_card = document.createElement('a')
   
- export function gridViewStyle(product) {
-
-  const grid_card = document.createElement('div')
-
   grid_card.classList.add('grid-view__card')
-
+  grid_card.href = '../../pages/productSingle/ProductSingle.html'
   // ----------------Card grid style--------------------
   grid_card.innerHTML = `
-  <a href="../../pages/productSingle/ProductSingle.html" >
+  
          <div class="grid-view__card-symbols">
            <div  class="grid-view__card-icon">
            <iconify-icon id="${
@@ -76,8 +75,7 @@ import {
            <p class="grid-view__card-price card-price"> ${moneyFormatter(
              product.price,
            )}<span> UZS </span></p>
-         </div>
-        </a>`
+      `
 
   return grid_card
 }

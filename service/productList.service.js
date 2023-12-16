@@ -7,7 +7,7 @@ const fetchConfig = {
 
     // Add any other common headers here
   },
-  
+
   // Add any other common options here
 }
 

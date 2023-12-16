@@ -198,15 +198,14 @@
 
 .dragover {
   border-color: var(--primary-color, #388ff3);
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-
-.remove-image svg path{
+.remove-image svg path {
   stroke: #fff;
 }
 
-.remove-image:hover svg path{
+.remove-image:hover svg path {
   stroke: #f85656;
 }
 
