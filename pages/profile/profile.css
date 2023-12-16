@@ -118,6 +118,12 @@
   max-width: 223px;
   font-size: 14px;
   text-align: left;
+  color: #FFF;
+}
+
+.ads-btn__link{
+  text-decoration: none;
+  color: #FFF;
 }
 
 .ads-btn__plus{
