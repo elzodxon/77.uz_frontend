@@ -113,22 +113,18 @@
 }
 
 .ads-btn {
+  display: flex;
+  gap: 8px;
   max-width: 223px;
   font-size: 14px;
   text-align: left;
 }
 
-.ads-btn::after {
-  position: absolute;
-  z-index: 2;
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-image: url(../../assets/img/profile/plus-icon.svg);
-  background-repeat: no-repeat;
-  top: calc(50% - 10px);
-  right: calc(50% - 98px);
+.ads-btn__plus{
+font-size: 19px;
 }
+
+
 
 .profile-content {
   width: 100%;
