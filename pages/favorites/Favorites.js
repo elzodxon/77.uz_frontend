@@ -17,6 +17,15 @@ document.addEventListener('DOMContentLoaded', function () {
       handleCardIconClick(event)
     }
   })
+
+  if(favoritesProducts.length === 0) {
+    gridWrapper.innerHTML=`
+      <div class="not-favorites">
+        <img src="/assets/img/404.svg" alt="">
+        <h1 class="title not-favorites__title">Избранные все еще доступно</h1>
+      </div>
+    `
+  }
 })
 
 // ------------------- Get Product Func --------------------

@@ -9,6 +9,28 @@
   gap: 24px;
   grid-template-columns: repeat(4, 1fr);
 }
+.not-favorites {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex: 1;
+  flex-basis: 100%;
+  flex-grow: 1;
+  margin: 100px 0;
+  grid-column: span 4;
+}
+.not-favorites img {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+}
+.not-favorites__title {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--primary-color);
+}
 .grid-view__card-icon {
   color: red !important;
 }
