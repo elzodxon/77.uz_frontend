@@ -335,13 +335,189 @@ flex-shrink: 0;">
       categoryMenuItem1[i].classList.remove('active')
     })
   }
-  for (let i = 0; i < categoryLinkItems.length; i++) {
-    categoryLinkItems[i].addEventListener('click', function (e) {
-      e.stopImmediatePropagation()
-      const categoryGroup = e.target.closest('.category-group')
-      const categoryDropDown = e.target.closest('.category-links')
-      categoryGroup.style.marginBottom = `${categoryDropDown.offsetHeight}px`
-      categoryMenuItem1[i].classList.remove('active')
+
+});
+  ///////////------SEARCH SUGGESTION-------///////
+
+  // const searchInput = document.getElementById('searchNow')
+  // const searchSuggestion = document.getElementById('m-search-suggestion')
+  const mSearchSuggestionTitle = document.querySelector(
+    '.m-search-suggestion-title',
+  )
+
+  // SEARCH
+  function generateSearchSuggestion(inputValue) {
+    const inputValueLowerCase = inputValue.toLowerCase()
+
+    const exactMatch = jsonData.find(
+      (category) => category.title.toLowerCase() === inputValueLowerCase,
+    )
+    if (exactMatch) {
+      return `<p>Recommendation  </p>
+         <div class="m-search-suggestion__card">
+         <a class="m-search-suggestion__title" href="#">
+         <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M14.1057 14.2L17 17M16.0667 9.53333C16.0667 13.1416 13.1416 16.0667 9.53333 16.0667C5.92507 16.0667 3 13.1416 3 9.53333C3 5.92507 5.92507 3 9.53333 3C13.1416 3 16.0667 5.92507 16.0667 9.53333Z" stroke="#388FF3" stroke-width="1.5" stroke-linecap="round"/>
+           </svg>
+         ${exactMatch.title}
+         </a>
+         <svg class="icon-right" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 6L12 10L8 14" stroke="CurrentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+         </div>
+         `
+    }
+
+    const partialMatches = jsonData.filter((category) => {
+      const categoryTitle = category.title.toLowerCase()
+      const subcategoryTitles = category.subcategories.map((subcategory) =>
+        subcategory.subcategoryTitle.toLowerCase(),
+      )
+      const subsubcategoryTitles = category.subcategories.flatMap(
+        (subcategory) =>
+          subcategory.subsubcategories.map((item) =>
+            Object.values(item)[0].toLowerCase(),
+          ),
+      )
+      return [categoryTitle, subcategoryTitles, subsubcategoryTitles].some(
+        (title) => title.includes(inputValueLowerCase),
+      )
+    })
+
+    if (partialMatches.length > 0) {
+      return partialMatches
+        .map((category) => {
+          const categoryTitle = category.title
+          return `
+           <div class="m-search-suggestion__card">
+           <a class="m-search-suggestion__title" href="">
+           <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M14.1057 14.2L17 17M16.0667 9.53333C16.0667 13.1416 13.1416 16.0667 9.53333 16.0667C5.92507 16.0667 3 13.1416 3 9.53333C3 5.92507 5.92507 3 9.53333 3C13.1416 3 16.0667 5.92507 16.0667 9.53333Z" stroke="#388FF3" stroke-width="1.5" stroke-linecap="round"/>
+           </svg>
+
+           ${highlightMatchingLetters(categoryTitle, inputValue)}
+           </a>
+           <svg class="icon-right" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 6L12 10L8 14" stroke="CurrentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>`
+        })
+        .join('')
+    }
+
+    return `
+      <div class="m-search-suggestion__card" style="background:#fff; cursor:default;">
+               <div class="search-error">
+                   <img src="/assets/img/category/search-error.svg" alt="" width="120" height="107">
+                   <h4>Ничего не найдено</h4>
+                   <p>Упс! Мы не смогли найти ни одного  <br> подходящего результата по вашему запросу</p>
+               </div>
+           </div>`
+  }
+
+  // SEARCH INPUT EVENT LISTENER
+  searchInput.addEventListener('input', function () {
+    const inputValue = searchInput.value.trim()
+    const searchSuggestions = generateSearchSuggestion(inputValue)
+
+    searchSuggestion.innerHTML = searchSuggestions
+    searchSuggestion.classList.toggle(
+      'active',
+      inputValue.length > 0 && searchSuggestions.length > 0,
+    )
+    updateSearchSuggestionTitle(inputValue)
+  })
+
+  // UPDATE SEARCH SUGGESTION TITLE
+  function updateSearchSuggestionTitle(inputValue) {
+    const searchHistory =
+      JSON.parse(localStorage.getItem('searchHistory')) || []
+    if (searchHistory.length === 0 && inputValue.length === 0) {
+      mSearchSuggestionTitle.textContent = 'No History'
+    } else {
+      mSearchSuggestionTitle.textContent =
+        inputValue.length > 0 ? 'Recommendation' : 'История поиска'
+    }
+  }
+
+  //
+  // SAVE SEARCH HISTORY
+  function saveSearchHistory(searchTerm) {
+    const searchHistory =
+      JSON.parse(localStorage.getItem('searchHistory')) || []
+    searchHistory.unshift(searchTerm)
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory))
+  }
+
+  saveSearchHistory()
+
+  // HIGHLIGHT MATCHING LETTERS
+  function highlightMatchingLetters(title, inputValue) {
+    const lowerCaseTitle = title.toLowerCase()
+    const lowerCaseInput = inputValue.toLowerCase()
+    const matchStart = lowerCaseTitle.indexOf(lowerCaseInput)
+
+    if (matchStart === -1) {
+      return title
+    }
+
+    const matchEnd = matchStart + lowerCaseInput.length
+    const highlightedPart =
+      title.substring(0, matchStart) +
+      `<span style="background-color: yellow;">${title.substring(
+        matchStart,
+        matchEnd,
+      )}</span>` +
+      title.substring(matchEnd)
+
+    return highlightedPart
+  }
+
+  function calculateCardsInOneRow() {
+    // Get the container and card elements
+    const container = document.getElementById('category-list')
+
+    // Get the computed style for the grid container
+    const containerStyle = window.getComputedStyle(container)
+
+    // Extract the grid-template-columns value
+    const gridColumnValue = containerStyle.getPropertyValue(
+      'grid-template-columns',
+    )
+
+    // Split the value into an array of column widths
+    const columnWidths = gridColumnValue.split(' ')
+
+    // Calculate the number of cards in one row
+    cardsInOneRow = columnWidths.length
+
+    console.log('Number of cards in one row:', cardsInOneRow)
+    return cardsInOneRow
+  }
+
+  // Call the function on window load or whenever necessary
+  window.addEventListener('resize', calculateCardsInOneRow)
+  window.addEventListener('load', calculateCardsInOneRow)
+
+  function markLastInRow(cards) {
+    cards.forEach((card, index) => {
+      card.addEventListener('click', () => {
+        // Find the index of the last element in the same row
+        const cardsPerRow = calculateCardsInOneRow()
+        let lastInRow = index + (cardsPerRow - (index % cardsPerRow)) - 1
+
+        // Remove the 'last-in-row' class from all cards
+        cards.forEach((card) => {
+          card.classList.remove('last-in-row')
+        })
+
+        // Add the 'last-in-row' class to the last element in the row
+        if (lastInRow > cards.length) {
+          lastInRow = cards.length - 1
+        }
+        cards[lastInRow].classList.add('last-in-row')
+      })
     })
   }
 })
+

@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ================== Favicon link ================== -->
+  
+  <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg" />
+  
+  <!-- ================== Css links ================== -->
+
+  <link rel="stylesheet" href="../../components/modal/modal.css">
+  
+  <link rel="stylesheet" href="../../components/buttons/buttons.css">
+ 
+  <link rel="stylesheet" href="../../components/breadCrumb/breadCrumb.css" />
+  <link rel="stylesheet" href="../../components/header/header.css" />
+  <link rel="stylesheet" href="../../components/footer/footer.css" />
+  <link
+  rel="stylesheet"
+  href="../../components/prevPageHeader/prevPageHeader.css"
+  />
+  <link
+  rel="stylesheet"
+  href="../../components/languageSwitcher/languageSwitcher.css"
+  />
+  <link rel="stylesheet" href="../profile/profile.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/variables.css" />
+  <link rel="stylesheet" href="../../assets/css/normalize.css" />
+  
+  <!-- ================== Website Title ================== -->
+  <title>Profile</title>
+</head>
+
+  <body>
+    <!------------------- Header ------------------------->
+
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <!-- Left navigation bar -->
+          <ul class="navbar-list">
+            <li id="language-switcher" class="navbar-list__item">
+              <button class="language-button text-sm-subtitle">
+                <img
+                  width="20"
+                  height="20"
+                  src="/assets/img/header/ru.svg"
+                  alt=""
+                />
+                <span>Русский</span>
+                <i class="icon-cheveron-down"></i>
+              </button>
+              <div class="language-content">
+                <ul class="language-content__list">
+                  <li class="language-content__item active">
+                    <img
+                      width="20"
+                      height="20"
+                      src="/assets/img/header/ru.svg"
+                      alt=""
+                    />
+                    <span>RU</span>
+                  </li>
+
+                  <li class="language-content__item">
+                    <img
+                      width="20"
+                      height="20"
+                      src="./assets/img/header/uz.svg"
+                      alt=""
+                    />
+                    <span>UZ</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="navbar-list__item phone-wrapper">
+              <a
+                id="telephone-number"
+                href="tel:+998885005000"
+                class="navbar-list__link"
+              >
+                <i class="icon-phone"></i>
+                <span class="phone-number text-sm-subtitle">
+                  +998 88 500 50 00
+                </span>
+              </a>
+            </li>
+          </ul>
+          <!-- Header Logo -->
+          <a href="/" class="header-logo">
+            <img src="/assets/img/logo.svg" alt="" />
+          </a>
+          <!-- Right navigation bar -->
+          <ul class="navbar-list">
+            <li class="navbar-list__item">
+              <a
+                id="favorite"
+                href="../favorites/Favorites.html"
+                class="navbar-list__link text-sm-subtitle"
+              >
+                <div class="favorite-item__parent">
+                  <i class="icon-heart"></i>
+                  <span
+                    id="favorite-product__number"
+                    class="favorite-product__number"
+                  >
+                  </span>
+                </div>
+                <span class="favorite-title"> Избранные </span>
+              </a>
+            </li>
+            <li class="navbar-list__item divider"></li>
+            <li class="navbar-list__item">
+              <button
+                href=""
+                id="registration-btn"
+                class="navbar-list__link login-button text-sm-subtitle"
+              >
+                <span class="login-title signed-in">
+                  <span class="login-text">Войти </span>
+                  <i class="icon-log-in"></i>
+                </span>
+
+                <span class="user-info signed-in">
+                  <img src="../../assets/img/user.svg" alt="" />
+                  <span class="user-name">Шохрух Шавкиев</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 6L12 10L8 14"
+                      stroke="#8E9297"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+<!------------------- Header ------------------------->
+
+<main>
+  <div class="profile">
+    <div class="container">
+      <!------------------ Bread-Crumb-------------------- -->
+      
+      <ul class="bread-crumb">
+        <li class="bread-crumb__item">
+          <a href="" class="bread-crumb__link">Главная</a>
+        </li>
+        <li class="bread-crumb__item">
+          <a href="" class="bread-crumb__link active">Профиль</a>
+        </li>
+      </ul>
+      <!------------------ Bread-Crumb-------------------- -->
+      
+      <!-- Prev Page  -->
+      <div class="prev-page__header">
+        <a href="/" class="prev-page__button">
+          <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          >
+          <path
+          d="M14.4448 24L6.66699 16M6.66699 16L14.4448 8M6.66699 16H25.3337"
+          stroke="black"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
+    <!-- Prev page  -->
+    
+    
+    <div class="profile-wrapper">
+      <!------------ Sidebar---------- -->
+      
+      <div class="sidebar">
+        <div class="personal">
+          <div class="personal-wrapper">
+            <div class="personal__info">
+              <img
+              class="personal__img"
+              src="../../assets/img/profile_img.png"
+              alt="personal photo"
+              width="54"
+              height="54"
+              />
+              
+              <p class="personal__name">
+                Шохрух <br />
+                Шавкиев
+              </p>
+            </div>
+            
+            <div class="personal__buttons">
+              <a href="../adverts/adverts.html">
+                <button
+                id="button1"
+                class="personal__innerButton"
+                >
+                <!-- <svg
+                class="personal-info-list__item-icon"
+                width="24"
+                height="24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                d="M19.467 2.4c1.178 0 2.133.942 2.133 2.104v3.592c0 1.162-.955 2.104-2.133 2.104h-3.2c-1.179 0-2.134-.942-2.134-2.104V4.504c0-1.162.955-2.104 2.134-2.104h3.2ZM4.533 2.4C3.355 2.4 2.4 3.342 2.4 4.504v3.592c0 1.162.955 2.104 2.133 2.104h3.2c1.178 0 2.134-.942 2.134-2.104V4.504c0-1.162-.956-2.104-2.134-2.104h-3.2ZM19.467 13.8c1.178 0 2.133.942 2.133 2.104v3.592c0 1.162-.955 2.104-2.133 2.104h-3.2c-1.179 0-2.134-.942-2.134-2.104v-3.592c0-1.162.955-2.104 2.134-2.104h3.2ZM4.533 13.8c-1.178 0-2.133.942-2.133 2.104v3.592c0 1.162.955 2.104 2.133 2.104h3.2c1.178 0 2.134-.942 2.134-2.104v-3.592c0-1.162-.956-2.104-2.134-2.104h-3.2Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"
+                />
+              </svg> -->
+
+              <i class="icon-grid" style="font-size: 24px"></i>
+              Мои объявления
+            </button>
+          </a>
+          
+          <a href="../profile/profile.html">
+            <button id="button2" class="personal__innerButton btn-active">
+              <!-- <svg
+              class="personal-info-list__item-icon"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              >
+              <path
+              d="M5.4 19.2c.461-.517 2.62-2.893 3.254-2.893h6.692c.918 0 2.79 1.97 3.254 2.664m3-6.971a9.6 9.6 0 1 1-19.2 0 9.6 9.6 0 0 1 19.2 0Zm-6.161-2.272C15.439 7.896 13.893 6.4 12 6.4c-1.892 0-3.438 1.496-3.438 3.328 0 1.831 1.546 3.328 3.438 3.328 1.893 0 3.439-1.497 3.439-3.328Z"
+              stroke="currentColor"
+              stroke-width="2"
+              />
+            </svg> -->
+
+            <i class="icon-user-circle" style="font-size: 24px"></i>
+            
+            Персональные данные
+          </button>
+        </a>
+      </div>
+      
+      <button class="btn btn-secondary sign-out-btn" id="exit-modal" onclick="openModal('exit-layer')">
+        <span class="sign-out-btn__icon"></span>
+        Выход
+      </button>
+      <div class="modal" id="exit-layer">
+        <div class="modal-header">
+          <button class="close-btn" onclick="closeModal('exit-layer')">
+            <img
+              class="close-img"
+              src="../../assets/img/modal-img/close-icon.svg"
+              alt="Close icon"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <div class="modal-body">
+          <img
+            class="modal-body__img"
+            src="../../assets/img/modal-img/trash-solid.svg"
+            alt="Wishlist"
+            width="120"
+            height="106"
+          />
+          <h2 class="modal-body__title">Выход</h2>
+          <p class="modal-body__subtitle">Вы точно хотите выйти из платформы</p>
+        </div>
+        <div class="modal-footer third">
+          <button onclick="closeModal('exit-layer')" class="btn btn-secondary">
+            Отменить
+          </button>
+          <button class="btn btn-light-danger">Выход</button>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+  </div>
+</div>
+
+<!-------------- Sidebar---------- -->
+
+<div class="profile-content main" id="content-container">
+  <div class="my-ads" id="content1">
+    <div class="personal-details" id="content2">
+      <h1 class="personal-details__title">Персональные данные</h1>
+      
+      <div class="personal-details__box">
+        <div class="personal-details__wrapper">
+          <img
+          class="personal-details__img"
+          src="../../assets/img/personal-details/avatar-img.png"
+          alt="person showing his watch with car in the background"
+          width="92"
+          height="92"
+          />
+          
+          <div class="personal-details__contents">
+            <h2 class="personal-details__subtitle">Шохрух Шавкиев</h2>
+            
+            <div class="personal-details__link-wrapper">
+              <a
+              class="personal-details__phone-link info-link"
+              href="tel:+998880331805"
+              >+998 88 033 18 05</a
+              >
+              <a
+              class="personal-details__adress info-link"
+              href="https://maps.app.goo.gl/iqouRWCba6kMUBVQA"
+              target="_blank"
+              >8897+PMP, Almachi Street, Тоshkent, Узбекистан</a
+              >
+            </div>
+          </div>
+        </div>
+        
+        <div class="personal-details__footer ">
+          <img
+          src="../../assets/img/personal-details/information-circle-icon.svg"
+          alt="information circle contained icon"
+          width="24"
+          height="24"
+          />
+          
+          <p class="personal-details__extraInfo">
+            Для изменения данных обратитесь к оператору
+            
+            <a class="personal-detail__extraInfo-tel" href="tel:1548"
+            >1547</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+    <!--------------------- Footer ------------------>
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer Logo -->
+        <a class="footer-logo" href="">
+          <img width="122" height="64" src="../../assets/img/logo.svg" alt="" />
+        </a>
+        <!-- Footer Info -->
+        <div class="footer-info">
+          <p class="footer-info__text subtitle text-center">
+            77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+            облегчает покупки и продажи, связывая продавцов с потенциальными
+            клиентами.
+          </p>
+          <ul class="footer-info__list" id="footerList">
+            <li class="footer-info__item">
+              <a href="../productList/ProductList.html" class="footer-info__link">
+                <img src="../../assets/img/footer/symbol.svg" alt="" />
+                Доска объявлений
+              </a>
+            </li>
+            <li class="footer-info__item">
+              <a href="../static/static.html" class="footer-info__link">
+                <img src="../../assets/img/footer/symbol.svg" alt="" />
+                Условия пользования
+              </a>
+            </li>
+            <li class="footer-info__item">
+              <a href="" class="footer-info__link">
+                <img src="../../assets/img/footer/symbol.svg" alt="" />
+                +998 88 500 50 00
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="development-company">
+        <div class="development-company-wrapper container">
+          <p class="development-company__text copyright">
+            <strong>© 77.uz</strong>
+            <span> 2023. Все права защищены</span>
+          </p>
+
+          <a
+            href="https://uic.group/"
+            target="_blank"
+            class="development-company__link"
+          >
+            <span>
+              <img src="../../assets/img/uic.group.svg" alt="" />
+            </span>
+            <img src="../../assets/img/uic.group.text.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!--------------------- Footer ------------------>
+
+<!-- ================== Javascript Links ================== -->
+<script src="../profile/profile.js"></script>
+<script src="../../components/modal/modal.js"></script>
+<script src="../../components/footer/footer.js"></script>
+<script src="../../components/header/header.js"></script>
+<script src="../../components/languageSwitcher/languageSwitcher.js"></script>
+
+</body>
+</html>
+
