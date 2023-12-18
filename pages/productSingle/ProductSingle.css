@@ -83,6 +83,38 @@
   color: #fff;
 }
 
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.profile-info__box {
+  border: 1px solid var(--gray-color);
+  background: linear-gradient(to right, #f2efee, #fff);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.profile-info__img {
+  border-radius: 6px;
+}
+
+.img-rounded {
+  border-radius: 50%;
+}
+
+.profile-info__name {
+  font-size: 16px;
+}
+
+.profile-info__name span {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--placeholder-color);
+}
+
 @media only screen and (max-width: 989px) {
   .sidebar {
     flex-basis: calc(75% - 24px) !important;
