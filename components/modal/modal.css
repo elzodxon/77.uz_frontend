@@ -9,7 +9,16 @@
   z-index: 2;
   border-radius: 12px;
 }
-
+.modal-form-group {
+  width: 100%;
+}
+.modal.active {
+  display: block;
+  z-index: 1000;
+}
+.overlay.active {
+  display: block;
+}
 .modal-header {
   display: flex;
   justify-content: flex-end;
@@ -79,7 +88,6 @@
   gap: 10px;
   flex-wrap: wrap;
 }
-
 .second {
   margin: 16px 0 -5px;
 }

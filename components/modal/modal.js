@@ -1,25 +1,89 @@
+const modalToggleButtons = document.querySelectorAll('.toggle-button')
+const allButtons = document.querySelectorAll('.btn')
+const closeModalButtons = document.querySelectorAll('.close-btn')
+const modals = document.querySelectorAll('.modal')
 const overlay = document.querySelector('.overlay')
+const modalNextButtons = document.querySelectorAll('.next-modal-button')
 
-function openModal(modalId) {
+allButtons.forEach((button) => {
+  button.addEventListener('submit', function (e) {
+    e.preventDefault()
+  })
+})
+
+let currentModalInputs = null
+
+// openModal function to open modals
+const openModal = (modalId) => {
   const modal = document.getElementById(modalId)
-  modal.style.display = 'block'
-  modal.style.zIndex = '1000'
-  overlay.style.display = 'block'
-  document.addEventListener('keydown', (event) => handleKeyDown(event, modalId))
+  currentModalInputs = modal.querySelectorAll('input')
+  modal.classList.add('active')
+  overlay.classList.add('active')
 }
 
-function closeModal(modalId) {
+// closeModal function to close modals
+const closeModal = (modalId) => {
   const modal = document.getElementById(modalId)
-  modal.style.display = 'none'
-  modal.style.zIndex = '0'
-  overlay.style.display = 'none'
-  document.removeEventListener('keydown', (event) => handleKeyDown(event, modalId))
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
 }
 
-function handleKeyDown(event, modalId) {
-  if (event.key === 'Escape' || event.keyCode === 27) {
+modalToggleButtons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    const modalId = button.getAttribute('modal-id')
+    openModal(modalId)
+  })
+})
+
+modalNextButtons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    const modalId = button.getAttribute('modal-id')
+    console.log(currentModalInputs)
+    // if (currentModalInputs) {
+    //   currentModalInputs?.forEach((modalInput) => {
+    //     if (modalInput.value !== '') {
+    //       currentModalInputs = null
+    //     }
+    //   })
+    // } else {
+    // }
+      nextModal(modalId)
+  })
+})
+
+const nextModal = (modalId) => {
+  closeAllModals()
+  const modal = document.getElementById(modalId)
+  currentModalInputs = modal.querySelectorAll('input')
+
+  console.log(currentModalInputs)
+  modal.classList.add('active')
+}
+
+function closeAllModals() {
+  modals.forEach((modal) => {
+    modal.classList.remove('active')
+  })
+}
+
+closeModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modalId = button.parentElement.id
     closeModal(modalId)
-  }
-}
+  })
+})
+overlay.addEventListener('click', () => {
+  modals.forEach((modal) => {
+    modal.classList.remove('active')
+  })
+  overlay.classList.remove('active')
+})
 
-overlay.addEventListener('click', closeModal)
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    modals.forEach((modal) => {
+      modal.classList.remove('active')
+    })
+    overlay.classList.remove('active')
+  }
+})
