@@ -29,14 +29,14 @@ const closeModal = (modalId) => {
 }
 
 modalToggleButtons.forEach((button) => {
-  button.addEventListener('click', (e) => {
+  button.addEventListener('click', () => {
     const modalId = button.getAttribute('modal-id')
     openModal(modalId)
   })
 })
 
 modalNextButtons.forEach((button) => {
-  button.addEventListener('click', (e) => {
+  button.addEventListener('click', () => {
     const modalId = button.getAttribute('modal-id')
     console.log(currentModalInputs)
     if (currentModalInputs) {
