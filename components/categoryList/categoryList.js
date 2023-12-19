@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 const favoriteProductButton = document.querySelectorAll(
   '.favorite__product-button',
 )
@@ -286,7 +287,6 @@ flex-shrink: 0;">
   const backButton = document.querySelectorAll('.dropdown-menu__back-title')
   const categoryMenuItem = document.querySelectorAll('.category-menu__item')
   const categoryMenuItem1 = document.querySelectorAll('.category-links')
-  const categoryLinkItems = document.querySelectorAll('.category-links__item')
 
   const categoryGroups = document.querySelectorAll('.category-card')
   const categoryCards = document.querySelectorAll('.category-group')
@@ -336,8 +336,7 @@ flex-shrink: 0;">
     })
   }
 
-});
-  ///////////------SEARCH SUGGESTION-------///////
+})
 
   // const searchInput = document.getElementById('searchNow')
   // const searchSuggestion = document.getElementById('m-search-suggestion')
@@ -349,6 +348,7 @@ flex-shrink: 0;">
   function generateSearchSuggestion(inputValue) {
     const inputValueLowerCase = inputValue.toLowerCase()
 
+    // eslint-disable-next-line no-undef
     const exactMatch = jsonData.find(
       (category) => category.title.toLowerCase() === inputValueLowerCase,
     )
@@ -368,6 +368,7 @@ flex-shrink: 0;">
          `
     }
 
+    // eslint-disable-next-line no-undef
     const partialMatches = jsonData.filter((category) => {
       const categoryTitle = category.title.toLowerCase()
       const subcategoryTitles = category.subcategories.map((subcategory) =>
@@ -379,7 +380,8 @@ flex-shrink: 0;">
             Object.values(item)[0].toLowerCase(),
           ),
       )
-      return [categoryTitle, subcategoryTitles, subsubcategoryTitles].some(
+
+return [categoryTitle, subcategoryTitles, subsubcategoryTitles].some(
         (title) => title.includes(inputValueLowerCase),
       )
     })
@@ -388,7 +390,8 @@ flex-shrink: 0;">
       return partialMatches
         .map((category) => {
           const categoryTitle = category.title
-          return `
+
+return `
            <div class="m-search-suggestion__card">
            <a class="m-search-suggestion__title" href="">
            <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -416,8 +419,10 @@ flex-shrink: 0;">
   }
 
   // SEARCH INPUT EVENT LISTENER
+// eslint-disable-next-line no-undef
   searchInput.addEventListener('input', function () {
-    const inputValue = searchInput.value.trim()
+    let inputValue
+    inputValue = searchInput.value.trim()
     const searchSuggestions = generateSearchSuggestion(inputValue)
 
     searchSuggestion.innerHTML = searchSuggestions
@@ -498,26 +503,4 @@ flex-shrink: 0;">
   // Call the function on window load or whenever necessary
   window.addEventListener('resize', calculateCardsInOneRow)
   window.addEventListener('load', calculateCardsInOneRow)
-
-  function markLastInRow(cards) {
-    cards.forEach((card, index) => {
-      card.addEventListener('click', () => {
-        // Find the index of the last element in the same row
-        const cardsPerRow = calculateCardsInOneRow()
-        let lastInRow = index + (cardsPerRow - (index % cardsPerRow)) - 1
-
-        // Remove the 'last-in-row' class from all cards
-        cards.forEach((card) => {
-          card.classList.remove('last-in-row')
-        })
-
-        // Add the 'last-in-row' class to the last element in the row
-        if (lastInRow > cards.length) {
-          lastInRow = cards.length - 1
-        }
-        cards[lastInRow].classList.add('last-in-row')
-      })
-    })
-  }
-})
 
