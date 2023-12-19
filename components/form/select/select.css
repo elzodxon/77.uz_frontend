@@ -22,8 +22,6 @@
   color: var(--placeholder-color);
 }
 
-
-
 .select-menu .select-btn {
   display: flex;
   background-color: var(--input-bg-color);
@@ -47,7 +45,6 @@
 }
 
 .select-menu .options {
-  
   padding: 0;
   max-height: 312px;
   overflow-y: auto;
@@ -76,18 +73,16 @@
   background: #fff;
   position: relative;
   z-index: 15;
+  pointer-events: all;
+  transition: 0.2s ease-in-out;
 }
 
-.selected-options::after {
-  position: absolute;
-  z-index: 2;
-  content: '';
-  width: 24px;
-  height: 24px;
-  background-image: url(../../../assets/img/select/checkmark.png);
-  background-repeat: no-repeat;
-  top: 15px;
-  right: 15px;
+.option.selected-option {
+  cursor: not-allowed;
+  background-color: #dad9d9;
+  pointer-events: none;
+}
+.option.selected-option:hover {
 }
 
 .options .option:hover {
