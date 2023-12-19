@@ -39,25 +39,29 @@ modalNextButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
     const modalId = button.getAttribute('modal-id')
     console.log(currentModalInputs)
-    // if (currentModalInputs) {
-    //   currentModalInputs?.forEach((modalInput) => {
-    //     if (modalInput.value !== '') {
-    //       currentModalInputs = null
-    //     }
-    //   })
-    // } else {
-    // }
+    if (currentModalInputs) {
+      currentModalInputs?.forEach((modalInput) => {
+        if (modalInput.value !== '') {
+          currentModalInputs = null
+          if (modalId === '') {
+            overlay.classList.remove('active')
+          }
+          nextModal(modalId)
+        }
+      })
+    }
+    if (modalId === 'password-layer' || modalId === 'application-layer') {
       nextModal(modalId)
+    }
   })
 })
 
 const nextModal = (modalId) => {
   closeAllModals()
   const modal = document.getElementById(modalId)
-  currentModalInputs = modal.querySelectorAll('input')
-
+  currentModalInputs = modal?.querySelectorAll('input')
   console.log(currentModalInputs)
-  modal.classList.add('active')
+  modal?.classList.add('active')
 }
 
 function closeAllModals() {
