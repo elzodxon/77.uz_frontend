@@ -161,24 +161,29 @@
       </div>
       
       <div class="modal" id="address-layer">
-        <div class="modal-header">
+        <div class="modal-header modal-header__wrapper">
+          <h2 class="modal-body__title modal-header__title modal-adress">Введите адресс</h2>
           <button class="close-btn" onclick="closeModal('address-layer')">
             <i class="icon-x"></i>
           </button>
         </div>
+        <p class="modal-body__subtitle modal__subtitle2">
+          Войти в систему чтобы торговать в системе
+        </p>
         <div class="modal-body">
           <div class="form-group modal-form-group">
-            <label class="label modal-label" for="address">Логин</label>
+            <label class="label modal-label" for="address">Адресс</label>
             <input
               class="input input__login"
               type="text"
               name="address"
               id="address"
-              placeholder="Введите логин"
+              placeholder="Введите свой адрес"
             />
           </div>
 
-          <img class="" src="/assets/img/Map.png" alt="Wishlist" />
+          <img style="margin-top: 8px;" class="" src="/assets/img/Map.png" alt="Map"
+          width="338" height="328" />
         </div>
         <div class="modal-footer fourth-wrapper">
           <button class="btn next-modal-button" modal-id="sending-layer">
