@@ -6,6 +6,7 @@
   background: #d5d8db;
   border-radius: 8px;
 }
+
 .select {
   display: flex;
   flex-direction: column;
@@ -36,6 +37,10 @@
 
 .select-menu__icon {
   transition: 0.3s ease-in-out;
+}
+
+.select-menu__context {
+  color: var(--black-color);
 }
 
 /* Change transform as you want */
@@ -83,8 +88,6 @@
   cursor: not-allowed;
   background-color: #dad9d9;
   pointer-events: none;
-}
-.option.selected-option:hover {
 }
 
 .options .option:hover {
