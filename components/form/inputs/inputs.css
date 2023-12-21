@@ -3,15 +3,18 @@
   --application_ff: 'Inter', sans-serif;
   --placeholder-color: #b8bbbd;
 }
+
 * {
   outline: inherit;
 }
+
 html,
 body {
   height: 100%;
   overflow-y: auto;
   background-color: #fff;
 }
+
 /* FORM */
 .form {
   font-family: var(--application_ff);
@@ -19,6 +22,7 @@ body {
   line-height: 20px;
   margin: 30px auto;
 }
+
 /* FORM GROUP */
 .form-group {
   padding-top: 16px;
@@ -26,12 +30,14 @@ body {
   flex-direction: column;
   gap: 8px;
 }
+
 /* LABEL */
 .label {
   color: var(--label-color);
   font-weight: 500;
   display: inline-block;
 }
+
 /* INPUT */
 .input {
   display: flex;
@@ -49,10 +55,12 @@ body {
   outline: none;
   transition: all 0.3s ease-in-out;
 }
+
 .input:focus {
   border-color: var(--primary-color);
   background: #fff;
 }
+
 .input::placeholder {
   color: var(--placeholder-color);
   font-weight: 400;
@@ -63,14 +71,17 @@ body {
   align-items: center;
   align-self: stretch;
 }
+
 /* PASSWORD INPUT GROUP */
 .password-input-group {
   position: relative;
 }
+
 /* INPUT PASSWORD */
 .input-password {
   padding-right: 34px;
 }
+
 /* PASSWORD OEN_EYE */
 .password-input-group .open-eye {
   background: url(/assets/img/form/input/open-eye.svg) no-repeat center/cover;
@@ -84,11 +95,13 @@ body {
   width: 24px;
   height: 24px;
 }
+
 /* CLOSED_EYE */
 .password-input-group .open-eye.closed-eye {
   background: url(/assets/img/form/input/closed-eye.svg) no-repeat center;
   cursor: pointer;
 }
+
 .password-input-group .forgot-password {
   position: absolute;
   top: 8px;
@@ -102,21 +115,25 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
 .phone-input-group {
   position: relative;
   display: flex;
   align-items: center;
   font-size: 14px;
 }
+
 .input_tel {
   padding-left: 45px;
   font-size: 14px;
 }
+
 .phone-input-group .country-code {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(30%,57%);
+  transform: translate(30%, 57%);
+  color: var(--black-color);
   z-index: 1;
   font-size: 14px;
 }
@@ -126,9 +143,11 @@ body {
   position: relative;
   display: flex;
 }
+
 .input_price {
   padding-right: 80px;
 }
+
 .currency-wrapper {
   position: absolute;
   top: 4px;
@@ -146,27 +165,33 @@ body {
   justify-content: flex-end;
   width: fit-content;
 }
+
 .currency-card {
   display: flex;
   align-items: center;
   padding: 6px;
   cursor: pointer;
 }
+
 .currency-card:hover {
   opacity: 0.8;
 }
+
 .current-currency {
   color: var(--black-color);
 }
+
 .currency-icon {
   transform: rotate(0deg);
   transition: all 0.3s ease;
   font-size: 20px;
 }
+
 .currency-icon.rotated {
   transform: rotate(-180deg);
   transition: all 0.3s ease;
 }
+
 .currency-list {
   display: none;
   flex-direction: column;
@@ -180,9 +205,11 @@ body {
   border-radius: 6px;
   transition: all 0.5s ease;
 }
+
 .currency-list.active {
   display: flex;
 }
+
 .currency__option {
   list-style: none;
   cursor: pointer;
@@ -192,24 +219,29 @@ body {
   position: relative;
   padding: 3px;
 }
+
 .currency__option:hover {
   color: var(--primary-color);
   background-color: #b8bbbd;
 }
+
 .currency__option:first-child:hover {
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
 }
+
 .currency__option:last-child:hover {
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
 }
+
 .currency__option.selected {
   color: var(--primary-color);
   pointer-events: none;
   opacity: 0.6;
   cursor: none;
 }
+
 .error {
   border: 1px solid #e93c47;
   background: #f0f3f7;
