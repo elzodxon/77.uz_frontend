@@ -8,6 +8,8 @@
   padding: 20px;
   z-index: 2;
   border-radius: 12px;
+  max-width: 378px;
+  width: 100%;
 }
 .modal-form-group {
   width: 100%;
@@ -247,9 +249,10 @@
 .icon-x:hover {
   color: var(--danger-color);
 }
+
 @media only screen and (max-width: 565px) {
   .modal {
-    padding: 10px;
+    padding: 20px;
   }
 
   .close-btn {
@@ -276,4 +279,24 @@
   .modal-footer {
     gap: 8px;
   }
+}
+
+@media only screen and (max-width: 400px) {
+  .modal {
+    padding: 20px;
+    width: 90%;
+  }
+
+
+  .modal-body__title{
+    font-size: 18px;
+  }
+
+  .modal-body__subtitle {
+    width: 280px;
+    font-size: 12px;
+    line-height: 100%;
+    margin-bottom: 20px;
+  }
+  
 }
