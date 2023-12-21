@@ -2,7 +2,7 @@ import {
   dateFormatter,
   moneyFormatter,
   phoneNumberFormatter,
-} from '../utils/utils.js'
+} from '/utils/utils.js'
 
 export function listViewStyle(product) {
   const listCard = document.createElement('a')

@@ -1,4 +1,4 @@
-import { gridViewStyle } from '../../utils/cardstyle.js'
+import { gridViewStyle } from '/utils/cardstyle.js'
 
 const gridWrapper = document.getElementById('profile__ads')
 const cardIcons = document.getElementsByClassName('icon')

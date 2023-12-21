@@ -1,4 +1,4 @@
-import { listViewStyle, gridViewStyle } from '../../utils/cardstyle.js'
+import { listViewStyle, gridViewStyle } from '/utils/cardstyle.js'
 
 // import { fetchData } from '../../service/productList.service.js'
 const switchers = document.querySelectorAll(
