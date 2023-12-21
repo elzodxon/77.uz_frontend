@@ -250,19 +250,11 @@
   color: var(--danger-color);
 }
 
-.modal-adress::before{
-  display: inline-block;
-  background-image: url("../../assets/img/modal-img/left-icon.svg");
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-  content: "";
-  top: 4px;
-  position: relative;
-  left: -5px;
-  margin-right: -4px;
+.address__map {
+  height: 338px;
+  margin-top: 8px;
+  border-radius: 8px;
 }
-
 @media only screen and (max-width: 565px) {
   .modal {
     padding: 20px;
