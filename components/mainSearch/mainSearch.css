@@ -87,7 +87,7 @@ body.block {
 .search__input:focus .blocker.active {
   display: block;
 }
-.btn {
+.btn-search {
   display: block;
   padding: 11px 28px;
   flex-shrink: 0;
